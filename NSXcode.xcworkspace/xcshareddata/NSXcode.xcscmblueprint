@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B2210842853596343FAED330AA243B355AF0C7C5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B2210842853596343FAED330AA243B355AF0C7C5" : 0,
+    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8C17E863-AC6F-4934-9AED-6F59529BD1A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B2210842853596343FAED330AA243B355AF0C7C5" : "NSXcode\/",
+    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : "GitHub\/YYKit\/YYKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NSXcode",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NSXcode.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ibireme\/YYKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DexSinis\/NSXcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2210842853596343FAED330AA243B355AF0C7C5"
+    }
+  ]
+}

@@ -11,7 +11,10 @@
 #import "NSXMessageController.h"
 #import "NSXSearchController.h"
 #import "NSXSettingController.h"
+
+
 #import "DemoVC3.h"
+#import "WBStatusTimelineViewController.h"
 
 @interface NSXTabBarController ()
 
@@ -33,7 +36,8 @@
 - (void)setUpAllChildViewController{
     // 1.添加第一个控制器
 //    NSXHomeController *oneVC = [[NSXHomeController alloc]init];
-    DemoVC3 *oneVC = [[DemoVC3 alloc] init];
+    WBStatusTimelineViewController *oneVC = [[WBStatusTimelineViewController alloc] init];
+//    DemoVC3 *oneVC = [[DemoVC3 alloc] init];
     [self setUpOneChildViewController:oneVC image:[UIImage imageNamed:@"tab_home_icon"] title:@"首页"];
     
     // 2.添加第2个控制器
