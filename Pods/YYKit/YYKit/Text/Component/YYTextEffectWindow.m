@@ -14,35 +14,42 @@
 #import "YYKitMacro.h"
 #import "YYCGUtilities.h"
 #import "UIView+YYAdd.h"
+#import "UIApplication+YYAdd.h"
 
 
 @implementation YYTextEffectWindow
 
 + (instancetype)sharedWindow {
-    static YYTextEffectWindow *one;
+    static YYTextEffectWindow *one = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        one = [self new];
-        one.frame = (CGRect){.size = kScreenSize};
-        one.userInteractionEnabled = NO;
-        one.windowLevel = UIWindowLevelStatusBar + 1;
-        one.hidden = NO;
-        
-        // for iOS 9:
-        one.opaque = NO;
-        one.backgroundColor = [UIColor clearColor];
-        one.layer.backgroundColor = [UIColor clearColor].CGColor;
+        if (![UIApplication isAppExtension]) {
+            one = [self new];
+            one.frame = (CGRect){.size = kScreenSize};
+            one.userInteractionEnabled = NO;
+            one.windowLevel = UIWindowLevelStatusBar + 1;
+            one.hidden = NO;
+            
+            // for iOS 9:
+            one.opaque = NO;
+            one.backgroundColor = [UIColor clearColor];
+            one.layer.backgroundColor = [UIColor clearColor].CGColor;
+        }
     });
     return one;
 }
 
 // Bring self to front
 - (void)_updateWindowLevel {
-    UIWindow *top = [UIApplication sharedApplication].windows.lastObject;
-    UIWindow *key = [UIApplication sharedApplication].keyWindow;
+    UIApplication *app = [UIApplication sharedExtensionApplication];
+    if (!app) return;
+    
+    UIWindow *top = app.windows.lastObject;
+    UIWindow *key = app.keyWindow;
     if (key && key.windowLevel > top.windowLevel) top = key;
     if (top == self) return;
     self.windowLevel = top.windowLevel + 1;
+
 }
 
 - (YYTextDirection)_keyboardDirection {
@@ -189,6 +196,8 @@
  @return Magnifier rotation radius.
  */
 - (CGFloat)_updateMagnifier:(YYTextMagnifier *)mag {
+    UIApplication *app = [UIApplication sharedExtensionApplication];
+    if (!app) return 0;
     
     UIView *hostView = mag.hostView;
     UIWindow *hostWindow = [hostView isKindOfClass:[UIWindow class]] ? (id)hostView : hostView.window;
@@ -231,8 +240,8 @@
     CGContextRotateCTM(context, -rotation);
     CGContextTranslateCTM(context, tp.x - captureCenter.x, tp.y - captureCenter.y);
     
-    NSMutableArray *windows = [UIApplication sharedApplication].windows.mutableCopy;
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    NSMutableArray *windows = app.windows.mutableCopy;
+    UIWindow *keyWindow = app.keyWindow;
     if (![windows containsObject:keyWindow]) [windows addObject:keyWindow];
     [windows sortUsingComparator:^NSComparisonResult(UIWindow *w1, UIWindow *w2) {
         if (w1.windowLevel < w2.windowLevel) return NSOrderedAscending;

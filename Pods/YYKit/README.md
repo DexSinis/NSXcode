@@ -3,8 +3,8 @@ YYKit <a href="#中文介绍">中文介绍</a>
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/ibireme/YYKit/master/LICENSE)&nbsp;
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)&nbsp;
-[![Cocoapods](http://img.shields.io/cocoapods/v/YYKit.svg?style=flat)](http://cocoapods.org/?q=YYKit)&nbsp;
-[![Cocoapods](http://img.shields.io/cocoapods/p/YYKit.svg?style=flat)](http://cocoapods.org/?q=YYKit)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/v/YYKit.svg?style=flat)](http://cocoapods.org/?q=YYKit)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/p/YYKit.svg?style=flat)](http://cocoapods.org/?q=YYKit)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 [![Build Status](https://travis-ci.org/ibireme/YYKit.svg?branch=master)](https://travis-ci.org/ibireme/YYKit)
 
@@ -27,6 +27,8 @@ It's so huge that I split it into several independent components:
 
 Demo Project
 ==============
+See `Demo/YYKitDemo.xcodeproj`
+
 <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/twitter.png" width="320"><br/>
 <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/weibo.png" width="320"> <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/weibo_compose.png" width="320">
 
@@ -34,7 +36,7 @@ Demo Project
 Installation
 ==============
 
-### Cocoapods
+### CocoaPods
 
 1. Add `pod "YYKit"` to your Podfile.
 2. Run `pod install` or `pod update`.
@@ -46,7 +48,7 @@ Installation
 1. Add `github "ibireme/YYKit"` to your Cartfile.
 2. Run `carthage update --platform ios` and add the framework to your project.
 3. Import \<YYKit/YYKit.h\>.
-
+4. Notice: carthage framework doesn't include webp component, if you want to support webp, use CocoaPods or install manually.
 
 ### Manually
 
@@ -67,7 +69,9 @@ Installation
     * SystemConfiguration
     * sqlite3
     * libz
-5. Import `YYText.h`.
+5. Add `Vendor/WebP.framework`(static library) to your Xcode project if you want to support WebP.
+6. Import `YYKit.h`.
+
 
 Documentation
 ==============
@@ -83,11 +87,11 @@ This library requires a deployment target of iOS 6.0 or greater.
 About
 ==============
 I want to use the APIs as if it was provided by system, so I don't add prefix in
-these categories. You should try the projects above first.
+these categories. You should try the sub-projects above first.
 
 License
 ==============
-YYModel is provided under the MIT license. See LICENSE file for details.
+YYKit is provided under the MIT license. See LICENSE file for details.
 
 
 <br/>
@@ -95,9 +99,7 @@ YYModel is provided under the MIT license. See LICENSE file for details.
 中文介绍
 ==============
 
-YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS 应用。
-
-这个项目起源于 13 年我对一些 Category 工具的整理。但随后我在里面更改和添加了大量其他组件，以至于这个项目的代码迅速膨胀了起来。这个项目目前是作为我在公司项目的技术预研而存在，当其中某些组件足够成熟时，我便会将其投入到公司项目的生产环境中去。
+YYKit 是一组庞大、功能丰富的 iOS 组件。
 
 为了尽量复用代码，这个项目中的某些组件之间有比较强的依赖关系。为了方便其他开发者使用，我从中拆分出以下独立组件：
 
@@ -109,12 +111,14 @@ YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS �
 * 
 * [YYKeyboardManager](https://github.com/ibireme/YYKeyboardManager) — iOS 键盘监听管理工具。
 * [YYDispatchQueuePool](https://github.com/ibireme/YYDispatchQueuePool) — iOS 全局并发队列管理工具。
-* [YYCategories](https://github.com/ibireme/YYCategories) — iOS 异步绘制与显示的工具。
+* [YYAsyncLayer](https://github.com/ibireme/YYAsyncLayer) — iOS 异步绘制与显示的工具。
 * [YYCategories](https://github.com/ibireme/YYCategories) — 功能丰富的 Category 类型工具库。
 
 
 演示项目
 ==============
+查看并运行 `Demo/YYKitDemo.xcodeproj`
+
 <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/twitter.png" width="320"><br/>
 <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/weibo.png" width="320"> <img src="https://raw.github.com/ibireme/YYKit/master/Demo/Snapshots/weibo_compose.png" width="320">
 
@@ -122,7 +126,7 @@ YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS �
 安装
 ==============
 
-### Cocoapods
+### CocoaPods
 
 1. 在 Podfile 中添加  `pod "YYKit"`。
 2. 执行 `pod install` 或 `pod update`。
@@ -134,7 +138,7 @@ YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS �
 1. 在 Cartfile 中添加 `github "ibireme/YYKit"`。
 2. 执行 `carthage update --platform ios` 并将生成的 framework 添加到你的工程。
 3. 导入 \<YYKit/YYKit.h\>。
-
+4. 注意: carthage framework 并没有包含 webp 组件。如果你需要支持 webp，可以用 CocoaPods 安装，或者手动安装。
 
 ### 手动安装
 
@@ -155,7 +159,8 @@ YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS �
     * SystemConfiguration
     * sqlite3
     * libz
-5. 导入 `YYKit.h`。
+5. 如果你需要支持 WebP，可以将 `Vendor/WebP.framework`(静态库) 加入你的工程。
+6. 导入 `YYKit.h`。
 
 
 文档
@@ -175,3 +180,9 @@ YYKit 是一组功能丰富的 iOS 组件，用于构建大型、复杂的 iOS �
 许可证
 ==============
 YYKit 使用 MIT 许可证，详情见 LICENSE 文件。
+
+
+相关文章
+==============
+[iOS 保持界面流畅的技巧
+](http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/) 

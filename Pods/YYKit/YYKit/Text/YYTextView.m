@@ -25,6 +25,7 @@
 #import "NSAttributedString+YYText.h"
 #import "UIPasteboard+YYText.h"
 #import "UIDevice+YYAdd.h"
+#import "UIApplication+YYAdd.h"
 #import "YYImage.h"
 
 
@@ -422,6 +423,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Show or update `_magnifierCaret` based on `_trackingPoint`, and hide `_magnifierRange`.
 - (void)_showMagnifierCaret {
+    if ([UIApplication isAppExtension]) return;
+    
     if (_state.showingMagnifierRanged) {
         _state.showingMagnifierRanged = NO;
         [[YYTextEffectWindow sharedWindow] hideMagnifier:_magnifierRanged];
@@ -439,6 +442,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Show or update `_magnifierRanged` based on `_trackingPoint`, and hide `_magnifierCaret`.
 - (void)_showMagnifierRanged {
+    if ([UIApplication isAppExtension]) return;
+    
     if (_verticalForm) { // hack for vertical form...
         [self _showMagnifierCaret];
         return;
@@ -511,6 +516,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Update the showing magnifier.
 - (void)_updateMagnifier {
+    if ([UIApplication isAppExtension]) return;
+    
     if (_state.showingMagnifierCaret) {
         [[YYTextEffectWindow sharedWindow] moveMagnifier:_magnifierCaret];
     }
@@ -521,6 +528,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Hide the `_magnifierCaret` and `_magnifierRanged`.
 - (void)_hideMagnifier {
+    if ([UIApplication isAppExtension]) return;
+    
     if (_state.showingMagnifierCaret || _state.showingMagnifierRanged) {
         // disable touch began temporary to ignore caret animation overlap
         _state.ignoreTouchBegan = YES;
@@ -592,13 +601,15 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
     }
     
     if (self.isFirstResponder || _containerView.isFirstResponder) {
-        UIMenuController *menu = [UIMenuController sharedMenuController];
-        [menu setTargetRect:CGRectStandardize(rect) inView:_selectionView];
-        [menu update];
-        if (!_state.showingMenu || !menu.menuVisible) {
-            _state.showingMenu = YES;
-            [menu setMenuVisible:YES animated:YES];
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIMenuController *menu = [UIMenuController sharedMenuController];
+            [menu setTargetRect:CGRectStandardize(rect) inView:_selectionView];
+            [menu update];
+            if (!_state.showingMenu || !menu.menuVisible) {
+                _state.showingMenu = YES;
+                [menu setMenuVisible:YES animated:YES];
+            }
+        });
     }
 }
 
@@ -746,6 +757,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Keyboard frame changed, scroll the caret to visible range, or modify the content insets.
 - (void)_keyboardChanged {
+    if (!self.isFirstResponder) return;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if ([YYTextKeyboardManager defaultManager].keyboardVisible) {
             [self _scrollRangeToVisible:_selectedTextRange];
@@ -1006,6 +1018,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 /// If it shows selection grabber and this view was moved by super view,
 /// update the selection dot in window.
 - (void)_fixSelectionDot {
+    if ([UIApplication isAppExtension]) return;
+    
     CGPoint origin = [self convertPoint:CGPointZero toViewOrWindow:[YYTextEffectWindow sharedWindow]];
     if (!CGPointEqualToPoint(origin, _previousOriginInWindow)) {
         _previousOriginInWindow = origin;
@@ -1442,12 +1456,21 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 /// Update outer properties from current inner data.
 - (void)_updateOuterProperties {
     [self _updateAttributesHolder];
-    NSParagraphStyle *style = _typingAttributesHolder.paragraphStyle;
+    NSParagraphStyle *style = _innerText.paragraphStyle;
+    if (!style) style = _typingAttributesHolder.paragraphStyle;
     if (!style) style = [NSParagraphStyle defaultParagraphStyle];
     
+    UIFont *font = _innerText.font;
+    if (!font) font = _typingAttributesHolder.font;
+    if (!font) font = [self _defaultFont];
+    
+    UIColor *color = _innerText.color;
+    if (!color) color = _typingAttributesHolder.color;
+    if (!color) color = [UIColor blackColor];
+    
     [self _setText:[_innerText plainTextForRange:NSMakeRange(0, _innerText.length)]];
-    [self _setFont:_typingAttributesHolder.font];
-    [self _setTextColor:_typingAttributesHolder.color];
+    [self _setFont:font];
+    [self _setTextColor:color];
     [self _setTextAlignment:style.alignment];
     [self _setSelectedRange:_selectedTextRange.asRange];
     [self _setTypingAttributes:_typingAttributesHolder.attributes];
@@ -1520,8 +1543,9 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 /// Returns the `root` view controller (returns nil if not found).
 - (UIViewController *)_getRootViewController {
     UIViewController *ctrl = nil;
-    if (!ctrl) ctrl = [UIApplication sharedApplication].keyWindow.rootViewController;
-    if (!ctrl) ctrl = [[UIApplication sharedApplication].windows.firstObject rootViewController];
+    UIApplication *app = [UIApplication sharedExtensionApplication];
+    if (!ctrl) ctrl = app.keyWindow.rootViewController;
+    if (!ctrl) ctrl = [app.windows.firstObject rootViewController];
     if (!ctrl) ctrl = self.viewController;
     if (!ctrl) return nil;
     
@@ -1618,7 +1642,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 }
 
 /// Show undo alert if it can undo or redo.
-- (void)_showUndoAlert {
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+- (void)_showUndoRedoAlert NS_EXTENSION_UNAVAILABLE_IOS(""){
     _state.firstResponderBeforeUndoAlert = self.isFirstResponder;
     __weak typeof(self) _self = self;
     NSArray *strings = [self _localizedUndoStrings];
@@ -1687,6 +1712,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
         }
     }
 }
+#endif
 
 /// Get the localized undo alert strings based on app's main bundle.
 - (NSArray *)_localizedUndoStrings {
@@ -2397,6 +2423,27 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
     }
 }
 
+- (CGSize)sizeThatFits:(CGSize)size {
+    YYTextLayout *textLayout = self.textLayout;
+    CGSize currentSize = CGSizePixelCeil(textLayout.textBoundingSize);
+    if (_verticalForm) {
+        if (currentSize.height == size.height) return currentSize;
+    } else {
+        if (currentSize.width == size.width) return currentSize;
+    }
+    
+    if (_verticalForm) {
+        size.width = CGFLOAT_MAX;
+    } else {
+        size.height = CGFLOAT_MAX;
+    }
+    YYTextContainer *newContainer = _innerContainer.mutableCopy;
+    newContainer.size = size;
+    YYTextLayout *newLayout = [YYTextLayout layoutWithContainer:newContainer text:textLayout.text];
+    CGSize newSize = newLayout.textBoundingSize;
+    return CGSizePixelCeil(newSize);
+}
+
 #pragma mark - Override UIResponder
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -2488,7 +2535,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
                 [self _updateTextRangeByTrackingPreSelect];
                 showMagnifierCaret = YES;
             } else if (_state.trackingCaret || _markedTextRange || self.isFirstResponder) {
-                if (_state.touchMoved) {
+                if (_state.trackingCaret || _state.touchMoved) {
                     _state.trackingCaret = YES;
                     [self _hideMenu];
                     if (_verticalForm) {
@@ -2624,6 +2671,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
                 if ([self.delegate respondsToSelector:@selector(textViewDidChangeSelection:)]) {
                     [self.delegate textViewDidChangeSelection:self];
                 }
+                [self _updateAttributesHolder];
+                [self _updateOuterProperties];
             }
             if (!_state.trackingGrabber && !_state.trackingPreSelect) {
                 [self _scrollRangeToVisible:_selectedTextRange];
@@ -2645,7 +2694,12 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake && _allowsUndoAndRedo) {
-        [self _showUndoAlert];
+        if (![UIApplication isAppExtension]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+            [self performSelector:@selector(_showUndoRedoAlert)];
+#pragma clang diagnostic pop
+        }
     } else {
         [super motionEnded:motion withEvent:event];
     }
@@ -3206,13 +3260,20 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
     [self _endTouchTracking];
     [self _hideMenu];
     
+    if ([self.delegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)]) {
+        NSRange range = _markedTextRange ? _markedTextRange.asRange : NSMakeRange(_selectedTextRange.end.offset, 0);
+        BOOL should = [self.delegate textView:self shouldChangeTextInRange:range replacementText:markedText];
+        if (!should) return;
+    }
+    
+    
     if (!NSEqualRanges(_lastTypeRange, _selectedTextRange.asRange)) {
         [self _saveToUndoStack];
         [self _resetRedoStack];
     }
     
     BOOL needApplyHolderAttribute = NO;
-    if (_innerText.length > 0) {
+    if (_innerText.length > 0 && _markedTextRange) {
         [self _updateAttributesHolder];
     } else {
         needApplyHolderAttribute = YES;
@@ -3255,6 +3316,9 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
     [self _updateSelectionView];
     [self _scrollRangeToVisible:_selectedTextRange];
     
+    if ([self.delegate respondsToSelector:@selector(textViewDidChange:)]) {
+        [self.delegate textViewDidChange:self];
+    }
     if ([self.delegate respondsToSelector:@selector(textViewDidChangeSelection:)]) {
         [self.delegate textViewDidChangeSelection:self];
     }

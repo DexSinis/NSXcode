@@ -15,12 +15,11 @@
 #import "YYWeakProxy.h"
 #import "UIImage+YYAdd.h"
 #import <ImageIO/ImageIO.h>
+#import <libkern/OSAtomic.h>
 #import "YYKitMacro.h"
 
 #if __has_include("YYDispatchQueuePool.h")
 #import "YYDispatchQueuePool.h"
-#else
-#import <libkern/OSAtomic.h>
 #endif
 
 #define MIN_PROGRESSIVE_TIME_INTERVAL 0.2
@@ -51,6 +50,34 @@ static NSData *JPEGSOSMarker() {
         marker = [NSData dataWithBytes:bytes length:2];
     });
     return marker;
+}
+
+static NSMutableSet *URLBlacklist;
+static OSSpinLock URLBlacklistLock;
+
+static void URLBlacklistInit() {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        URLBlacklist = [NSMutableSet new];
+        URLBlacklistLock = OS_SPINLOCK_INIT;
+    });
+}
+
+static BOOL URLBlackListContains(NSURL *url) {
+    if (!url || url == (id)[NSNull null]) return NO;
+    URLBlacklistInit();
+    OSSpinLockLock(&URLBlacklistLock);
+    BOOL contains = [URLBlacklist containsObject:url];
+    OSSpinLockUnlock(&URLBlacklistLock);
+    return contains;
+}
+
+static void URLInBlackListAdd(NSURL *url) {
+    if (!url || url == (id)[NSNull null]) return;
+    URLBlacklistInit();
+    OSSpinLockLock(&URLBlacklistLock);
+    [URLBlacklist addObject:url];
+    OSSpinLockUnlock(&URLBlacklistLock);
 }
 
 
@@ -172,7 +199,7 @@ static NSData *JPEGSOSMarker() {
 - (void)dealloc {
     [_lock lock];
     if (_taskID != UIBackgroundTaskInvalid) {
-        [[UIApplication sharedApplication] endBackgroundTask:_taskID];
+        [[UIApplication sharedExtensionApplication] endBackgroundTask:_taskID];
         _taskID = UIBackgroundTaskInvalid;
     }
     if ([self isExecuting]) {
@@ -181,7 +208,7 @@ static NSData *JPEGSOSMarker() {
         if (_connection) {
             [_connection cancel];
             if (![_request.URL isFileURL] && (_options & YYWebImageOptionShowNetworkActivity)) {
-                [[UIApplication sharedApplication] decrementNetworkActivityCount];
+                [[UIApplication sharedExtensionApplication] decrementNetworkActivityCount];
             }
         }
         if (_completion) {
@@ -196,7 +223,7 @@ static NSData *JPEGSOSMarker() {
 - (void)_endBackgroundTask {
     [_lock lock];
     if (_taskID != UIBackgroundTaskInvalid) {
-        [[UIApplication sharedApplication] endBackgroundTask:_taskID];
+        [[UIApplication sharedExtensionApplication] endBackgroundTask:_taskID];
         _taskID = UIBackgroundTaskInvalid;
     }
     [_lock unlock];
@@ -252,6 +279,17 @@ static NSData *JPEGSOSMarker() {
 - (void)_startRequest:(id)object {
     if ([self isCancelled]) return;
     @autoreleasepool {
+        if ((_options & YYWebImageOptionIgnoreFailedURL) && URLBlackListContains(_request.URL)) {
+            NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:@{ NSLocalizedDescriptionKey : @"Failed to load URL, blacklisted." }];
+            [_lock lock];
+            if (![self isCancelled]) {
+                if (_completion) _completion(nil, _request.URL, YYWebImageFromNone, YYWebImageStageFinished, error);
+            }
+            [self _finish];
+            [_lock unlock];
+            return;
+        }
+        
         if (_request.URL.isFileURL) {
             NSArray *keys = @[NSURLFileSizeKey];
             NSDictionary *attr = [_request.URL resourceValuesForKeys:keys error:nil];
@@ -264,7 +302,7 @@ static NSData *JPEGSOSMarker() {
         if (![self isCancelled]) {
             _connection = [[NSURLConnection alloc] initWithRequest:_request delegate:[YYWeakProxy proxyWithTarget:self]];
             if (![_request.URL isFileURL] && (_options & YYWebImageOptionShowNetworkActivity)) {
-                [[UIApplication sharedApplication] incrementNetworkActivityCount];
+                [[UIApplication sharedExtensionApplication] incrementNetworkActivityCount];
             }
         }
         [_lock unlock];
@@ -276,7 +314,7 @@ static NSData *JPEGSOSMarker() {
     @autoreleasepool {
         if (_connection) {
             if (![_request.URL isFileURL] && (_options & YYWebImageOptionShowNetworkActivity)) {
-                [[UIApplication sharedApplication] decrementNetworkActivityCount];
+                [[UIApplication sharedExtensionApplication] decrementNetworkActivityCount];
             }
         }
         [_connection cancel];
@@ -319,6 +357,13 @@ static NSData *JPEGSOSMarker() {
             NSError *error = nil;
             if (!image) {
                 error = [NSError errorWithDomain:@"com.ibireme.yykit.image" code:-1 userInfo:@{ NSLocalizedDescriptionKey : @"Web image decode fail." }];
+                if (_options & YYWebImageOptionIgnoreFailedURL) {
+                    if (URLBlackListContains(_request.URL)) {
+                        error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:@{ NSLocalizedDescriptionKey : @"Failed to load URL, blacklisted." }];
+                    } else {
+                        URLInBlackListAdd(_request.URL);
+                    }
+                }
             }
             if (_completion) _completion(image, _request.URL, YYWebImageFromRemote, YYWebImageStageFinished, error);
             [self _finish];
@@ -582,7 +627,7 @@ static NSData *JPEGSOSMarker() {
                 [self performSelector:@selector(_didReceiveImageFromWeb:) onThread:[self.class _networkThread] withObject:image waitUntilDone:NO];
             });
             if (![self.request.URL isFileURL] && (self.options & YYWebImageOptionShowNetworkActivity)) {
-                [[UIApplication sharedApplication] decrementNetworkActivityCount];
+                [[UIApplication sharedExtensionApplication] decrementNetworkActivityCount];
             }
         }
         [_lock unlock];
@@ -599,9 +644,18 @@ static NSData *JPEGSOSMarker() {
             _connection = nil;
             _data = nil;
             if (![_request.URL isFileURL] && (_options & YYWebImageOptionShowNetworkActivity)) {
-                [[UIApplication sharedApplication] decrementNetworkActivityCount];
+                [[UIApplication sharedExtensionApplication] decrementNetworkActivityCount];
             }
             [self _finish];
+            
+            if (_options & YYWebImageOptionIgnoreFailedURL) {
+                if (error.code != NSURLErrorNotConnectedToInternet &&
+                    error.code != NSURLErrorCancelled &&
+                    error.code != NSURLErrorTimedOut &&
+                    error.code != NSURLErrorUserCancelledAuthentication) {
+                    URLInBlackListAdd(_request.URL);
+                }
+            }
         }
         [_lock unlock];
     }
@@ -626,10 +680,10 @@ static NSData *JPEGSOSMarker() {
             } else {
                 self.executing = YES;
                 [self performSelector:@selector(_startOperation) onThread:[[self class] _networkThread] withObject:nil waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
-                if (_options & YYWebImageOptionAllowBackgroundTask) {
+                if ((_options & YYWebImageOptionAllowBackgroundTask) && ![UIApplication isAppExtension]) {
                     __weak __typeof__ (self) _self = self;
                     if (_taskID == UIBackgroundTaskInvalid) {
-                        _taskID = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+                        _taskID = [[UIApplication sharedExtensionApplication] beginBackgroundTaskWithExpirationHandler:^{
                             __strong __typeof (_self) self = _self;
                             if (self) {
                                 [self cancel];

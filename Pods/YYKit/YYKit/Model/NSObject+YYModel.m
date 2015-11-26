@@ -572,10 +572,18 @@ static force_inline void ModelSetNumberToProperty(__unsafe_unretained id model,
             ((void (*)(id, SEL, uint32_t))(void *) objc_msgSend)((id)model, meta->_setter, (uint32_t)num.unsignedIntValue);
         } break;
         case YYEncodingTypeInt64: {
-            ((void (*)(id, SEL, int64_t))(void *) objc_msgSend)((id)model, meta->_setter, (int64_t)num.longLongValue);
-        }
+            if ([num isKindOfClass:[NSDecimalNumber class]]) {
+                ((void (*)(id, SEL, int64_t))(void *) objc_msgSend)((id)model, meta->_setter, (int64_t)num.stringValue.longLongValue);
+            } else {
+                ((void (*)(id, SEL, uint64_t))(void *) objc_msgSend)((id)model, meta->_setter, (uint64_t)num.longLongValue);
+            }
+        } break;
         case YYEncodingTypeUInt64: {
-            ((void (*)(id, SEL, uint64_t))(void *) objc_msgSend)((id)model, meta->_setter, (uint64_t)num.unsignedLongLongValue);
+            if ([num isKindOfClass:[NSDecimalNumber class]]) {
+                ((void (*)(id, SEL, int64_t))(void *) objc_msgSend)((id)model, meta->_setter, (int64_t)num.stringValue.longLongValue);
+            } else {
+                ((void (*)(id, SEL, uint64_t))(void *) objc_msgSend)((id)model, meta->_setter, (uint64_t)num.unsignedLongLongValue);
+            }
         } break;
         case YYEncodingTypeFloat: {
             float f = num.floatValue;
@@ -1179,9 +1187,6 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
     if (modelMeta->_nsType) return [self copy];
     
     NSObject *one = [self.class new];
-    [modelMeta->_allPropertyMetas enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-    }];
     for (_YYModelPropertyMeta *propertyMeta in modelMeta->_allPropertyMetas) {
         if (!propertyMeta->_getter || !propertyMeta->_setter) continue;
         
@@ -1368,7 +1373,7 @@ static id ModelToJSONObjectRecursive(NSObject *model) {
     for (_YYModelPropertyMeta *propertyMeta in modelMeta->_allPropertyMetas) {
         if (!propertyMeta->_getter) continue;
         id this = [self valueForKey:NSStringFromSelector(propertyMeta->_getter)];
-        id that = [self valueForKey:NSStringFromSelector(propertyMeta->_getter)];
+        id that = [model valueForKey:NSStringFromSelector(propertyMeta->_getter)];
         if (this == that) continue;
         if (this == nil || that == nil) return NO;
         if ([this isEqual:that]) continue;

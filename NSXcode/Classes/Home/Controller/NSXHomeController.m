@@ -7,11 +7,13 @@
 //
 
 #import "NSXHomeController.h"
-#import "NSXCell.h"
+//#import "NSXCell.h"
+#import "NSXHomeCell.h"
 #import "NSXMenu.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
+#import "UITableView+SDAutoTableViewCellHeight.h"
 
 @interface NSXHomeController ()
 
@@ -53,10 +55,10 @@ static NSString * const CYXCellID = @"cell";
 #pragma mark - private methods 私有方法
 
 - (void)setupTable{
-    self.tableView.rowHeight = 90;
+//    self.tableView.rowHeight = 90;
     
     // 注册重用Cell
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NSXCell class]) bundle:nil] forCellReuseIdentifier:CYXCellID];
+//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NSXCell class]) bundle:nil] forCellReuseIdentifier:CYXCellID];
     
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -146,16 +148,35 @@ static NSString * const CYXCellID = @"cell";
 #pragma mark - UITableviewDatasource 数据源方法
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    [self.tableView startAutoCellHeightWithCellClass:[NSXHomeCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
+    
     return self.menus.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSXCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    NSXCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    
+//    cell.menu = self.menus[indexPath.row];
+//    
+//    return cell;
     
+    
+//    int index = indexPath.row % 5;
+    static NSString *ID = @"test";
+    NSXHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[NSXHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
     cell.menu = self.menus[indexPath.row];
-    
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    int index = indexPath.row % 5;
+    NSXMenu *menu = self.menus[indexPath.row];
+    return [self.tableView cellHeightForIndexPath:indexPath model:menu keyPath:@"menu"];
 }
 
 #pragma mark - UITableviewDelegate 代理方法
