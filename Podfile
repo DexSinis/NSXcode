@@ -1,9 +1,13 @@
-platform :ios, "9.0"
+platform :ios, '9.0'
 
-pod "AFNetworking"
-pod "SDWebImage"
-pod "MJExtension"
-pod "MJRefresh"
-pod "YYKit"
-pod "UITableView+FDTemplateLayoutCell"
-pod "GPUImage"
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'YYKit'
+#pod 'UITableView+FDTemplateLayoutCell'
+pod 'GPUImage'
+pod 'AFOnoResponseSerializer'
+pod 'HMSegmentedControl'
+pod 'LeanCloudSDK'
+pod 'ASIHTTPRequest'

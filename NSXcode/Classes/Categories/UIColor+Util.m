@@ -29,21 +29,24 @@
 //
 //#pragma mark - theme colors
 //
-//+ (UIColor *)themeColor
-//{
++ (UIColor *)themeColor
+{
+    
+    return [UIColor blueColor];
 //    if (((AppDelegate *)[UIApplication sharedApplication].delegate).inNightMode) {
 //        return [UIColor colorWithRed:0.17 green:0.17 blue:0.17 alpha:1.0];
 //    }
 //    return [UIColor colorWithRed:235.0/255 green:235.0/255 blue:243.0/255 alpha:1.0];
-//}
+}
 //
-//+ (UIColor *)nameColor
-//{
++ (UIColor *)nameColor
+{
+    return [UIColor blueColor];
 //    if (((AppDelegate *)[UIApplication sharedApplication].delegate).inNightMode) {
 //        return [UIColor colorWithRed:37.0/255 green:147.0/255 blue:58.0/255 alpha:1.0];
 //    }
 //    return [UIColor colorWithHex:0x087221];
-//}
+}
 //
 //+ (UIColor *)titleColor
 //{
@@ -69,13 +72,15 @@
 //    return [UIColor whiteColor];
 //}
 //
-//+ (UIColor *)titleBarColor
-//{
++ (UIColor *)titleBarColor
+{
+    
+    return [UIColor blueColor];
 //    if (((AppDelegate *)[UIApplication sharedApplication].delegate).inNightMode) {
 //        return  [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1.0];
 //    }
 //    return [UIColor colorWithHex:0xE1E1E1];
-//}
+}
 //
 //+ (UIColor *)contentTextColor
 //{

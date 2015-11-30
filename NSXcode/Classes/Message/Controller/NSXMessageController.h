@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface NSXMessageController : UIViewController
+#import "HMSegmentedControl.h"
+@interface NSXMessageController : UIViewController <UIScrollViewDelegate>
 
 @end

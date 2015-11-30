@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AFOnoResponseSerializer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ASIHTTPRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GPUImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HMSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,17 +39,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Ono.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +67,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2D754DAFCDDB5C74F371F384A063428D</key>
+		<key>06D1E331F819F0A76EC732F42EA982C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FE880510D600138F54D126B01663345</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2AB49797D14D57FA43A345254AFB9F18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33ED830477B6E7E276B2B3255A5DC77A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79A360724FB63B7D195FA45D2E482D34</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>864592DAE5BF1AB8CEEADCE695F9E090</key>
+		<key>8942FCFCE19DFD8277496ED3746EAED1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>AC320BF3B09D57852C0D12961DFE9A76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5EA24F4AC65FB57A93A5FC9B2058CF7</key>
+		<key>DDCE26CDE8794AF8E72BAE43A355AFC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB1A7BE7726586F169C9461A24B6AA51</key>
 		<dict>
 			<key>primary</key>
 			<true/>

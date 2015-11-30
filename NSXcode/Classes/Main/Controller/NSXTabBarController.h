@@ -10,4 +10,5 @@
 
 @interface NSXTabBarController : UITabBarController
 
+@property (nonatomic, strong) UIButton *centerButton;
 @end

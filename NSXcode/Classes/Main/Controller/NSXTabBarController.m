@@ -7,7 +7,7 @@
 //
 
 #import "NSXTabBarController.h"
-#import "NSXHomeController.h"
+#import "NSXNewsController.h"
 #import "NSXMessageController.h"
 #import "NSXSearchController.h"
 #import "NSXSettingController.h"
@@ -20,8 +20,25 @@
 #import "UIImage+Util.h"
 #import "UIColor+Util.h"
 #import "NSXOptionButton.h"
+#import "SwipableViewController.h"
+#import "NewsViewController.h"
+
 
 @interface NSXTabBarController ()  <UITabBarControllerDelegate>
+{
+//    NSXHomeController *oneVC;
+//    NSXMessageController *twoVC;
+//    NSXSearchController *threeVC;
+//    NSXSettingController *fourVC ;
+    NewsViewController *newsViewCtl;
+    NewsViewController *hotNewsViewCtl;
+    NSXNewsController *blogViewCtl;
+    NSXNewsController *recommendBlogViewCtl;
+    
+    NSXSettingController *newTweetViewCtl;
+    NSXSettingController *hotTweetViewCtl;
+    NSXSettingController *myTweetViewCtl;
+}
 @property (nonatomic, strong) UIView *dimView;
 @property (nonatomic, strong) UIImageView *blurView;
 @property (nonatomic, assign) BOOL isPressed;
@@ -35,12 +52,139 @@
 
 @implementation NSXTabBarController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dawnAndNightMode:) name:@"dawnAndNight" object:nil];
+}
+
+- (void)dawnAndNightMode:(NSNotification *)center
+{
+
+    newsViewCtl.view.backgroundColor = [UIColor themeColor];
+    hotNewsViewCtl.view.backgroundColor = [UIColor themeColor];
+    blogViewCtl.view.backgroundColor = [UIColor themeColor];
+    recommendBlogViewCtl.view.backgroundColor = [UIColor themeColor];
+    
+    newTweetViewCtl.view.backgroundColor = [UIColor themeColor];
+    hotTweetViewCtl.view.backgroundColor = [UIColor themeColor];
+    myTweetViewCtl.view.backgroundColor = [UIColor themeColor];
+
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationbarColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor titleBarColor]];
+    
+    [self.viewControllers enumerateObjectsUsingBlock:^(UINavigationController *nav, NSUInteger idx, BOOL *stop) {
+        if (idx == 0) {
+            SwipableViewController *newsVc = nav.viewControllers[0];
+            [newsVc.titleBar setTitleButtonsColor];
+            [newsVc.viewPager.controllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                UITableViewController *table = obj;
+                [table.navigationController.navigationBar setBarTintColor:[UIColor navigationbarColor]];
+                [table.tabBarController.tabBar setBarTintColor:[UIColor titleBarColor]];
+                [table.tableView reloadData];
+            }];
+            
+        } else if (idx == 1) {
+            SwipableViewController *tweetVc = nav.viewControllers[0];
+            [tweetVc.titleBar setTitleButtonsColor];
+            [tweetVc.viewPager.controllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                UITableViewController *table = obj;
+                [table.navigationController.navigationBar setBarTintColor:[UIColor navigationbarColor]];
+                [table.tabBarController.tabBar setBarTintColor:[UIColor titleBarColor]];
+                [table.tableView reloadData];
+            }];
+            
+        } else if (idx == 3) {
+//            DiscoverViewController *dvc = nav.viewControllers[0];
+//            [dvc.navigationController.navigationBar setBarTintColor:[UIColor navigationbarColor]];
+//            [dvc.tabBarController.tabBar setBarTintColor:[UIColor titleBarColor]];
+//            [dvc dawnAndNightMode];
+        } else if (idx == 4) {
+//            HomepageViewController *homepageVC = nav.viewControllers[0];
+//            [homepageVC.navigationController.navigationBar setBarTintColor:[UIColor navigationbarColor]];
+//            [homepageVC.tabBarController.tabBar setBarTintColor:[UIColor titleBarColor]];
+//            [homepageVC dawnAndNightMode];
+        }
+    }];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setUpAllChildViewController];
+//    [self setUpAllChildViewController];
     
      self.delegate = self;
+    
+    newsViewCtl = [[NewsViewController alloc]  initWithNewsListType:NewsListTypeNews];
+    hotNewsViewCtl = [[NewsViewController alloc]  initWithNewsListType:NewsListTypeAllTypeWeekHottest];
+    
+//    UIViewController *testVc = [[UIViewController alloc] init];
+////    testVc.view.backgroundColor = [UIColor blueColor];
+//    
+//    SwipableViewController *newsSVC = [[SwipableViewController alloc] initWithTitle:@"综合"
+//                                                                       andSubTitles:@[@"资讯", @"热点", @"博客", @"推荐"]
+//                                                                     andControllers:@[newsViewCtl, hotNewsViewCtl]
+//                                                                        underTabbar:YES];
+//    
+//    SwipableViewController *tweetsSVC = [[SwipableViewController alloc] initWithTitle:@"动弹"
+//                                                                         andSubTitles:@[@"最新动弹", @"热门动弹", @"我的动弹"]
+//                                                                       andControllers:@[newsViewCtl, hotNewsViewCtl]
+//                                                                          underTabbar:YES];
+    
+    // 1.添加第一个控制器
+    NSXNewsController *oneVC = [[NSXNewsController alloc]init];
+    UINavigationController *oneNav = [[UINavigationController alloc]initWithRootViewController:oneVC];
+    
+    // 2.添加第2个控制器
+    NSXMessageController *twoVC = [[NSXMessageController alloc]init];
+    UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVC];
+    
+    // 3.添加第3个控制器
+    NSXSearchController *threeVc = [[NSXSearchController alloc]init];
+//    [self setUpOneChildViewController:discoverVc image:[UIImage imageNamed:@"qw"] title:@"博文"];
+    
+    UINavigationController *threeNav = [[UINavigationController alloc]initWithRootViewController:threeVc];
+    
+    
+    // 4.添加第4个控制器
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"NSXSettingController" bundle:nil];
+    
+    NSXSettingController *fourVc = [storyBoard instantiateInitialViewController];
+    
+    UINavigationController *fourNav = [[UINavigationController alloc]initWithRootViewController:fourVc];
+    //    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
+    
+//    [self setUpOneChildViewController:homepageNav image:[UIImage imageNamed:@"user"] title:@"设置"];
+    
+    
+    self.viewControllers = @[
+                             oneNav,
+                             twoNav,
+                             [UIViewController new],
+                             threeNav,
+                             fourNav,
+                             ];
+    
+    NSArray *titles = @[@"综合", @"动弹", @"", @"发现", @"我"];
+    NSArray *images = @[@"tabbar-news", @"tabbar-tweet", @"", @"tabbar-discover", @"tabbar-me"];
+    [self.tabBar.items enumerateObjectsUsingBlock:^(UITabBarItem *item, NSUInteger idx, BOOL *stop) {
+        [item setTitle:titles[idx]];
+        [item setImage:[UIImage imageNamed:images[idx]]];
+        [item setSelectedImage:[UIImage imageNamed:[images[idx] stringByAppendingString:@"-selected"]]];
+    }];
+    
+    [self.tabBar.items[2] setEnabled:NO];
+    
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"tabbar-more"]];
+    
+    [self.tabBar addObserver:self
+                  forKeyPath:@"selectedItem"
+                     options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew
+                     context:nil];
     
     _optionButtons = [NSMutableArray new];
     _screenHeight = [UIScreen mainScreen].bounds.size.height;
@@ -72,12 +216,41 @@
     }
 }
 
+
+-(void)addCenterButtonWithImage:(UIImage *)buttonImage
+{
+    _centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    CGPoint origin = [self.view convertPoint:self.tabBar.center toView:self.tabBar];
+    CGSize buttonSize = CGSizeMake(self.tabBar.frame.size.width / 5 - 6, self.tabBar.frame.size.height - 4);
+    
+    _centerButton.frame = CGRectMake(origin.x - buttonSize.height/2, origin.y - buttonSize.height/2, buttonSize.height, buttonSize.height);
+    
+    [_centerButton setCornerRadius:buttonSize.height/2];
+    [_centerButton setBackgroundColor:[UIColor colorWithHex:0x24a83d]];
+    [_centerButton setImage:buttonImage forState:UIControlStateNormal];
+    [_centerButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.tabBar addSubview:_centerButton];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"selectedItem"]) {
+        if(self.isPressed) {[self buttonPressed];}
+    }
+}
+
+
 /**
  *  添加所有子控制器
  */
 - (void)setUpAllChildViewController{
     // 1.添加第一个控制器
-    NSXHomeController *oneVC = [[NSXHomeController alloc]init];
+    NSXNewsController *oneVC = [[NSXNewsController alloc]init];
 //    WBStatusTimelineViewController *oneVC = [[WBStatusTimelineViewController alloc] init];
     
 //        T1HomeTimelineItemsViewController *oneVC = [[T1HomeTimelineItemsViewController alloc] init];
@@ -122,14 +295,35 @@
 }
 
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
+#pragma mark -
 
+- (UINavigationController *)addNavigationItemForViewController:(UIViewController *)viewController
+{
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    [self buttonPressed];
-    NSLog(@"%@",viewController);
+    viewController.navigationItem.leftBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar-sidebar"]
+                                                                                        style:UIBarButtonItemStylePlain
+                                                                                       target:self action:@selector(onClickMenuButton)];
+    
+    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                                                                                     target:self
+                                                                                                     action:@selector(pushSearchViewController)];
+    
+    
+    
+    return navigationController;
 }
 
+
+//
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+//{
+//
+//    
+//    [self buttonPressed];
+//    NSLog(@"%@",viewController);
+//}
+//
 
 
 
@@ -232,7 +426,25 @@
                      }];
 }
 
+-(void)viewWillLayoutSubviews
+{
+    NSLog(@"viewWillLayoutSubviews");
+    [self updateCenterButton];
+}
 
-
+-(void)updateCenterButton
+{
+    
+    CGPoint origin = [self.view convertPoint:self.tabBar.center toView:self.tabBar];
+    CGSize buttonSize = CGSizeMake(self.tabBar.frame.size.width / 5 - 6, self.tabBar.frame.size.height - 4);
+    
+    _centerButton.frame = CGRectMake(origin.x - buttonSize.height/2, origin.y - buttonSize.height/2, buttonSize.height, buttonSize.height);
+    
+    [_centerButton setCornerRadius:buttonSize.height/2];
+    
+    [_centerButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.tabBar addSubview:_centerButton];
+}
 
 @end

@@ -25,7 +25,7 @@
 
 #import "UIView+SDAutoLayout.h"
 #import "UITableView+SDAutoTableViewCellHeight.h"
-#import "UIView+Visuals.h"
+//#import "UIView+Visuals.h"
 @implementation TestCell2
 {
     UIView *_view0;
@@ -81,7 +81,7 @@
         .heightIs(50)
         .topSpaceToView(self.contentView, 10)
         .leftSpaceToView(self.contentView, 10);
-        [_view0 cornerRadius:50/4 strokeSize:0 color:nil];
+//        [_view0 cornerRadius:50/4 strokeSize:0 color:nil];
         
         _view1.sd_layout
         .topEqualToView(_view0)
