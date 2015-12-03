@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.navigationItem.leftBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar-sidebar"]
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self action:@selector(onClickMenuButton)];
 }
 
 - (void)didReceiveMemoryWarning {

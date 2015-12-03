@@ -1,1 +1,0 @@
-../../../../LeanCloudSDK/Frameworks/AVOSCloud.framework/Headers/AVSignature.h

@@ -22,6 +22,7 @@
 #import "NSXOptionButton.h"
 #import "SwipableViewController.h"
 #import "NewsViewController.h"
+#import "NSXNavigationController.h"
 
 
 @interface NSXTabBarController ()  <UITabBarControllerDelegate>
@@ -48,6 +49,9 @@
 @property (nonatomic, assign) CGFloat screenHeight;
 @property (nonatomic, assign) CGFloat screenWidth;
 @property (nonatomic, assign) CGGlyph length;
+
+@property (nonatomic, strong) UIPanGestureRecognizer *leftSwipe;
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *percent;
 @end
 
 @implementation NSXTabBarController
@@ -114,11 +118,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    UIViewController *c1=[[UIViewController alloc]init];
+//    c1.view.backgroundColor=[UIColor grayColor];
+//    c1.view.backgroundColor=[UIColor greenColor];
+//    c1.tabBarItem.title=@"消息";
+//    c1.tabBarItem.image=[UIImage imageNamed:@"tab_recent_nor"];
+//    c1.tabBarItem.badgeValue=@"123";
+//    
+//    UIViewController *c2=[[UIViewController alloc]init];
+//    c2.view.backgroundColor=[UIColor brownColor];
+//    c2.tabBarItem.title=@"联系人";
+//    c2.tabBarItem.image=[UIImage imageNamed:@"tab_buddy_nor"];
+//    
+//    UIViewController *c3=[[UIViewController alloc]init];
+//    c3.tabBarItem.title=@"动态";
+//    c3.tabBarItem.image=[UIImage imageNamed:@"tab_qworld_nor"];
+//    
+//    UIViewController *c4=[[UIViewController alloc]init];
+//    c4.tabBarItem.title=@"设置";
+//    c4.tabBarItem.image=[UIImage imageNamed:@"tab_me_nor"];
+    
+    
+    //c.添加子控制器到ITabBarController中
+    //c.1第一种方式
+    //    [tb addChildViewController:c1];
+    //    [tb addChildViewController:c2];
+    
+    //c.2第二种方式
+//    self.viewControllers=@[c1,c2,c3,c4];
+
 
 //    [self setUpAllChildViewController];
-    
+
      self.delegate = self;
-    
+
     newsViewCtl = [[NewsViewController alloc]  initWithNewsListType:NewsListTypeNews];
     hotNewsViewCtl = [[NewsViewController alloc]  initWithNewsListType:NewsListTypeAllTypeWeekHottest];
     
@@ -136,12 +170,12 @@
 //                                                                          underTabbar:YES];
     
     // 1.添加第一个控制器
-    NSXNewsController *oneVC = [[NSXNewsController alloc]init];
-    UINavigationController *oneNav = [[UINavigationController alloc]initWithRootViewController:oneVC];
+    NSXNewsController *oneVc = [[NSXNewsController alloc]init];
+    UINavigationController *oneNav = [[UINavigationController alloc]initWithRootViewController:oneVc];
     
     // 2.添加第2个控制器
-    NSXMessageController *twoVC = [[NSXMessageController alloc]init];
-    UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVC];
+    NSXMessageController *twoVc = [[NSXMessageController alloc]init];
+    UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVc];
     
     // 3.添加第3个控制器
     NSXSearchController *threeVc = [[NSXSearchController alloc]init];
@@ -156,17 +190,18 @@
     NSXSettingController *fourVc = [storyBoard instantiateInitialViewController];
     
     UINavigationController *fourNav = [[UINavigationController alloc]initWithRootViewController:fourVc];
+    
     //    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
     
 //    [self setUpOneChildViewController:homepageNav image:[UIImage imageNamed:@"user"] title:@"设置"];
     
     
     self.viewControllers = @[
-                             oneNav,
-                             twoNav,
+                             [self addNavigationItemForViewController:oneVc],
+                             [self addNavigationItemForViewController:twoVc],
                              [UIViewController new],
-                             threeNav,
-                             fourNav,
+                             [self addNavigationItemForViewController:threeVc],
+                             [self addNavigationItemForViewController:fourVc],
                              ];
     
     NSArray *titles = @[@"综合", @"动弹", @"", @"发现", @"我"];
@@ -216,6 +251,10 @@
     }
 }
 
+-(void)dealloc
+{
+     [self.tabBar removeObserver:self forKeyPath:@"selectedItem"];
+}
 
 -(void)addCenterButtonWithImage:(UIImage *)buttonImage
 {
@@ -313,6 +352,8 @@
     
     return navigationController;
 }
+
+
 
 
 //
@@ -425,6 +466,8 @@
                          }
                      }];
 }
+
+
 
 -(void)viewWillLayoutSubviews
 {

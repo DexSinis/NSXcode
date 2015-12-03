@@ -49,6 +49,12 @@
 		DE5C156B1C06EFD600E8B428 /* HorizonalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15661C06EFD600E8B428 /* HorizonalTableViewController.m */; };
 		DE5C156C1C06EFD600E8B428 /* SwipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15681C06EFD600E8B428 /* SwipableViewController.m */; };
 		DE5C156D1C06EFD600E8B428 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C156A1C06EFD600E8B428 /* TitleBarView.m */; };
+		DE7BF7DA1C0FEBEB00B81F67 /* DEMOFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7D31C0FEBEB00B81F67 /* DEMOFirstViewController.m */; };
+		DE7BF7DB1C0FEBEB00B81F67 /* DEMOLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7D51C0FEBEB00B81F67 /* DEMOLeftMenuViewController.m */; };
+		DE7BF7DC1C0FEBEB00B81F67 /* DEMORightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7D71C0FEBEB00B81F67 /* DEMORightMenuViewController.m */; };
+		DE7BF7DD1C0FEBEB00B81F67 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7D91C0FEBEB00B81F67 /* DEMOSecondViewController.m */; };
+		DE7BF7DF1C0FF55400B81F67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7DE1C0FF55400B81F67 /* AppDelegate.m */; };
+		DE7BF7E21C102CBE00B81F67 /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7E11C102CBE00B81F67 /* TBViewController.m */; };
 		DE9BBBC61BFCA26B0048D32A /* twitter_0.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */; };
 		DE9BBBC71BFCA26B0048D32A /* twitter_1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */; };
 		DE9BBBC81BFCA26B0048D32A /* twitter_2.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBA01BFCA26B0048D32A /* twitter_2.json */; };
@@ -93,7 +99,7 @@
 		DEAF09B11BF988A400C6954F /* NSXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09901BF988A400C6954F /* NSXTabBarController.m */; };
 		DEAF09B21BF988A400C6954F /* NSXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09921BF988A400C6954F /* NSXViewController.m */; };
 		DEAF09B31BF988A400C6954F /* NSXMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09961BF988A400C6954F /* NSXMessageController.m */; };
-		DEAF09B41BF988A400C6954F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09991BF988A400C6954F /* AppDelegate.m */; };
+		DEAF09B41BF988A400C6954F /* AppDelegate2.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09991BF988A400C6954F /* AppDelegate2.m */; };
 		DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF099D1BF988A400C6954F /* NSXSearchController.m */; };
 		DEAF09B61BF988A400C6954F /* NSXSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09A11BF988A400C6954F /* NSXSettingController.m */; };
 		DEAF09B71BF988A400C6954F /* NSXSettingController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAF09A21BF988A400C6954F /* NSXSettingController.storyboard */; };
@@ -230,6 +236,17 @@
 		DE5C15681C06EFD600E8B428 /* SwipableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipableViewController.m; sourceTree = "<group>"; };
 		DE5C15691C06EFD600E8B428 /* TitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBarView.h; sourceTree = "<group>"; };
 		DE5C156A1C06EFD600E8B428 /* TitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBarView.m; sourceTree = "<group>"; };
+		DE7BF7D21C0FEBEB00B81F67 /* DEMOFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOFirstViewController.h; sourceTree = "<group>"; };
+		DE7BF7D31C0FEBEB00B81F67 /* DEMOFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOFirstViewController.m; sourceTree = "<group>"; };
+		DE7BF7D41C0FEBEB00B81F67 /* DEMOLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLeftMenuViewController.h; sourceTree = "<group>"; };
+		DE7BF7D51C0FEBEB00B81F67 /* DEMOLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLeftMenuViewController.m; sourceTree = "<group>"; };
+		DE7BF7D61C0FEBEB00B81F67 /* DEMORightMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMORightMenuViewController.h; sourceTree = "<group>"; };
+		DE7BF7D71C0FEBEB00B81F67 /* DEMORightMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMORightMenuViewController.m; sourceTree = "<group>"; };
+		DE7BF7D81C0FEBEB00B81F67 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
+		DE7BF7D91C0FEBEB00B81F67 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
+		DE7BF7DE1C0FF55400B81F67 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE7BF7E01C102CBE00B81F67 /* TBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBViewController.h; sourceTree = "<group>"; };
+		DE7BF7E11C102CBE00B81F67 /* TBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBViewController.m; sourceTree = "<group>"; };
 		DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_0.json; sourceTree = "<group>"; };
 		DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_1.json; sourceTree = "<group>"; };
 		DE9BBBA01BFCA26B0048D32A /* twitter_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_2.json; sourceTree = "<group>"; };
@@ -307,7 +324,7 @@
 		DEAF09951BF988A400C6954F /* NSXMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMessageController.h; sourceTree = "<group>"; };
 		DEAF09961BF988A400C6954F /* NSXMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMessageController.m; sourceTree = "<group>"; };
 		DEAF09981BF988A400C6954F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DEAF09991BF988A400C6954F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEAF09991BF988A400C6954F /* AppDelegate2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate2.m; sourceTree = "<group>"; };
 		DEAF099C1BF988A400C6954F /* NSXSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSearchController.h; sourceTree = "<group>"; };
 		DEAF099D1BF988A400C6954F /* NSXSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSearchController.m; sourceTree = "<group>"; };
 		DEAF09A01BF988A400C6954F /* NSXSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSettingController.h; sourceTree = "<group>"; };
@@ -781,6 +798,8 @@
 				DEAF09901BF988A400C6954F /* NSXTabBarController.m */,
 				DEAF09911BF988A400C6954F /* NSXViewController.h */,
 				DEAF09921BF988A400C6954F /* NSXViewController.m */,
+				DE7BF7E01C102CBE00B81F67 /* TBViewController.h */,
+				DE7BF7E11C102CBE00B81F67 /* TBViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -805,8 +824,17 @@
 		DEAF09971BF988A400C6954F /* other */ = {
 			isa = PBXGroup;
 			children = (
+				DE7BF7D21C0FEBEB00B81F67 /* DEMOFirstViewController.h */,
+				DE7BF7D31C0FEBEB00B81F67 /* DEMOFirstViewController.m */,
+				DE7BF7D41C0FEBEB00B81F67 /* DEMOLeftMenuViewController.h */,
+				DE7BF7D51C0FEBEB00B81F67 /* DEMOLeftMenuViewController.m */,
+				DE7BF7D61C0FEBEB00B81F67 /* DEMORightMenuViewController.h */,
+				DE7BF7D71C0FEBEB00B81F67 /* DEMORightMenuViewController.m */,
+				DE7BF7D81C0FEBEB00B81F67 /* DEMOSecondViewController.h */,
+				DE7BF7D91C0FEBEB00B81F67 /* DEMOSecondViewController.m */,
 				DEAF09981BF988A400C6954F /* AppDelegate.h */,
-				DEAF09991BF988A400C6954F /* AppDelegate.m */,
+				DEAF09991BF988A400C6954F /* AppDelegate2.m */,
+				DE7BF7DE1C0FF55400B81F67 /* AppDelegate.m */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -1145,7 +1173,7 @@
 				DEAF09B61BF988A400C6954F /* NSXSettingController.m in Sources */,
 				DE9BBC161BFCA5280048D32A /* YYTableView.m in Sources */,
 				DE4ACDCC1C072EF700BA5608 /* NSXNewsCell1.m in Sources */,
-				DEAF09B41BF988A400C6954F /* AppDelegate.m in Sources */,
+				DEAF09B41BF988A400C6954F /* AppDelegate2.m in Sources */,
 				DE5C156D1C06EFD600E8B428 /* TitleBarView.m in Sources */,
 				DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */,
 				DE4ACDC51C072E4E00BA5608 /* NewsCell.m in Sources */,
@@ -1173,6 +1201,7 @@
 				DE9BBBD71BFCA26B0048D32A /* WBEmoticonInputView.m in Sources */,
 				DE5C156B1C06EFD600E8B428 /* HorizonalTableViewController.m in Sources */,
 				DEAF09B11BF988A400C6954F /* NSXTabBarController.m in Sources */,
+				DE7BF7DF1C0FF55400B81F67 /* AppDelegate.m in Sources */,
 				DE5C155D1C06B79700E8B428 /* NSXOptionButton.m in Sources */,
 				DE9BBBDB1BFCA26B0048D32A /* WBStatusComposeViewController.m in Sources */,
 				DE34ED861BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
@@ -1184,12 +1213,15 @@
 				DE5C15591C06AF0700E8B428 /* UIImage+Util.m in Sources */,
 				DE5A182D1C07EB8D00FD3B1D /* NSXNewsDetails.m in Sources */,
 				DE34EDA31BF9B451003CFC80 /* UIView+SDExtension.m in Sources */,
+				DE7BF7DB1C0FEBEB00B81F67 /* DEMOLeftMenuViewController.m in Sources */,
 				DE9BBBCD1BFCA26B0048D32A /* T1StatusCell.m in Sources */,
 				DE5A18331C084AAE00FD3B1D /* NSDate+TimeAgo.m in Sources */,
+				DE7BF7E21C102CBE00B81F67 /* TBViewController.m in Sources */,
 				DE0187011C0BFDD100F45AC1 /* NSXNewsParam.m in Sources */,
 				DE0186F71C0BF6F300F45AC1 /* NSXNews+provider.m in Sources */,
 				DE5C15631C06BB5C00E8B428 /* UIColor+Util.m in Sources */,
 				DE9BBBDA1BFCA26B0048D32A /* WBStatusComposeTextParser.m in Sources */,
+				DE7BF7DD1C0FEBEB00B81F67 /* DEMOSecondViewController.m in Sources */,
 				DE34EDA11BF9B451003CFC80 /* SDRefreshHeaderView.m in Sources */,
 				DEAF09B81BF988A400C6954F /* NSXPushController.m in Sources */,
 				DE5A18211C07E64D00FD3B1D /* NSXNewsCellTest.m in Sources */,
@@ -1205,7 +1237,9 @@
 				DE5A18411C08581700FD3B1D /* FAImageView.m in Sources */,
 				DEAF09B91BF988A400C6954F /* NSXGroupItem.m in Sources */,
 				DEAF09AD1BF988A400C6954F /* NSXMenu.m in Sources */,
+				DE7BF7DA1C0FEBEB00B81F67 /* DEMOFirstViewController.m in Sources */,
 				DE5A18441C08581700FD3B1D /* UIImage+FontAwesome.m in Sources */,
+				DE7BF7DC1C0FEBEB00B81F67 /* DEMORightMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
