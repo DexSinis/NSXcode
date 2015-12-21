@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "NSXViewController.h"
+#import "NSXNavigationBarSearchViewController.h"
 #import "NSXTabBarController.h"
 
 #import "DEMOFirstViewController.h"
@@ -16,10 +16,15 @@
 #import "DEMOFirstViewController.h"
 
 #import "NSXNavigationController.h"
+#import "MMDrawerController.h"
+#import "MMNavigationController.h"
+#import "MMExampleLeftSideDrawerViewController.h"
+#import "MMExampleRightSideDrawerViewController.h"
+#import "MMExampleDrawerVisualStateManager.h"
 
-#import "TBViewController.h"
+#import "LeftMenuViewController.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong) MMDrawerController * drawerController;
 @end
 
 @implementation AppDelegate
@@ -37,25 +42,80 @@
 //    TBViewController *dragVC = [[TBViewController alloc]init];
 //    NSXNavigationController *dragVC = [[NSXNavigationController alloc]init];
 //    DEMOFirstViewController *dragVC = [[DEMOFirstViewController alloc]init];
-//      UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:dragVC];
-    DEMOLeftMenuViewController *leftMenuViewController = [[DEMOLeftMenuViewController alloc] init];
-    DEMORightMenuViewController *rightMenuViewController = [[DEMORightMenuViewController alloc] init];
+////      UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:dragVC];
+//    DEMOLeftMenuViewController *leftMenuViewController = [[DEMOLeftMenuViewController alloc] init];
+//    DEMORightMenuViewController *rightMenuViewController = [[DEMORightMenuViewController alloc] init];
+//    
+//    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:dragVC
+//                                                                    leftMenuViewController:leftMenuViewController
+//                                                                   rightMenuViewController:rightMenuViewController];
+//    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+//    sideMenuViewController.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
+//    sideMenuViewController.delegate = self;
+//    sideMenuViewController.contentViewShadowColor = [UIColor blackColor];
+//    sideMenuViewController.contentViewShadowOffset = CGSizeMake(0, 0);
+//    sideMenuViewController.contentViewShadowOpacity = 0.6;
+//    sideMenuViewController.contentViewShadowRadius = 12;
+//    sideMenuViewController.contentViewShadowEnabled = YES;
+//    self.window.rootViewController = sideMenuViewController;
     
-    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:dragVC
-                                                                    leftMenuViewController:leftMenuViewController
-                                                                   rightMenuViewController:rightMenuViewController];
-    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
-    sideMenuViewController.menuPreferredStatusBarStyle = 1; // UIStatusBarStyleLightContent
-    sideMenuViewController.delegate = self;
-    sideMenuViewController.contentViewShadowColor = [UIColor blackColor];
-    sideMenuViewController.contentViewShadowOffset = CGSizeMake(0, 0);
-    sideMenuViewController.contentViewShadowOpacity = 0.6;
-    sideMenuViewController.contentViewShadowRadius = 12;
-    sideMenuViewController.contentViewShadowEnabled = YES;
-    self.window.rootViewController = sideMenuViewController;
+//    UIViewController * leftDrawer = [[UIViewController alloc] init];
+//    UIViewController * center = [[UIViewController alloc] init];
+//    UIViewController * rightDrawer = [[UIViewController alloc] init];
+//    
+//    MMDrawerController *drawerController = [[MMDrawerController alloc]
+//                                             initWithCenterViewController:dragVC
+//                                             leftDrawerViewController:leftDrawer
+//                                             rightDrawerViewController:rightDrawer];
+//    self.window.rootViewController = drawerController;
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    return YES;
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+     UIViewController * leftSideDrawerViewController = [[MMExampleLeftSideDrawerViewController alloc] init];
+    
+    LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:@"LeftMenuViewController" bundle:[NSBundle mainBundle]];
+    
+//    UIViewController * centerViewController = [[MMExampleCenterTableViewController alloc] init];
+    
+    UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
+    
+//    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
+//    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+    UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
+    [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+    UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+    [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+    self.drawerController = [[MMDrawerController alloc]
+                             initWithCenterViewController:dragVC
+                             leftDrawerViewController:leftSideDrawerViewController
+                             rightDrawerViewController:rightSideNavController];
+    
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [self.drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[MMExampleDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                          green:173.0/255.0
+                                           blue:234.0/255.0
+                                          alpha:1.0];
+    [self.window setTintColor:tintColor];
+    [self.window setRootViewController:self.drawerController];
+    
     return YES;
 }
 

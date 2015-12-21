@@ -1,0 +1,31 @@
+
+
+<%-include header%>
+<!--  left menu  -->
+
+<div class="c-container menu-container">
+	<div class="sub-container menu-sub-container">
+		<article class="left">
+			<ul class="c-ul menu-ul">
+				<li class="menu-li hand">用户管理</li>
+				<div class="li-menu">
+					<ul>
+						<li><a href="javascript:getUserList('');">用户列表</a></li>
+						<li><a href="javascript:userAdd();">增加用户</a></li>
+					</ul>
+				</div>
+				<li class="menu-li hand">资源管理</a></li>
+				<div class="li-menu">
+					<ul>
+						<li><a href="javascript:getResList('');">资源列表</a></li>
+						<li><a href="javascript:resourceAdd();">增加资源</a></li>
+					</ul>
+				</div>
+			</ul>
+		</article>
+
+		<!-- content  -->
+		<article class="content"></article>
+	</div>
+</div>
+<%- include footer%>

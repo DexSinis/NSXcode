@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%=title %></title>
+<style type="text/css">
+body {
+	font-family: "Microsoft YaHei";
+	overflow-y : hidden;
+	padding-top: 90px;
+	background-color: #E7E7E7;
+	overflow-y: hidden;
+}
+
+.login {
+	width: 70%;
+	height:400px;
+	padding-top: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	border-radius: 50px;
+}
+
+.sub_login {
+	width: 600px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+label {
+	font-weight: 700;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+input[type=text],[type=password] {
+	width: 90%;
+	height: 35px;
+	padding: .5em;
+	border: 1px solid #ccc;
+	font-weight: 700;
+	font-size: 18px;
+	border-radius: 18px;
+	padding-left: 25px;
+}
+
+.btn {
+	display: block;
+	width: 150px;
+	height: 50px;
+	border: none;
+	margin-right: 15px;
+	font-weight: 700;
+	color: #B0B0B0;
+	background-color: #6BB0FF;
+	border-radius: 18px;
+	font-size: 15px;
+}
+
+.error_msg {
+	color: red;
+	font-size: 12px;
+	margin-left: 15px;
+}
+</style>
+</head>
+
+<body>
+
+
+	<div class="login">
+		<div class="sub_login">
+			<h1>登录<span class="error_msg"></span></h1>
+			<hr>
+			<br>
+			<section>
+			<form method="post" class="form">
+				<label for="text">账号:</label> <input type="text" name="account"
+					id="account"> <br> <label for="password"><br>密码:</label> <input
+					type="password" name="pwd" id="pwd"> <br> <br />
+				<div style="float: right;">
+						<input style="float: left; color: #fff; " type="button" name="login" value="登 录" class="btn btn_login">
+					</div>
+			</form>
+			</section>
+		</div>
+	</div>
+
+<script type="text/javascript" src="/javascripts/jquery.min.js?v=v1.0"></script>
+<script type="text/javascript" src="/javascripts/login.js"></script>
+</body></html>

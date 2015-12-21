@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<link rel="stylesheet" href="/summernote/summernote.css" />
+	<link rel="stylesheet" href="/stylesheets/base.css" />
+	<link rel="stylesheet" href="/stylesheets/theme-default.css" />
+</head>
+	
+<!--<body style="overflow-y: hidden;">-->
+<body>
+	<div class="c-container">
+		<div class="sub-container">
+
+			<article class="header"> 
+				<header>
+					<b>cc  博客后台管理系统</b>
+					<ul class="c-ul header-ul">
+						<li>欢迎你，<%= locals.session.user.name %></li> |     
+						<li><a href="javascript:ask('/users/logout');">注销</a></li>
+					</ul>
+				</header> 
+			</article>
+
+	

@@ -1,0 +1,22 @@
+
+#ifndef pch
+#define pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import "UIView+Extension.h"
+
+
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenBounds [UIScreen mainScreen].bounds
+
+#define kbaseURL @"http://news-at.zhihu.com/api/4"
+
+#define kNavigationBarColor [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:1.f];
+#define kAppdelegate (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+#endif 

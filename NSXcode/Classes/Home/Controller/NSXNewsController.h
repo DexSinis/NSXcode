@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSXNewsController : UITableViewController
+@interface NSXNewsController : UIViewController
 
 @end

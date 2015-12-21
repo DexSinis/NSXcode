@@ -1,0 +1,63 @@
+
+/**
+ * 
+ * Author:Liuchang
+ * Date:2015-11-18
+ * Email:lc9401@gmail.com
+ *
+ */
+
+/*  global style  */
+body {
+font-family: "Microsoft YaHei";
+background-image: url('../images/base/bg.jpg');*/\\
+background-repeat: no-repeat;
+color: #fff;
+font-size: 14px;
+}
+
+a {
+color: #fff;
+}
+
+/*  header style  */
+.header {
+background:	rgba(14, 14, 14, 0.53);
+}
+
+
+.header a:hover {
+color: #A9A9A9;
+}
+
+/*  main style  */
+.left {
+background:	rgba(14, 14, 14, 0.53);
+}
+
+.content {
+background:	rgba(14, 14, 14, 0.53);
+}
+
+.content input,select {
+	border: 2px solid #ccc;
+}
+
+.list-content .table {
+background-color: #fff;
+color: #999;
+font-weight: bolder;
+}
+
+.list-content .table a {
+color: #999;
+}
+
+.list-content .table a:hover {
+color: red;
+}
+
+/*  footer style  */
+.footer {
+background-color: #000;
+}

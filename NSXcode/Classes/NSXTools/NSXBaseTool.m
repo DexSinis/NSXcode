@@ -33,6 +33,11 @@
     
     [NSXHttpTool post:url params:params success:^(id responseObj){
         if (success) {
+//            　NSString *string = [[NSString alloc] initWithData:responseObj encoding:NSUTF8StringEncoding];
+//            NSError *error;
+//             NSData* jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
+//            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+         
             id result = [resultClass mj_objectWithKeyValues:responseObj];
             success(result);
         }

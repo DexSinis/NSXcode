@@ -85,7 +85,7 @@ static NSString * const kAuthorUID2 = @"authoruid2";
 - (BOOL)isEqual:(id)object
 {
     if ([self class] == [object class]) {
-        return _newsID == ((NSXNews *)object).newsID;
+        return _newsId == ((NSXNews *)object).newsId;
     }
     
     return NO;

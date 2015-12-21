@@ -5,12 +5,14 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "B2210842853596343FAED330AA243B355AF0C7C5" : 0,
-    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : 0
+    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : 0,
+    "BF2FE30DD30E807A424B26D63A15FEB4A29593EB" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8C17E863-AC6F-4934-9AED-6F59529BD1A1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "B2210842853596343FAED330AA243B355AF0C7C5" : "NSXcode\/",
-    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : "GitHub\/YYKit\/YYKit\/"
+    "1348A3F3A9255948743B6F3B2B6D2B1CE3E2D839" : "GitHub\/YYKit\/YYKit\/",
+    "BF2FE30DD30E807A424B26D63A15FEB4A29593EB" : "GitHub\/MMDrawerController\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "NSXcode",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DexSinis\/NSXcode.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2210842853596343FAED330AA243B355AF0C7C5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mutualmobile\/MMDrawerController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF2FE30DD30E807A424B26D63A15FEB4A29593EB"
     }
   ]
 }

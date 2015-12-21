@@ -23,7 +23,7 @@
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure
 {
     AFHTTPRequestOperationManager *mar =[AFHTTPRequestOperationManager manager];
-    
+      mar.responseSerializer = [AFHTTPResponseSerializer serializer];
     [mar GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
             success(responseObject);
@@ -38,7 +38,7 @@
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure
 {
     AFHTTPRequestOperationManager *mar =[AFHTTPRequestOperationManager manager];
-    
+      mar.responseSerializer = [AFHTTPResponseSerializer serializer];
     [mar POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
             success(responseObject);
