@@ -147,7 +147,6 @@
 		DEE2DCDB1C27937D00ED907E /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCDA1C27937D00ED907E /* FriendsViewController.m */; };
 		DEE2DCDE1C27943000ED907E /* MessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCDD1C27943000ED907E /* MessageCenter.m */; };
 		DEE2DCE21C27A84400ED907E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE01C27A84400ED907E /* LogInViewController.m */; };
-		DEE2DCE31C27A84400ED907E /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCE11C27A84400ED907E /* LogInViewController.xib */; };
 		DEE2DCE61C27F02B00ED907E /* NSXNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */; };
 		DEE2DD0D1C27F38D00ED907E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCE81C27F38D00ED907E /* InfoPlist.strings */; };
 		DEE2DD0E1C27F38D00ED907E /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCEB1C27F38D00ED907E /* MMAppDelegate.m */; };
@@ -167,6 +166,21 @@
 		DEE2DD1C1C27F38D00ED907E /* HMStatusDetailBottomToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD081C27F38D00ED907E /* HMStatusDetailBottomToolbar.m */; };
 		DEE2DD1D1C27F38D00ED907E /* NSXSideViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD0A1C27F38D00ED907E /* NSXSideViewFooter.m */; };
 		DEE2DD1E1C27F38D00ED907E /* NSXSideViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */; };
+		DEE2DD601C281CB300ED907E /* SDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD5B1C281CB300ED907E /* SDLoginViewController.m */; };
+		DEE2DD611C281CB300ED907E /* SDPasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD5D1C281CB300ED907E /* SDPasswordResetViewController.m */; };
+		DEE2DD621C281CB300ED907E /* SDSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD5F1C281CB300ED907E /* SDSignUpViewController.m */; };
+		DEE2DD771C281D0D00ED907E /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD651C281D0D00ED907E /* gray.png */; };
+		DEE2DD781C281D0D00ED907E /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD661C281D0D00ED907E /* green.png */; };
+		DEE2DD791C281D0D00ED907E /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD671C281D0D00ED907E /* red.png */; };
+		DEE2DD7A1C281D0D00ED907E /* SDFooterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD691C281D0D00ED907E /* SDFooterButtonView.m */; };
+		DEE2DD7B1C281D0D00ED907E /* SDPatternCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD6C1C281D0D00ED907E /* SDPatternCell.m */; };
+		DEE2DD7C1C281D0D00ED907E /* SDPlaceholderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD6E1C281D0D00ED907E /* SDPlaceholderCell.m */; };
+		DEE2DD7D1C281D0D00ED907E /* SDRoundedImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD701C281D0D00ED907E /* SDRoundedImageViewCell.m */; };
+		DEE2DD7E1C281D0D00ED907E /* SDSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD721C281D0D00ED907E /* SDSwitchCell.m */; };
+		DEE2DD7F1C281D0D00ED907E /* SDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD741C281D0D00ED907E /* SDTextFieldCell.m */; };
+		DEE2DD801C281D0D00ED907E /* SDTextFooterButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD761C281D0D00ED907E /* SDTextFooterButtonView.m */; };
+		DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD821C281E3F00ED907E /* RegistViewController.m */; };
+		DEE2DD851C281F4F00ED907E /* LoginRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
 		DEF099271C215ADA005D0CB8 /* www in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947F1C215AD9005D0CB8 /* www */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
@@ -1407,7 +1421,6 @@
 		DEE2DCDD1C27943000ED907E /* MessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenter.m; sourceTree = "<group>"; };
 		DEE2DCDF1C27A84400ED907E /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		DEE2DCE01C27A84400ED907E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		DEE2DCE11C27A84400ED907E /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		DEE2DCE41C27F02B00ED907E /* NSXNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsController.h; sourceTree = "<group>"; };
 		DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsController.m; sourceTree = "<group>"; };
 		DEE2DCE91C27F38D00ED907E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1445,6 +1458,34 @@
 		DEE2DD0A1C27F38D00ED907E /* NSXSideViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewFooter.m; sourceTree = "<group>"; };
 		DEE2DD0B1C27F38D00ED907E /* NSXSideViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSideViewHeader.h; sourceTree = "<group>"; };
 		DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewHeader.m; sourceTree = "<group>"; };
+		DEE2DD591C281CB300ED907E /* SDLoginKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoginKit.h; sourceTree = "<group>"; };
+		DEE2DD5A1C281CB300ED907E /* SDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLoginViewController.h; sourceTree = "<group>"; };
+		DEE2DD5B1C281CB300ED907E /* SDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLoginViewController.m; sourceTree = "<group>"; };
+		DEE2DD5C1C281CB300ED907E /* SDPasswordResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPasswordResetViewController.h; sourceTree = "<group>"; };
+		DEE2DD5D1C281CB300ED907E /* SDPasswordResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPasswordResetViewController.m; sourceTree = "<group>"; };
+		DEE2DD5E1C281CB300ED907E /* SDSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSignUpViewController.h; sourceTree = "<group>"; };
+		DEE2DD5F1C281CB300ED907E /* SDSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSignUpViewController.m; sourceTree = "<group>"; };
+		DEE2DD651C281D0D00ED907E /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
+		DEE2DD661C281D0D00ED907E /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		DEE2DD671C281D0D00ED907E /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		DEE2DD681C281D0D00ED907E /* SDFooterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFooterButtonView.h; sourceTree = "<group>"; };
+		DEE2DD691C281D0D00ED907E /* SDFooterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFooterButtonView.m; sourceTree = "<group>"; };
+		DEE2DD6A1C281D0D00ED907E /* SDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKit.h; sourceTree = "<group>"; };
+		DEE2DD6B1C281D0D00ED907E /* SDPatternCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPatternCell.h; sourceTree = "<group>"; };
+		DEE2DD6C1C281D0D00ED907E /* SDPatternCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPatternCell.m; sourceTree = "<group>"; };
+		DEE2DD6D1C281D0D00ED907E /* SDPlaceholderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPlaceholderCell.h; sourceTree = "<group>"; };
+		DEE2DD6E1C281D0D00ED907E /* SDPlaceholderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPlaceholderCell.m; sourceTree = "<group>"; };
+		DEE2DD6F1C281D0D00ED907E /* SDRoundedImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRoundedImageViewCell.h; sourceTree = "<group>"; };
+		DEE2DD701C281D0D00ED907E /* SDRoundedImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRoundedImageViewCell.m; sourceTree = "<group>"; };
+		DEE2DD711C281D0D00ED907E /* SDSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSwitchCell.h; sourceTree = "<group>"; };
+		DEE2DD721C281D0D00ED907E /* SDSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSwitchCell.m; sourceTree = "<group>"; };
+		DEE2DD731C281D0D00ED907E /* SDTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTextFieldCell.h; sourceTree = "<group>"; };
+		DEE2DD741C281D0D00ED907E /* SDTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTextFieldCell.m; sourceTree = "<group>"; };
+		DEE2DD751C281D0D00ED907E /* SDTextFooterButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTextFooterButtonView.h; sourceTree = "<group>"; };
+		DEE2DD761C281D0D00ED907E /* SDTextFooterButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTextFooterButtonView.m; sourceTree = "<group>"; };
+		DEE2DD811C281E3F00ED907E /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		DEE2DD821C281E3F00ED907E /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegist.storyboard; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		DEF0947F1C215AD9005D0CB8 /* www */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = www; sourceTree = "<group>"; };
 		DEF094801C215AD9005D0CB8 /* database.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = database.js; sourceTree = "<group>"; };
@@ -3061,12 +3102,15 @@
 		DEE2DCA71C2790EF00ED907E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DEE2DD581C281CB300ED907E /* SDLoginKit */,
 				DEE2DCDF1C27A84400ED907E /* LogInViewController.h */,
 				DEE2DCE01C27A84400ED907E /* LogInViewController.m */,
-				DEE2DCE11C27A84400ED907E /* LogInViewController.xib */,
+				DEE2DD811C281E3F00ED907E /* RegistViewController.h */,
+				DEE2DD821C281E3F00ED907E /* RegistViewController.m */,
 				DEE2DCA81C2790EF00ED907E /* CYloginRegisterViewController.h */,
 				DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */,
 				DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */,
+				DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -3207,6 +3251,54 @@
 				DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */,
 			);
 			path = NSXSideView;
+			sourceTree = "<group>";
+		};
+		DEE2DD581C281CB300ED907E /* SDLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2DD631C281D0D00ED907E /* SDKit */,
+				DEE2DD591C281CB300ED907E /* SDLoginKit.h */,
+				DEE2DD5A1C281CB300ED907E /* SDLoginViewController.h */,
+				DEE2DD5B1C281CB300ED907E /* SDLoginViewController.m */,
+				DEE2DD5E1C281CB300ED907E /* SDSignUpViewController.h */,
+				DEE2DD5C1C281CB300ED907E /* SDPasswordResetViewController.h */,
+				DEE2DD5D1C281CB300ED907E /* SDPasswordResetViewController.m */,
+				DEE2DD5F1C281CB300ED907E /* SDSignUpViewController.m */,
+			);
+			path = SDLoginKit;
+			sourceTree = "<group>";
+		};
+		DEE2DD631C281D0D00ED907E /* SDKit */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2DD641C281D0D00ED907E /* Assets */,
+				DEE2DD681C281D0D00ED907E /* SDFooterButtonView.h */,
+				DEE2DD691C281D0D00ED907E /* SDFooterButtonView.m */,
+				DEE2DD6A1C281D0D00ED907E /* SDKit.h */,
+				DEE2DD6B1C281D0D00ED907E /* SDPatternCell.h */,
+				DEE2DD6C1C281D0D00ED907E /* SDPatternCell.m */,
+				DEE2DD6D1C281D0D00ED907E /* SDPlaceholderCell.h */,
+				DEE2DD6E1C281D0D00ED907E /* SDPlaceholderCell.m */,
+				DEE2DD6F1C281D0D00ED907E /* SDRoundedImageViewCell.h */,
+				DEE2DD701C281D0D00ED907E /* SDRoundedImageViewCell.m */,
+				DEE2DD711C281D0D00ED907E /* SDSwitchCell.h */,
+				DEE2DD721C281D0D00ED907E /* SDSwitchCell.m */,
+				DEE2DD731C281D0D00ED907E /* SDTextFieldCell.h */,
+				DEE2DD741C281D0D00ED907E /* SDTextFieldCell.m */,
+				DEE2DD751C281D0D00ED907E /* SDTextFooterButtonView.h */,
+				DEE2DD761C281D0D00ED907E /* SDTextFooterButtonView.m */,
+			);
+			path = SDKit;
+			sourceTree = "<group>";
+		};
+		DEE2DD641C281D0D00ED907E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2DD651C281D0D00ED907E /* gray.png */,
+				DEE2DD661C281D0D00ED907E /* green.png */,
+				DEE2DD671C281D0D00ED907E /* red.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		DEF0947C1C215AD9005D0CB8 /* bin */ = {
@@ -6170,6 +6262,7 @@
 				DEF09C021C215ADB005D0CB8 /* test.js in Resources */,
 				DEF09A581C215ADA005D0CB8 /* literal.html in Resources */,
 				DEF09B0E1C215ADB005D0CB8 /* .eslintrc in Resources */,
+				DEE2DD791C281D0D00ED907E /* red.png in Resources */,
 				DEF09A451C215ADA005D0CB8 /* include-abspath.ejs in Resources */,
 				DEF09C551C215ADB005D0CB8 /* dbcs-data.js in Resources */,
 				DEF09A101C215ADA005D0CB8 /* part3 in Resources */,
@@ -6343,6 +6436,7 @@
 				DEF09B131C215ADB005D0CB8 /* test.js in Resources */,
 				DEF09A8C1C215ADA005D0CB8 /* route.js in Resources */,
 				DEF09CB01C215ADB005D0CB8 /* ueditor.js in Resources */,
+				DEE2DD771C281D0D00ED907E /* gray.png in Resources */,
 				DEF09C241C215ADB005D0CB8 /* node-extensions.js in Resources */,
 				DEF09CE71C215ADB005D0CB8 /* login.js in Resources */,
 				DEF09CC91C215ADB005D0CB8 /* package.json in Resources */,
@@ -6553,6 +6647,7 @@
 				DEF09B521C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09B751C215ADB005D0CB8 /* root.js in Resources */,
 				DEF09B901C215ADB005D0CB8 /* .npmignore in Resources */,
+				DEE2DD851C281F4F00ED907E /* LoginRegist.storyboard in Resources */,
 				DEF099CA1C215ADA005D0CB8 /* crc1.js in Resources */,
 				DEF09C631C215ADB005D0CB8 /* utf16.js in Resources */,
 				DEF09BF41C215ADB005D0CB8 /* index.js in Resources */,
@@ -6671,7 +6766,6 @@
 				DEF099681C215ADA005D0CB8 /* LICENCE in Resources */,
 				DEF09BA61C215ADB005D0CB8 /* ssl_profiles.js in Resources */,
 				DEF099B51C215ADA005D0CB8 /* LICENSE in Resources */,
-				DEE2DCE31C27A84400ED907E /* LogInViewController.xib in Resources */,
 				DEF09A061C215ADA005D0CB8 /* part5.header in Resources */,
 				DEF09C651C215ADB005D0CB8 /* bom-handling.js in Resources */,
 				DEF09AFF1C215ADB005D0CB8 /* cp949.json in Resources */,
@@ -6710,6 +6804,7 @@
 				DEF09B9F1C215ADB005D0CB8 /* PoolSelector.js in Resources */,
 				DEF09C681C215ADB005D0CB8 /* streams.js in Resources */,
 				DEF09BD71C215ADB005D0CB8 /* index.js in Resources */,
+				DEE2DD781C281D0D00ED907E /* green.png in Resources */,
 				DEF09A631C215ADA005D0CB8 /* newlines.mixed.html in Resources */,
 				DEF09C8F1C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09C781C215ADB005D0CB8 /* passthrough.js in Resources */,
@@ -6903,6 +6998,7 @@
 				DEF099451C215ADA005D0CB8 /* CHANGES.md in Sources */,
 				DEB3E9721C16814800495FBE /* NSXNavigationBarSearchViewController.m in Sources */,
 				DE5A18911C088EEC00FD3B1D /* NSXNewsCellBar.m in Sources */,
+				DEE2DD7C1C281D0D00ED907E /* SDPlaceholderCell.m in Sources */,
 				DEF09B4A1C215ADB005D0CB8 /* README.md in Sources */,
 				DE9BBBCA1BFCA26B0048D32A /* T1Helper.m in Sources */,
 				DEF09C871C215ADB005D0CB8 /* HISTORY.md in Sources */,
@@ -6919,6 +7015,7 @@
 				DE4ACDCC1C072EF700BA5608 /* NSXNewsCell1.m in Sources */,
 				DEF09AB01C215ADA005D0CB8 /* README.md in Sources */,
 				DEF0994E1C215ADA005D0CB8 /* LICENSE.md in Sources */,
+				DEE2DD601C281CB300ED907E /* SDLoginViewController.m in Sources */,
 				DEF09C2D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09BE81C215ADB005D0CB8 /* README.md in Sources */,
 				DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */,
@@ -6970,6 +7067,7 @@
 				DEF09B951C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099571C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09CDE1C215ADB005D0CB8 /* Makefile in Sources */,
+				DEE2DD7A1C281D0D00ED907E /* SDFooterButtonView.m in Sources */,
 				DEB3E96A1C166D8C00495FBE /* DEMOFirstViewController.m in Sources */,
 				DEF09CB61C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09CC61C215ADB005D0CB8 /* History.md in Sources */,
@@ -7027,6 +7125,7 @@
 				DEF099D81C215ADA005D0CB8 /* README.md in Sources */,
 				DE9BBC151BFCA5280048D32A /* YYSimpleWebViewController.m in Sources */,
 				DE248A081C03027900472F71 /* NSXNewsCell.m in Sources */,
+				DEE2DD7F1C281D0D00ED907E /* SDTextFieldCell.m in Sources */,
 				DEF09AA51C215ADA005D0CB8 /* README.md in Sources */,
 				DE9BBBD71BFCA26B0048D32A /* WBEmoticonInputView.m in Sources */,
 				DEF09AB61C215ADA005D0CB8 /* README.md in Sources */,
@@ -7064,6 +7163,7 @@
 				DEF1765E1C22A8C800EEF06B /* TopStoryView.m in Sources */,
 				DE5A18421C08581700FD3B1D /* NSString+FontAwesome.m in Sources */,
 				DE34EDA21BF9B451003CFC80 /* SDRefreshView.m in Sources */,
+				DEE2DD7E1C281D0D00ED907E /* SDSwitchCell.m in Sources */,
 				DEE2DD111C27F38D00ED907E /* MMExampleCenterTableViewController.m in Sources */,
 				DEF09C991C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B531C215ADB005D0CB8 /* README.md in Sources */,
@@ -7096,12 +7196,14 @@
 				DEF09B461C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BFF1C215ADB005D0CB8 /* license.md in Sources */,
 				DEF099491C215ADA005D0CB8 /* README.md in Sources */,
+				DEE2DD621C281CB300ED907E /* SDSignUpViewController.m in Sources */,
 				DE34EDA31BF9B451003CFC80 /* UIView+SDExtension.m in Sources */,
 				DEF09AB21C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF099DF1C215ADA005D0CB8 /* History.md in Sources */,
 				DEF09B791C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF099351C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09CCA1C215ADB005D0CB8 /* README.md in Sources */,
+				DEE2DD7B1C281D0D00ED907E /* SDPatternCell.m in Sources */,
 				DEE2DD151C27F38D00ED907E /* MMExampleSideDrawerViewController.m in Sources */,
 				DE9BBBCD1BFCA26B0048D32A /* T1StatusCell.m in Sources */,
 				DE5A18331C084AAE00FD3B1D /* NSDate+TimeAgo.m in Sources */,
@@ -7124,6 +7226,7 @@
 				DEAF09BB1BF988A400C6954F /* NSXSettingItem.m in Sources */,
 				DEF09C861C215ADB005D0CB8 /* README.md in Sources */,
 				DE0186FE1C0BFA7500F45AC1 /* NSXHttpTool.m in Sources */,
+				DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */,
 				DEF09B2E1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DE9BBBCC1BFCA26B0048D32A /* T1Model.m in Sources */,
 				DEF0995E1C215ADA005D0CB8 /* README.md in Sources */,
@@ -7142,6 +7245,7 @@
 				DEF09BCE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B201C215ADB005D0CB8 /* README.md in Sources */,
 				DE4ACDC91C072E8C00BA5608 /* OSCObjsViewController.m in Sources */,
+				DEE2DD801C281D0D00ED907E /* SDTextFooterButtonView.m in Sources */,
 				DEF09ACF1C215ADA005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF0994F1C215ADA005D0CB8 /* Makefile in Sources */,
 				DE4ACDC61C072E4E00BA5608 /* NewsViewController.m in Sources */,
@@ -7156,6 +7260,7 @@
 				DEF09B591C215ADB005D0CB8 /* readme.markdown in Sources */,
 				DEF099AF1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09AD1BF988A400C6954F /* NSXMenu.m in Sources */,
+				DEE2DD7D1C281D0D00ED907E /* SDRoundedImageViewCell.m in Sources */,
 				DEF09A7C1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEE2DD0E1C27F38D00ED907E /* MMAppDelegate.m in Sources */,
 				DEF09BEE1C215ADB005D0CB8 /* README.md in Sources */,
@@ -7163,6 +7268,7 @@
 				DEF09C801C215ADB005D0CB8 /* README.md in Sources */,
 				DE7BF7F81C103EA700B81F67 /* NSXNewsParam.m in Sources */,
 				DE5A18441C08581700FD3B1D /* UIImage+FontAwesome.m in Sources */,
+				DEE2DD611C281CB300ED907E /* SDPasswordResetViewController.m in Sources */,
 				DEF09BE41C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A9A1C215ADA005D0CB8 /* History.md in Sources */,
 			);

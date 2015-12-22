@@ -314,7 +314,7 @@
         <image name="login_QQ_icon" width="70" height="70"/>
         <image name="login_QQ_icon_click" width="70" height="70"/>
         <image name="login_close_icon" width="16" height="16"/>
-        <image name="login_register_background" width="540" height="960"/>
+        <image name="login_register_background" width="1104" height="1104"/>
         <image name="login_register_button" width="87" height="40"/>
         <image name="login_register_button_click" width="87" height="40"/>
         <image name="login_register_left_line" width="103" height="1"/>

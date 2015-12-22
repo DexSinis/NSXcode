@@ -6,16 +6,14 @@
 //  Copyright (c) 2015年 Junichi Tsurukawa. All rights reserved.
 //
 
-#import "LogInViewController.h"
+#import "RegistViewController.h"
 #import "JTFadingInfoView.h"
 
-#import "RegistViewController.h"
-
-@interface LogInViewController ()
+@interface RegistViewController ()
 
 @end
 
-@implementation LogInViewController
+@implementation RegistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,11 +41,7 @@
 }
 
 - (IBAction)tapCloseButton:(id)sender {
-    
-    [self dismissViewControllerAnimated:self completion:^{
-
-    }];
-//  [self.navigationController popViewControllerAnimated:YES];
+  [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -87,27 +81,19 @@
 
 - (IBAction)registPressed:(id)sender {
     
-    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"LoginRegist" bundle:nil];
-    RegistViewController *fourNav = [mainStoryboard instantiateViewControllerWithIdentifier:@"RegistViewController"];
+    NSLog(@"%@",self.textField.text);
     
-    [self.view addSubview:fourNav.view];
-//    [self presentViewController:fourNav animated:YES completion:^{
-//        
-//    }];
     
-//    NSLog(@"%@",self.textField.text);
-//    
-//    
-//    NSString *msg = @"Login Success!";
-//    CGRect frame = CGRectZero;
-//    frame.origin.x = self.view.frame.size.width/4;
-//    frame.origin.y = self.view.frame.size.height*4/5;
-//    frame.size.width = self.view.frame.size.width/2;
-//    frame.size.height = 40;
-//    
-//    JTFadingInfoView *infoView = [[JTFadingInfoView alloc] initWithFrame:frame label:msg];
-//    infoView.appearingDuration = 0.4;
-//    [self.view addSubview:infoView];
+    NSString *msg = @"Login Success!";
+    CGRect frame = CGRectZero;
+    frame.origin.x = self.view.frame.size.width/4;
+    frame.origin.y = self.view.frame.size.height*4/5;
+    frame.size.width = self.view.frame.size.width/2;
+    frame.size.height = 40;
+    
+    JTFadingInfoView *infoView = [[JTFadingInfoView alloc] initWithFrame:frame label:msg];
+    infoView.appearingDuration = 0.4;
+    [self.view addSubview:infoView];
     
 }
 

@@ -32,7 +32,7 @@
 + (UIColor *)themeColor
 {
     
-    return [UIColor blueColor];
+    return [UIColor redColor];
 //    if (((AppDelegate *)[UIApplication sharedApplication].delegate).inNightMode) {
 //        return [UIColor colorWithRed:0.17 green:0.17 blue:0.17 alpha:1.0];
 //    }

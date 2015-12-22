@@ -13,7 +13,7 @@
 #import "NSXNewsResult.h"
 #import "NSXBaseTool.h"
 
-#define Domain @"http://localhost:8888/"
+
 
 @implementation NSXNews (Provider)
 + (void)newsWithParam:(NSXNewsParam *)param success:(void (^)(NSXNewsResult *result))success failure:(void (^)(NSError *error))failure

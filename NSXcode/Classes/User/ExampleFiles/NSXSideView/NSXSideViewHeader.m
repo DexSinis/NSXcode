@@ -11,9 +11,13 @@
 #define MAS_SHORTHAND_GLOBALS
 
 #import "Masonry.h"
+#import "CYloginRegisterViewController.h"
+
 typedef NS_ENUM(NSInteger, NSXButtonType) {
     NSXButtonTypeLogin = 0,                         // no button type
-    NSXButtonTypeOther,   // Deprecated, use UIButtonTypeSystem instead
+    NSXButtonTypeCollect,
+    NSXButtonTypeMessage,
+    NSXButtonTypeSetting// Deprecated, use UIButtonTypeSystem instead
 };
 @implementation NSXSideViewHeader
 
@@ -37,11 +41,11 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
 -(void)initSubviews
 {
     
-    _loginBtn = [self setupBtnWithIcon:@"Menu_Avatar" title:@"请登录" tag:NSXButtonTypeLogin];
+    _loginBtn = [self setupBtnWithIcon:@"MenuAvatar" title:@"请登录" tag:NSXButtonTypeLogin];
     
-    _collectionBtn =[self setupBtnWithIcon:@"Menu_Icon_Collect" title:@"收藏" tag:NSXButtonTypeOther];
-    _messageBtn = [self setupBtnWithIcon:@"Menu_Icon_Message" title:@"消息" tag:NSXButtonTypeOther];
-    _settingBtn = [self setupBtnWithIcon:@"Menu_Icon_Setting" title:@"设置" tag:NSXButtonTypeOther];
+    _collectionBtn =[self setupBtnWithIcon:@"Menu_Icon_Collect" title:@"收藏" tag:NSXButtonTypeCollect];
+    _messageBtn = [self setupBtnWithIcon:@"Menu_Icon_Message" title:@"消息" tag:NSXButtonTypeMessage];
+    _settingBtn = [self setupBtnWithIcon:@"Menu_Icon_Setting" title:@"设置" tag:NSXButtonTypeSetting];
 
 //    self.loginBtn = loginBtn;
 //    self.collectionBtn = collectionBtn;
@@ -192,9 +196,71 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
          btn.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     
+    [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     // 设置间距
 //    btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     return btn;
+}
+
+-(void)buttonClick:(UIButton *)btn
+{
+    
+    CYloginRegisterViewController *nav = [[CYloginRegisterViewController alloc] init];
+    switch (btn.tag) {
+        case NSXButtonTypeLogin:
+            [[self getCurrentVC] presentViewController:nav animated:YES completion:^{
+                
+            }];
+            break;
+        case NSXButtonTypeCollect:
+            [[self getCurrentVC] presentViewController:nav animated:YES completion:^{
+                
+            }];
+            break;
+        case NSXButtonTypeMessage:
+            [[self getCurrentVC] presentViewController:nav animated:YES completion:^{
+                
+            }];
+            break;
+        case NSXButtonTypeSetting:
+            [[self getCurrentVC] presentViewController:nav animated:YES completion:^{
+                
+            }];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+//获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
 }
 
 @end

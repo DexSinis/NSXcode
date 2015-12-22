@@ -42,11 +42,6 @@
 
 @implementation NSXNewsController
 
-#pragma mark - 全局常量
-static NSString * const CYXRequestURL = @"http://apis.haoservice.com/lifeservice/cook/query?";
-static NSString * const CYXCellID = @"cell";
-
-
 #pragma mark - life cycle 生命周期方法
 
 - (void)viewDidLoad {
@@ -60,27 +55,12 @@ static NSString * const CYXCellID = @"cell";
          NSLog(@"%@", result.totalNumber);
         for (NSXNews *news in result.newsArray) {
              NSLog(@"%@", news.title);
-//            [self insertNewsArray:news];
         }
        
     } failure:^(NSError *error) {
         
     }];
 
-}
-
-
--(void)insertNewsArray:(NSXNews *)news
-{
-    NSXNewsParam *param = [[NSXNewsParam alloc] init];
-    param.title = news.title;
-    param.body =news.body;
-    [NSXNews newsInsertWithParam:param success:^(NSXNewsResult *result) {
-    
-        
-    } failure:^(NSError *error) {
-        
-    }];
 }
 
 
@@ -98,7 +78,7 @@ static NSString * const CYXCellID = @"cell";
     tv.delegate = self;
     tv.dataSource = self;
 //    tv.rowHeight = kRowHeight;
-    tv.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 200.f)];
+    tv.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 220.f)];
     [self.view addSubview:tv];
     _mainTableView = tv;
     

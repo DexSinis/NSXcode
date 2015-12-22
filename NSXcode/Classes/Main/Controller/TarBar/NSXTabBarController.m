@@ -201,12 +201,15 @@
 //    JTFadingInfoView *infoView = [[JTFadingInfoView alloc] initWithFrame:frame
 //                                                                   label:label];
     
-    LogInViewController *fourNav = [[LogInViewController alloc] init];
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"LoginRegist" bundle:nil];
+    LogInViewController *fourNav = [mainStoryboard instantiateViewControllerWithIdentifier:@"LogInViewController"];
+    
+//    LogInViewController *logInDemoVC = [[LogInViewController alloc] init];
 //    [self.view addSubview:infoView];
     
 //    UINavigationController *fourNav = [[UINavigationController alloc]initWithRootViewController:fourVc];
     
-////    
+//    
 //    UIStoryboard *homepageSB = [UIStoryboard storyboardWithName:@"Homepage" bundle:nil];
 //    HomepageViewController *fourNav = [homepageSB instantiateViewControllerWithIdentifier:@"HomepageViewController"];
     
