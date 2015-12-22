@@ -63,6 +63,7 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - UITableView+FDTemplateLayoutCell (1.3)
   - YYKit (0.9.6):
     - YYKit/no-arc (= 0.9.6)
   - YYKit/no-arc (0.9.6)
@@ -82,6 +83,7 @@ DEPENDENCIES:
   - MMDrawerController
   - RESideMenu
   - SDWebImage
+  - UITableView+FDTemplateLayoutCell
   - YYKit (= 0.9.6)
 
 SPEC CHECKSUMS:
@@ -101,6 +103,7 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  UITableView+FDTemplateLayoutCell: d5be6056b5060313f5955a2590ecd33142ad713d
   YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
 
 COCOAPODS: 0.39.0

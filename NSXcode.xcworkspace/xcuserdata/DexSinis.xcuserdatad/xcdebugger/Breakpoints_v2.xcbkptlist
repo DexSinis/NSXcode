@@ -134,7 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/NSXTools/NSXBaseTool.m"
@@ -262,7 +262,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/NSXTools/NSXBaseTool.m"
@@ -275,14 +275,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "+[NSXBaseTool postWithUrl:param:resultClass:success:failure:]"
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
-                  timestampString = "472443671.408886"
+                  timestampString = "472461402.99813"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -290,14 +290,14 @@
                   offsetFromSymbolStart = "220">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__61+[NSXBaseTool postWithUrl:param:resultClass:success:failure:]_block_invoke"
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
-                  timestampString = "472443671.409044"
+                  timestampString = "472461402.99827"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -305,22 +305,6 @@
                   offsetFromSymbolStart = "40">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "472382031.731779"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -342,7 +326,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/NSXTools/NSXBaseTool.m"
@@ -362,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "472382031.731779"
+            timestampString = "472460662.61546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,7 +394,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "472443671.41288"
+                  timestampString = "472462501.170225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -425,7 +409,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "472443671.413055"
+                  timestampString = "472462501.170374"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -448,6 +432,131 @@
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "-tapCloseButton:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDTemplateLayoutCell.m"
+            timestampString = "472461380.737191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-fd_templateCellForReuseIdentifier:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/NSXTools/NSXBaseTool.m"
+            timestampString = "472461407.482545"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "+postWithUrl:param:resultClass:success:failure:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[NSXBaseTool postWithUrl:param:resultClass:success:failure:]"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
+                  timestampString = "472461407.49006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__61+[NSXBaseTool postWithUrl:param:resultClass:success:failure:]_block_invoke"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
+                  timestampString = "472461407.490221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_10"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
+                  timestampString = "472461407.490349"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_11"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
+                  timestampString = "472461407.490471"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__61+[NSXBaseTool postWithUrl:param:resultClass:success:failure:]_block_invoke14"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/NSXTools/NSXBaseTool.m"
+                  timestampString = "472461407.490628"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/UITableView+FDTemplateLayoutCell/Classes/UITableView+FDTemplateLayoutCell.m"
+            timestampString = "472461502.906376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-fd_heightForCellWithIdentifier:cacheByKey:configuration:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

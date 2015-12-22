@@ -13,7 +13,10 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
-#import "UITableView+SDAutoTableViewCellHeight.h"
+//#import "UITableView+SDAutoTableViewCellHeight.h"
+#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import "UITableView+FDTemplateLayoutCell.h"
+
 #import "NSXNews.h"
 #import "NSXNewsResult.h"
 #import "NSXNewsParam.h"
@@ -33,7 +36,7 @@
 
 @property (strong, nonatomic) NSMutableArray *newsArray;
 
-@property(weak,nonatomic)UITableView *mainTableView;
+@property(weak,nonatomic)UITableView *tableView;
 @property(weak,nonatomic)UIView *navBarBackgroundView;
 @property(weak,nonatomic)UILabel *newsTodayLb;
 @property(weak,nonatomic)CarouseView *carouseView;
@@ -51,7 +54,7 @@
    
     [NSXNews newsArrayWithParam:nil success:^(NSXNewsResult *result) {
         self.newsArray = result.newsArray;
-        [self.mainTableView reloadData];
+        [self.tableView reloadData];
          NSLog(@"%@", result.totalNumber);
         for (NSXNews *news in result.newsArray) {
              NSLog(@"%@", news.title);
@@ -75,12 +78,14 @@
 //    self.view.backgroundColor = [UIColor whiteColor];
     
     UITableView *tv = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
     tv.delegate = self;
     tv.dataSource = self;
 //    tv.rowHeight = kRowHeight;
     tv.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 220.f)];
     [self.view addSubview:tv];
-    _mainTableView = tv;
+    [tv registerClass:[NSXNewsCell class] forCellReuseIdentifier:@"FDFeedCell"];
+    self.tableView = tv;
     
     
     CarouseView *cv = [[CarouseView alloc] initWithFrame:CGRectMake(0.f, -40.f, kScreenWidth, 260.f)];
@@ -117,10 +122,10 @@
     
     
     // 头部刷新控件
-    self.mainTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     
     // 尾部刷新控件
-    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 
@@ -173,7 +178,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    if ([scrollView isEqual:_mainTableView]) {
+    if ([scrollView isEqual:self.tableView]) {
         //下拉刷新和navBar的background渐变
         CGFloat offSetY = scrollView.contentOffset.y;
         if (offSetY<=0&&offSetY>=-80) {
@@ -195,7 +200,7 @@
             [_carouseView updateSubViewsOriginY:offSetY];
             _navBarBackgroundView.backgroundColor = [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:0.f];
         }else if(offSetY<-80){
-            _mainTableView.contentOffset = CGPointMake(0.f, -80.f);
+            self.tableView.contentOffset = CGPointMake(0.f, -80.f);
         }else if(offSetY <= 300) {
 //            [_refreshView redrawFromProgress:0];
             _carouseView.frame = CGRectMake(0, -40-offSetY, kScreenWidth, 260);
@@ -290,46 +295,80 @@
 #pragma mark - UITableviewDatasource 数据源方法
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    [self.mainTableView startAutoCellHeightWithCellClass:[NSXNewsCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
+//    [self.mainTableView startAutoCellHeightWithCellClass:[NSXNewsCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
     return self.newsArray.count;
 //    return self.menus.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSXNews *news = self.newsArray[indexPath.row];
-//    NSXNews *news = [[NSXNews alloc] init];
-    
-//    news.newsID = 112312312;
-////    news.pubDate = [NSDate new];
-////    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
-//    news.title = @"SonarQube 5.2发布,提升监控";
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    NSXNews *news = self.newsArray[indexPath.row];
+////    NSXNews *news = [[NSXNews alloc] init];
+//    
+////    news.newsID = 112312312;
+//////    news.pubDate = [NSDate new];
+//////    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
+////    news.title = @"SonarQube 5.2发布,提升监控";
+////
+////    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
 //
-//    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
+//    static NSString *ID = @"test";
+//    NSXNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    if (!cell) {
+//        cell = [[NSXNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+//    }
+//    cell.news = news;
+//    return cell;
+//}
 
-    static NSString *ID = @"test";
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    NSXNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FDFeedCell"];
+    
+//    NSXNews *news = self.newsArray[indexPath.row];
+    //    NSXNews *news = [[NSXNews alloc] init];
+    
+    //    news.newsID = 112312312;
+    ////    news.pubDate = [NSDate new];
+    ////    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
+    //    news.title = @"SonarQube 5.2发布,提升监控";
+    //
+    //    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
+    NSXNews *news = self.newsArray[indexPath.row];
+    static NSString *ID = @"FDFeedCell";
     NSXNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[NSXNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     cell.news = news;
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSXNews *news = self.newsArray[indexPath.row];
-////    int index = indexPath.row % 5;
-//    NSXNews *news = [[NSXNews alloc] init];
-//    news.newsID = 112312312;
-////    news.pubDate = [NSDate new];
-//    //    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
-//    news.title = @"SonarQube 5.2发布,提升监控";
-//    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
-    return [self.mainTableView cellHeightForIndexPath:indexPath model:news keyPath:@"news"];
+
+- (void)configureCell:(NSXNewsCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.fd_enforceFrameLayout = NO; // Enable to use "-sizeThatFits:"
+    if (indexPath.row % 2 == 0) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    cell.news = self.newsArray[indexPath.row];
 }
 
-#pragma mark - UITableviewDelegate 代理方法
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSXNews *news = self.newsArray[indexPath.row];
+    return [tableView fd_heightForCellWithIdentifier:@"FDFeedCell" cacheByKey:[NSString stringWithFormat:@"%lld",news.newsId] configuration:^(NSXNewsCell *cell) {
+        [self configureCell:cell atIndexPath:indexPath];
+    }];
+//    return 50;
+}
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // 点击了第indexPath.row行Cell所做的操作
