@@ -235,14 +235,6 @@
     
     [self setupAutoHeightWithBottomView:self.newsCellBar  bottomMargin:5];
 }
-
-
-//
-//-(void)setLayout
-//{
-//    
-//}
-
 //
 
 //- (void)setLayout

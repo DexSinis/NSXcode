@@ -7,7 +7,10 @@
 //
 
 #import "NSXNewsCellBar.h"
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 
+#import "Masonry.h"
 @implementation NSXNewsCellBar
 
 /*
@@ -54,15 +57,7 @@
 
 - (void)setLayout
 {
-    for (UIView *view in [self subviews]) {
-        view.translatesAutoresizingMaskIntoConstraints = NO;
-    }
-    
-    NSDictionary *viewsDict = NSDictionaryOfVariableBindings( _view3, _view4, _view5);
-    
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_view3]"
-                                                                 options:NSLayoutFormatAlignAllLeft | NSLayoutFormatAlignAllRight
-                                                                 metrics:nil views:viewsDict]];
+
     //    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_view1]-5-[_view2]"
     //                                                                             options:NSLayoutFormatAlignAllLeft | NSLayoutFormatAlignAllRight
     //                                                                             metrics:nil views:viewsDict]];
@@ -74,9 +69,49 @@
     //    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-30.0-[_view3]-30.0-|"
     //                                                                             options:0 metrics:nil views:viewsDict]];
     //
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8.0-[_view3]-10-[_view4]-10-[_view5]"
-                                                                             options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-                                                                             metrics:nil views:viewsDict]];
+    
+//    for (UIView *view in [self subviews]) {
+//        view.translatesAutoresizingMaskIntoConstraints = NO;
+//    }
+//    
+//    NSDictionary *viewsDict = NSDictionaryOfVariableBindings( _view3, _view4, _view5);
+//    
+//    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[_view3]"
+//                                                                 options:NSLayoutFormatAlignAllLeft | NSLayoutFormatAlignAllRight
+//                                                                 metrics:nil views:viewsDict]];
+//    
+//    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8.0-[_view3]-10-[_view4]-10-[_view5]"
+//                                                                             options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+//                                                                             metrics:nil views:viewsDict]];
+    
+    
+    [_view3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.left.and.top.mas_equalTo(8);
+//        make.size.equalTo(CGSizeMake(30,30));
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+        //        make.left.mas_equalTo(20);
+    }];
+    //
+    [_view4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.top.equalTo(_view3.mas_top);
+//        make.size.equalTo(CGSizeMake(30, 30));
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+        make.left.mas_equalTo(_view3.mas_right).offset(10);
+    }];
+    
+    
+    [_view5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.top.equalTo(_view3.mas_top);
+//        make.size.equalTo(CGSizeMake(30, 30));
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+        make.left.mas_equalTo(_view4.mas_right).offset(10);
+    }];
     
 }
 
