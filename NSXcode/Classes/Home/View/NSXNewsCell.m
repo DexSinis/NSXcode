@@ -16,7 +16,10 @@
 #import "NSXUtils.h"
 #import "NSXNewsCellBar.h"
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 
+#import "Masonry.h"
 
 @implementation NSXNewsCell
 
@@ -183,7 +186,7 @@
 //             self.view0.layer.masksToBounds = YES;
     //        [self.view0 cornerRadius:50/4 strokeSize:0 color:nil];
     
-            self.view1.sd_layout
+  /*          self.view1.sd_layout
             .topSpaceToView(self.contentView, 10)
             .leftSpaceToView(self.contentView, 10)
             .rightSpaceToView(self.contentView, 10)
@@ -201,7 +204,7 @@
         .leftEqualToView(self.view2)
         .topSpaceToView(self.view2, 0)
         .heightIs(30)
-        .widthRatioToView(self.view1,1);
+        .widthRatioToView(self.view1,1); */
     
 //            self.view3.sd_layout
 //            .topEqualToView(self.view2)
@@ -233,7 +236,39 @@
 //    
     //***********************高度自适应cell设置步骤************************
     
-    [self setupAutoHeightWithBottomView:self.newsCellBar  bottomMargin:5];
+    
+    [self.view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.left.and.top.mas_equalTo(8);
+        make.right.mas_equalTo(-8);
+//        make.size.equalTo(CGSizeMake(30,30));
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+        //        make.left.mas_equalTo(20);
+    }];
+    //
+    [self.view2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.top.equalTo(self.view1.mas_bottom).offset(10);
+        make.left.mas_equalTo(8);
+        make.right.mas_equalTo(-8);
+//        make.size.equalTo(CGSizeMake(60, 60));
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+//        make.left.mas_equalTo(self.view1.mas_right).offset(10);
+    }];
+    
+    
+    [self.newsCellBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        // 大小、上边距约束与黑色view相同
+        make.top.equalTo(self.view2.mas_bottom);
+        make.left.and.right.mas_equalTo(0);
+        // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
+//        make.left.mas_equalTo(self.view2.mas_right).offset(10);
+    }];
+    
+    [self setupAutoHeightWithBottomView:self.newsCellBar  bottomMargin:30];
 }
 
 
