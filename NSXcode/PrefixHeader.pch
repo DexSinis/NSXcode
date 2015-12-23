@@ -15,9 +15,11 @@
 #define kScreenBounds [UIScreen mainScreen].bounds
 
 #define kbaseURL @"http://news-at.zhihu.com/api/4"
-#define Domain @"http://192.168.1.17:8888/"
+#define Domain @"http://192.168.2.144:8888/"
 
 #define kNavigationBarColor [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:1.f];
 #define kAppdelegate (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+#define isIpad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 #endif 

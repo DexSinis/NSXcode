@@ -22,7 +22,7 @@
 #import "MMExampleRightSideDrawerViewController.h"
 #import "MMExampleDrawerVisualStateManager.h"
 
-#import "LeftMenuViewController.h"
+
 @interface AppDelegate ()
 @property (nonatomic,strong) MMDrawerController * drawerController;
 @end
@@ -75,7 +75,7 @@
     
      UIViewController * leftSideDrawerViewController = [[MMExampleLeftSideDrawerViewController alloc] init];
     
-    LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:@"LeftMenuViewController" bundle:[NSBundle mainBundle]];
+//    LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:@"LeftMenuViewController" bundle:[NSBundle mainBundle]];
     
 //    UIViewController * centerViewController = [[MMExampleCenterTableViewController alloc] init];
     

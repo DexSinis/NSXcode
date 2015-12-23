@@ -11,8 +11,6 @@
 		DE0186FD1C0BFA7500F45AC1 /* NSXBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0186FA1C0BFA7500F45AC1 /* NSXBaseTool.m */; };
 		DE0186FE1C0BFA7500F45AC1 /* NSXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0186FC1C0BFA7500F45AC1 /* NSXHttpTool.m */; };
 		DE0187141C0C483700F45AC1 /* NSXNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0187111C0C483700F45AC1 /* NSXNews.m */; };
-		DE172FD81C1E571F0053BB77 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE172FD61C1E571F0053BB77 /* LeftMenuViewController.m */; };
-		DE172FD91C1E571F0053BB77 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE172FD71C1E571F0053BB77 /* LeftMenuViewController.xib */; };
 		DE248A081C03027900472F71 /* NSXNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE248A071C03027900472F71 /* NSXNewsCell.m */; };
 		DE34ED861BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED831BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		DE34ED871BF9B370003CFC80 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED851BF9B370003CFC80 /* UIView+SDAutoLayout.m */; };
@@ -135,6 +133,7 @@
 		DEB4F7CC1C02AF6300DF6740 /* Twitter@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEB4F7AE1C02AF6300DF6740 /* Twitter@3x.jpg */; };
 		DEB4F7CD1C02AF6300DF6740 /* wall-e@2x.webp in Resources */ = {isa = PBXBuildFile; fileRef = DEB4F7AF1C02AF6300DF6740 /* wall-e@2x.webp */; };
 		DEB4F7CE1C02AF6300DF6740 /* Weibo@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEB4F7B01C02AF6300DF6740 /* Weibo@3x.jpg */; };
+		DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */; };
 		DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */; };
 		DEE2DCB91C2790EF00ED907E /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */; };
 		DEE2DCC31C27914600ED907E /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCBE1C27914600ED907E /* Homepage.storyboard */; };
@@ -1200,9 +1199,6 @@
 		DE0186FC1C0BFA7500F45AC1 /* NSXHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXHttpTool.m; sourceTree = "<group>"; };
 		DE0187101C0C483700F45AC1 /* NSXNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNews.h; sourceTree = "<group>"; };
 		DE0187111C0C483700F45AC1 /* NSXNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNews.m; sourceTree = "<group>"; };
-		DE172FD51C1E571F0053BB77 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
-		DE172FD61C1E571F0053BB77 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
-		DE172FD71C1E571F0053BB77 /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuViewController.xib; sourceTree = "<group>"; };
 		DE248A061C03027900472F71 /* NSXNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCell.h; sourceTree = "<group>"; };
 		DE248A071C03027900472F71 /* NSXNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCell.m; sourceTree = "<group>"; };
 		DE34ED821BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
@@ -1399,6 +1395,8 @@
 		DEB4F7AE1C02AF6300DF6740 /* Twitter@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Twitter@3x.jpg"; sourceTree = "<group>"; };
 		DEB4F7AF1C02AF6300DF6740 /* wall-e@2x.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wall-e@2x.webp"; sourceTree = "<group>"; };
 		DEB4F7B01C02AF6300DF6740 /* Weibo@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Weibo@3x.jpg"; sourceTree = "<group>"; };
+		DEDD80DE1C2A81AE00C5ECE3 /* XHFeedCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFeedCell3.h; sourceTree = "<group>"; };
+		DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFeedCell3.m; sourceTree = "<group>"; };
 		DEE2DCA81C2790EF00ED907E /* CYloginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYloginRegisterViewController.h; sourceTree = "<group>"; };
 		DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYloginRegisterViewController.m; sourceTree = "<group>"; };
 		DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -2837,9 +2835,6 @@
 			children = (
 				DEE2DCE71C27F38D00ED907E /* ExampleFiles */,
 				DEE2DCA61C2790EF00ED907E /* User */,
-				DE172FD51C1E571F0053BB77 /* LeftMenuViewController.h */,
-				DE172FD61C1E571F0053BB77 /* LeftMenuViewController.m */,
-				DE172FD71C1E571F0053BB77 /* LeftMenuViewController.xib */,
 				DEB3E9791C1681F200495FBE /* BackUp */,
 				DEB3E95A1C166D8C00495FBE /* Other */,
 				DE0186F81C0BFA6800F45AC1 /* NSXTools */,
@@ -2901,6 +2896,8 @@
 		DEAF09871BF988A400C6954F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DEDD80DE1C2A81AE00C5ECE3 /* XHFeedCell3.h */,
+				DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */,
 				DEF17A8D1C22E3A300EEF06B /* CarouseView.h */,
 				DEF17A8E1C22E3A300EEF06B /* CarouseView.m */,
 				DEF1765B1C22A8C800EEF06B /* TopStoryView.h */,
@@ -6384,7 +6381,6 @@
 				DEF09C571C215ADB005D0CB8 /* internal.js in Resources */,
 				DEF099A31C215ADA005D0CB8 /* passthrough.js in Resources */,
 				DEF09B6D1C215ADB005D0CB8 /* opts_fs.js in Resources */,
-				DE172FD91C1E571F0053BB77 /* LeftMenuViewController.xib in Resources */,
 				DEF099E71C215ADA005D0CB8 /* callsite-tostring.js in Resources */,
 				DEF09ACE1C215ADA005D0CB8 /* .npmignore in Resources */,
 				DEF09BD91C215ADB005D0CB8 /* package.json in Resources */,
@@ -7016,6 +7012,7 @@
 				DEF09AB01C215ADA005D0CB8 /* README.md in Sources */,
 				DEF0994E1C215ADA005D0CB8 /* LICENSE.md in Sources */,
 				DEE2DD601C281CB300ED907E /* SDLoginViewController.m in Sources */,
+				DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */,
 				DEF09C2D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09BE81C215ADB005D0CB8 /* README.md in Sources */,
 				DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */,
@@ -7045,7 +7042,6 @@
 				DEF09A7D1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DE9BBC171BFCA5280048D32A /* YYTableViewCell.m in Sources */,
 				DE5C15561C06AEAB00E8B428 /* UIView+Util.m in Sources */,
-				DE172FD81C1E571F0053BB77 /* LeftMenuViewController.m in Sources */,
 				DEE2DD0F1C27F38D00ED907E /* MMCenterTableViewCell.m in Sources */,
 				DE9BBC121BFCA5280048D32A /* YYControl.m in Sources */,
 				DEF09B361C215ADB005D0CB8 /* README.md in Sources */,
