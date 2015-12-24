@@ -62,7 +62,7 @@
 {
     // 修改约束
     if (self.leadingSpace.constant == 0) {
-       self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width;
+       self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width*2;
 //        [button setTitle:@"已有账号？" forState:UIControlStateNormal];
    
 
