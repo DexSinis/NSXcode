@@ -24,6 +24,10 @@
 @property (nonatomic, weak) IBOutlet UIButton *wechatButton;
 @property (nonatomic, weak) IBOutlet UIButton *weiboButton;
 
+
+@property (nonatomic, weak) IBOutlet UIButton *tipButton;
+
+@property (nonatomic, weak) IBOutlet UIButton *forgetButton;
 @end
 
 @implementation CYloginRegisterViewController
@@ -62,8 +66,8 @@
 {
     // 修改约束
     if (self.leadingSpace.constant == 0) {
-       self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width*2;
-//        [button setTitle:@"已有账号？" forState:UIControlStateNormal];
+       self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width;
+        [button setTitle:@"已有账号？" forState:UIControlStateSelected];
    
 
         button.selected = YES;
@@ -73,7 +77,7 @@
 
         
         self.leadingSpace.constant = 0;
-//        [button setTitle:@"注册账号" forState:UIControlStateNormal];
+        [button setTitle:@"注册账号" forState:UIControlStateNormal];
         button.selected = NO;
     }
     
@@ -82,6 +86,19 @@
     }];
 }
 
+-(IBAction)forgetPassWord:(UIButton *)button
+{
+    if (self.leadingSpace.constant == 0) {
+    self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width*2;
+    [self.tipButton setTitle:@"返回登录" forState:UIControlStateSelected];
+     self.tipButton.selected = YES;
+    }else
+    {
+        self.leadingSpace.constant = 0;
+        [self.tipButton setTitle:@"返回登录" forState:UIControlStateSelected];
+        self.tipButton.selected = NO;
+    }
+}
 - (IBAction)login:(UIButton *)button
 {
     NSLog(@"%@",self.accountField.text);

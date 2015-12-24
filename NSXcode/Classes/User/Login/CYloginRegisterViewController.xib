@@ -9,12 +9,14 @@
             <connections>
                 <outlet property="accountField" destination="xH1-IQ-oJH" id="Q4K-sg-tnE"/>
                 <outlet property="accountRegistField" destination="3rL-mP-hQq" id="5lH-Az-ZJd"/>
+                <outlet property="forgetButton" destination="eup-Hm-ePN" id="bgp-ma-j0L"/>
                 <outlet property="leadingSpace" destination="jJI-RE-XDD" id="eM8-K2-gCW"/>
                 <outlet property="loginButton" destination="uFR-ry-whf" id="KXu-c3-RZ5"/>
                 <outlet property="passwordField" destination="26n-0d-gkH" id="TAb-mh-hhQ"/>
                 <outlet property="passwordRegistField" destination="r6F-7G-JzC" id="zIO-JY-2LA"/>
                 <outlet property="qqButton" destination="giZ-cQ-8q5" id="PxO-X9-1sl"/>
                 <outlet property="registButton" destination="73J-h7-pzd" id="pYw-iT-MF0"/>
+                <outlet property="tipButton" destination="0Y3-dj-uUC" id="BDM-UG-rND"/>
                 <outlet property="view" destination="K8Q-Iw-JiJ" id="Dyg-K4-zgd"/>
                 <outlet property="wechatButton" destination="VfX-Ci-fIc" id="mRA-nK-WUB"/>
                 <outlet property="weiboButton" destination="HMj-Qe-sm2" id="lzE-vJ-kEb"/>
@@ -51,7 +53,6 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" title="已有账号？"/>
                     <connections>
                         <action selector="loginOrRegister:" destination="-1" eventType="touchUpInside" id="En6-eX-X48"/>
                     </connections>
@@ -216,6 +217,9 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="forgetPassWord:" destination="-1" eventType="touchUpInside" id="tAy-FZ-4qd"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
