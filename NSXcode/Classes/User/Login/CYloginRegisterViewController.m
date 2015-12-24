@@ -8,8 +8,21 @@
 #import <UIKit/UIKit.h>
 #import "CYloginRegisterViewController.h"
 
-@interface CYloginRegisterViewController ()
+@interface CYloginRegisterViewController ()<UITextFieldDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadingSpace;
+
+
+@property (nonatomic, weak) IBOutlet UITextField *accountField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordField;
+@property (nonatomic, weak) IBOutlet UIButton *loginButton;
+
+@property (nonatomic, weak) IBOutlet UITextField *accountRegistField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordRegistField;
+@property (nonatomic, weak) IBOutlet UIButton *registButton;
+
+@property (nonatomic, weak) IBOutlet UIButton *qqButton;
+@property (nonatomic, weak) IBOutlet UIButton *wechatButton;
+@property (nonatomic, weak) IBOutlet UIButton *weiboButton;
 
 @end
 
@@ -35,6 +48,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
@@ -43,11 +62,16 @@
 {
     // 修改约束
     if (self.leadingSpace.constant == 0) {
-        self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width;
+       self.leadingSpace.constant = - [UIScreen mainScreen].bounds.size.width;
 //        [button setTitle:@"已有账号？" forState:UIControlStateNormal];
+   
+
         button.selected = YES;
     }else
     {
+     
+
+        
         self.leadingSpace.constant = 0;
 //        [button setTitle:@"注册账号" forState:UIControlStateNormal];
         button.selected = NO;
@@ -58,5 +82,17 @@
     }];
 }
 
+- (IBAction)login:(UIButton *)button
+{
+    NSLog(@"%@",self.accountField.text);
+    NSLog(@"%@",self.passwordField.text);
+}
+
+
+-(IBAction)regist:(UIButton *)button
+{
+    NSLog(@"%@",self.accountRegistField.text);
+    NSLog(@"%@",self.passwordRegistField.text);
+}
 
 @end
