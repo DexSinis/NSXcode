@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DKCarouselView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GPUImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -94,6 +89,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SSKeychain.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,12 +102,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>002DAC917E8B0AA7666658B641860B4D</key>
+		<key>06D1E331F819F0A76EC732F42EA982C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>06D1E331F819F0A76EC732F42EA982C4</key>
+		<key>10756EAF93C26D12859A00004CF22C54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,17 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>360190E3F7D2390A563C1DA41161F11B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4C5ADC6211660769C85B0431AC327B4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,17 +152,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85A3A38A99E35EB0B97CDF9D0E7BE597</key>
+		<key>69C44AB7F1CBF6ABC34CB852DE887DD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72EBC94787A4D2227C33178271D2A89D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8016E02C8ACDD4BD69873ADCD2FF2460</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>931A3701A2AABDD719BE54E962A3B8EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -188,6 +183,11 @@
 			<true/>
 		</dict>
 		<key>DDCE26CDE8794AF8E72BAE43A355AFC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFE029D36451F107020B4D5ADF4C078F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

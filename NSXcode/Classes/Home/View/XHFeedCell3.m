@@ -149,7 +149,7 @@
     [ _commentCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         // 大小、上边距约束与黑色view相同
-        make.top.equalTo(_updateLabel.mas_bottom);
+        make.top.equalTo(_cellImageView.mas_bottom).offset(5);
         make.left.mas_equalTo(8);
         
         // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）
@@ -158,7 +158,7 @@
     
     [_likeCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(_updateLabel.mas_bottom);
+        make.top.equalTo(_commentCountLabel.mas_top);
         make.left.mas_equalTo(_commentCountLabel.mas_right).offset(8);
        
     }];
@@ -166,7 +166,7 @@
     
     [_dislikeCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(_updateLabel.mas_bottom);
+        make.top.equalTo(_commentCountLabel.mas_top);
         make.left.mas_equalTo(_likeCountLabel.mas_right).offset(8);
         
     }];
@@ -174,7 +174,7 @@
     [_dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         // 大小、上边距约束与黑色view相同
-        make.top.equalTo(_updateLabel.mas_bottom);
+        make.top.equalTo(_nameLabel.mas_top);
         make.right.mas_equalTo(-8);
 //        make.left.mas_equalTo(_commentCountLabel.mas_right).offset(8);
         // 添加右边距约束（这里的间距是有方向性的，左、上边距约束为正数，右、下边距约束为负数）

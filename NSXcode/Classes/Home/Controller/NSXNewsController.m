@@ -8,7 +8,8 @@
 
 #import "NSXNewsController.h"
 //#import "NSXCell.h"
-#import "NSXNewsCell.h"
+//#import "NSXNewsCell.h"
+#import "XHFeedCell3.h"
 #import "NSXMenu.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
@@ -20,7 +21,11 @@
 #import "NSXNews+provider.h"
 
 #import "CarouseView.h"
+#import "RefreshView.h"
 #import "StoryModel.h"
+
+#import "UIFont+FontAwesome.h"
+#import "NSString+FontAwesome.h"
 
 #define kRowHeight 88.f
 #define kSectionHeaderHeight 36.f
@@ -32,11 +37,12 @@
 @property (nonatomic,assign) NSInteger pn;
 
 @property (strong, nonatomic) NSMutableArray *newsArray;
-
+@property(assign,readonly,nonatomic)BOOL isLoading;
 @property(weak,nonatomic)UITableView *mainTableView;
 @property(weak,nonatomic)UIView *navBarBackgroundView;
 @property(weak,nonatomic)UILabel *newsTodayLb;
 @property(weak,nonatomic)CarouseView *carouseView;
+@property(weak,nonatomic)RefreshView *refreshView;
 
 @end
 
@@ -106,6 +112,10 @@
     _newsTodayLb = lab;
     
 
+    RefreshView *refreshView = [[RefreshView alloc] initWithFrame:CGRectMake(_newsTodayLb.left-20.f, _newsTodayLb.centerY-10, 20.f, 20.f)];
+    [self.view addSubview:refreshView];
+    _refreshView = refreshView;
+    
     
     UIButton *menuBtn = [[UIButton alloc] initWithFrame:CGRectMake(16.f, 28.f, 22.f, 22.f)];
     [menuBtn setImage:[UIImage imageNamed:@"Home_Icon"] forState:UIControlStateNormal];
@@ -116,11 +126,11 @@
    
     
     
-    // 头部刷新控件
-    self.mainTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+//    // 头部刷新控件
+//    self.mainTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     
     // 尾部刷新控件
-    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+//    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 
@@ -177,36 +187,38 @@
         //下拉刷新和navBar的background渐变
         CGFloat offSetY = scrollView.contentOffset.y;
         if (offSetY<=0&&offSetY>=-80) {
-//            if (-offSetY<=40) {
-//                if(!_viewmodel.isLoading){
-//                    [_refreshView redrawFromProgress:-offSetY/40];
-//                }else{
-//                    [_refreshView redrawFromProgress:0];
-//                }
-//            }
-//            if (-offSetY>40&&-offSetY<=80&&!scrollView.isDragging&&!_viewmodel.isLoading) {
+            if (-offSetY<=40) {
+                if(!self.isLoading){
+                    [_refreshView redrawFromProgress:-offSetY/40];
+                }else{
+                    [_refreshView redrawFromProgress:0];
+                }
+            }
+            if (-offSetY>40&&-offSetY<=80&&!scrollView.isDragging&&!self.isLoading) {
 //                [self.viewmodel updateLatestStories];
-//                [_refreshView startAnimation];
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    [_refreshView stopAnimation];
-//                });
-//            }
+                [self loadData];
+                [_refreshView startAnimation];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [_refreshView stopAnimation];
+                });
+            }
             _carouseView.frame = CGRectMake(0, -40-offSetY/2, kScreenWidth, 260-offSetY/2);
             [_carouseView updateSubViewsOriginY:offSetY];
             _navBarBackgroundView.backgroundColor = [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:0.f];
         }else if(offSetY<-80){
             _mainTableView.contentOffset = CGPointMake(0.f, -80.f);
         }else if(offSetY <= 300) {
-//            [_refreshView redrawFromProgress:0];
+            [_refreshView redrawFromProgress:0];
             _carouseView.frame = CGRectMake(0, -40-offSetY, kScreenWidth, 260);
             _navBarBackgroundView.backgroundColor = [UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:offSetY/(220.f-56.f)];
         }
         
         //上拉刷新
         if (offSetY + kRowHeight > scrollView.contentSize.height - kScreenHeight) {
-//            if (!_viewmodel.isLoading) {
+            if (!self.isLoading) {
 //                [_viewmodel getPreviousStories];
-//            }
+                [self loadMoreData];
+            }
         }
     }
 }
@@ -217,6 +229,7 @@
  */
 - (void)loadData{
     
+    NSLog(@"loadData-----------");
 //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 //    self.pn = 1;
 //    // 请求参数（根据接口文档编写）
@@ -250,6 +263,7 @@
  *  加载更多数据
  */
 - (void)loadMoreData{
+       NSLog(@"loadMoreData-----------");
 //    
 //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 //    
@@ -290,7 +304,7 @@
 #pragma mark - UITableviewDatasource 数据源方法
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    [self.mainTableView startAutoCellHeightWithCellClass:[NSXNewsCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
+//    [self.mainTableView startAutoCellHeightWithCellClass:[NSXNewsCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
     return self.newsArray.count;
 //    return self.menus.count;
 }
@@ -298,27 +312,98 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSXNews *news = self.newsArray[indexPath.row];
-//    NSXNews *news = [[NSXNews alloc] init];
     
-//    news.newsID = 112312312;
-////    news.pubDate = [NSDate new];
-////    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
-//    news.title = @"SonarQube 5.2发布,提升监控";
-//
-//    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
-
-    static NSString *ID = @"test";
-    NSXNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[NSXNewsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    static NSString *cellIdentifier = @"FeedCell3";
+//    XHFeedCell3* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    if (!cell) {
+     XHFeedCell3*  cell = [[XHFeedCell3 alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+//    }
+    
+    
+    cell.nameLabel.text = news.title;
+    if (news.body.length>60) {
+        news.body = [news.body substringToIndex:60];
     }
-    cell.news = news;
+    cell.updateLabel.text = news.body;
+    
+    
+    NSString *rawString = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForEnum:FAClockO], @"8 hours ago"];
+    if (rawString != nil) {
+        NSAttributedString *attributedTime = [[NSAttributedString alloc] initWithString:rawString
+                                                                             attributes:@{
+                                                                                          NSFontAttributeName: [UIFont fontAwesomeFontOfSize:12],
+                                                                                          }];
+        
+        cell.dateLabel.attributedText = attributedTime;
+    }
+    else{
+        cell.dateLabel.text = rawString;
+    }
+    
+    NSString *likeCountLabelrawString = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForEnum:FAThumbsOUp], @"293"];
+    if (rawString != nil) {
+        NSAttributedString *attributedTime = [[NSAttributedString alloc] initWithString:likeCountLabelrawString
+                                                                             attributes:@{
+                                                                                          NSFontAttributeName: [UIFont fontAwesomeFontOfSize:12],
+                                                                                          }];
+        
+        cell.likeCountLabel.attributedText = attributedTime;
+    }
+    else{
+        cell.likeCountLabel.text = rawString;
+    }
+    
+    NSString *dislikeCountLabelrawString = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForEnum:FAThumbsODown], @"293"];
+    if (rawString != nil) {
+        NSAttributedString *attributedTime = [[NSAttributedString alloc] initWithString:dislikeCountLabelrawString
+                                                                             attributes:@{
+                                                                                          NSFontAttributeName: [UIFont fontAwesomeFontOfSize:12],
+                                                                                          }];
+        
+        cell.dislikeCountLabel.attributedText = attributedTime;
+    }
+    else{
+        cell.dislikeCountLabel.text = rawString;
+    }
+    
+    
+    
+    //    cell.likeCountLabel.text = @"293 likes";
+    
+    
+    NSString *commentCountLabelrawString = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForEnum:FAComment], @"555K"];
+    if (rawString != nil) {
+        NSAttributedString *attributedTime = [[NSAttributedString alloc] initWithString:commentCountLabelrawString
+                                                                             attributes:@{
+                                                                                          NSFontAttributeName: [UIFont fontAwesomeFontOfSize:12],
+                                                                                          }];
+        
+        cell.commentCountLabel.attributedText = attributedTime;
+    }
+    else{
+        cell.commentCountLabel.text = rawString;
+    }
+    
+    //    cell.commentCountLabel.text = @"555K comments";
+    
+    //
+    //    [button_2 setTitle:[NSString stringWithFormat:@" %@ Delete按钮",iconString] forState:UIControlStateNormal];
+    //    [button_2.titleLabel setFont:[UIFont fontWithName:@"FontAwesome" size:14]];
+    //
+    //
+//    NSString* profileImageName = self.profileImages[indexPath.row%self.profileImages.count];
+    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:@"http://d05.res.meilishuo.net/pic/_o/9b/5a/f1f34e24c1a89f2799de30894c21_750_750.cj.jpg"]];
+//    cell.profileImageView.image = [UIImage imageNamed:@""];
+    [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:@"http://d05.res.meilishuo.net/pic/_o/7f/33/64a4d0e9c5cf95e707581e98b7c9_750_750.cj.jpg"]];
     return cell;
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSXNews *news = self.newsArray[indexPath.row];
+//    NSXNews *news = self.newsArray[indexPath.row];
+    
+    return  100;
 ////    int index = indexPath.row % 5;
 //    NSXNews *news = [[NSXNews alloc] init];
 //    news.newsID = 112312312;
@@ -326,7 +411,7 @@
 //    //    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
 //    news.title = @"SonarQube 5.2发布,提升监控";
 //    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
-    return [self.mainTableView cellHeightForIndexPath:indexPath model:news keyPath:@"news"];
+//    return [self.mainTableView cellHeightForIndexPath:indexPath model:news keyPath:@"news"];
 }
 
 #pragma mark - UITableviewDelegate 代理方法
