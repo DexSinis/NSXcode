@@ -762,12 +762,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/User/ExampleFiles/MMExampleSideDrawerViewController.m"
-            timestampString = "472787787.85566"
+            timestampString = "472792402.310487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487"
-            landmarkName = "-updateHeaderInfo"
+            startingLineNumber = "499"
+            endingLineNumber = "499"
+            landmarkName = "-updateHeaderAndFooter"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -778,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/User/ExampleFiles/MMExampleSideDrawerViewController.m"
-            timestampString = "472787787.85566"
+            timestampString = "472792402.310487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
+            startingLineNumber = "501"
+            endingLineNumber = "501"
             landmarkName = "-updateHeaderInfo"
             landmarkType = "5">
          </BreakpointContent>

@@ -173,6 +173,7 @@
 		DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2C61C2C0E810074D94A /* Utils.m */; };
 		DEE4C2CA1C2C0EE70074D94A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2C91C2C0EE70074D94A /* Config.m */; };
 		DEE4C2D11C2C13530074D94A /* NSXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2CF1C2C13530074D94A /* NSXUser.m */; };
+		DEE527CF1C2E904500381C6D /* NSXNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */; };
 		DEE8204B1C2CDFAA00E515C9 /* NSXUser+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */; };
 		DEE820501C2CE0A200E515C9 /* NSXUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204D1C2CE0A200E515C9 /* NSXUserParam.m */; };
 		DEE820511C2CE0A200E515C9 /* NSXUserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204F1C2CE0A200E515C9 /* NSXUserResult.m */; };
@@ -1471,6 +1472,8 @@
 		DEE4C2C91C2C0EE70074D94A /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		DEE4C2CE1C2C13530074D94A /* NSXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXUser.h; sourceTree = "<group>"; };
 		DEE4C2CF1C2C13530074D94A /* NSXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXUser.m; sourceTree = "<group>"; };
+		DEE527CD1C2E904500381C6D /* NSXNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModel.h; sourceTree = "<group>"; };
+		DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModel.m; sourceTree = "<group>"; };
 		DEE820491C2CDFAA00E515C9 /* NSXUser+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXUser+Provider.h"; sourceTree = "<group>"; };
 		DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXUser+Provider.m"; sourceTree = "<group>"; };
 		DEE8204C1C2CE0A200E515C9 /* NSXUserParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXUserParam.h; sourceTree = "<group>"; };
@@ -2673,6 +2676,8 @@
 		DE7BF7E31C103D4500B81F67 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DEE527CD1C2E904500381C6D /* NSXNewsViewModel.h */,
+				DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */,
 				DE7BF7F11C103EA700B81F67 /* NSXNews+Provider.h */,
 				DE7BF7F21C103EA700B81F67 /* NSXNews+Provider.m */,
 				DE7BF7F31C103EA700B81F67 /* NSXNewsParam.h */,
@@ -7000,6 +7005,7 @@
 				DEF09C181C215ADB005D0CB8 /* Readme.md in Sources */,
 				DE4ACDCC1C072EF700BA5608 /* NSXNewsCell1.m in Sources */,
 				DEF09AB01C215ADA005D0CB8 /* README.md in Sources */,
+				DEE527CF1C2E904500381C6D /* NSXNewsViewModel.m in Sources */,
 				DEF0994E1C215ADA005D0CB8 /* LICENSE.md in Sources */,
 				DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */,
 				DEE820501C2CE0A200E515C9 /* NSXUserParam.m in Sources */,

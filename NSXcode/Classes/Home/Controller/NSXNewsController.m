@@ -19,6 +19,7 @@
 #import "NSXNewsResult.h"
 #import "NSXNewsParam.h"
 #import "NSXNews+provider.h"
+#import "NSXNewsViewModel.h"
 
 #import "CarouseView.h"
 #import "RefreshView.h"
@@ -36,8 +37,10 @@
 /** 用于加载下一页的参数(页码) */
 @property (nonatomic,assign) NSInteger pn;
 
-@property (strong, nonatomic) NSMutableArray *newsArray;
-@property(assign,readonly,nonatomic)BOOL isLoading;
+//@property (strong, nonatomic) NSMutableArray *newsArray;
+//@property(assign,readonly,nonatomic)BOOL isLoading;
+@property(strong,nonatomic)NSXNewsViewModel *viewmodel;
+
 @property(weak,nonatomic)UITableView *mainTableView;
 @property(weak,nonatomic)UIView *navBarBackgroundView;
 @property(weak,nonatomic)UILabel *newsTodayLb;

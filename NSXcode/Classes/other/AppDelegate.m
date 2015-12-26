@@ -33,7 +33,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 1.创建窗口
-    [Config clearCookie];
+//    [Config clearCookie];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     // 2.设置窗口的根控制器

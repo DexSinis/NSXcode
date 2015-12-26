@@ -33,6 +33,7 @@
 #import "NSXNewsCellBar.h"
 #import "Config.h"
 #import "NSXUser.h"
+#import "UIButton+Badge.h"
 
 @implementation MMExampleSideDrawerViewController
 
@@ -468,6 +469,20 @@
     if (user!=nil) {
         [_headerView.loginBtn setTitle:user.name forState:UIControlStateNormal];
         [_headerView.avatarImageView sd_setImageWithURL:user.portraitURL placeholderImage:[UIImage imageNamed:@"MenuAvatar"]];
+        
+        _headerView.collectionBtn.badgeValue = [NSString stringWithFormat:@"%d",user.favoriteCount];
+        _headerView.collectionBtn.badgeOriginX = 12;
+        _headerView.collectionBtn.badgeOriginY = 10;
+        
+        
+        _headerView.messageBtn.badgeValue = [NSString stringWithFormat:@"%d",user.fansCount];
+        _headerView.messageBtn.badgeOriginX = 12;
+        _headerView.messageBtn.badgeOriginY = 10;
+        
+        
+        _headerView.settingBtn.badgeValue = [NSString stringWithFormat:@"%d",user.score];
+        _headerView.settingBtn.badgeOriginX = 12;
+        _headerView.settingBtn.badgeOriginY = 10;
     }
     //    _headerView.loginBtn.titleLabel.text = @"sadsa";
 //    [_headerView setNeedsDisplay];
