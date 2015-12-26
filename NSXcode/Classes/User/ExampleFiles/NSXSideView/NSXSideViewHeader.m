@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
     if (self) {
         [self initSubviews];
         [self setLayout];
+   
+
     }
     return self;
 }
@@ -41,7 +43,10 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
 -(void)initSubviews
 {
     
-    _loginBtn = [self setupBtnWithIcon:@"MenuAvatar" title:@"请登录" tag:NSXButtonTypeLogin];
+    _avatarImageView = [[UIImageView alloc] init];
+    _avatarImageView.image = [UIImage imageNamed:@"MenuAvatar"];
+    
+    _loginBtn = [self setupBtnWithIcon:@"" title:@"请登录" tag:NSXButtonTypeLogin];
     
     _collectionBtn =[self setupBtnWithIcon:@"Menu_Icon_Collect" title:@"收藏" tag:NSXButtonTypeCollect];
     _messageBtn = [self setupBtnWithIcon:@"Menu_Icon_Message" title:@"消息" tag:NSXButtonTypeMessage];
@@ -51,7 +56,7 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
 //    self.collectionBtn = collectionBtn;
 //    self.messageBtn=messageBtn;
 //    self.settingBtn =settingBtn;
-    
+    [self addSubview:_avatarImageView];
     [self addSubview:_loginBtn];
     [self addSubview:_collectionBtn];
     [self addSubview:_messageBtn];
@@ -95,12 +100,25 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
 //                          constant:0.0]];
 //    
     
+    [_avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.and.top.mas_equalTo(20);
+        // 添加大小约束
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+        
+        _avatarImageView.layer.masksToBounds = YES; //没这句话它圆不起来
+        _avatarImageView.layer.cornerRadius = 20; //设置图片圆角的尺度
+        // 添加左、上边距约束（左、上约束都是20）
+//        make.left.and.top.mas_equalTo(20);
+    }];
+    
     [_loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         // 添加大小约束
-        make.size.mas_equalTo(CGSizeMake(300, 40));
+        make.size.mas_equalTo(CGSizeMake(260, 40));
         // 添加左、上边距约束（左、上约束都是20）
-        make.left.and.top.mas_equalTo(20);
+        make.top.mas_equalTo(20);
+        make.left.mas_equalTo(_avatarImageView.mas_right).offset(20);
     }];
     
 //    [_collectionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -187,9 +205,10 @@ typedef NS_ENUM(NSInteger, NSXButtonType) {
 //    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     if (tag == NSXButtonTypeLogin) {
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 50, 0, 0)];
+        [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
          btn.titleLabel.font = [UIFont systemFontOfSize:16];
 //        [btn setTitleEdgeInsets:UIEdgeInsetsMake(50, -btn.titleLabel.bounds.size.width-45, 0, 0)];
+        
     }else
     {
         [btn setTitleEdgeInsets:UIEdgeInsetsMake(50, -btn.titleLabel.bounds.size.width-45, 0, 0)];

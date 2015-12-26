@@ -31,6 +31,8 @@
 #import "CYloginRegisterViewController.h"
 
 #import "NSXNewsCellBar.h"
+#import "Config.h"
+#import "NSXUser.h"
 
 @implementation MMExampleSideDrawerViewController
 
@@ -38,15 +40,12 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateHeaderAndFooter) name:CYLOGINSUCCESSNotification object:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
     
     [self updateHeaderAndFooter];
-
-    
-    
-
-    
-    
+ 
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height-150-49) style:UITableViewStyleGrouped];
     
     [self.tableView setDelegate:self];
@@ -456,13 +455,22 @@
 
 -(void)updateHeaderAndFooter
 {
+
     [self.headerView removeFromSuperview];
     [self.footerView removeFromSuperview];
     
-    _headerView = [[NSXSideViewHeader alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150)];
+  
     
+    _headerView = [[NSXSideViewHeader alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150)];
     _headerView.backgroundColor = [UIColor darkGrayColor];
     
+    NSXUser *user = [Config getOwnUser];
+    if (user!=nil) {
+        [_headerView.loginBtn setTitle:user.name forState:UIControlStateNormal];
+        [_headerView.avatarImageView sd_setImageWithURL:user.portraitURL placeholderImage:[UIImage imageNamed:@"MenuAvatar"]];
+    }
+    //    _headerView.loginBtn.titleLabel.text = @"sadsa";
+//    [_headerView setNeedsDisplay];
     
     [self.view  addSubview:self.headerView];
     
@@ -473,6 +481,13 @@
     
     [self.view  addSubview:self.footerView];
 
+}
+-(void)updateHeaderInfo
+{
+    NSXUser *user = [Config getOwnUser];
+//    _headerView.loginBtn.titleLabel.text = @"sadsa";
+    [_headerView.loginBtn setTitle:user.name forState:UIControlStateNormal];
+    [_headerView setNeedsDisplay];
 }
 
 

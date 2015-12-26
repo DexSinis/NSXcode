@@ -21,6 +21,7 @@
 #import "MMExampleLeftSideDrawerViewController.h"
 #import "MMExampleRightSideDrawerViewController.h"
 #import "MMExampleDrawerVisualStateManager.h"
+#import "Config.h"
 
 
 @interface AppDelegate ()
@@ -32,6 +33,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 1.创建窗口
+    [Config clearCookie];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     // 2.设置窗口的根控制器
@@ -116,6 +118,7 @@
     [self.window setTintColor:tintColor];
     [self.window setRootViewController:self.drawerController];
     
+   
     return YES;
 }
 

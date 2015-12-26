@@ -10,6 +10,7 @@
 
 @interface NSXSideViewHeader : UIView
 
+@property (strong, nonatomic) UIImageView *avatarImageView;
 @property (strong, nonatomic) UIButton *loginBtn;
 @property (strong, nonatomic) UIButton *collectionBtn;
 @property (strong, nonatomic) UIButton *messageBtn;

@@ -13,15 +13,30 @@ mysql = client.getDbCon();
 var uuid = require("../utils/uuid")
 
 function User(user) {
-	this.id = user.id;
-    this.name = user.name;
-    this.password = user.password;
-    this.u_level = user.u_level;
+	this.userID = user.userID;
+	this.location = user.location;
+	this.name = user.name;
+	this.followersCount = user.followersCount;
+	this.fansCount = user.fansCount;
+	this.score = user.score;
+	this.favoriteCount = user.favoriteCount;
+	this.relationship = user.relationship;
+	this.portraitURL = user.portraitURL;
+	this.gender = user.gender;
+	this.developPlatform = user.developPlatform;
+	this.expertise = user.expertise;
+	this.joinTime = user.joinTime;
+	this.latestOnlineTime = user.latestOnlineTime;
+	this.pinyin = user.pinyin;
+	this.pinyinFirst = user.pinyinFirst;
+    this.hometown = user.hometown;
+    //this.password = user.password;
+    //this.u_level = user.u_level;
 }
 module.exports = User;
 
-User.get = function(u_name, callback){
-	var sql = "select * from user where name='"+u_name+"'";
+User.get = function(u_userID, callback){
+	var sql = "select * from t_user where userID ='"+u_userID+"'";
 	mysql.query(sql,function(err, result, fields){
 		if(err){
 			throw err;
@@ -33,7 +48,7 @@ User.get = function(u_name, callback){
 
 
 User.getList = function(keyword, callback){
-	var sql = "select * from user where 1=1 and name like'%"+keyword+"%'";
+	var sql = "select * from t_user where 1=1 and name like'%"+keyword+"%'";
 	mysql.query(sql, function(err, result, fields){
 		if(err){
 			throw err;
@@ -45,9 +60,24 @@ User.getList = function(keyword, callback){
 
 User.prototype.add = function add(callback) {
 	var user = {
-		name: this.name,
-		password: this.password,
-		u_level: this.u_level
+		//this.userID = user.userID,
+	location : this.location,
+	name : this.name,
+	followersCount : this.followersCount,
+	fansCount : this.fansCount,
+	score : this.score,
+	favoriteCount : this.favoriteCount,
+	relationship : this.relationship,
+	portraitURL : this.portraitURL,
+	gender : this.gender,
+	developPlatform : this.developPlatform,
+	expertise : this.expertise,
+	joinTime : this.joinTime,
+	latestOnlineTime : this.latestOnlineTime,
+	pinyin : this.pinyin,
+	pinyinFirst : this.pinyinFirst,
+	hometown : this.hometown
+	//this.password = user.password;
 	};
 	var uuid_ = uuid.v4();
 	var sql = "insert into user(id,name,password,u_level) values(?,?,?,?)";
@@ -62,10 +92,23 @@ User.prototype.add = function add(callback) {
 
 User.prototype.update = function(callback) {
 	var user = {
-		id: this.id,
-		name: this.name,
-		password: this.password,
-		u_level: this.u_level
+		userID : this.userID,
+		location : this.location,
+		name : this.name,
+		followersCount : this.followersCount,
+		fansCount : this.fansCount,
+		score : this.score,
+		favoriteCount : this.favoriteCount,
+		relationship : this.relationship,
+		portraitURL : this.portraitURL,
+		gender : this.gender,
+		developPlatform : this.developPlatform,
+		expertise : this.expertise,
+		joinTime : this.joinTime,
+		latestOnlineTime : this.latestOnlineTime,
+		pinyin : this.pinyin,
+		pinyinFirst : this.pinyinFirst,
+		hometown : this.hometown
 	}
 
 	var sql = "update user set name=?,password=?,u_level=? where id=?";
@@ -80,7 +123,7 @@ User.prototype.update = function(callback) {
 
 User.prototype.delete = function(callback){
 	var user = {
-		id: this.id
+		userId: this.userID
 	}
 	var sql = "delete from user where id='"+user.id+"'";
 	mysql.query(sql ,function(err){
