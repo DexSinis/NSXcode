@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class StoryModel;
+@class NSXNews;
 @interface NSXNewsViewModel : NSObject
 
 @property(strong,nonatomic)NSMutableArray *daysDataList;
 @property(strong,nonatomic)NSMutableArray *top_stories;
-@property(assign,readonly,nonatomic)BOOL isLoading;
-@property(strong,readonly,nonatomic)NSMutableArray *storiesID;
+@property(assign,nonatomic)BOOL isLoading;
+@property(strong,nonatomic)NSMutableArray *newsIdArray;
+
+@property(copy,nonatomic)NSString *currentLoadDayStr; //已加载最靠前那一天的日期字符串
+
 
 - (void)getLatestStories;
 - (void)getPreviousStories;
@@ -23,7 +26,7 @@
 - (NSUInteger)numberOfSections;
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
 - (NSAttributedString *)titleForSection:(NSInteger)section;
-- (StoryModel *)storyAtIndexPath:(NSIndexPath *)indexPath;
+- (NSXNews *)storyAtIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

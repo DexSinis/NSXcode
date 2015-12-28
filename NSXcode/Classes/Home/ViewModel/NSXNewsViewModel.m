@@ -8,6 +8,11 @@
 
 #import "NSXNewsViewModel.h"
 #import "NSXNews.h"
+//#import "NSXNews+Provider.h"
+#import "NSXNewsViewModel+Provider.h"
+#import "NSXNewsViewModelParam.h"
+#import "NSXNewsViewModelResult.h"
+#import <MJExtension/MJExtension.h>
 
 @interface SectionViewModel : NSObject
 
@@ -20,18 +25,34 @@
 
 @implementation SectionViewModel
 
-- (instancetype)initWithDictionary:(NSDictionary *)dic {
+//- (instancetype)initWithDictionary:(NSDictionary *)dic {
+//    self = [super init];
+//    if (self) {
+//        self.sectionTitleText = [self stringConvertToSectionTitleText:dic[@"date"]];
+//        NSArray *newsArray = dic[@"newsArray"];
+//        NSMutableArray *newsModelList = [NSMutableArray new];
+//        for (NSDictionary *newsDict in newsArray) {
+////            StoryModel *model = [[StoryModel alloc] initWithDictionary:storyDic];
+//            NSXNews *news = [NSXNews  mj_objectWithKeyValues:newsDict];
+//            [newsModelList addObject:news];
+//        }
+//        self.sectionDataSource = newsModelList;
+//    }
+//    return self;
+//}
+
+- (instancetype)initWithViewModel:(NSXNewsViewModel *)viewModel {
     self = [super init];
     if (self) {
-        self.sectionTitleText = [self stringConvertToSectionTitleText:dic[@"date"]];
-        NSArray *newsArray = dic[@"newsArray"];
-        NSMutableArray *storyModelList = [NSMutableArray new];
-        for (NSDictionary *newsDict in newsArray) {
-//            StoryModel *model = [[StoryModel alloc] initWithDictionary:storyDic];
-            NSXNews *news = [NSXNews  mj_objectWithKeyValues:newsDict];
-            [storyModelList addObject:news];
-        }
-        self.sectionDataSource = storyModelList;
+        self.sectionTitleText = viewModel.currentLoadDayStr;
+//        NSArray *newsArray = viewModel.daysDataList;
+//        NSMutableArray *newsModelList = [NSMutableArray new];
+//        for (NSXNews *news in newsArray) {
+//            //            StoryModel *model = [[StoryModel alloc] initWithDictionary:storyDic];
+////            NSXNews *news = [NSXNews  mj_objectWithKeyValues:newsDict];
+//            [newsModelList addObject:news];
+//        }
+        self.sectionDataSource = viewModel.daysDataList;
     }
     return self;
 }
@@ -52,11 +73,26 @@
 
 @interface NSXNewsViewModel()
 
-@property(copy,nonatomic)NSString *currentLoadDayStr; //已加载最靠前那一天的日期字符串
 
 @end
 
 @implementation NSXNewsViewModel
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{
+             @"daysDataList" : @"NSXNews",
+             @"top_stories" : @"NSXNews",
+             };
+}
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"currentLoadDayStr" : @"date",
+             @"newsId" : @"id"
+             };
+    
+}
 
 - (NSUInteger)numberOfSections {
     return self.daysDataList.count;
@@ -72,14 +108,40 @@
     return [[NSAttributedString alloc] initWithString:svm.sectionTitleText attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18] ,NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
 
-- (StoryModel *)storyAtIndexPath:(NSIndexPath *)indexPath {
+- (NSXNews *)storyAtIndexPath:(NSIndexPath *)indexPath {
     SectionViewModel *svm = _daysDataList[indexPath.section];
-    StoryModel *story = svm.sectionDataSource[indexPath.row];
-    return story;
+    NSXNews *news = svm.sectionDataSource[indexPath.row];
+    return news;
 }
 
 //获取最新的新闻
 - (void)getLatestStories {
+    
+    NSLog(@"getLatestStories----------");
+    NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+    [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {        NSXNewsViewModel *viewModel = result.viewModel;
+        self.currentLoadDayStr = viewModel.currentLoadDayStr;
+        SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
+        self.daysDataList = [NSMutableArray arrayWithObject:vm];
+        self.newsIdArray = [NSMutableArray arrayWithArray:[vm valueForKeyPath:@"sectionDataSource.newsId"]];
+
+        
+        for (NSXNews *news in viewModel.daysDataList) {
+            NSLog(@"%@",news.images);
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadLatestDaily" object:nil];
+
+    } failure:^(NSError *error) {
+        
+    }];
+//    NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+//   [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
+//       
+//   } failure:^(NSError *error) {
+//       
+//   }];
+    
 //    [HttpOperation getRequestWithURL:@"news/latest" parameters:nil success:^(id responseObject) {
 //        NSDictionary *jsonDic = (NSDictionary*)responseObject;
 //        self.currentLoadDayStr = responseObject[@"date"];
@@ -105,7 +167,39 @@
 }
 
 - (void)updateLatestStories {
-//    _isLoading = YES;
+    _isLoading = YES;
+    NSLog(@"updateLatestStories----------");
+    NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+    param.currentLoadDayStr = self.currentLoadDayStr;
+    [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
+        NSXNewsViewModel *viewModel = result.viewModel;
+        SectionViewModel *newvm = [[SectionViewModel alloc] initWithViewModel:viewModel];
+        SectionViewModel *oldvm = _daysDataList[0];
+        
+        if ([newvm.sectionTitleText isEqualToString:oldvm.sectionTitleText]) {
+            NSArray* new = newvm.sectionDataSource;
+            NSArray* old = oldvm.sectionDataSource;
+            if (new.count>old.count) {
+                NSUInteger newItemsCount = new.count-old.count;
+                for (int i = 1; i <=newItemsCount; i++) {
+                    NSXNews *news = new[newItemsCount-i];
+                    [_newsIdArray insertObject:news.newsId atIndex:0];
+                }
+                [_daysDataList removeObject:oldvm];
+                [_daysDataList insertObject:newvm atIndex:0];
+            }
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"UpdateLatestDaily" object:nil];
+        }else {
+            self.currentLoadDayStr = viewModel.currentLoadDayStr;
+            self.daysDataList = [NSMutableArray arrayWithObject:newvm];
+            _newsIdArray = [NSMutableArray arrayWithArray:[newvm valueForKeyPath:@"sectionDataSource.newsId"]];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"UpdateLatestDaily" object:nil userInfo:@{@"isNewDay":@(YES)}];
+        }
+        _isLoading = NO;
+        
+    } failure:^(NSError *error) {
+        
+    }];
 //    [HttpOperation getRequestWithURL:@"news/latest" parameters:nil success:^(id responseObject) {
 //        NSDictionary *jsonDic = (NSDictionary*)responseObject;
 //        
@@ -152,7 +246,21 @@
 
 
 - (void)getPreviousStories {
-//    _isLoading = YES;
+    
+      NSLog(@"getPreviousStories----------");
+     _isLoading = YES;
+        NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+        param.currentLoadDayStr = self.currentLoadDayStr;
+       [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
+           NSXNewsViewModel *viewModel = result.viewModel;
+           SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
+           [self.daysDataList addObject:vm];
+           [self.newsIdArray addObjectsFromArray:[vm valueForKeyPath:@"sectionDataSource.newsId"]];
+           [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadPreviousDaily" object:nil];
+           _isLoading = NO;
+       } failure:^(NSError *error) {
+    
+       }];
 //    [HttpOperation getRequestWithURL:[NSString stringWithFormat:@"news/before/%@",_currentLoadDayStr] parameters:nil success:^(id responseObject) {
 //        NSDictionary *jsonDic = (NSDictionary*)responseObject;
 //        self.currentLoadDayStr = responseObject[@"date"];

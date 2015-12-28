@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class NSXNewsViewModel;
 @interface NSXNewsController : UIViewController
+- (instancetype)initWithViewModel:(NSXNewsViewModel *)vm;
 
 @end

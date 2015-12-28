@@ -28,6 +28,7 @@
 #import "HomepageViewController.h"
 
 #import "LogInViewController.h"
+#import "NSXNewsViewModel.h"
 
 @interface NSXTabBarController ()  <UITabBarControllerDelegate,UISearchBarDelegate>
 {
@@ -176,7 +177,7 @@
 //                                                                          underTabbar:YES];
     
     // 1.添加第一个控制器
-    NSXNewsController *oneVc = [[NSXNewsController alloc]init];
+    NSXNewsController *oneVc = [[NSXNewsController alloc]initWithViewModel:[NSXNewsViewModel new]];
     UINavigationController *oneNav = [[UINavigationController alloc]initWithRootViewController:oneVc];
     
     // 2.添加第2个控制器

@@ -41,9 +41,6 @@
 		DE5C15591C06AF0700E8B428 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15581C06AF0700E8B428 /* UIImage+Util.m */; };
 		DE5C155D1C06B79700E8B428 /* NSXOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C155C1C06B79700E8B428 /* NSXOptionButton.m */; };
 		DE5C15631C06BB5C00E8B428 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15621C06BB5C00E8B428 /* UIColor+Util.m */; };
-		DE7BF7F71C103EA700B81F67 /* NSXNews+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7F21C103EA700B81F67 /* NSXNews+Provider.m */; };
-		DE7BF7F81C103EA700B81F67 /* NSXNewsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7F41C103EA700B81F67 /* NSXNewsParam.m */; };
-		DE7BF7F91C103EA700B81F67 /* NSXNewsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7BF7F61C103EA700B81F67 /* NSXNewsResult.m */; };
 		DE9BBBC61BFCA26B0048D32A /* twitter_0.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */; };
 		DE9BBBC71BFCA26B0048D32A /* twitter_1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */; };
 		DE9BBBC81BFCA26B0048D32A /* twitter_2.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBA01BFCA26B0048D32A /* twitter_2.json */; };
@@ -137,6 +134,9 @@
 		DEDCE8D31C2E383900C7757C /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCE8D11C2E383900C7757C /* UIButton+Badge.m */; };
 		DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */; };
 		DEDD80E61C2AA11300C5ECE3 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD80E51C2AA11300C5ECE3 /* RefreshView.m */; };
+		DEDFFBA21C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */; };
+		DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */; };
+		DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */; };
 		DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */; };
 		DEE2DCB91C2790EF00ED907E /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */; };
 		DEE2DCC31C27914600ED907E /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCBE1C27914600ED907E /* Homepage.storyboard */; };
@@ -1257,12 +1257,6 @@
 		DE5C155C1C06B79700E8B428 /* NSXOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXOptionButton.m; sourceTree = "<group>"; };
 		DE5C15611C06BB5C00E8B428 /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		DE5C15621C06BB5C00E8B428 /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
-		DE7BF7F11C103EA700B81F67 /* NSXNews+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXNews+Provider.h"; sourceTree = "<group>"; };
-		DE7BF7F21C103EA700B81F67 /* NSXNews+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXNews+Provider.m"; sourceTree = "<group>"; };
-		DE7BF7F31C103EA700B81F67 /* NSXNewsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsParam.h; sourceTree = "<group>"; };
-		DE7BF7F41C103EA700B81F67 /* NSXNewsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsParam.m; sourceTree = "<group>"; };
-		DE7BF7F51C103EA700B81F67 /* NSXNewsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsResult.h; sourceTree = "<group>"; };
-		DE7BF7F61C103EA700B81F67 /* NSXNewsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsResult.m; sourceTree = "<group>"; };
 		DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_0.json; sourceTree = "<group>"; };
 		DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_1.json; sourceTree = "<group>"; };
 		DE9BBBA01BFCA26B0048D32A /* twitter_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_2.json; sourceTree = "<group>"; };
@@ -1404,6 +1398,12 @@
 		DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFeedCell3.m; sourceTree = "<group>"; };
 		DEDD80E41C2AA11300C5ECE3 /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
 		DEDD80E51C2AA11300C5ECE3 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
+		DEDFFBA01C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXNewsViewModel+Provider.h"; sourceTree = "<group>"; };
+		DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXNewsViewModel+Provider.m"; sourceTree = "<group>"; };
+		DEDFFBA31C30CC45001BB8C4 /* NSXNewsViewModelParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelParam.h; sourceTree = "<group>"; };
+		DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelParam.m; sourceTree = "<group>"; };
+		DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelResult.h; sourceTree = "<group>"; };
+		DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelResult.m; sourceTree = "<group>"; };
 		DEE2DCA81C2790EF00ED907E /* CYloginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYloginRegisterViewController.h; sourceTree = "<group>"; };
 		DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYloginRegisterViewController.m; sourceTree = "<group>"; };
 		DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -2678,12 +2678,12 @@
 			children = (
 				DEE527CD1C2E904500381C6D /* NSXNewsViewModel.h */,
 				DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */,
-				DE7BF7F11C103EA700B81F67 /* NSXNews+Provider.h */,
-				DE7BF7F21C103EA700B81F67 /* NSXNews+Provider.m */,
-				DE7BF7F31C103EA700B81F67 /* NSXNewsParam.h */,
-				DE7BF7F41C103EA700B81F67 /* NSXNewsParam.m */,
-				DE7BF7F51C103EA700B81F67 /* NSXNewsResult.h */,
-				DE7BF7F61C103EA700B81F67 /* NSXNewsResult.m */,
+				DEDFFBA01C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.h */,
+				DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */,
+				DEDFFBA31C30CC45001BB8C4 /* NSXNewsViewModelParam.h */,
+				DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */,
+				DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */,
+				DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -7086,10 +7086,10 @@
 				DEE2DCD51C27933D00ED907E /* MyTweetLikeListViewController.m in Sources */,
 				DEF099411C215ADA005D0CB8 /* README.md in Sources */,
 				DEE2DD131C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m in Sources */,
-				DE7BF7F71C103EA700B81F67 /* NSXNews+Provider.m in Sources */,
 				DEF09BDF1C215ADB005D0CB8 /* README.md in Sources */,
 				DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */,
 				DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */,
+				DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */,
 				DEF09BDA1C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF09CB71C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE2DCC41C27914600ED907E /* HomepageViewController.m in Sources */,
@@ -7182,7 +7182,6 @@
 				DEF0993C1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF0998C1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09A371C215ADA005D0CB8 /* README.md in Sources */,
-				DE7BF7F91C103EA700B81F67 /* NSXNewsResult.m in Sources */,
 				DEF09C8B1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099891C215ADA005D0CB8 /* History.md in Sources */,
 				DE5C15591C06AF0700E8B428 /* UIImage+Util.m in Sources */,
@@ -7215,6 +7214,7 @@
 				DE5A18211C07E64D00FD3B1D /* NSXNewsCellTest.m in Sources */,
 				DEF099C61C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099991C215ADA005D0CB8 /* stream.markdown in Sources */,
+				DEDFFBA21C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m in Sources */,
 				DEF09B371C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEB3E9781C16818B00495FBE /* NSXNavigationController.m in Sources */,
 				DEB3E9C21C16D26900495FBE /* MyTableViewController.m in Sources */,
@@ -7248,6 +7248,7 @@
 				DE4ACDC61C072E4E00BA5608 /* NewsViewController.m in Sources */,
 				DEF176661C22AB6300EEF06B /* UIView+Extension.m in Sources */,
 				DEF09AF51C215ADB005D0CB8 /* Changelog.md in Sources */,
+				DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */,
 				DE5A18411C08581700FD3B1D /* FAImageView.m in Sources */,
 				DEE4C2D11C2C13530074D94A /* NSXUser.m in Sources */,
 				DEF099461C215ADA005D0CB8 /* LICENSE.md in Sources */,
@@ -7263,7 +7264,6 @@
 				DEF09BEE1C215ADB005D0CB8 /* README.md in Sources */,
 				DEE2DCC51C27914600ED907E /* MyBasicInfoViewController.m in Sources */,
 				DEF09C801C215ADB005D0CB8 /* README.md in Sources */,
-				DE7BF7F81C103EA700B81F67 /* NSXNewsParam.m in Sources */,
 				DE5A18441C08581700FD3B1D /* UIImage+FontAwesome.m in Sources */,
 				DEF09BE41C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A9A1C215ADA005D0CB8 /* History.md in Sources */,

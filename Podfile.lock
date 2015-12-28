@@ -36,13 +36,14 @@ PODS:
     - Reachability
   - ASIHTTPRequest/S3 (1.8.2):
     - ASIHTTPRequest/Core
+  - CYLTableViewPlaceHolder (1.0.6)
   - GPUImage (0.1.7)
   - HMSegmentedControl (1.5.2)
   - JTFadingInfoView (1.0.2)
-  - Masonry (0.6.3)
+  - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
-  - MJExtension (3.0.7)
-  - MJRefresh (3.0.7)
+  - MJExtension (3.0.8)
+  - MJRefresh (3.0.8)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - AFNetworking
   - AFOnoResponseSerializer
   - ASIHTTPRequest
+  - CYLTableViewPlaceHolder
   - GPUImage
   - HMSegmentedControl
   - JTFadingInfoView
@@ -87,13 +89,14 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AFOnoResponseSerializer: c02c8bef1d6742ac68f33ecaed41826c9657bc33
   ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  CYLTableViewPlaceHolder: 44eae89c0b3ba9e5e9a061bab9e9ddac0e7c5059
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
   JTFadingInfoView: 9fcb410da4bf8e3ce722b04b14ee0046a8f13a65
-  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
-  MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
+  MJExtension: 12d2875959b4a0f936ae86b22a1eb6b0251c50ba
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96

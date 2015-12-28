@@ -16,9 +16,9 @@
 #import <MJRefresh.h>
 #import "UITableView+SDAutoTableViewCellHeight.h"
 #import "NSXNews.h"
-#import "NSXNewsResult.h"
-#import "NSXNewsParam.h"
-#import "NSXNews+provider.h"
+//#import "NSXNewsResult.h"
+//#import "NSXNewsParam.h"
+//#import "NSXNews+provider.h"
 #import "NSXNewsViewModel.h"
 
 #import "CarouseView.h"
@@ -39,7 +39,7 @@
 
 //@property (strong, nonatomic) NSMutableArray *newsArray;
 //@property(assign,readonly,nonatomic)BOOL isLoading;
-@property(strong,nonatomic)NSXNewsViewModel *viewmodel;
+@property(strong,nonatomic)NSXNewsViewModel *viewModel;
 
 @property(weak,nonatomic)UITableView *mainTableView;
 @property(weak,nonatomic)UIView *navBarBackgroundView;
@@ -51,24 +51,38 @@
 
 @implementation NSXNewsController
 
+- (instancetype)initWithViewModel:(NSXNewsViewModel *)vm {
+    self = [super init];
+    if (self) {
+        self.viewModel = vm;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadingLatestDaily:) name:@"LoadLatestDaily" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadingPreviousDaily:) name:@"LoadPreviousDaily" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLatestDaily:) name:@"UpdateLatestDaily" object:nil];
+        [self.viewModel getLatestStories];
+    }
+    return self;
+}
+
 #pragma mark - life cycle 生命周期方法
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupTable];
+    
+  
    
-    [NSXNews newsArrayWithParam:nil success:^(NSXNewsResult *result) {
-        self.newsArray = result.newsArray;
-        [self.mainTableView reloadData];
-         NSLog(@"%@", result.totalNumber);
-        for (NSXNews *news in result.newsArray) {
-             NSLog(@"%@", news.title);
-        }
-       
-    } failure:^(NSError *error) {
-        
-    }];
+//    [NSXNews newsArrayWithParam:nil success:^(NSXNewsResult *result) {
+//        self.newsArray = result.newsArray;
+//        [self.mainTableView reloadData];
+//         NSLog(@"%@", result.totalNumber);
+//        for (NSXNews *news in result.newsArray) {
+//             NSLog(@"%@", news.title);
+//        }
+//       
+//    } failure:^(NSError *error) {
+//        
+//    }];
 
 }
 
@@ -76,12 +90,7 @@
 #pragma mark - private methods 私有方法
 
 - (void)setupTable{
-//    self.tableView.rowHeight = 90;
-    
-    // 注册重用Cell
-//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NSXCell class]) bundle:nil] forCellReuseIdentifier:CYXCellID];
-    
-//    self.view.backgroundColor = [UIColor whiteColor];
+
     
     UITableView *tv = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     tv.delegate = self;
@@ -171,6 +180,31 @@
 }
 
 
+
+- (void)loadingLatestDaily:(NSNotification *)noti {
+    NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
+    [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+    [self setTopStoriesContent];
+}
+
+- (void)loadingPreviousDaily:(NSNotification *)noti {
+    NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: [self.viewModel numberOfSections]-1];
+    [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)updateLatestDaily:(NSNotification *)noti {
+    if (![noti.userInfo[@"isNewDay"] boolValue]) {
+        NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
+        [_mainTableView reloadSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+        [self setTopStoriesContent];
+    }else {
+        [_mainTableView reloadData];
+        [self setTopStoriesContent];
+    }
+}
+
+
+
 #pragma mark - CarouseViewDelegate
 
 - (void)didSelectItemWithTag:(NSInteger)tag {
@@ -191,15 +225,15 @@
         CGFloat offSetY = scrollView.contentOffset.y;
         if (offSetY<=0&&offSetY>=-80) {
             if (-offSetY<=40) {
-                if(!self.isLoading){
+                if(!self.viewModel.isLoading){
                     [_refreshView redrawFromProgress:-offSetY/40];
                 }else{
                     [_refreshView redrawFromProgress:0];
                 }
             }
-            if (-offSetY>40&&-offSetY<=80&&!scrollView.isDragging&&!self.isLoading) {
-//                [self.viewmodel updateLatestStories];
-                [self loadData];
+            if (-offSetY>40&&-offSetY<=80&&!scrollView.isDragging&&!self.viewModel.isLoading) {
+                [self.viewModel updateLatestStories];
+//                [self loadData];
                 [_refreshView startAnimation];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [_refreshView stopAnimation];
@@ -218,8 +252,8 @@
         
         //上拉刷新
         if (offSetY + kRowHeight > scrollView.contentSize.height - kScreenHeight) {
-            if (!self.isLoading) {
-//                [_viewmodel getPreviousStories];
+            if (!self.viewModel.isLoading) {
+                [_viewModel getPreviousStories];
                 [self loadMoreData];
             }
         }
@@ -266,8 +300,10 @@
  *  加载更多数据
  */
 - (void)loadMoreData{
-       NSLog(@"loadMoreData-----------");
-//    
+//       NSLog(@"loadMoreData-----------");
+    
+//      [self.viewModel getLatestStories];
+//
 //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 //    
 //    // 请求参数（根据接口文档编写）
@@ -304,17 +340,23 @@
     
 }
 
-#pragma mark - UITableviewDatasource 数据源方法
+#pragma mark - UITableviewDaasource 数据源方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.viewModel.numberOfSections;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 //    [self.mainTableView startAutoCellHeightWithCellClass:[NSXNewsCell class] contentViewWidth:[UIScreen mainScreen].bounds.size.width];
-    return self.newsArray.count;
+//    return self.newsArray.count;
 //    return self.menus.count;
+  return [self.viewModel numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSXNews *news = self.newsArray[indexPath.row];
+//    NSXNews *news = self.newsArray[indexPath.row];
+    NSXNews *news = [self.viewModel storyAtIndexPath:indexPath];
     
     static NSString *cellIdentifier = @"FeedCell3";
 //    XHFeedCell3* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
