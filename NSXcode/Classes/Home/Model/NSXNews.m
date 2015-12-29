@@ -26,6 +26,15 @@ static NSString * const kAttachment = @"attachment";
 static NSString * const kAuthorUID2 = @"authoruid2";
 
 @implementation NSXNews
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+//             @"currentLoadDayStr" : @"date",
+             @"newsId" : @"id"
+             };
+    
+}
+
 //
 //- (instancetype)initWithXML:(ONOXMLElement *)xml
 //{

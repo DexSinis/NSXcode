@@ -89,7 +89,7 @@
 {
     return @{
              @"currentLoadDayStr" : @"date",
-             @"newsId" : @"id"
+//             @"newsId" : @"id"
              };
     
 }
@@ -119,11 +119,14 @@
     
     NSLog(@"getLatestStories----------");
     NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+    param.currentLoadDayStr =@"20151226";
     [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {        NSXNewsViewModel *viewModel = result.viewModel;
         self.currentLoadDayStr = viewModel.currentLoadDayStr;
         SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
         self.daysDataList = [NSMutableArray arrayWithObject:vm];
-        self.newsIdArray = [NSMutableArray arrayWithArray:[vm valueForKeyPath:@"sectionDataSource.newsId"]];
+        NSDictionary *vmjson = vm.mj_keyValues;
+        NSLog(@"%@",vmjson);
+        self.newsIdArray = [NSMutableArray arrayWithArray:[vmjson valueForKeyPath:@"sectionDataSource.id"]];
 
         
         for (NSXNews *news in viewModel.daysDataList) {
@@ -133,7 +136,7 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadLatestDaily" object:nil];
 
     } failure:^(NSError *error) {
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadLatestDaily" object:nil userInfo:@{@"cyl_reloadData":@"cyl_reloadData"}];
     }];
 //    NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
 //   [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
@@ -170,19 +173,21 @@
     _isLoading = YES;
     NSLog(@"updateLatestStories----------");
     NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
+
     param.currentLoadDayStr = self.currentLoadDayStr;
+    param.currentLoadDayStr =@"20151227";
     [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
         NSXNewsViewModel *viewModel = result.viewModel;
         SectionViewModel *newvm = [[SectionViewModel alloc] initWithViewModel:viewModel];
         SectionViewModel *oldvm = _daysDataList[0];
         
         if ([newvm.sectionTitleText isEqualToString:oldvm.sectionTitleText]) {
-            NSArray* new = newvm.sectionDataSource;
-            NSArray* old = oldvm.sectionDataSource;
-            if (new.count>old.count) {
-                NSUInteger newItemsCount = new.count-old.count;
+//            NSArray* new = newvm.sectionDataSource;
+//            NSArray* old = oldvm.sectionDataSource;
+            if (newvm.sectionDataSource.count>oldvm.sectionDataSource.count) {
+                NSUInteger newItemsCount = newvm.sectionDataSource.count-oldvm.sectionDataSource.count;
                 for (int i = 1; i <=newItemsCount; i++) {
-                    NSXNews *news = new[newItemsCount-i];
+                    NSXNews *news = newvm.sectionDataSource[newItemsCount-i];
                     [_newsIdArray insertObject:news.newsId atIndex:0];
                 }
                 [_daysDataList removeObject:oldvm];
@@ -198,7 +203,7 @@
         _isLoading = NO;
         
     } failure:^(NSError *error) {
-        
+           [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateLatestDaily" object:nil userInfo:@{@"cyl_reloadData":@"cyl_reloadData"}];
     }];
 //    [HttpOperation getRequestWithURL:@"news/latest" parameters:nil success:^(id responseObject) {
 //        NSDictionary *jsonDic = (NSDictionary*)responseObject;
@@ -251,6 +256,7 @@
      _isLoading = YES;
         NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
         param.currentLoadDayStr = self.currentLoadDayStr;
+        param.currentLoadDayStr =@"20151225";
        [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
            NSXNewsViewModel *viewModel = result.viewModel;
            SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
@@ -259,7 +265,7 @@
            [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadPreviousDaily" object:nil];
            _isLoading = NO;
        } failure:^(NSError *error) {
-    
+      [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadPreviousDaily" object:nil userInfo:@{@"cyl_reloadData":@"cyl_reloadData"}];
        }];
 //    [HttpOperation getRequestWithURL:[NSString stringWithFormat:@"news/before/%@",_currentLoadDayStr] parameters:nil success:^(id responseObject) {
 //        NSDictionary *jsonDic = (NSDictionary*)responseObject;

@@ -27,11 +27,16 @@
 
 #import "UIFont+FontAwesome.h"
 #import "NSString+FontAwesome.h"
+#import "CYLTableViewPlaceHolder.h"
+#import "XTNetReloader.h"
+#import "UITableView+CYLTableViewPlaceHolder.h"
+
+
 
 #define kRowHeight 88.f
 #define kSectionHeaderHeight 36.f
 
-@interface NSXNewsController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,CarouseViewDelegate>
+@interface NSXNewsController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,CarouseViewDelegate,CYLTableViewPlaceHolderDelegate>
 
 
 /** 用于加载下一页的参数(页码) */
@@ -182,24 +187,73 @@
 
 
 - (void)loadingLatestDaily:(NSNotification *)noti {
-    NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
-    [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
-    [self setTopStoriesContent];
+    NSLog(@"loadingLatestDaily--------noti");
+//    
+//    NSDictionary *dict = [noti userInfo];
+//    NSString *cyl_reloadData = dict[@"cyl_reloadData"];
+//    if ([cyl_reloadData isEqualToString:@"cyl_reloadData"]) {
+//        [_mainTableView cyl_reloadData];
+//    }else
+//    {
+    if(self.viewModel.daysDataList.count>0)
+    {
+    
+//        NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
+//        [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+        [self setTopStoriesContent];
+        [_mainTableView cyl_reloadData];
+    }else{
+        [_mainTableView cyl_reloadData];
+    }
+    
+//    }
+    
+
 }
 
 - (void)loadingPreviousDaily:(NSNotification *)noti {
-    NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: [self.viewModel numberOfSections]-1];
-    [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+        NSLog(@"loadingPreviousDaily--------noti");
+//    NSDictionary *dict = [noti userInfo];
+//    NSString *cyl_reloadData = dict[@"cyl_reloadData"];
+//    if ([cyl_reloadData isEqualToString:@"cyl_reloadData"]) {
+//        [_mainTableView cyl_reloadData];
+//    }else
+//    {
+//    NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: [self.viewModel numberOfSections]-1];
+//    [_mainTableView insertSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+//    [_mainTableView cyl_reloadData];
+//    }
+    if(self.viewModel.daysDataList.count>0)
+    {
+        [_mainTableView cyl_reloadData];
+    }else{
+        [_mainTableView cyl_reloadData];
+    }
 }
 
 - (void)updateLatestDaily:(NSNotification *)noti {
-    if (![noti.userInfo[@"isNewDay"] boolValue]) {
-        NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
-        [_mainTableView reloadSections:indexset withRowAnimation:UITableViewRowAnimationFade];
-        [self setTopStoriesContent];
-    }else {
-        [_mainTableView reloadData];
-        [self setTopStoriesContent];
+            NSLog(@"updateLatestDaily--------noti");
+//    NSDictionary *dict = [noti userInfo];
+//    NSString *cyl_reloadData = dict[@"cyl_reloadData"];
+//    if ([cyl_reloadData isEqualToString:@"cyl_reloadData"]) {
+//        [_mainTableView cyl_reloadData];
+//    }else
+//    {
+//    if (![noti.userInfo[@"isNewDay"] boolValue]) {
+//        NSIndexSet *indexset = [NSIndexSet indexSetWithIndex: 0];
+//        [_mainTableView reloadSections:indexset withRowAnimation:UITableViewRowAnimationFade];
+//        [self setTopStoriesContent];
+//    }else {
+//        [_mainTableView cyl_reloadData];
+//        [self setTopStoriesContent];
+//    }
+//    }
+    
+    if(self.viewModel.daysDataList.count>0)
+    {
+        [_mainTableView cyl_reloadData];
+    }else{
+        [_mainTableView cyl_reloadData];
     }
 }
 
@@ -465,6 +519,23 @@
     // 点击了第indexPath.row行Cell所做的操作
 }
 
+#pragma mark - CYLTableViewPlaceHolderDelegate Method
 
+- (UIView *)makePlaceHolderView {
+    UIView *taobaoStyle = [self taoBaoStylePlaceHolder];
+    return taobaoStyle;
+}
 
+- (UIView *)taoBaoStylePlaceHolder {
+    __block XTNetReloader *netReloader = [[XTNetReloader alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
+                                                                  reloadBlock:^{
+//                                                                      [self.mainTableView.mj_header beginRefreshing];
+                                                                 [self.viewModel getLatestStories];
+                                                                  }] ;
+    return netReloader;
+}
+- (BOOL)enableScrollWhenPlaceHolderViewShowing
+{
+    return YES;
+}
 @end

@@ -137,6 +137,7 @@
 		DEDFFBA21C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */; };
 		DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */; };
 		DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */; };
+		DEE18E431C326DE0003A5278 /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = DEE18E421C326DE0003A5278 /* server.js */; };
 		DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */; };
 		DEE2DCB91C2790EF00ED907E /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */; };
 		DEE2DCC31C27914600ED907E /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCBE1C27914600ED907E /* Homepage.storyboard */; };
@@ -181,8 +182,8 @@
 		DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820551C2CE1C800E515C9 /* NSXAccountParam.m */; };
 		DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */; };
 		DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */; };
+		DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF9E691C315E040079773D /* XTNetReloader.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
-		DEF099271C215ADA005D0CB8 /* www in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947F1C215AD9005D0CB8 /* www */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
 		DEF099291C215ADA005D0CB8 /* resource.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094821C215AD9005D0CB8 /* resource.js */; };
 		DEF0992A1C215ADA005D0CB8 /* user.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094831C215AD9005D0CB8 /* user.js */; };
@@ -1404,6 +1405,7 @@
 		DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelParam.m; sourceTree = "<group>"; };
 		DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelResult.h; sourceTree = "<group>"; };
 		DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelResult.m; sourceTree = "<group>"; };
+		DEE18E421C326DE0003A5278 /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		DEE2DCA81C2790EF00ED907E /* CYloginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYloginRegisterViewController.h; sourceTree = "<group>"; };
 		DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYloginRegisterViewController.m; sourceTree = "<group>"; };
 		DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -1488,8 +1490,9 @@
 		DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccountResult.m; sourceTree = "<group>"; };
 		DEE8205B1C2CE2A200E515C9 /* NSXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXAccount.h; sourceTree = "<group>"; };
 		DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccount.m; sourceTree = "<group>"; };
+		DEEF9E681C315E040079773D /* XTNetReloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNetReloader.h; sourceTree = "<group>"; };
+		DEEF9E691C315E040079773D /* XTNetReloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNetReloader.m; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
-		DEF0947F1C215AD9005D0CB8 /* www */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = www; sourceTree = "<group>"; };
 		DEF094801C215AD9005D0CB8 /* database.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = database.js; sourceTree = "<group>"; };
 		DEF094821C215AD9005D0CB8 /* resource.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = resource.js; sourceTree = "<group>"; };
 		DEF094831C215AD9005D0CB8 /* user.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = user.js; sourceTree = "<group>"; };
@@ -2912,6 +2915,7 @@
 		DEAF09871BF988A400C6954F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DEEF9E671C315E040079773D /* XTNetReloader */,
 				DEDD80DE1C2A81AE00C5ECE3 /* XHFeedCell3.h */,
 				DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */,
 				DEF17A8D1C22E3A300EEF06B /* CarouseView.h */,
@@ -3297,11 +3301,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DEEF9E671C315E040079773D /* XTNetReloader */ = {
+			isa = PBXGroup;
+			children = (
+				DEEF9E681C315E040079773D /* XTNetReloader.h */,
+				DEEF9E691C315E040079773D /* XTNetReloader.m */,
+			);
+			path = XTNetReloader;
+			sourceTree = "<group>";
+		};
 		DEF0947C1C215AD9005D0CB8 /* bin */ = {
 			isa = PBXGroup;
 			children = (
+				DEE18E421C326DE0003A5278 /* server.js */,
 				DEF0947D1C215AD9005D0CB8 /* public */,
-				DEF0947F1C215AD9005D0CB8 /* www */,
 			);
 			path = bin;
 			sourceTree = "<group>";
@@ -6290,7 +6303,6 @@
 				DEF09C4A1C215ADB005D0CB8 /* index.js in Resources */,
 				DEF099D11C215ADA005D0CB8 /* crc8.js in Resources */,
 				DEF09C4F1C215ADB005D0CB8 /* index.js in Resources */,
-				DEF099271C215ADA005D0CB8 /* www in Resources */,
 				DEF09A071C215ADA005D0CB8 /* part6 in Resources */,
 				DEF09AE41C215ADB005D0CB8 /* graceful-fs.js in Resources */,
 				DEF09C221C215ADB005D0CB8 /* finally.js in Resources */,
@@ -6314,6 +6326,7 @@
 				DEF09B301C215ADB005D0CB8 /* LICENSE in Resources */,
 				DEF09A7F1C215ADA005D0CB8 /* LICENSE in Resources */,
 				DEF09C1D1C215ADB005D0CB8 /* index.js in Resources */,
+				DEE18E431C326DE0003A5278 /* server.js in Resources */,
 				DEF099C11C215ADA005D0CB8 /* package.json in Resources */,
 				DEF09ABA1C215ADA005D0CB8 /* file.js in Resources */,
 				DEF099F01C215ADA005D0CB8 /* dicer-bench-multipart-parser.js in Resources */,
@@ -7175,6 +7188,7 @@
 				DEF09C951C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09CC11C215ADB005D0CB8 /* README.md in Sources */,
 				DEDD80E61C2AA11300C5ECE3 /* RefreshView.m in Sources */,
+				DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */,
 				DEF09CAD1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099AA1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BFB1C215ADB005D0CB8 /* README.md in Sources */,
