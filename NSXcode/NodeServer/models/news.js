@@ -41,6 +41,16 @@ News.getList = function(keyword, callback){
 		}
 	})
 }
+News.getTopList = function(keyword, callback){
+	var sql = "select * from t_news where 1=1 and istopnews = 'yes'";
+	mysql.query(sql, function(err, result, fields){
+		if(err){
+			throw err;
+		}else{
+			callback(err, result, fields);
+		}
+	})
+}
 
 News.prototype.add = function add(callback) {
 	var news = {

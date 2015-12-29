@@ -120,10 +120,12 @@
     NSLog(@"getLatestStories----------");
     NSXNewsViewModelParam *param = [[NSXNewsViewModelParam alloc] init];
     param.currentLoadDayStr =@"20151226";
-    [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {        NSXNewsViewModel *viewModel = result.viewModel;
+    [NSXNewsViewModel newsViewModelWithParam:param success:^(NSXNewsViewModelResult *result) {
+        NSXNewsViewModel *viewModel = result.viewModel;
         self.currentLoadDayStr = viewModel.currentLoadDayStr;
         SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
         self.daysDataList = [NSMutableArray arrayWithObject:vm];
+        self.top_stories = viewModel.top_stories;
         NSDictionary *vmjson = vm.mj_keyValues;
         NSLog(@"%@",vmjson);
         self.newsIdArray = [NSMutableArray arrayWithArray:[vmjson valueForKeyPath:@"sectionDataSource.id"]];

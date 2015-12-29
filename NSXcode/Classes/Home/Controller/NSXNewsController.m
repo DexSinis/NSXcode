@@ -152,36 +152,7 @@
 
 
 - (void)setTopStoriesContent {
-    NSMutableArray *imageData = [NSMutableArray array];
-    [imageData addObject:@"http://d06.res.meilishuo.net/pic/_o/c3/63/103f7e9e20ebde538fc7521559e0_298_170.cf.jpg"];
-    [imageData addObject:@"http://d04.res.meilishuo.net/pic/_o/57/aa/591621b049c826fe33a047109c42_750_750.cj.jpg"];
-    [imageData addObject:@"http://d05.res.meilishuo.net/pic/_o/9b/5a/f1f34e24c1a89f2799de30894c21_750_750.cj.jpg"];
-    [imageData addObject:@"http://d03.res.meilishuo.net/pic/_o/74/c4/259e63e3569c43cf3f184d996d83_795_795.cj.jpg"];
-    
-    [imageData addObject:@"http://d05.res.meilishuo.net/pic/_o/7f/33/64a4d0e9c5cf95e707581e98b7c9_750_750.cj.jpg"];
-    
-    NSMutableArray *daysDataList = [NSMutableArray array];
-    for (int i =0; i<7; i++) {
-        StoryModel *sm = [[StoryModel alloc] init];
-        sm.title = [NSString stringWithFormat:@"暴走日报%d",i];
-        sm.storyID = [NSNumber numberWithInt:(i)];
-        if (arc4random()%4==0) {
-              sm.image = @"http://pic1.zhimg.com//375333b151adf2a41a64a57e91e54b54.jpg";
-        }else if(arc4random()%4==1)
-        {
-                    sm.image = @"http://pic2.zhimg.com//8bb7d82d8131e1ac925fca6b9555cfb1.jpg";
-        }else if(arc4random()%4==2)
-        {
-                    sm.image = @"http://pic3.zhimg.com//b2329274ec0817d35d80d57b3e25be3e.jpg";
-        }else
-        {
-            sm.image =@"http://pic4.zhimg.com//a787255c9e2b8286274f45c6df66581b.jpg";
-        }
-      
-        [daysDataList addObject:sm];
-    }
-//    _carouseView.topStories = daysDataList;
-    [_carouseView setTopStories:daysDataList];
+   [_carouseView setTopStories:self.viewModel.top_stories];
 }
 
 
