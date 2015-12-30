@@ -2,8 +2,8 @@
 //  CarouseView.m
 //  HPYZhiHuDaily
 //
-//  Created by 洪鹏宇 on 15/11/29.
-//  Copyright © 2015年 洪鹏宇. All rights reserved.
+//  Created by 洪鹏宇 on 17/11/29.
+//  Copyright © 2017年 洪鹏宇. All rights reserved.
 //
 
 #import "CarouseView.h"
@@ -59,12 +59,12 @@
         [tsv.imageView sd_setImageWithURL:[NSURL URLWithString:model.image]];
         NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:model.title attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:21],NSForegroundColorAttributeName:[UIColor whiteColor]}];
         CGSize size =  [attStr boundingRectWithSize:CGSizeMake(kScreenWidth-30, 200) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil].size;
-        tsv.label.frame = CGRectMake(15, 0, kScreenWidth-30, size.height);
+        tsv.label.frame = CGRectMake(17, 0, kScreenWidth-30, size.height);
         [tsv.label setBottom:240];
         tsv.label.attributedText = attStr;
         
     }
-    _timer = [NSTimer scheduledTimerWithTimeInterval:5.f target:self selector:@selector(nextStoryDisplay) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:7.f target:self selector:@selector(nextStoryDisplay) userInfo:nil repeats:YES];
 }
 
 - (void)nextStoryDisplay {
@@ -78,7 +78,7 @@
             _scrollView.contentOffset = CGPointMake(kScreenWidth, 0);
             _pageControl.currentPage = 0;
         }else if (offSetX == 0){
-            _scrollView.contentOffset = CGPointMake(5*kScreenWidth, 0);
+            _scrollView.contentOffset = CGPointMake(7*kScreenWidth, 0);
             _pageControl.currentPage = 4;
         }else {
             _pageControl.currentPage = offSetX/kScreenWidth-1;
@@ -87,7 +87,7 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    [_timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:5.0]];
+    [_timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:7.0]];
 }
 
 

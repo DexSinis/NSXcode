@@ -31,6 +31,8 @@
 #import "XTNetReloader.h"
 #import "UITableView+CYLTableViewPlaceHolder.h"
 
+#import "StoryContentViewModel.h"
+#import "StoryContentViewController.h"
 
 
 #define kRowHeight 88.f
@@ -471,23 +473,54 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSXNews *news = self.newsArray[indexPath.row];
-    
-    return  100;
-////    int index = indexPath.row % 5;
-//    NSXNews *news = [[NSXNews alloc] init];
-//    news.newsID = 112312312;
-////    news.pubDate = [NSDate new];
-//    //    news.title =@"github发布被doss攻击，被逼迁移到中国,要求日本道歉并赔偿损失";
-//    news.title = @"SonarQube 5.2发布,提升监控";
-//    news.body =@"当你的 app 没有提供 3x 的 LaunchImage 时,github于2015年十月23日被日本的doss攻击，被逼迁移到中国，强烈要求日本道歉并赔偿损失";
-//    return [self.mainTableView cellHeightForIndexPath:indexPath model:news keyPath:@"news"];
+   return  100;
 }
 
 #pragma mark - UITableviewDelegate 代理方法
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    // 点击了第indexPath.row行Cell所做的操作
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSXNews *news = [self.viewModel storyAtIndexPath:indexPath];
+    StoryContentViewModel* vm = [[StoryContentViewModel alloc] init];
+    vm.loadedStoryID = news.newsId;
+    vm.loadedStoryID = @"7667220";
+    vm.storiesID = _viewModel.newsIdArray;
+    StoryContentViewController *storyContentVC = [[StoryContentViewController alloc] initWithViewModel:vm];
+//    AppDelegate* appdele = kAppdelegate;
+    [storyContentVC setHidesBottomBarWhenPushed:YES];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    [self.navigationController pushViewController:storyContentVC animated:YES];
+    
+//    [self.navigationController pushViewController:storyContentVC animated:YES];
+
+}
+//获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
 }
 
 #pragma mark - CYLTableViewPlaceHolderDelegate Method
@@ -508,5 +541,8 @@
 - (BOOL)enableScrollWhenPlaceHolderViewShowing
 {
     return YES;
+}
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 @end

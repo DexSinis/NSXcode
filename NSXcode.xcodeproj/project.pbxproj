@@ -138,6 +138,21 @@
 		DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */; };
 		DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */; };
 		DEE18E431C326DE0003A5278 /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = DEE18E421C326DE0003A5278 /* server.js */; };
+		DEE18E621C327AC3003A5278 /* HMStatusDetailBottomToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E5D1C327AC3003A5278 /* HMStatusDetailBottomToolbar.m */; };
+		DEE18E631C327AC3003A5278 /* NSXSideViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E5F1C327AC3003A5278 /* NSXSideViewFooter.m */; };
+		DEE18E641C327AC3003A5278 /* NSXSideViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E611C327AC3003A5278 /* NSXSideViewHeader.m */; };
+		DEE18E881C327B5B003A5278 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E6F1C327B5B003A5278 /* MMCenterTableViewCell.m */; };
+		DEE18E8A1C327B5B003A5278 /* MMExampleCenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E731C327B5B003A5278 /* MMExampleCenterTableViewController.m */; };
+		DEE18E8B1C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E751C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m */; };
+		DEE18E8C1C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E771C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m */; };
+		DEE18E8D1C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E791C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m */; };
+		DEE18E8E1C327B5B003A5278 /* MMExampleSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E7B1C327B5B003A5278 /* MMExampleSideDrawerViewController.m */; };
+		DEE18E8F1C327B5B003A5278 /* MMExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E7D1C327B5B003A5278 /* MMExampleViewController.m */; };
+		DEE18E901C327B5B003A5278 /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E7F1C327B5B003A5278 /* MMLogoView.m */; };
+		DEE18E911C327B5B003A5278 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E811C327B5B003A5278 /* MMNavigationController.m */; };
+		DEE18E921C327B5B003A5278 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E831C327B5B003A5278 /* MMSideDrawerSectionHeaderView.m */; };
+		DEE18E931C327B5B003A5278 /* MMSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E851C327B5B003A5278 /* MMSideDrawerTableViewCell.m */; };
+		DEE18E941C327B5B003A5278 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E871C327B5B003A5278 /* MMTableViewCell.m */; };
 		DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */; };
 		DEE2DCB91C2790EF00ED907E /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */; };
 		DEE2DCC31C27914600ED907E /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCBE1C27914600ED907E /* Homepage.storyboard */; };
@@ -151,24 +166,6 @@
 		DEE2DCDE1C27943000ED907E /* MessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCDD1C27943000ED907E /* MessageCenter.m */; };
 		DEE2DCE21C27A84400ED907E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE01C27A84400ED907E /* LogInViewController.m */; };
 		DEE2DCE61C27F02B00ED907E /* NSXNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */; };
-		DEE2DD0D1C27F38D00ED907E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCE81C27F38D00ED907E /* InfoPlist.strings */; };
-		DEE2DD0E1C27F38D00ED907E /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCEB1C27F38D00ED907E /* MMAppDelegate.m */; };
-		DEE2DD0F1C27F38D00ED907E /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCED1C27F38D00ED907E /* MMCenterTableViewCell.m */; };
-		DEE2DD101C27F38D00ED907E /* MMDrawerControllerKitchenSink-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DCEE1C27F38D00ED907E /* MMDrawerControllerKitchenSink-Info.plist */; };
-		DEE2DD111C27F38D00ED907E /* MMExampleCenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCF11C27F38D00ED907E /* MMExampleCenterTableViewController.m */; };
-		DEE2DD121C27F38D00ED907E /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCF31C27F38D00ED907E /* MMExampleDrawerVisualStateManager.m */; };
-		DEE2DD131C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCF51C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m */; };
-		DEE2DD141C27F38D00ED907E /* MMExampleRightSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCF71C27F38D00ED907E /* MMExampleRightSideDrawerViewController.m */; };
-		DEE2DD151C27F38D00ED907E /* MMExampleSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCF91C27F38D00ED907E /* MMExampleSideDrawerViewController.m */; };
-		DEE2DD161C27F38D00ED907E /* MMExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCFB1C27F38D00ED907E /* MMExampleViewController.m */; };
-		DEE2DD171C27F38D00ED907E /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCFD1C27F38D00ED907E /* MMLogoView.m */; };
-		DEE2DD181C27F38D00ED907E /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCFF1C27F38D00ED907E /* MMNavigationController.m */; };
-		DEE2DD191C27F38D00ED907E /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD011C27F38D00ED907E /* MMSideDrawerSectionHeaderView.m */; };
-		DEE2DD1A1C27F38D00ED907E /* MMSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD031C27F38D00ED907E /* MMSideDrawerTableViewCell.m */; };
-		DEE2DD1B1C27F38D00ED907E /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD051C27F38D00ED907E /* MMTableViewCell.m */; };
-		DEE2DD1C1C27F38D00ED907E /* HMStatusDetailBottomToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD081C27F38D00ED907E /* HMStatusDetailBottomToolbar.m */; };
-		DEE2DD1D1C27F38D00ED907E /* NSXSideViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD0A1C27F38D00ED907E /* NSXSideViewFooter.m */; };
-		DEE2DD1E1C27F38D00ED907E /* NSXSideViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */; };
 		DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD821C281E3F00ED907E /* RegistViewController.m */; };
 		DEE2DD851C281F4F00ED907E /* LoginRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */; };
 		DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2C61C2C0E810074D94A /* Utils.m */; };
@@ -182,6 +179,10 @@
 		DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820551C2CE1C800E515C9 /* NSXAccountParam.m */; };
 		DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */; };
 		DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */; };
+		DEEAA51C1C33B9C1002C46EF /* StoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */; };
+		DEEAA51D1C33B9C1002C46EF /* StoryContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */; };
+		DEEAA51E1C33B9C1002C46EF /* PreView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5181C33B9C1002C46EF /* PreView.m */; };
+		DEEAA51F1C33B9C1002C46EF /* StoryContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */; };
 		DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF9E691C315E040079773D /* XTNetReloader.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
@@ -1406,6 +1407,36 @@
 		DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelResult.h; sourceTree = "<group>"; };
 		DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelResult.m; sourceTree = "<group>"; };
 		DEE18E421C326DE0003A5278 /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
+		DEE18E5C1C327AC3003A5278 /* HMStatusDetailBottomToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStatusDetailBottomToolbar.h; sourceTree = "<group>"; };
+		DEE18E5D1C327AC3003A5278 /* HMStatusDetailBottomToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStatusDetailBottomToolbar.m; sourceTree = "<group>"; };
+		DEE18E5E1C327AC3003A5278 /* NSXSideViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSideViewFooter.h; sourceTree = "<group>"; };
+		DEE18E5F1C327AC3003A5278 /* NSXSideViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewFooter.m; sourceTree = "<group>"; };
+		DEE18E601C327AC3003A5278 /* NSXSideViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSideViewHeader.h; sourceTree = "<group>"; };
+		DEE18E611C327AC3003A5278 /* NSXSideViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewHeader.m; sourceTree = "<group>"; };
+		DEE18E6E1C327B5B003A5278 /* MMCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCenterTableViewCell.h; sourceTree = "<group>"; };
+		DEE18E6F1C327B5B003A5278 /* MMCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCenterTableViewCell.m; sourceTree = "<group>"; };
+		DEE18E721C327B5B003A5278 /* MMExampleCenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleCenterTableViewController.h; sourceTree = "<group>"; };
+		DEE18E731C327B5B003A5278 /* MMExampleCenterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleCenterTableViewController.m; sourceTree = "<group>"; };
+		DEE18E741C327B5B003A5278 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
+		DEE18E751C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
+		DEE18E761C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleLeftSideDrawerViewController.h; sourceTree = "<group>"; };
+		DEE18E771C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleLeftSideDrawerViewController.m; sourceTree = "<group>"; };
+		DEE18E781C327B5B003A5278 /* MMExampleRightSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleRightSideDrawerViewController.h; sourceTree = "<group>"; };
+		DEE18E791C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleRightSideDrawerViewController.m; sourceTree = "<group>"; };
+		DEE18E7A1C327B5B003A5278 /* MMExampleSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleSideDrawerViewController.h; sourceTree = "<group>"; };
+		DEE18E7B1C327B5B003A5278 /* MMExampleSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleSideDrawerViewController.m; sourceTree = "<group>"; };
+		DEE18E7C1C327B5B003A5278 /* MMExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleViewController.h; sourceTree = "<group>"; };
+		DEE18E7D1C327B5B003A5278 /* MMExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleViewController.m; sourceTree = "<group>"; };
+		DEE18E7E1C327B5B003A5278 /* MMLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogoView.h; sourceTree = "<group>"; };
+		DEE18E7F1C327B5B003A5278 /* MMLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogoView.m; sourceTree = "<group>"; };
+		DEE18E801C327B5B003A5278 /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
+		DEE18E811C327B5B003A5278 /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
+		DEE18E821C327B5B003A5278 /* MMSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerSectionHeaderView.h; sourceTree = "<group>"; };
+		DEE18E831C327B5B003A5278 /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerSectionHeaderView.m; sourceTree = "<group>"; };
+		DEE18E841C327B5B003A5278 /* MMSideDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerTableViewCell.h; sourceTree = "<group>"; };
+		DEE18E851C327B5B003A5278 /* MMSideDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerTableViewCell.m; sourceTree = "<group>"; };
+		DEE18E861C327B5B003A5278 /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
+		DEE18E871C327B5B003A5278 /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
 		DEE2DCA81C2790EF00ED907E /* CYloginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYloginRegisterViewController.h; sourceTree = "<group>"; };
 		DEE2DCA91C2790EF00ED907E /* CYloginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYloginRegisterViewController.m; sourceTree = "<group>"; };
 		DEE2DCAA1C2790EF00ED907E /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -1430,41 +1461,6 @@
 		DEE2DCE01C27A84400ED907E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		DEE2DCE41C27F02B00ED907E /* NSXNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsController.h; sourceTree = "<group>"; };
 		DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsController.m; sourceTree = "<group>"; };
-		DEE2DCE91C27F38D00ED907E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DEE2DCEA1C27F38D00ED907E /* MMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAppDelegate.h; sourceTree = "<group>"; };
-		DEE2DCEB1C27F38D00ED907E /* MMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMAppDelegate.m; sourceTree = "<group>"; };
-		DEE2DCEC1C27F38D00ED907E /* MMCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCenterTableViewCell.h; sourceTree = "<group>"; };
-		DEE2DCED1C27F38D00ED907E /* MMCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCenterTableViewCell.m; sourceTree = "<group>"; };
-		DEE2DCEE1C27F38D00ED907E /* MMDrawerControllerKitchenSink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MMDrawerControllerKitchenSink-Info.plist"; sourceTree = "<group>"; };
-		DEE2DCEF1C27F38D00ED907E /* MMDrawerControllerKitchenSink-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerControllerKitchenSink-Prefix.pch"; sourceTree = "<group>"; };
-		DEE2DCF01C27F38D00ED907E /* MMExampleCenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleCenterTableViewController.h; sourceTree = "<group>"; };
-		DEE2DCF11C27F38D00ED907E /* MMExampleCenterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleCenterTableViewController.m; sourceTree = "<group>"; };
-		DEE2DCF21C27F38D00ED907E /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
-		DEE2DCF31C27F38D00ED907E /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
-		DEE2DCF41C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleLeftSideDrawerViewController.h; sourceTree = "<group>"; };
-		DEE2DCF51C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleLeftSideDrawerViewController.m; sourceTree = "<group>"; };
-		DEE2DCF61C27F38D00ED907E /* MMExampleRightSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleRightSideDrawerViewController.h; sourceTree = "<group>"; };
-		DEE2DCF71C27F38D00ED907E /* MMExampleRightSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleRightSideDrawerViewController.m; sourceTree = "<group>"; };
-		DEE2DCF81C27F38D00ED907E /* MMExampleSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleSideDrawerViewController.h; sourceTree = "<group>"; };
-		DEE2DCF91C27F38D00ED907E /* MMExampleSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleSideDrawerViewController.m; sourceTree = "<group>"; };
-		DEE2DCFA1C27F38D00ED907E /* MMExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleViewController.h; sourceTree = "<group>"; };
-		DEE2DCFB1C27F38D00ED907E /* MMExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleViewController.m; sourceTree = "<group>"; };
-		DEE2DCFC1C27F38D00ED907E /* MMLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLogoView.h; sourceTree = "<group>"; };
-		DEE2DCFD1C27F38D00ED907E /* MMLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLogoView.m; sourceTree = "<group>"; };
-		DEE2DCFE1C27F38D00ED907E /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
-		DEE2DCFF1C27F38D00ED907E /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
-		DEE2DD001C27F38D00ED907E /* MMSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerSectionHeaderView.h; sourceTree = "<group>"; };
-		DEE2DD011C27F38D00ED907E /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerSectionHeaderView.m; sourceTree = "<group>"; };
-		DEE2DD021C27F38D00ED907E /* MMSideDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSideDrawerTableViewCell.h; sourceTree = "<group>"; };
-		DEE2DD031C27F38D00ED907E /* MMSideDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSideDrawerTableViewCell.m; sourceTree = "<group>"; };
-		DEE2DD041C27F38D00ED907E /* MMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewCell.h; sourceTree = "<group>"; };
-		DEE2DD051C27F38D00ED907E /* MMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCell.m; sourceTree = "<group>"; };
-		DEE2DD071C27F38D00ED907E /* HMStatusDetailBottomToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStatusDetailBottomToolbar.h; sourceTree = "<group>"; };
-		DEE2DD081C27F38D00ED907E /* HMStatusDetailBottomToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStatusDetailBottomToolbar.m; sourceTree = "<group>"; };
-		DEE2DD091C27F38D00ED907E /* NSXSideViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSideViewFooter.h; sourceTree = "<group>"; };
-		DEE2DD0A1C27F38D00ED907E /* NSXSideViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewFooter.m; sourceTree = "<group>"; };
-		DEE2DD0B1C27F38D00ED907E /* NSXSideViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSideViewHeader.h; sourceTree = "<group>"; };
-		DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXSideViewHeader.m; sourceTree = "<group>"; };
 		DEE2DD811C281E3F00ED907E /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		DEE2DD821C281E3F00ED907E /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegist.storyboard; sourceTree = "<group>"; };
@@ -1490,6 +1486,14 @@
 		DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccountResult.m; sourceTree = "<group>"; };
 		DEE8205B1C2CE2A200E515C9 /* NSXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXAccount.h; sourceTree = "<group>"; };
 		DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccount.m; sourceTree = "<group>"; };
+		DEEAA5111C33B9C1002C46EF /* StoryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewController.h; sourceTree = "<group>"; };
+		DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewController.m; sourceTree = "<group>"; };
+		DEEAA5141C33B9C1002C46EF /* StoryContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentModel.h; sourceTree = "<group>"; };
+		DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentModel.m; sourceTree = "<group>"; };
+		DEEAA5171C33B9C1002C46EF /* PreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreView.h; sourceTree = "<group>"; };
+		DEEAA5181C33B9C1002C46EF /* PreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreView.m; sourceTree = "<group>"; };
+		DEEAA51A1C33B9C1002C46EF /* StoryContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewModel.h; sourceTree = "<group>"; };
+		DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewModel.m; sourceTree = "<group>"; };
 		DEEF9E681C315E040079773D /* XTNetReloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNetReloader.h; sourceTree = "<group>"; };
 		DEEF9E691C315E040079773D /* XTNetReloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNetReloader.m; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
@@ -2607,6 +2611,7 @@
 		DE4ACDC01C072E4E00BA5608 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				DEEAA50F1C33B9C1002C46EF /* DailyNewsContent */,
 				DE4ACDCA1C072EF700BA5608 /* NSXNewsCell1.h */,
 				DE4ACDCB1C072EF700BA5608 /* NSXNewsCell1.m */,
 				DE4ACDC71C072E8C00BA5608 /* OSCObjsViewController.h */,
@@ -2852,7 +2857,6 @@
 		DEAF097F1BF988A400C6954F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DEE2DCE71C27F38D00ED907E /* ExampleFiles */,
 				DEE2DCA61C2790EF00ED907E /* User */,
 				DEB3E9791C1681F200495FBE /* BackUp */,
 				DEB3E95A1C166D8C00495FBE /* Other */,
@@ -2946,6 +2950,7 @@
 		DEAF098C1BF988A400C6954F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DEE18E451C32798C003A5278 /* SideViewController */,
 				DEB3E96F1C16814800495FBE /* NavigationBar */,
 				DE5C155A1C06B79700E8B428 /* TarBar */,
 			);
@@ -3106,6 +3111,51 @@
 			path = Compare;
 			sourceTree = "<group>";
 		};
+		DEE18E451C32798C003A5278 /* SideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEE18E6E1C327B5B003A5278 /* MMCenterTableViewCell.h */,
+				DEE18E6F1C327B5B003A5278 /* MMCenterTableViewCell.m */,
+				DEE18E721C327B5B003A5278 /* MMExampleCenterTableViewController.h */,
+				DEE18E731C327B5B003A5278 /* MMExampleCenterTableViewController.m */,
+				DEE18E741C327B5B003A5278 /* MMExampleDrawerVisualStateManager.h */,
+				DEE18E751C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m */,
+				DEE18E761C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.h */,
+				DEE18E771C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m */,
+				DEE18E781C327B5B003A5278 /* MMExampleRightSideDrawerViewController.h */,
+				DEE18E791C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m */,
+				DEE18E7A1C327B5B003A5278 /* MMExampleSideDrawerViewController.h */,
+				DEE18E7B1C327B5B003A5278 /* MMExampleSideDrawerViewController.m */,
+				DEE18E7C1C327B5B003A5278 /* MMExampleViewController.h */,
+				DEE18E7D1C327B5B003A5278 /* MMExampleViewController.m */,
+				DEE18E7E1C327B5B003A5278 /* MMLogoView.h */,
+				DEE18E7F1C327B5B003A5278 /* MMLogoView.m */,
+				DEE18E801C327B5B003A5278 /* MMNavigationController.h */,
+				DEE18E811C327B5B003A5278 /* MMNavigationController.m */,
+				DEE18E821C327B5B003A5278 /* MMSideDrawerSectionHeaderView.h */,
+				DEE18E831C327B5B003A5278 /* MMSideDrawerSectionHeaderView.m */,
+				DEE18E841C327B5B003A5278 /* MMSideDrawerTableViewCell.h */,
+				DEE18E851C327B5B003A5278 /* MMSideDrawerTableViewCell.m */,
+				DEE18E861C327B5B003A5278 /* MMTableViewCell.h */,
+				DEE18E871C327B5B003A5278 /* MMTableViewCell.m */,
+				DEE18E5B1C327AC3003A5278 /* NSXSideView */,
+			);
+			path = SideViewController;
+			sourceTree = "<group>";
+		};
+		DEE18E5B1C327AC3003A5278 /* NSXSideView */ = {
+			isa = PBXGroup;
+			children = (
+				DEE18E5C1C327AC3003A5278 /* HMStatusDetailBottomToolbar.h */,
+				DEE18E5D1C327AC3003A5278 /* HMStatusDetailBottomToolbar.m */,
+				DEE18E5E1C327AC3003A5278 /* NSXSideViewFooter.h */,
+				DEE18E5F1C327AC3003A5278 /* NSXSideViewFooter.m */,
+				DEE18E601C327AC3003A5278 /* NSXSideViewHeader.h */,
+				DEE18E611C327AC3003A5278 /* NSXSideViewHeader.m */,
+			);
+			path = NSXSideView;
+			sourceTree = "<group>";
+		};
 		DEE2DCA61C2790EF00ED907E /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -3220,57 +3270,6 @@
 			path = TweetLike;
 			sourceTree = "<group>";
 		};
-		DEE2DCE71C27F38D00ED907E /* ExampleFiles */ = {
-			isa = PBXGroup;
-			children = (
-				DEE2DCE81C27F38D00ED907E /* InfoPlist.strings */,
-				DEE2DCEA1C27F38D00ED907E /* MMAppDelegate.h */,
-				DEE2DCEB1C27F38D00ED907E /* MMAppDelegate.m */,
-				DEE2DCEC1C27F38D00ED907E /* MMCenterTableViewCell.h */,
-				DEE2DCED1C27F38D00ED907E /* MMCenterTableViewCell.m */,
-				DEE2DCEE1C27F38D00ED907E /* MMDrawerControllerKitchenSink-Info.plist */,
-				DEE2DCEF1C27F38D00ED907E /* MMDrawerControllerKitchenSink-Prefix.pch */,
-				DEE2DCF01C27F38D00ED907E /* MMExampleCenterTableViewController.h */,
-				DEE2DCF11C27F38D00ED907E /* MMExampleCenterTableViewController.m */,
-				DEE2DCF21C27F38D00ED907E /* MMExampleDrawerVisualStateManager.h */,
-				DEE2DCF31C27F38D00ED907E /* MMExampleDrawerVisualStateManager.m */,
-				DEE2DCF41C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.h */,
-				DEE2DCF51C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m */,
-				DEE2DCF61C27F38D00ED907E /* MMExampleRightSideDrawerViewController.h */,
-				DEE2DCF71C27F38D00ED907E /* MMExampleRightSideDrawerViewController.m */,
-				DEE2DCF81C27F38D00ED907E /* MMExampleSideDrawerViewController.h */,
-				DEE2DCF91C27F38D00ED907E /* MMExampleSideDrawerViewController.m */,
-				DEE2DCFA1C27F38D00ED907E /* MMExampleViewController.h */,
-				DEE2DCFB1C27F38D00ED907E /* MMExampleViewController.m */,
-				DEE2DCFC1C27F38D00ED907E /* MMLogoView.h */,
-				DEE2DCFD1C27F38D00ED907E /* MMLogoView.m */,
-				DEE2DCFE1C27F38D00ED907E /* MMNavigationController.h */,
-				DEE2DCFF1C27F38D00ED907E /* MMNavigationController.m */,
-				DEE2DD001C27F38D00ED907E /* MMSideDrawerSectionHeaderView.h */,
-				DEE2DD011C27F38D00ED907E /* MMSideDrawerSectionHeaderView.m */,
-				DEE2DD021C27F38D00ED907E /* MMSideDrawerTableViewCell.h */,
-				DEE2DD031C27F38D00ED907E /* MMSideDrawerTableViewCell.m */,
-				DEE2DD041C27F38D00ED907E /* MMTableViewCell.h */,
-				DEE2DD051C27F38D00ED907E /* MMTableViewCell.m */,
-				DEE2DD061C27F38D00ED907E /* NSXSideView */,
-			);
-			name = ExampleFiles;
-			path = User/ExampleFiles;
-			sourceTree = "<group>";
-		};
-		DEE2DD061C27F38D00ED907E /* NSXSideView */ = {
-			isa = PBXGroup;
-			children = (
-				DEE2DD071C27F38D00ED907E /* HMStatusDetailBottomToolbar.h */,
-				DEE2DD081C27F38D00ED907E /* HMStatusDetailBottomToolbar.m */,
-				DEE2DD091C27F38D00ED907E /* NSXSideViewFooter.h */,
-				DEE2DD0A1C27F38D00ED907E /* NSXSideViewFooter.m */,
-				DEE2DD0B1C27F38D00ED907E /* NSXSideViewHeader.h */,
-				DEE2DD0C1C27F38D00ED907E /* NSXSideViewHeader.m */,
-			);
-			path = NSXSideView;
-			sourceTree = "<group>";
-		};
 		DEE4C2CB1C2C13530074D94A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3297,6 +3296,53 @@
 				DEE8204F1C2CE0A200E515C9 /* NSXUserResult.m */,
 				DEE820491C2CDFAA00E515C9 /* NSXUser+Provider.h */,
 				DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEEAA50F1C33B9C1002C46EF /* DailyNewsContent */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAA5101C33B9C1002C46EF /* Controller */,
+				DEEAA5131C33B9C1002C46EF /* Model */,
+				DEEAA5161C33B9C1002C46EF /* View */,
+				DEEAA5191C33B9C1002C46EF /* ViewModel */,
+			);
+			path = DailyNewsContent;
+			sourceTree = "<group>";
+		};
+		DEEAA5101C33B9C1002C46EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAA5111C33B9C1002C46EF /* StoryContentViewController.h */,
+				DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEEAA5131C33B9C1002C46EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAA5141C33B9C1002C46EF /* StoryContentModel.h */,
+				DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEEAA5161C33B9C1002C46EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAA5171C33B9C1002C46EF /* PreView.h */,
+				DEEAA5181C33B9C1002C46EF /* PreView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEEAA5191C33B9C1002C46EF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAA51A1C33B9C1002C46EF /* StoryContentViewModel.h */,
+				DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -6416,7 +6462,6 @@
 				DEB4F7C51C02AF6300DF6740 /* mew_interlaced.png in Resources */,
 				DEF0993D1C215ADA005D0CB8 /* forms.js in Resources */,
 				DEF09AC11C215ADA005D0CB8 /* LICENSE in Resources */,
-				DEE2DD101C27F38D00ED907E /* MMDrawerControllerKitchenSink-Info.plist in Resources */,
 				DEF09A2A1C215ADA005D0CB8 /* test-multipart-nolisteners.js in Resources */,
 				DEF09A5A1C215ADA005D0CB8 /* menu.html in Resources */,
 				DEF099D51C215ADA005D0CB8 /* index.js in Resources */,
@@ -6495,7 +6540,6 @@
 				DEF09C101C215ADB005D0CB8 /* es6-extensions.js in Resources */,
 				DEF09C171C215ADB005D0CB8 /* polyfill.js in Resources */,
 				DEF09C741C215ADB005D0CB8 /* _stream_transform.js in Resources */,
-				DEE2DD0D1C27F38D00ED907E /* InfoPlist.strings in Resources */,
 				DEF099971C215ADA005D0CB8 /* .travis.yml in Resources */,
 				DEF0996E1C215ADA005D0CB8 /* json.js in Resources */,
 				DEF099801C215ADA005D0CB8 /* utils.js in Resources */,
@@ -7009,6 +7053,7 @@
 				DEF09BDB1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BF21C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF09AC41C215ADA005D0CB8 /* HISTORY.md in Sources */,
+				DEEAA51D1C33B9C1002C46EF /* StoryContentModel.m in Sources */,
 				DEF099B81C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09B61BF988A400C6954F /* NSXSettingController.m in Sources */,
 				DE9BBC161BFCA5280048D32A /* YYTableView.m in Sources */,
@@ -7027,6 +7072,7 @@
 				DEF09BE81C215ADB005D0CB8 /* README.md in Sources */,
 				DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */,
 				DEF09B181C215ADB005D0CB8 /* README.md in Sources */,
+				DEE18E8F1C327B5B003A5278 /* MMExampleViewController.m in Sources */,
 				DEF09AA31C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */,
 				DEF0996A1C215ADA005D0CB8 /* README.md in Sources */,
@@ -7038,6 +7084,7 @@
 				DE4ACDC51C072E4E00BA5608 /* NewsCell.m in Sources */,
 				DE5A18431C08581700FD3B1D /* UIFont+FontAwesome.m in Sources */,
 				DE9BBC141BFCA5280048D32A /* YYPhotoGroupView.m in Sources */,
+				DEE18E941C327B5B003A5278 /* MMTableViewCell.m in Sources */,
 				DEF099511C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09B8D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B271C215ADB005D0CB8 /* README.md in Sources */,
@@ -7051,10 +7098,10 @@
 				DEE2DCCA1C2791CF00ED907E /* OSCMyInfo.m in Sources */,
 				DEF09C7A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A7D1C215ADA005D0CB8 /* HISTORY.md in Sources */,
+				DEE18E8E1C327B5B003A5278 /* MMExampleSideDrawerViewController.m in Sources */,
 				DE9BBC171BFCA5280048D32A /* YYTableViewCell.m in Sources */,
 				DE5C15561C06AEAB00E8B428 /* UIView+Util.m in Sources */,
 				DEDCE8D21C2E383900C7757C /* UIBarButtonItem+Badge.m in Sources */,
-				DEE2DD0F1C27F38D00ED907E /* MMCenterTableViewCell.m in Sources */,
 				DE9BBC121BFCA5280048D32A /* YYControl.m in Sources */,
 				DEF09B361C215ADB005D0CB8 /* README.md in Sources */,
 				DE34ED921BF9B3CF003CFC80 /* DemoVC3.m in Sources */,
@@ -7066,9 +7113,7 @@
 				DE34ED871BF9B370003CFC80 /* UIView+SDAutoLayout.m in Sources */,
 				DEF0996B1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09BA1BF988A400C6954F /* NSXPushitem.m in Sources */,
-				DEE2DD1C1C27F38D00ED907E /* HMStatusDetailBottomToolbar.m in Sources */,
 				DEF17A8F1C22E3A300EEF06B /* CarouseView.m in Sources */,
-				DEE2DD121C27F38D00ED907E /* MMExampleDrawerVisualStateManager.m in Sources */,
 				DEF0995B1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09C9F1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE2DCE61C27F02B00ED907E /* NSXNewsController.m in Sources */,
@@ -7081,9 +7126,10 @@
 				DEF09B2D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF176631C22AA6700EEF06B /* StoryModel.m in Sources */,
 				DEF09C4D1C215ADB005D0CB8 /* README.md in Sources */,
-				DEE2DD171C27F38D00ED907E /* MMLogoView.m in Sources */,
 				DEF09C3A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEB3E9751C16817E00495FBE /* NSXTabBarController.m in Sources */,
+				DEE18E8D1C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m in Sources */,
+				DEE18E641C327AC3003A5278 /* NSXSideViewHeader.m in Sources */,
 				DEF09B831C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C6D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEE8204B1C2CDFAA00E515C9 /* NSXUser+Provider.m in Sources */,
@@ -7098,7 +7144,6 @@
 				DE9BBBCE1BFCA26B0048D32A /* T1StatusLayout.m in Sources */,
 				DEE2DCD51C27933D00ED907E /* MyTweetLikeListViewController.m in Sources */,
 				DEF099411C215ADA005D0CB8 /* README.md in Sources */,
-				DEE2DD131C27F38D00ED907E /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				DEF09BDF1C215ADB005D0CB8 /* README.md in Sources */,
 				DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */,
 				DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */,
@@ -7118,6 +7163,7 @@
 				DEF099AE1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09C451C215ADB005D0CB8 /* Readme.md in Sources */,
 				DEF09A821C215ADA005D0CB8 /* History.md in Sources */,
+				DEE18E921C327B5B003A5278 /* MMSideDrawerSectionHeaderView.m in Sources */,
 				DEF099741C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09C011C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF099E31C215ADA005D0CB8 /* Readme.md in Sources */,
@@ -7126,13 +7172,13 @@
 				DEF09CA31C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C8C1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09AAC1C215ADA005D0CB8 /* CHANGELOG.md in Sources */,
-				DEE2DD161C27F38D00ED907E /* MMExampleViewController.m in Sources */,
 				DEF09CD01C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE2DCCB1C2791CF00ED907E /* OSCUser.m in Sources */,
 				DEB3E96D1C166D8C00495FBE /* DEMOSecondViewController.m in Sources */,
 				DEF09C9E1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099D81C215ADA005D0CB8 /* README.md in Sources */,
 				DE9BBC151BFCA5280048D32A /* YYSimpleWebViewController.m in Sources */,
+				DEE18E621C327AC3003A5278 /* HMStatusDetailBottomToolbar.m in Sources */,
 				DE248A081C03027900472F71 /* NSXNewsCell.m in Sources */,
 				DEF09AA51C215ADA005D0CB8 /* README.md in Sources */,
 				DE9BBBD71BFCA26B0048D32A /* WBEmoticonInputView.m in Sources */,
@@ -7143,17 +7189,15 @@
 				DEB3E96C1C166D8C00495FBE /* DEMORightMenuViewController.m in Sources */,
 				DEF09B3B1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099A91C215ADA005D0CB8 /* readme.md in Sources */,
-				DEE2DD1B1C27F38D00ED907E /* MMTableViewCell.m in Sources */,
 				DEF09C331C215ADB005D0CB8 /* CONTRIBUTING.md in Sources */,
 				DEF09BF31C215ADB005D0CB8 /* History.md in Sources */,
 				DEF099EE1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099791C215ADA005D0CB8 /* README.md in Sources */,
-				DEE2DD141C27F38D00ED907E /* MMExampleRightSideDrawerViewController.m in Sources */,
 				DEF09AF21C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C321C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
 				DEB3E9691C166D8C00495FBE /* AppDelegate2.m in Sources */,
+				DEE18E901C327B5B003A5278 /* MMLogoView.m in Sources */,
 				DEE4C2CA1C2C0EE70074D94A /* Config.m in Sources */,
-				DEE2DD1A1C27F38D00ED907E /* MMSideDrawerTableViewCell.m in Sources */,
 				DEB3E9671C166D8C00495FBE /* AppDelegate.m in Sources */,
 				DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */,
 				DE5C155D1C06B79700E8B428 /* NSXOptionButton.m in Sources */,
@@ -7165,7 +7209,6 @@
 				DEE2DCDE1C27943000ED907E /* MessageCenter.m in Sources */,
 				DEF09BE01C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DE34ED861BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
-				DEE2DD181C27F38D00ED907E /* MMNavigationController.m in Sources */,
 				DEF099311C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09CD71C215ADB005D0CB8 /* README.md in Sources */,
 				DEE2DCE21C27A84400ED907E /* LogInViewController.m in Sources */,
@@ -7173,20 +7216,22 @@
 				DE5A18421C08581700FD3B1D /* NSString+FontAwesome.m in Sources */,
 				DEE820581C2CE1C800E515C9 /* NSXAccount+Provider.m in Sources */,
 				DE34EDA21BF9B451003CFC80 /* SDRefreshView.m in Sources */,
-				DEE2DD111C27F38D00ED907E /* MMExampleCenterTableViewController.m in Sources */,
 				DEF09C991C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B531C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099921C215ADA005D0CB8 /* README.markdown in Sources */,
-				DEE2DD191C27F38D00ED907E /* MMSideDrawerSectionHeaderView.m in Sources */,
+				DEE18E911C327B5B003A5278 /* MMNavigationController.m in Sources */,
 				DEF09A921C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09C411C215ADB005D0CB8 /* History.md in Sources */,
+				DEEAA51C1C33B9C1002C46EF /* StoryContentViewController.m in Sources */,
 				DE9BBBD81BFCA26B0048D32A /* WBModel.m in Sources */,
 				DE0186FD1C0BFA7500F45AC1 /* NSXBaseTool.m in Sources */,
 				DEF09AC81C215ADA005D0CB8 /* README.md in Sources */,
 				DE0187141C0C483700F45AC1 /* NSXNews.m in Sources */,
 				DEF09B4B1C215ADB005D0CB8 /* HISTORY.md in Sources */,
+				DEE18E881C327B5B003A5278 /* MMCenterTableViewCell.m in Sources */,
 				DEF09C951C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09CC11C215ADB005D0CB8 /* README.md in Sources */,
+				DEE18E8C1C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				DEDD80E61C2AA11300C5ECE3 /* RefreshView.m in Sources */,
 				DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */,
 				DEF09CAD1C215ADB005D0CB8 /* README.md in Sources */,
@@ -7212,7 +7257,6 @@
 				DEF09B791C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF099351C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09CCA1C215ADB005D0CB8 /* README.md in Sources */,
-				DEE2DD151C27F38D00ED907E /* MMExampleSideDrawerViewController.m in Sources */,
 				DE9BBBCD1BFCA26B0048D32A /* T1StatusCell.m in Sources */,
 				DE5A18331C084AAE00FD3B1D /* NSDate+TimeAgo.m in Sources */,
 				DE5C15631C06BB5C00E8B428 /* UIColor+Util.m in Sources */,
@@ -7241,16 +7285,17 @@
 				DE9BBBCC1BFCA26B0048D32A /* T1Model.m in Sources */,
 				DEF0995E1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09ACD1C215ADA005D0CB8 /* README.md in Sources */,
-				DEE2DD1D1C27F38D00ED907E /* NSXSideViewFooter.m in Sources */,
 				DEF09BCD1C215ADB005D0CB8 /* Readme.md in Sources */,
 				DE9BBBDE1BFCA26B0048D32A /* WBStatusTimelineViewController.m in Sources */,
 				DEF09B691C215ADB005D0CB8 /* readme.markdown in Sources */,
 				DEF09CCF1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A911C215ADA005D0CB8 /* Readme.md in Sources */,
 				DE9BBBD91BFCA26B0048D32A /* WBStatusCell.m in Sources */,
+				DEEAA51E1C33B9C1002C46EF /* PreView.m in Sources */,
 				DEF09A811C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF09B31BF988A400C6954F /* NSXMessageController.m in Sources */,
 				DEF09CE11C215ADB005D0CB8 /* README.md in Sources */,
+				DEE18E631C327AC3003A5278 /* NSXSideViewFooter.m in Sources */,
 				DE5A18371C084C7A00FD3B1D /* NSXUtils.m in Sources */,
 				DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */,
 				DEF09BCE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
@@ -7267,18 +7312,20 @@
 				DEE4C2D11C2C13530074D94A /* NSXUser.m in Sources */,
 				DEF099461C215ADA005D0CB8 /* LICENSE.md in Sources */,
 				DEB3E9C11C16D26900495FBE /* MyResultsViewController.m in Sources */,
+				DEEAA51F1C33B9C1002C46EF /* StoryContentViewModel.m in Sources */,
+				DEE18E8B1C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				DEF099561C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF09B91BF988A400C6954F /* NSXGroupItem.m in Sources */,
-				DEE2DD1E1C27F38D00ED907E /* NSXSideViewHeader.m in Sources */,
 				DEF09B591C215ADB005D0CB8 /* readme.markdown in Sources */,
 				DEF099AF1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09AD1BF988A400C6954F /* NSXMenu.m in Sources */,
 				DEF09A7C1C215ADA005D0CB8 /* Readme.md in Sources */,
-				DEE2DD0E1C27F38D00ED907E /* MMAppDelegate.m in Sources */,
 				DEF09BEE1C215ADB005D0CB8 /* README.md in Sources */,
 				DEE2DCC51C27914600ED907E /* MyBasicInfoViewController.m in Sources */,
+				DEE18E931C327B5B003A5278 /* MMSideDrawerTableViewCell.m in Sources */,
 				DEF09C801C215ADB005D0CB8 /* README.md in Sources */,
 				DE5A18441C08581700FD3B1D /* UIImage+FontAwesome.m in Sources */,
+				DEE18E8A1C327B5B003A5278 /* MMExampleCenterTableViewController.m in Sources */,
 				DEF09BE41C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A9A1C215ADA005D0CB8 /* History.md in Sources */,
 			);
@@ -7330,14 +7377,6 @@
 				DEAF09561BF987AC00C6954F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DEE2DCE81C27F38D00ED907E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEE2DCE91C27F38D00ED907E /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -179,6 +179,9 @@
     // 1.添加第一个控制器
     NSXNewsController *oneVc = [[NSXNewsController alloc]initWithViewModel:[NSXNewsViewModel new]];
     UINavigationController *oneNav = [[UINavigationController alloc]initWithRootViewController:oneVc];
+    oneNav.navigationBarHidden = YES;
+    oneNav.navigationController.interactivePopGestureRecognizer.enabled = YES;
+
     
     // 2.添加第2个控制器
     NSXMessageController *twoVc = [[NSXMessageController alloc]init];
@@ -224,7 +227,7 @@
     
     self.viewControllers = @[
 //                             [self addNavigationItemForViewController:oneVc],
-                             oneVc,
+                             oneNav,
                              [self addNavigationItemForViewController:twoVc],
                              [UIViewController new],
                              [self addNavigationItemForViewController:threeVc],

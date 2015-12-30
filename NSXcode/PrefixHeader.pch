@@ -14,9 +14,12 @@
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kScreenBounds [UIScreen mainScreen].bounds
+#define kAppdelegate (AppDelegate *)[UIApplication sharedApplication].delegate;
 
 #define kbaseURL @"http://news-at.zhihu.com/api/4"
 #define Domain @"http://192.168.2.144:8888/"
+#define Domain3 @"http://61.160.193.80:39564/"
+#define Domain1 @"http://123.249.81.33:16385/"
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__)

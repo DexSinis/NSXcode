@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Main/Controller/TarBar/NSXTabBarController.m"
-            timestampString = "472966689.344254"
+            timestampString = "473157413.31674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "395"
-            endingLineNumber = "395"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "-pushSearchViewController"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,7 +346,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473069264.317642"
+                  timestampString = "473169461.554915"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -361,7 +361,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473069264.317814"
+                  timestampString = "473169461.555371"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -938,11 +938,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "472997980.912966"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -954,11 +954,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -993,6 +993,38 @@
             endingLineNumber = "262"
             landmarkName = "-getPreviousStories"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSXNewsViewModel getPreviousStories]"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
+                  timestampString = "473169461.833813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[NSXNewsViewModel getPreviousStories]_block_invoke"
+                  moduleName = "NSXcode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
+                  timestampString = "473169461.834117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1018,11 +1050,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "-scrollViewDidScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1139,7 +1171,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
@@ -1175,11 +1207,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1255,11 +1287,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1271,11 +1303,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1287,11 +1319,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1303,11 +1335,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473160113.81971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "529"
+            endingLineNumber = "529"
             landmarkName = "-makePlaceHolderView"
             landmarkType = "5">
          </BreakpointContent>
@@ -1319,11 +1351,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473160113.81971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "502"
-            endingLineNumber = "502"
+            startingLineNumber = "535"
+            endingLineNumber = "535"
             landmarkName = "-taoBaoStylePlaceHolder"
             landmarkType = "5">
             <Locations>
@@ -1335,11 +1367,11 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/Controller/NSXNewsController.m"
-                  timestampString = "473069264.326137"
+                  timestampString = "473169461.844783"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
+                  startingLineNumber = "535"
+                  endingLineNumber = "535"
                   offsetFromSymbolStart = "192">
                </Location>
                <Location
@@ -1350,11 +1382,11 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/Controller/NSXNewsController.m"
-                  timestampString = "473069264.32626"
+                  timestampString = "473169461.844945"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "502"
-                  endingLineNumber = "502"
+                  startingLineNumber = "535"
+                  endingLineNumber = "535"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -1479,11 +1511,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-loadingLatestDaily:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1491,7 +1523,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
@@ -1543,11 +1575,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473068568.907535"
+            timestampString = "473154098.512535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "-updateLatestDaily:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1571,16 +1603,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
+            timestampString = "473154098.512535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-setTopStoriesContent"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
+            timestampString = "473154118.517727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "482"
+            endingLineNumber = "482"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/News/DailyNewsContent/ViewModel/StoryContentViewModel.m"
+            timestampString = "473154566.166764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-getStoryContentWithStoryID:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/News/DailyNewsContent/ViewModel/StoryContentViewModel.m"
+            timestampString = "473169397.796111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-getStoryContentWithStoryID:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/News/DailyNewsContent/Model/StoryContentModel.m"
+            timestampString = "473154388.317125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "-initWithDictionary:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/Controller/NSXNewsController.m"
-            timestampString = "473069250.610908"
+            timestampString = "473160113.81971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-setTopStoriesContent"
+            startingLineNumber = "491"
+            endingLineNumber = "491"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/News/DailyNewsContent/ViewModel/StoryContentViewModel.m"
+            timestampString = "473169397.796111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-getPreviousStoryContent"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/Controller/News/DailyNewsContent/ViewModel/StoryContentViewModel.m"
+            timestampString = "473169441.915756"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-getNextStoryContent"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

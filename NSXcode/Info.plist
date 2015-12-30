@@ -43,5 +43,7 @@
 	<array>
 		<string>FontAwesome.ttf</string>
 	</array>
+	<key>View controller-based status bar appearance </key>
+	<false/>
 </dict>
 </plist>
