@@ -8,6 +8,7 @@
 
 #import "StoryContentViewController.h"
 #import "PreView.h"
+#import "CommentViewController.h"
 
 @interface StoryContentViewController ()<UIScrollViewDelegate>
 
@@ -17,6 +18,9 @@
 @property(strong,nonatomic)UILabel *imaSourceLab;
 @property(strong,nonatomic)UIWebView *webView;
 @property(strong,nonatomic)PreView *preView;
+
+@property(strong,nonatomic)UIView *commentView;
+@property(strong,nonatomic)CommentViewController *commentViewController;
 
 @property(strong,nonatomic)StoryContentViewModel *viewmodel;
 
@@ -37,6 +41,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.commentViewController = [[CommentViewController alloc] init];
+    
     [self initSubViews];
 }
 
@@ -99,6 +105,13 @@
     
     _preView = [[PreView alloc] initWithFrame:kScreenBounds];
     [self.view addSubview:_preView];
+    
+    UIView *commentView  = [[UIView alloc] init];
+    commentView.frame = CGRectMake(0, kScreenHeight, 375, 667);
+    commentView.backgroundColor = [UIColor lightGrayColor];
+    self.commentView = commentView;
+    self.commentView.hidden =YES;
+    [self.view addSubview:commentView];
 }
 
 - (void)backAction:(id)sender {
@@ -126,10 +139,34 @@
         _headerView.frame = CGRectMake(0, -40-offSetY, kScreenWidth, 260);
     }
     if (offSetY + kScreenHeight > scrollView.contentSize.height + 160&&!_webView.scrollView.isDragging) {
-        [self.viewmodel getNextStoryContent];
+////        [self.viewmodel getNextStoryContent];
+////        self.commentView.hidden =NO;
+//        UIView *commentView  = [[UIView alloc] init];
+//        commentView.frame = CGRectMake(0, scrollView.contentSize.height, 375, 667);
+//        commentView.backgroundColor = [UIColor lightGrayColor];
+//        self.commentView = commentView;
+////        self.commentView.hidden =YES;
+//        [self.view addSubview:commentView];
+        self.commentViewController.view.frame = CGRectMake(0,scrollView.contentSize.height, self.view.frame.size.width, self.view.frame.size.height);
+        scrollView.contentSize = CGSizeMake(scrollView.contentSize.width, scrollView.contentSize.height+1000);
+        //    self.subViewController.dataArray = self.product.detailPhotos;
+        //    self.subViewController.product = self.product;
+        [scrollView addSubview:self.commentViewController.view];
+        [self addSubPage];
     }
 }
 
+
+- (void)addSubPage
+{
+//    if (!self.commentViewController) {
+//        return;
+//    }
+//    
+//    self.subViewController.mainViewController = self;
+   
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

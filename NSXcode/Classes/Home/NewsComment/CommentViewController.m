@@ -69,6 +69,8 @@
     _tableview.delegate = self;
     _tableview.dataSource = self;
     _tableview.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+//    _tableview.scrollEnabled =NO;
+//    NSLog(@"%f------------------------------>>>>>>>>>>>>>>>>>>",.contentSize);
     [self.view addSubview:_tableview];
     
 }
@@ -104,6 +106,10 @@
     [ce.contentView addSubview:container];
     return ce;
     
+}
+-(CGFloat)getTableViewHeight
+{
+    return _tableview.contentSize.height;
 }
 @end
 

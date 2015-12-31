@@ -10,6 +10,6 @@
 
 @interface CommentViewController : UIViewController
 
-
+-(CGFloat)getTableViewHeight;
 @end
 

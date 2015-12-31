@@ -346,7 +346,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473171329.068102"
+                  timestampString = "473239373.723011"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -361,7 +361,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473171329.068356"
+                  timestampString = "473239373.723176"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -993,38 +993,6 @@
             endingLineNumber = "262"
             landmarkName = "-getPreviousStories"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSXNewsViewModel getPreviousStories]"
-                  moduleName = "NSXcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
-                  timestampString = "473171329.073689"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "262"
-                  endingLineNumber = "262"
-                  offsetFromSymbolStart = "260">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__38-[NSXNewsViewModel getPreviousStories]_block_invoke"
-                  moduleName = "NSXcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/ViewModel/NSXNewsViewModel.m"
-                  timestampString = "473171329.073878"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "262"
-                  endingLineNumber = "262"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1358,38 +1326,6 @@
             endingLineNumber = "535"
             landmarkName = "-taoBaoStylePlaceHolder"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSXNewsController taoBaoStylePlaceHolder]"
-                  moduleName = "NSXcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/Controller/NSXNewsController.m"
-                  timestampString = "473171329.076169"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "535"
-                  endingLineNumber = "535"
-                  offsetFromSymbolStart = "192">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__43-[NSXNewsController taoBaoStylePlaceHolder]_block_invoke"
-                  moduleName = "NSXcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/Home/Controller/NSXNewsController.m"
-                  timestampString = "473171329.076324"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "535"
-                  endingLineNumber = "535"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1725,6 +1661,54 @@
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "-getNextStoryContent"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/NewsComment/CommentViewController.m"
+            timestampString = "473225353.334193"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/NewsDailyContent/Controller/StoryContentViewController.m"
+            timestampString = "473225800.226889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-scrollViewDidScroll:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSXcode/Classes/Home/NewsComment/CommentViewController.m"
+            timestampString = "473239368.502032"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-getTableViewHeight"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
