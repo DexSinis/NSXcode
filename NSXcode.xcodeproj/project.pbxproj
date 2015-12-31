@@ -10,24 +10,14 @@
 		35612A354A341856D19E82D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AE6DCBDCC2BA4CECDF6A21 /* libPods.a */; };
 		DE0186FD1C0BFA7500F45AC1 /* NSXBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0186FA1C0BFA7500F45AC1 /* NSXBaseTool.m */; };
 		DE0186FE1C0BFA7500F45AC1 /* NSXHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0186FC1C0BFA7500F45AC1 /* NSXHttpTool.m */; };
-		DE0187141C0C483700F45AC1 /* NSXNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0187111C0C483700F45AC1 /* NSXNews.m */; };
-		DE248A081C03027900472F71 /* NSXNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE248A071C03027900472F71 /* NSXNewsCell.m */; };
 		DE34ED861BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED831BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		DE34ED871BF9B370003CFC80 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED851BF9B370003CFC80 /* UIView+SDAutoLayout.m */; };
-		DE34ED921BF9B3CF003CFC80 /* DemoVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED8F1BF9B3CF003CFC80 /* DemoVC3.m */; };
-		DE34ED931BF9B3CF003CFC80 /* TestCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED911BF9B3CF003CFC80 /* TestCell2.m */; };
 		DE34ED9F1BF9B451003CFC80 /* sdRefeshView_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE34ED951BF9B451003CFC80 /* sdRefeshView_arrow@2x.png */; };
 		DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED981BF9B451003CFC80 /* SDRefreshFooterView.m */; };
 		DE34EDA11BF9B451003CFC80 /* SDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED9A1BF9B451003CFC80 /* SDRefreshHeaderView.m */; };
 		DE34EDA21BF9B451003CFC80 /* SDRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED9C1BF9B451003CFC80 /* SDRefreshView.m */; };
 		DE34EDA31BF9B451003CFC80 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DE34ED9E1BF9B451003CFC80 /* UIView+SDExtension.m */; };
 		DE34EDA81BF9BE2A003CFC80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE34EDA61BF9BE2A003CFC80 /* LaunchScreen.storyboard */; };
-		DE4ACDC51C072E4E00BA5608 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4ACDC21C072E4E00BA5608 /* NewsCell.m */; };
-		DE4ACDC61C072E4E00BA5608 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4ACDC41C072E4E00BA5608 /* NewsViewController.m */; };
-		DE4ACDC91C072E8C00BA5608 /* OSCObjsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4ACDC81C072E8C00BA5608 /* OSCObjsViewController.m */; };
-		DE4ACDCC1C072EF700BA5608 /* NSXNewsCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4ACDCB1C072EF700BA5608 /* NSXNewsCell1.m */; };
-		DE5A18211C07E64D00FD3B1D /* NSXNewsCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A18201C07E64D00FD3B1D /* NSXNewsCellTest.m */; };
-		DE5A182D1C07EB8D00FD3B1D /* NSXNewsDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A182C1C07EB8D00FD3B1D /* NSXNewsDetails.m */; };
 		DE5A18331C084AAE00FD3B1D /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A18311C084AAE00FD3B1D /* NSDate+TimeAgo.m */; };
 		DE5A18341C084AAE00FD3B1D /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DE5A18321C084AAE00FD3B1D /* NSDateTimeAgo.bundle */; };
 		DE5A18371C084C7A00FD3B1D /* NSXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A18361C084C7A00FD3B1D /* NSXUtils.m */; };
@@ -36,36 +26,10 @@
 		DE5A18431C08581700FD3B1D /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A183E1C08581700FD3B1D /* UIFont+FontAwesome.m */; };
 		DE5A18441C08581700FD3B1D /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A18401C08581700FD3B1D /* UIImage+FontAwesome.m */; };
 		DE5A18461C085A1100FD3B1D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5A18451C08598300FD3B1D /* FontAwesome.ttf */; };
-		DE5A18911C088EEC00FD3B1D /* NSXNewsCellBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5A188F1C088EEC00FD3B1D /* NSXNewsCellBar.m */; };
 		DE5C15561C06AEAB00E8B428 /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15551C06AEAB00E8B428 /* UIView+Util.m */; };
 		DE5C15591C06AF0700E8B428 /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15581C06AF0700E8B428 /* UIImage+Util.m */; };
 		DE5C155D1C06B79700E8B428 /* NSXOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C155C1C06B79700E8B428 /* NSXOptionButton.m */; };
 		DE5C15631C06BB5C00E8B428 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5C15621C06BB5C00E8B428 /* UIColor+Util.m */; };
-		DE9BBBC61BFCA26B0048D32A /* twitter_0.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */; };
-		DE9BBBC71BFCA26B0048D32A /* twitter_1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */; };
-		DE9BBBC81BFCA26B0048D32A /* twitter_2.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBA01BFCA26B0048D32A /* twitter_2.json */; };
-		DE9BBBC91BFCA26B0048D32A /* twitter_3.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBA11BFCA26B0048D32A /* twitter_3.json */; };
-		DE9BBBCA1BFCA26B0048D32A /* T1Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBA31BFCA26B0048D32A /* T1Helper.m */; };
-		DE9BBBCB1BFCA26B0048D32A /* T1HomeTimelineItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBA51BFCA26B0048D32A /* T1HomeTimelineItemsViewController.m */; };
-		DE9BBBCC1BFCA26B0048D32A /* T1Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBA71BFCA26B0048D32A /* T1Model.m */; };
-		DE9BBBCD1BFCA26B0048D32A /* T1StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBA91BFCA26B0048D32A /* T1StatusCell.m */; };
-		DE9BBBCE1BFCA26B0048D32A /* T1StatusLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBAB1BFCA26B0048D32A /* T1StatusLayout.m */; };
-		DE9BBBCF1BFCA26B0048D32A /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBAE1BFCA26B0048D32A /* weibo_0.json */; };
-		DE9BBBD01BFCA26B0048D32A /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBAF1BFCA26B0048D32A /* weibo_1.json */; };
-		DE9BBBD11BFCA26B0048D32A /* weibo_2.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB01BFCA26B0048D32A /* weibo_2.json */; };
-		DE9BBBD21BFCA26B0048D32A /* weibo_3.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB11BFCA26B0048D32A /* weibo_3.json */; };
-		DE9BBBD31BFCA26B0048D32A /* weibo_4.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB21BFCA26B0048D32A /* weibo_4.json */; };
-		DE9BBBD41BFCA26B0048D32A /* weibo_5.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB31BFCA26B0048D32A /* weibo_5.json */; };
-		DE9BBBD51BFCA26B0048D32A /* weibo_6.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB41BFCA26B0048D32A /* weibo_6.json */; };
-		DE9BBBD61BFCA26B0048D32A /* weibo_7.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9BBBB51BFCA26B0048D32A /* weibo_7.json */; };
-		DE9BBBD71BFCA26B0048D32A /* WBEmoticonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBB71BFCA26B0048D32A /* WBEmoticonInputView.m */; };
-		DE9BBBD81BFCA26B0048D32A /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBB91BFCA26B0048D32A /* WBModel.m */; };
-		DE9BBBD91BFCA26B0048D32A /* WBStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBBB1BFCA26B0048D32A /* WBStatusCell.m */; };
-		DE9BBBDA1BFCA26B0048D32A /* WBStatusComposeTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBBD1BFCA26B0048D32A /* WBStatusComposeTextParser.m */; };
-		DE9BBBDB1BFCA26B0048D32A /* WBStatusComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBBF1BFCA26B0048D32A /* WBStatusComposeViewController.m */; };
-		DE9BBBDC1BFCA26B0048D32A /* WBStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBC11BFCA26B0048D32A /* WBStatusHelper.m */; };
-		DE9BBBDD1BFCA26B0048D32A /* WBStatusLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBC31BFCA26B0048D32A /* WBStatusLayout.m */; };
-		DE9BBBDE1BFCA26B0048D32A /* WBStatusTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBBC51BFCA26B0048D32A /* WBStatusTimelineViewController.m */; };
 		DE9BBC121BFCA5280048D32A /* YYControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBC071BFCA5280048D32A /* YYControl.m */; };
 		DE9BBC131BFCA5280048D32A /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBC091BFCA5280048D32A /* YYFPSLabel.m */; };
 		DE9BBC141BFCA5280048D32A /* YYPhotoGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9BBC0B1BFCA5280048D32A /* YYPhotoGroupView.m */; };
@@ -77,9 +41,6 @@
 		DEAF09591BF987AC00C6954F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAF09581BF987AC00C6954F /* Assets.xcassets */; };
 		DEAF09671BF987AC00C6954F /* NSXcodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09661BF987AC00C6954F /* NSXcodeTests.m */; };
 		DEAF09721BF987AC00C6954F /* NSXcodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09711BF987AC00C6954F /* NSXcodeUITests.m */; };
-		DEAF09AD1BF988A400C6954F /* NSXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09861BF988A400C6954F /* NSXMenu.m */; };
-		DEAF09AE1BF988A400C6954F /* NSXCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09891BF988A400C6954F /* NSXCell.m */; };
-		DEAF09AF1BF988A400C6954F /* NSXCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEAF098A1BF988A400C6954F /* NSXCell.xib */; };
 		DEAF09B31BF988A400C6954F /* NSXMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09961BF988A400C6954F /* NSXMessageController.m */; };
 		DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF099D1BF988A400C6954F /* NSXSearchController.m */; };
 		DEAF09B61BF988A400C6954F /* NSXSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAF09A11BF988A400C6954F /* NSXSettingController.m */; };
@@ -132,11 +93,7 @@
 		DEB4F7CE1C02AF6300DF6740 /* Weibo@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEB4F7B01C02AF6300DF6740 /* Weibo@3x.jpg */; };
 		DEDCE8D21C2E383900C7757C /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCE8CF1C2E383900C7757C /* UIBarButtonItem+Badge.m */; };
 		DEDCE8D31C2E383900C7757C /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDCE8D11C2E383900C7757C /* UIButton+Badge.m */; };
-		DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */; };
 		DEDD80E61C2AA11300C5ECE3 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDD80E51C2AA11300C5ECE3 /* RefreshView.m */; };
-		DEDFFBA21C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */; };
-		DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */; };
-		DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */; };
 		DEE18E431C326DE0003A5278 /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = DEE18E421C326DE0003A5278 /* server.js */; };
 		DEE18E621C327AC3003A5278 /* HMStatusDetailBottomToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E5D1C327AC3003A5278 /* HMStatusDetailBottomToolbar.m */; };
 		DEE18E631C327AC3003A5278 /* NSXSideViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE18E5F1C327AC3003A5278 /* NSXSideViewFooter.m */; };
@@ -165,13 +122,51 @@
 		DEE2DCDB1C27937D00ED907E /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCDA1C27937D00ED907E /* FriendsViewController.m */; };
 		DEE2DCDE1C27943000ED907E /* MessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCDD1C27943000ED907E /* MessageCenter.m */; };
 		DEE2DCE21C27A84400ED907E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE01C27A84400ED907E /* LogInViewController.m */; };
-		DEE2DCE61C27F02B00ED907E /* NSXNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */; };
 		DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE2DD821C281E3F00ED907E /* RegistViewController.m */; };
 		DEE2DD851C281F4F00ED907E /* LoginRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */; };
+		DEE4076F1C34C195000AB909 /* DemoVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406DB1C34C195000AB909 /* DemoVC3.m */; };
+		DEE407741C34C195000AB909 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406EB1C34C195000AB909 /* NewsCell.m */; };
+		DEE407751C34C195000AB909 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406ED1C34C195000AB909 /* NewsViewController.m */; };
+		DEE407761C34C195000AB909 /* NSXNewsCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406EF1C34C195000AB909 /* NSXNewsCell1.m */; };
+		DEE407771C34C195000AB909 /* OSCObjsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406F11C34C195000AB909 /* OSCObjsViewController.m */; };
+		DEE407781C34C195000AB909 /* NSXNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406F31C34C195000AB909 /* NSXNewsController.m */; };
+		DEE4077A1C34C195000AB909 /* TestCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE406F71C34C195000AB909 /* TestCell2.m */; };
+		DEE407941C34C195000AB909 /* NSXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407241C34C195000AB909 /* NSXMenu.m */; };
+		DEE407951C34C195000AB909 /* NSXNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407261C34C195000AB909 /* NSXNews.m */; };
+		DEE407961C34C195000AB909 /* NSXNewsDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407281C34C195000AB909 /* NSXNewsDetails.m */; };
+		DEE407971C34C195000AB909 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4072A1C34C195000AB909 /* StoryModel.m */; };
+		DEE4079D1C34C195000AB909 /* CarouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407371C34C195000AB909 /* CarouseView.m */; };
+		DEE4079E1C34C195000AB909 /* NSXCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407391C34C195000AB909 /* NSXCell.m */; };
+		DEE4079F1C34C195000AB909 /* NSXCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE4073A1C34C195000AB909 /* NSXCell.xib */; };
+		DEE407A01C34C195000AB909 /* NSXNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4073C1C34C195000AB909 /* NSXNewsCell.m */; };
+		DEE407A21C34C195000AB909 /* NSXNewsCellBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407401C34C195000AB909 /* NSXNewsCellBar.m */; };
+		DEE407A31C34C195000AB909 /* NSXNewsCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407421C34C195000AB909 /* NSXNewsCellTest.m */; };
+		DEE407A51C34C195000AB909 /* TopStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407461C34C195000AB909 /* TopStoryView.m */; };
+		DEE407A61C34C195000AB909 /* XHFeedCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407481C34C195000AB909 /* XHFeedCell3.m */; };
+		DEE407A71C34C195000AB909 /* XTNetReloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4074B1C34C195000AB909 /* XTNetReloader.m */; };
+		DEE407AB1C34C195000AB909 /* NSXNews+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407541C34C195000AB909 /* NSXNews+Provider.m */; };
+		DEE407AC1C34C195000AB909 /* NSXNewsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407561C34C195000AB909 /* NSXNewsParam.m */; };
+		DEE407AD1C34C195000AB909 /* NSXNewsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407581C34C195000AB909 /* NSXNewsResult.m */; };
+		DEE407AE1C34C195000AB909 /* NSXNewsViewModel+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4075A1C34C195000AB909 /* NSXNewsViewModel+Provider.m */; };
+		DEE407AF1C34C195000AB909 /* NSXNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4075C1C34C195000AB909 /* NSXNewsViewModel.m */; };
+		DEE407B01C34C195000AB909 /* NSXNewsViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4075E1C34C195000AB909 /* NSXNewsViewModelParam.m */; };
+		DEE407B11C34C195000AB909 /* NSXNewsViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407601C34C195000AB909 /* NSXNewsViewModelResult.m */; };
+		DEE407B21C34C195000AB909 /* StoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407651C34C195000AB909 /* StoryContentViewController.m */; };
+		DEE407B31C34C195000AB909 /* StoryContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407681C34C195000AB909 /* StoryContentModel.m */; };
+		DEE407B41C34C195000AB909 /* PreView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4076B1C34C195000AB909 /* PreView.m */; };
+		DEE407B51C34C195000AB909 /* StoryContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4076E1C34C195000AB909 /* StoryContentViewModel.m */; };
+		DEE407C71C34C918000AB909 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407B91C34C918000AB909 /* CommentModel.m */; };
+		DEE407C81C34C918000AB909 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407BB1C34C918000AB909 /* CommentTableViewCell.m */; };
+		DEE407C91C34C918000AB909 /* GridLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407BE1C34C918000AB909 /* GridLayoutView.m */; };
+		DEE407CA1C34C918000AB909 /* LayoutContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407C01C34C918000AB909 /* LayoutContainerView.m */; };
+		DEE407CB1C34C918000AB909 /* LayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407C21C34C918000AB909 /* LayoutView.m */; };
+		DEE407CC1C34C918000AB909 /* head_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE407C41C34C918000AB909 /* head_default@2x.png */; };
+		DEE407CD1C34C918000AB909 /* like_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE407C51C34C918000AB909 /* like_btn@2x.png */; };
+		DEE407CE1C34C918000AB909 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = DEE407C61C34C918000AB909 /* test.json */; };
+		DEE407D11C34C931000AB909 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE407D01C34C931000AB909 /* CommentViewController.m */; };
 		DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2C61C2C0E810074D94A /* Utils.m */; };
 		DEE4C2CA1C2C0EE70074D94A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2C91C2C0EE70074D94A /* Config.m */; };
 		DEE4C2D11C2C13530074D94A /* NSXUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4C2CF1C2C13530074D94A /* NSXUser.m */; };
-		DEE527CF1C2E904500381C6D /* NSXNewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */; };
 		DEE8204B1C2CDFAA00E515C9 /* NSXUser+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */; };
 		DEE820501C2CE0A200E515C9 /* NSXUserParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204D1C2CE0A200E515C9 /* NSXUserParam.m */; };
 		DEE820511C2CE0A200E515C9 /* NSXUserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8204F1C2CE0A200E515C9 /* NSXUserResult.m */; };
@@ -179,11 +174,6 @@
 		DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820551C2CE1C800E515C9 /* NSXAccountParam.m */; };
 		DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */; };
 		DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */; };
-		DEEAA51C1C33B9C1002C46EF /* StoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */; };
-		DEEAA51D1C33B9C1002C46EF /* StoryContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */; };
-		DEEAA51E1C33B9C1002C46EF /* PreView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA5181C33B9C1002C46EF /* PreView.m */; };
-		DEEAA51F1C33B9C1002C46EF /* StoryContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */; };
-		DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEF9E691C315E040079773D /* XTNetReloader.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
 		DEF099291C215ADA005D0CB8 /* resource.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094821C215AD9005D0CB8 /* resource.js */; };
@@ -1170,10 +1160,7 @@
 		DEF09CFE1C215ADB005D0CB8 /* header.ejs in Resources */ = {isa = PBXBuildFile; fileRef = DEF099231C215ADA005D0CB8 /* header.ejs */; };
 		DEF09CFF1C215ADB005D0CB8 /* index.ejs in Resources */ = {isa = PBXBuildFile; fileRef = DEF099241C215ADA005D0CB8 /* index.ejs */; };
 		DEF09D001C215ADB005D0CB8 /* login.ejs in Resources */ = {isa = PBXBuildFile; fileRef = DEF099251C215ADA005D0CB8 /* login.ejs */; };
-		DEF1765E1C22A8C800EEF06B /* TopStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF1765C1C22A8C800EEF06B /* TopStoryView.m */; };
-		DEF176631C22AA6700EEF06B /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF176621C22AA6700EEF06B /* StoryModel.m */; };
 		DEF176661C22AB6300EEF06B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF176651C22AB6300EEF06B /* UIView+Extension.m */; };
-		DEF17A8F1C22E3A300EEF06B /* CarouseView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF17A8E1C22E3A300EEF06B /* CarouseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1200,18 +1187,10 @@
 		DE0186FA1C0BFA7500F45AC1 /* NSXBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXBaseTool.m; sourceTree = "<group>"; };
 		DE0186FB1C0BFA7500F45AC1 /* NSXHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXHttpTool.h; sourceTree = "<group>"; };
 		DE0186FC1C0BFA7500F45AC1 /* NSXHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXHttpTool.m; sourceTree = "<group>"; };
-		DE0187101C0C483700F45AC1 /* NSXNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNews.h; sourceTree = "<group>"; };
-		DE0187111C0C483700F45AC1 /* NSXNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNews.m; sourceTree = "<group>"; };
-		DE248A061C03027900472F71 /* NSXNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCell.h; sourceTree = "<group>"; };
-		DE248A071C03027900472F71 /* NSXNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCell.m; sourceTree = "<group>"; };
 		DE34ED821BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		DE34ED831BF9B370003CFC80 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		DE34ED841BF9B370003CFC80 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		DE34ED851BF9B370003CFC80 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
-		DE34ED8E1BF9B3CF003CFC80 /* DemoVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC3.h; sourceTree = "<group>"; };
-		DE34ED8F1BF9B3CF003CFC80 /* DemoVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC3.m; sourceTree = "<group>"; };
-		DE34ED901BF9B3CF003CFC80 /* TestCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell2.h; sourceTree = "<group>"; };
-		DE34ED911BF9B3CF003CFC80 /* TestCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell2.m; sourceTree = "<group>"; };
 		DE34ED951BF9B451003CFC80 /* sdRefeshView_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdRefeshView_arrow@2x.png"; sourceTree = "<group>"; };
 		DE34ED961BF9B451003CFC80 /* SDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRefresh.h; sourceTree = "<group>"; };
 		DE34ED971BF9B451003CFC80 /* SDRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRefreshFooterView.h; sourceTree = "<group>"; };
@@ -1223,18 +1202,6 @@
 		DE34ED9D1BF9B451003CFC80 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		DE34ED9E1BF9B451003CFC80 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		DE34EDA71BF9BE2A003CFC80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE4ACDC11C072E4E00BA5608 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
-		DE4ACDC21C072E4E00BA5608 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
-		DE4ACDC31C072E4E00BA5608 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		DE4ACDC41C072E4E00BA5608 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		DE4ACDC71C072E8C00BA5608 /* OSCObjsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCObjsViewController.h; sourceTree = "<group>"; };
-		DE4ACDC81C072E8C00BA5608 /* OSCObjsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCObjsViewController.m; sourceTree = "<group>"; };
-		DE4ACDCA1C072EF700BA5608 /* NSXNewsCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCell1.h; sourceTree = "<group>"; };
-		DE4ACDCB1C072EF700BA5608 /* NSXNewsCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCell1.m; sourceTree = "<group>"; };
-		DE5A181F1C07E64D00FD3B1D /* NSXNewsCellTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCellTest.h; sourceTree = "<group>"; };
-		DE5A18201C07E64D00FD3B1D /* NSXNewsCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCellTest.m; sourceTree = "<group>"; };
-		DE5A182B1C07EB8D00FD3B1D /* NSXNewsDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsDetails.h; sourceTree = "<group>"; };
-		DE5A182C1C07EB8D00FD3B1D /* NSXNewsDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsDetails.m; sourceTree = "<group>"; };
 		DE5A18301C084AAE00FD3B1D /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
 		DE5A18311C084AAE00FD3B1D /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		DE5A18321C084AAE00FD3B1D /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
@@ -1249,8 +1216,6 @@
 		DE5A183F1C08581700FD3B1D /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
 		DE5A18401C08581700FD3B1D /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
 		DE5A18451C08598300FD3B1D /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		DE5A188E1C088EEC00FD3B1D /* NSXNewsCellBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCellBar.h; sourceTree = "<group>"; };
-		DE5A188F1C088EEC00FD3B1D /* NSXNewsCellBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCellBar.m; sourceTree = "<group>"; };
 		DE5C15541C06AEAB00E8B428 /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
 		DE5C15551C06AEAB00E8B428 /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
 		DE5C15571C06AF0700E8B428 /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
@@ -1259,44 +1224,6 @@
 		DE5C155C1C06B79700E8B428 /* NSXOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXOptionButton.m; sourceTree = "<group>"; };
 		DE5C15611C06BB5C00E8B428 /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		DE5C15621C06BB5C00E8B428 /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
-		DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_0.json; sourceTree = "<group>"; };
-		DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_1.json; sourceTree = "<group>"; };
-		DE9BBBA01BFCA26B0048D32A /* twitter_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_2.json; sourceTree = "<group>"; };
-		DE9BBBA11BFCA26B0048D32A /* twitter_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_3.json; sourceTree = "<group>"; };
-		DE9BBBA21BFCA26B0048D32A /* T1Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Helper.h; sourceTree = "<group>"; };
-		DE9BBBA31BFCA26B0048D32A /* T1Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T1Helper.m; sourceTree = "<group>"; };
-		DE9BBBA41BFCA26B0048D32A /* T1HomeTimelineItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1HomeTimelineItemsViewController.h; sourceTree = "<group>"; };
-		DE9BBBA51BFCA26B0048D32A /* T1HomeTimelineItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T1HomeTimelineItemsViewController.m; sourceTree = "<group>"; };
-		DE9BBBA61BFCA26B0048D32A /* T1Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1Model.h; sourceTree = "<group>"; };
-		DE9BBBA71BFCA26B0048D32A /* T1Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T1Model.m; sourceTree = "<group>"; };
-		DE9BBBA81BFCA26B0048D32A /* T1StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1StatusCell.h; sourceTree = "<group>"; };
-		DE9BBBA91BFCA26B0048D32A /* T1StatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T1StatusCell.m; sourceTree = "<group>"; };
-		DE9BBBAA1BFCA26B0048D32A /* T1StatusLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T1StatusLayout.h; sourceTree = "<group>"; };
-		DE9BBBAB1BFCA26B0048D32A /* T1StatusLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T1StatusLayout.m; sourceTree = "<group>"; };
-		DE9BBBAE1BFCA26B0048D32A /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
-		DE9BBBAF1BFCA26B0048D32A /* weibo_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_1.json; sourceTree = "<group>"; };
-		DE9BBBB01BFCA26B0048D32A /* weibo_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_2.json; sourceTree = "<group>"; };
-		DE9BBBB11BFCA26B0048D32A /* weibo_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_3.json; sourceTree = "<group>"; };
-		DE9BBBB21BFCA26B0048D32A /* weibo_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_4.json; sourceTree = "<group>"; };
-		DE9BBBB31BFCA26B0048D32A /* weibo_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_5.json; sourceTree = "<group>"; };
-		DE9BBBB41BFCA26B0048D32A /* weibo_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_6.json; sourceTree = "<group>"; };
-		DE9BBBB51BFCA26B0048D32A /* weibo_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_7.json; sourceTree = "<group>"; };
-		DE9BBBB61BFCA26B0048D32A /* WBEmoticonInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBEmoticonInputView.h; sourceTree = "<group>"; };
-		DE9BBBB71BFCA26B0048D32A /* WBEmoticonInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBEmoticonInputView.m; sourceTree = "<group>"; };
-		DE9BBBB81BFCA26B0048D32A /* WBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBModel.h; sourceTree = "<group>"; };
-		DE9BBBB91BFCA26B0048D32A /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
-		DE9BBBBA1BFCA26B0048D32A /* WBStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusCell.h; sourceTree = "<group>"; };
-		DE9BBBBB1BFCA26B0048D32A /* WBStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusCell.m; sourceTree = "<group>"; };
-		DE9BBBBC1BFCA26B0048D32A /* WBStatusComposeTextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusComposeTextParser.h; sourceTree = "<group>"; };
-		DE9BBBBD1BFCA26B0048D32A /* WBStatusComposeTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusComposeTextParser.m; sourceTree = "<group>"; };
-		DE9BBBBE1BFCA26B0048D32A /* WBStatusComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusComposeViewController.h; sourceTree = "<group>"; };
-		DE9BBBBF1BFCA26B0048D32A /* WBStatusComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusComposeViewController.m; sourceTree = "<group>"; };
-		DE9BBBC01BFCA26B0048D32A /* WBStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusHelper.h; sourceTree = "<group>"; };
-		DE9BBBC11BFCA26B0048D32A /* WBStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusHelper.m; sourceTree = "<group>"; };
-		DE9BBBC21BFCA26B0048D32A /* WBStatusLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusLayout.h; sourceTree = "<group>"; };
-		DE9BBBC31BFCA26B0048D32A /* WBStatusLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusLayout.m; sourceTree = "<group>"; };
-		DE9BBBC41BFCA26B0048D32A /* WBStatusTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusTimelineViewController.h; sourceTree = "<group>"; };
-		DE9BBBC51BFCA26B0048D32A /* WBStatusTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusTimelineViewController.m; sourceTree = "<group>"; };
 		DE9BBC061BFCA5280048D32A /* YYControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYControl.h; sourceTree = "<group>"; };
 		DE9BBC071BFCA5280048D32A /* YYControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYControl.m; sourceTree = "<group>"; };
 		DE9BBC081BFCA5280048D32A /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
@@ -1320,11 +1247,6 @@
 		DEAF096D1BF987AC00C6954F /* NSXcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSXcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAF09711BF987AC00C6954F /* NSXcodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSXcodeUITests.m; sourceTree = "<group>"; };
 		DEAF09731BF987AC00C6954F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEAF09851BF988A400C6954F /* NSXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMenu.h; sourceTree = "<group>"; };
-		DEAF09861BF988A400C6954F /* NSXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMenu.m; sourceTree = "<group>"; };
-		DEAF09881BF988A400C6954F /* NSXCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXCell.h; sourceTree = "<group>"; };
-		DEAF09891BF988A400C6954F /* NSXCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXCell.m; sourceTree = "<group>"; };
-		DEAF098A1BF988A400C6954F /* NSXCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSXCell.xib; sourceTree = "<group>"; };
 		DEAF09951BF988A400C6954F /* NSXMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMessageController.h; sourceTree = "<group>"; };
 		DEAF09961BF988A400C6954F /* NSXMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMessageController.m; sourceTree = "<group>"; };
 		DEAF099C1BF988A400C6954F /* NSXSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXSearchController.h; sourceTree = "<group>"; };
@@ -1396,16 +1318,8 @@
 		DEDCE8CF1C2E383900C7757C /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
 		DEDCE8D01C2E383900C7757C /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		DEDCE8D11C2E383900C7757C /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
-		DEDD80DE1C2A81AE00C5ECE3 /* XHFeedCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFeedCell3.h; sourceTree = "<group>"; };
-		DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFeedCell3.m; sourceTree = "<group>"; };
 		DEDD80E41C2AA11300C5ECE3 /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
 		DEDD80E51C2AA11300C5ECE3 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
-		DEDFFBA01C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXNewsViewModel+Provider.h"; sourceTree = "<group>"; };
-		DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXNewsViewModel+Provider.m"; sourceTree = "<group>"; };
-		DEDFFBA31C30CC45001BB8C4 /* NSXNewsViewModelParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelParam.h; sourceTree = "<group>"; };
-		DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelParam.m; sourceTree = "<group>"; };
-		DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelResult.h; sourceTree = "<group>"; };
-		DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelResult.m; sourceTree = "<group>"; };
 		DEE18E421C326DE0003A5278 /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		DEE18E5C1C327AC3003A5278 /* HMStatusDetailBottomToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStatusDetailBottomToolbar.h; sourceTree = "<group>"; };
 		DEE18E5D1C327AC3003A5278 /* HMStatusDetailBottomToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStatusDetailBottomToolbar.m; sourceTree = "<group>"; };
@@ -1459,19 +1373,92 @@
 		DEE2DCDD1C27943000ED907E /* MessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCenter.m; sourceTree = "<group>"; };
 		DEE2DCDF1C27A84400ED907E /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		DEE2DCE01C27A84400ED907E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		DEE2DCE41C27F02B00ED907E /* NSXNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsController.h; sourceTree = "<group>"; };
-		DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsController.m; sourceTree = "<group>"; };
 		DEE2DD811C281E3F00ED907E /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		DEE2DD821C281E3F00ED907E /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		DEE2DD841C281F4F00ED907E /* LoginRegist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegist.storyboard; sourceTree = "<group>"; };
+		DEE406DA1C34C195000AB909 /* DemoVC3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC3.h; sourceTree = "<group>"; };
+		DEE406DB1C34C195000AB909 /* DemoVC3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC3.m; sourceTree = "<group>"; };
+		DEE406EA1C34C195000AB909 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		DEE406EB1C34C195000AB909 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		DEE406EC1C34C195000AB909 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		DEE406ED1C34C195000AB909 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		DEE406EE1C34C195000AB909 /* NSXNewsCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCell1.h; sourceTree = "<group>"; };
+		DEE406EF1C34C195000AB909 /* NSXNewsCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCell1.m; sourceTree = "<group>"; };
+		DEE406F01C34C195000AB909 /* OSCObjsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCObjsViewController.h; sourceTree = "<group>"; };
+		DEE406F11C34C195000AB909 /* OSCObjsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCObjsViewController.m; sourceTree = "<group>"; };
+		DEE406F21C34C195000AB909 /* NSXNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsController.h; sourceTree = "<group>"; };
+		DEE406F31C34C195000AB909 /* NSXNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsController.m; sourceTree = "<group>"; };
+		DEE406F61C34C195000AB909 /* TestCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell2.h; sourceTree = "<group>"; };
+		DEE406F71C34C195000AB909 /* TestCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell2.m; sourceTree = "<group>"; };
+		DEE407231C34C195000AB909 /* NSXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXMenu.h; sourceTree = "<group>"; };
+		DEE407241C34C195000AB909 /* NSXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXMenu.m; sourceTree = "<group>"; };
+		DEE407251C34C195000AB909 /* NSXNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNews.h; sourceTree = "<group>"; };
+		DEE407261C34C195000AB909 /* NSXNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNews.m; sourceTree = "<group>"; };
+		DEE407271C34C195000AB909 /* NSXNewsDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsDetails.h; sourceTree = "<group>"; };
+		DEE407281C34C195000AB909 /* NSXNewsDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsDetails.m; sourceTree = "<group>"; };
+		DEE407291C34C195000AB909 /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModel.h; sourceTree = "<group>"; };
+		DEE4072A1C34C195000AB909 /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
+		DEE407361C34C195000AB909 /* CarouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouseView.h; sourceTree = "<group>"; };
+		DEE407371C34C195000AB909 /* CarouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouseView.m; sourceTree = "<group>"; };
+		DEE407381C34C195000AB909 /* NSXCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXCell.h; sourceTree = "<group>"; };
+		DEE407391C34C195000AB909 /* NSXCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXCell.m; sourceTree = "<group>"; };
+		DEE4073A1C34C195000AB909 /* NSXCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSXCell.xib; sourceTree = "<group>"; };
+		DEE4073B1C34C195000AB909 /* NSXNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCell.h; sourceTree = "<group>"; };
+		DEE4073C1C34C195000AB909 /* NSXNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCell.m; sourceTree = "<group>"; };
+		DEE4073F1C34C195000AB909 /* NSXNewsCellBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCellBar.h; sourceTree = "<group>"; };
+		DEE407401C34C195000AB909 /* NSXNewsCellBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCellBar.m; sourceTree = "<group>"; };
+		DEE407411C34C195000AB909 /* NSXNewsCellTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsCellTest.h; sourceTree = "<group>"; };
+		DEE407421C34C195000AB909 /* NSXNewsCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsCellTest.m; sourceTree = "<group>"; };
+		DEE407451C34C195000AB909 /* TopStoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoryView.h; sourceTree = "<group>"; };
+		DEE407461C34C195000AB909 /* TopStoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryView.m; sourceTree = "<group>"; };
+		DEE407471C34C195000AB909 /* XHFeedCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFeedCell3.h; sourceTree = "<group>"; };
+		DEE407481C34C195000AB909 /* XHFeedCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFeedCell3.m; sourceTree = "<group>"; };
+		DEE4074A1C34C195000AB909 /* XTNetReloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNetReloader.h; sourceTree = "<group>"; };
+		DEE4074B1C34C195000AB909 /* XTNetReloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNetReloader.m; sourceTree = "<group>"; };
+		DEE407531C34C195000AB909 /* NSXNews+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXNews+Provider.h"; sourceTree = "<group>"; };
+		DEE407541C34C195000AB909 /* NSXNews+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXNews+Provider.m"; sourceTree = "<group>"; };
+		DEE407551C34C195000AB909 /* NSXNewsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsParam.h; sourceTree = "<group>"; };
+		DEE407561C34C195000AB909 /* NSXNewsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsParam.m; sourceTree = "<group>"; };
+		DEE407571C34C195000AB909 /* NSXNewsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsResult.h; sourceTree = "<group>"; };
+		DEE407581C34C195000AB909 /* NSXNewsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsResult.m; sourceTree = "<group>"; };
+		DEE407591C34C195000AB909 /* NSXNewsViewModel+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXNewsViewModel+Provider.h"; sourceTree = "<group>"; };
+		DEE4075A1C34C195000AB909 /* NSXNewsViewModel+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXNewsViewModel+Provider.m"; sourceTree = "<group>"; };
+		DEE4075B1C34C195000AB909 /* NSXNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModel.h; sourceTree = "<group>"; };
+		DEE4075C1C34C195000AB909 /* NSXNewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModel.m; sourceTree = "<group>"; };
+		DEE4075D1C34C195000AB909 /* NSXNewsViewModelParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelParam.h; sourceTree = "<group>"; };
+		DEE4075E1C34C195000AB909 /* NSXNewsViewModelParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelParam.m; sourceTree = "<group>"; };
+		DEE4075F1C34C195000AB909 /* NSXNewsViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModelResult.h; sourceTree = "<group>"; };
+		DEE407601C34C195000AB909 /* NSXNewsViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModelResult.m; sourceTree = "<group>"; };
+		DEE407641C34C195000AB909 /* StoryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewController.h; sourceTree = "<group>"; };
+		DEE407651C34C195000AB909 /* StoryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewController.m; sourceTree = "<group>"; };
+		DEE407671C34C195000AB909 /* StoryContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentModel.h; sourceTree = "<group>"; };
+		DEE407681C34C195000AB909 /* StoryContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentModel.m; sourceTree = "<group>"; };
+		DEE4076A1C34C195000AB909 /* PreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreView.h; sourceTree = "<group>"; };
+		DEE4076B1C34C195000AB909 /* PreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreView.m; sourceTree = "<group>"; };
+		DEE4076D1C34C195000AB909 /* StoryContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewModel.h; sourceTree = "<group>"; };
+		DEE4076E1C34C195000AB909 /* StoryContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewModel.m; sourceTree = "<group>"; };
+		DEE407B81C34C918000AB909 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		DEE407B91C34C918000AB909 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		DEE407BA1C34C918000AB909 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		DEE407BB1C34C918000AB909 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		DEE407BC1C34C918000AB909 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		DEE407BD1C34C918000AB909 /* GridLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayoutView.h; sourceTree = "<group>"; };
+		DEE407BE1C34C918000AB909 /* GridLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridLayoutView.m; sourceTree = "<group>"; };
+		DEE407BF1C34C918000AB909 /* LayoutContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutContainerView.h; sourceTree = "<group>"; };
+		DEE407C01C34C918000AB909 /* LayoutContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutContainerView.m; sourceTree = "<group>"; };
+		DEE407C11C34C918000AB909 /* LayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutView.h; sourceTree = "<group>"; };
+		DEE407C21C34C918000AB909 /* LayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutView.m; sourceTree = "<group>"; };
+		DEE407C41C34C918000AB909 /* head_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_default@2x.png"; sourceTree = "<group>"; };
+		DEE407C51C34C918000AB909 /* like_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_btn@2x.png"; sourceTree = "<group>"; };
+		DEE407C61C34C918000AB909 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		DEE407CF1C34C931000AB909 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		DEE407D01C34C931000AB909 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		DEE4C2C51C2C0E810074D94A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		DEE4C2C61C2C0E810074D94A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		DEE4C2C81C2C0EE70074D94A /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		DEE4C2C91C2C0EE70074D94A /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		DEE4C2CE1C2C13530074D94A /* NSXUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXUser.h; sourceTree = "<group>"; };
 		DEE4C2CF1C2C13530074D94A /* NSXUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXUser.m; sourceTree = "<group>"; };
-		DEE527CD1C2E904500381C6D /* NSXNewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXNewsViewModel.h; sourceTree = "<group>"; };
-		DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXNewsViewModel.m; sourceTree = "<group>"; };
 		DEE820491C2CDFAA00E515C9 /* NSXUser+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXUser+Provider.h"; sourceTree = "<group>"; };
 		DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXUser+Provider.m"; sourceTree = "<group>"; };
 		DEE8204C1C2CE0A200E515C9 /* NSXUserParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXUserParam.h; sourceTree = "<group>"; };
@@ -1486,16 +1473,6 @@
 		DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccountResult.m; sourceTree = "<group>"; };
 		DEE8205B1C2CE2A200E515C9 /* NSXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXAccount.h; sourceTree = "<group>"; };
 		DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccount.m; sourceTree = "<group>"; };
-		DEEAA5111C33B9C1002C46EF /* StoryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewController.h; sourceTree = "<group>"; };
-		DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewController.m; sourceTree = "<group>"; };
-		DEEAA5141C33B9C1002C46EF /* StoryContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentModel.h; sourceTree = "<group>"; };
-		DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentModel.m; sourceTree = "<group>"; };
-		DEEAA5171C33B9C1002C46EF /* PreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreView.h; sourceTree = "<group>"; };
-		DEEAA5181C33B9C1002C46EF /* PreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreView.m; sourceTree = "<group>"; };
-		DEEAA51A1C33B9C1002C46EF /* StoryContentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryContentViewModel.h; sourceTree = "<group>"; };
-		DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryContentViewModel.m; sourceTree = "<group>"; };
-		DEEF9E681C315E040079773D /* XTNetReloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNetReloader.h; sourceTree = "<group>"; };
-		DEEF9E691C315E040079773D /* XTNetReloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNetReloader.m; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		DEF094801C215AD9005D0CB8 /* database.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = database.js; sourceTree = "<group>"; };
 		DEF094821C215AD9005D0CB8 /* resource.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = resource.js; sourceTree = "<group>"; };
@@ -2483,15 +2460,9 @@
 		DEF099231C215ADA005D0CB8 /* header.ejs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = header.ejs; sourceTree = "<group>"; };
 		DEF099241C215ADA005D0CB8 /* index.ejs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ejs; sourceTree = "<group>"; };
 		DEF099251C215ADA005D0CB8 /* login.ejs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = login.ejs; sourceTree = "<group>"; };
-		DEF1765B1C22A8C800EEF06B /* TopStoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoryView.h; sourceTree = "<group>"; };
-		DEF1765C1C22A8C800EEF06B /* TopStoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoryView.m; sourceTree = "<group>"; };
 		DEF176601C22A98300EEF06B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		DEF176611C22AA6700EEF06B /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModel.h; sourceTree = "<group>"; };
-		DEF176621C22AA6700EEF06B /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
 		DEF176641C22AB6300EEF06B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		DEF176651C22AB6300EEF06B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
-		DEF17A8D1C22E3A300EEF06B /* CarouseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouseView.h; sourceTree = "<group>"; };
-		DEF17A8E1C22E3A300EEF06B /* CarouseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouseView.m; sourceTree = "<group>"; };
 		E5CBF173F21CD2FEC0E93851 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2608,22 +2579,6 @@
 			path = SDRefeshView;
 			sourceTree = "<group>";
 		};
-		DE4ACDC01C072E4E00BA5608 /* News */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA50F1C33B9C1002C46EF /* DailyNewsContent */,
-				DE4ACDCA1C072EF700BA5608 /* NSXNewsCell1.h */,
-				DE4ACDCB1C072EF700BA5608 /* NSXNewsCell1.m */,
-				DE4ACDC71C072E8C00BA5608 /* OSCObjsViewController.h */,
-				DE4ACDC81C072E8C00BA5608 /* OSCObjsViewController.m */,
-				DE4ACDC11C072E4E00BA5608 /* NewsCell.h */,
-				DE4ACDC21C072E4E00BA5608 /* NewsCell.m */,
-				DE4ACDC31C072E4E00BA5608 /* NewsViewController.h */,
-				DE4ACDC41C072E4E00BA5608 /* NewsViewController.m */,
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
 		DE5A182F1C084AAE00FD3B1D /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -2679,89 +2634,6 @@
 				DE5C155C1C06B79700E8B428 /* NSXOptionButton.m */,
 			);
 			path = TarBar;
-			sourceTree = "<group>";
-		};
-		DE7BF7E31C103D4500B81F67 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DEE527CD1C2E904500381C6D /* NSXNewsViewModel.h */,
-				DEE527CE1C2E904500381C6D /* NSXNewsViewModel.m */,
-				DEDFFBA01C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.h */,
-				DEDFFBA11C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m */,
-				DEDFFBA31C30CC45001BB8C4 /* NSXNewsViewModelParam.h */,
-				DEDFFBA41C30CC45001BB8C4 /* NSXNewsViewModelParam.m */,
-				DEDFFBA51C30CC45001BB8C4 /* NSXNewsViewModelResult.h */,
-				DEDFFBA61C30CC45001BB8C4 /* NSXNewsViewModelResult.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DE9BBB9C1BFCA26B0048D32A /* Twitter */ = {
-			isa = PBXGroup;
-			children = (
-				DE9BBB9D1BFCA26B0048D32A /* API Dump */,
-				DE9BBBA21BFCA26B0048D32A /* T1Helper.h */,
-				DE9BBBA31BFCA26B0048D32A /* T1Helper.m */,
-				DE9BBBA41BFCA26B0048D32A /* T1HomeTimelineItemsViewController.h */,
-				DE9BBBA51BFCA26B0048D32A /* T1HomeTimelineItemsViewController.m */,
-				DE9BBBA61BFCA26B0048D32A /* T1Model.h */,
-				DE9BBBA71BFCA26B0048D32A /* T1Model.m */,
-				DE9BBBA81BFCA26B0048D32A /* T1StatusCell.h */,
-				DE9BBBA91BFCA26B0048D32A /* T1StatusCell.m */,
-				DE9BBBAA1BFCA26B0048D32A /* T1StatusLayout.h */,
-				DE9BBBAB1BFCA26B0048D32A /* T1StatusLayout.m */,
-			);
-			path = Twitter;
-			sourceTree = "<group>";
-		};
-		DE9BBB9D1BFCA26B0048D32A /* API Dump */ = {
-			isa = PBXGroup;
-			children = (
-				DE9BBB9E1BFCA26B0048D32A /* twitter_0.json */,
-				DE9BBB9F1BFCA26B0048D32A /* twitter_1.json */,
-				DE9BBBA01BFCA26B0048D32A /* twitter_2.json */,
-				DE9BBBA11BFCA26B0048D32A /* twitter_3.json */,
-			);
-			path = "API Dump";
-			sourceTree = "<group>";
-		};
-		DE9BBBAC1BFCA26B0048D32A /* Weibo */ = {
-			isa = PBXGroup;
-			children = (
-				DE9BBBAD1BFCA26B0048D32A /* API Dump */,
-				DE9BBBB61BFCA26B0048D32A /* WBEmoticonInputView.h */,
-				DE9BBBB71BFCA26B0048D32A /* WBEmoticonInputView.m */,
-				DE9BBBB81BFCA26B0048D32A /* WBModel.h */,
-				DE9BBBB91BFCA26B0048D32A /* WBModel.m */,
-				DE9BBBBA1BFCA26B0048D32A /* WBStatusCell.h */,
-				DE9BBBBB1BFCA26B0048D32A /* WBStatusCell.m */,
-				DE9BBBBC1BFCA26B0048D32A /* WBStatusComposeTextParser.h */,
-				DE9BBBBD1BFCA26B0048D32A /* WBStatusComposeTextParser.m */,
-				DE9BBBBE1BFCA26B0048D32A /* WBStatusComposeViewController.h */,
-				DE9BBBBF1BFCA26B0048D32A /* WBStatusComposeViewController.m */,
-				DE9BBBC01BFCA26B0048D32A /* WBStatusHelper.h */,
-				DE9BBBC11BFCA26B0048D32A /* WBStatusHelper.m */,
-				DE9BBBC21BFCA26B0048D32A /* WBStatusLayout.h */,
-				DE9BBBC31BFCA26B0048D32A /* WBStatusLayout.m */,
-				DE9BBBC41BFCA26B0048D32A /* WBStatusTimelineViewController.h */,
-				DE9BBBC51BFCA26B0048D32A /* WBStatusTimelineViewController.m */,
-			);
-			path = Weibo;
-			sourceTree = "<group>";
-		};
-		DE9BBBAD1BFCA26B0048D32A /* API Dump */ = {
-			isa = PBXGroup;
-			children = (
-				DE9BBBAE1BFCA26B0048D32A /* weibo_0.json */,
-				DE9BBBAF1BFCA26B0048D32A /* weibo_1.json */,
-				DE9BBBB01BFCA26B0048D32A /* weibo_2.json */,
-				DE9BBBB11BFCA26B0048D32A /* weibo_3.json */,
-				DE9BBBB21BFCA26B0048D32A /* weibo_4.json */,
-				DE9BBBB31BFCA26B0048D32A /* weibo_5.json */,
-				DE9BBBB41BFCA26B0048D32A /* weibo_6.json */,
-				DE9BBBB51BFCA26B0048D32A /* weibo_7.json */,
-			);
-			path = "API Dump";
 			sourceTree = "<group>";
 		};
 		DE9BBC051BFCA5280048D32A /* Utility */ = {
@@ -2877,66 +2749,11 @@
 		DEAF09801BF988A400C6954F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DEAF09841BF988A400C6954F /* Model */,
-				DEAF09871BF988A400C6954F /* View */,
-				DE7BF7E31C103D4500B81F67 /* ViewModel */,
-				DEAF09811BF988A400C6954F /* Controller */,
+				DEE406D81C34C195000AB909 /* News */,
+				DEE407611C34C195000AB909 /* NewsComment */,
+				DEE407621C34C195000AB909 /* NewsDailyContent */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		DEAF09811BF988A400C6954F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				DE4ACDC01C072E4E00BA5608 /* News */,
-				DE9BBB9C1BFCA26B0048D32A /* Twitter */,
-				DE9BBBAC1BFCA26B0048D32A /* Weibo */,
-				DE34ED8E1BF9B3CF003CFC80 /* DemoVC3.h */,
-				DE34ED8F1BF9B3CF003CFC80 /* DemoVC3.m */,
-				DE34ED901BF9B3CF003CFC80 /* TestCell2.h */,
-				DE34ED911BF9B3CF003CFC80 /* TestCell2.m */,
-				DEE2DCE41C27F02B00ED907E /* NSXNewsController.h */,
-				DEE2DCE51C27F02B00ED907E /* NSXNewsController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DEAF09841BF988A400C6954F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DEF176611C22AA6700EEF06B /* StoryModel.h */,
-				DEF176621C22AA6700EEF06B /* StoryModel.m */,
-				DE0187101C0C483700F45AC1 /* NSXNews.h */,
-				DE0187111C0C483700F45AC1 /* NSXNews.m */,
-				DEAF09851BF988A400C6954F /* NSXMenu.h */,
-				DEAF09861BF988A400C6954F /* NSXMenu.m */,
-				DE5A182B1C07EB8D00FD3B1D /* NSXNewsDetails.h */,
-				DE5A182C1C07EB8D00FD3B1D /* NSXNewsDetails.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DEAF09871BF988A400C6954F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEEF9E671C315E040079773D /* XTNetReloader */,
-				DEDD80DE1C2A81AE00C5ECE3 /* XHFeedCell3.h */,
-				DEDD80DF1C2A81AE00C5ECE3 /* XHFeedCell3.m */,
-				DEF17A8D1C22E3A300EEF06B /* CarouseView.h */,
-				DEF17A8E1C22E3A300EEF06B /* CarouseView.m */,
-				DEF1765B1C22A8C800EEF06B /* TopStoryView.h */,
-				DEF1765C1C22A8C800EEF06B /* TopStoryView.m */,
-				DE5A188E1C088EEC00FD3B1D /* NSXNewsCellBar.h */,
-				DE5A188F1C088EEC00FD3B1D /* NSXNewsCellBar.m */,
-				DEAF09881BF988A400C6954F /* NSXCell.h */,
-				DEAF09891BF988A400C6954F /* NSXCell.m */,
-				DEAF098A1BF988A400C6954F /* NSXCell.xib */,
-				DE248A061C03027900472F71 /* NSXNewsCell.h */,
-				DE248A071C03027900472F71 /* NSXNewsCell.m */,
-				DE5A181F1C07E64D00FD3B1D /* NSXNewsCellTest.h */,
-				DE5A18201C07E64D00FD3B1D /* NSXNewsCellTest.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DEAF098B1BF988A400C6954F /* Main */ = {
@@ -3270,6 +3087,200 @@
 			path = TweetLike;
 			sourceTree = "<group>";
 		};
+		DEE406D81C34C195000AB909 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				DEE406D91C34C195000AB909 /* Controller */,
+				DEE407221C34C195000AB909 /* Model */,
+				DEE407351C34C195000AB909 /* View */,
+				DEE407501C34C195000AB909 /* ViewModel */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		DEE406D91C34C195000AB909 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEE406DA1C34C195000AB909 /* DemoVC3.h */,
+				DEE406DB1C34C195000AB909 /* DemoVC3.m */,
+				DEE406DC1C34C195000AB909 /* News */,
+				DEE406F21C34C195000AB909 /* NSXNewsController.h */,
+				DEE406F31C34C195000AB909 /* NSXNewsController.m */,
+				DEE406F61C34C195000AB909 /* TestCell2.h */,
+				DEE406F71C34C195000AB909 /* TestCell2.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEE406DC1C34C195000AB909 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				DEE406EA1C34C195000AB909 /* NewsCell.h */,
+				DEE406EB1C34C195000AB909 /* NewsCell.m */,
+				DEE406EC1C34C195000AB909 /* NewsViewController.h */,
+				DEE406ED1C34C195000AB909 /* NewsViewController.m */,
+				DEE406EE1C34C195000AB909 /* NSXNewsCell1.h */,
+				DEE406EF1C34C195000AB909 /* NSXNewsCell1.m */,
+				DEE406F01C34C195000AB909 /* OSCObjsViewController.h */,
+				DEE406F11C34C195000AB909 /* OSCObjsViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		DEE407221C34C195000AB909 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407231C34C195000AB909 /* NSXMenu.h */,
+				DEE407241C34C195000AB909 /* NSXMenu.m */,
+				DEE407251C34C195000AB909 /* NSXNews.h */,
+				DEE407261C34C195000AB909 /* NSXNews.m */,
+				DEE407271C34C195000AB909 /* NSXNewsDetails.h */,
+				DEE407281C34C195000AB909 /* NSXNewsDetails.m */,
+				DEE407291C34C195000AB909 /* StoryModel.h */,
+				DEE4072A1C34C195000AB909 /* StoryModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEE407351C34C195000AB909 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407361C34C195000AB909 /* CarouseView.h */,
+				DEE407371C34C195000AB909 /* CarouseView.m */,
+				DEE407381C34C195000AB909 /* NSXCell.h */,
+				DEE407391C34C195000AB909 /* NSXCell.m */,
+				DEE4073A1C34C195000AB909 /* NSXCell.xib */,
+				DEE4073B1C34C195000AB909 /* NSXNewsCell.h */,
+				DEE4073C1C34C195000AB909 /* NSXNewsCell.m */,
+				DEE4073F1C34C195000AB909 /* NSXNewsCellBar.h */,
+				DEE407401C34C195000AB909 /* NSXNewsCellBar.m */,
+				DEE407411C34C195000AB909 /* NSXNewsCellTest.h */,
+				DEE407421C34C195000AB909 /* NSXNewsCellTest.m */,
+				DEE407451C34C195000AB909 /* TopStoryView.h */,
+				DEE407461C34C195000AB909 /* TopStoryView.m */,
+				DEE407471C34C195000AB909 /* XHFeedCell3.h */,
+				DEE407481C34C195000AB909 /* XHFeedCell3.m */,
+				DEE407491C34C195000AB909 /* XTNetReloader */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEE407491C34C195000AB909 /* XTNetReloader */ = {
+			isa = PBXGroup;
+			children = (
+				DEE4074A1C34C195000AB909 /* XTNetReloader.h */,
+				DEE4074B1C34C195000AB909 /* XTNetReloader.m */,
+			);
+			path = XTNetReloader;
+			sourceTree = "<group>";
+		};
+		DEE407501C34C195000AB909 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407531C34C195000AB909 /* NSXNews+Provider.h */,
+				DEE407541C34C195000AB909 /* NSXNews+Provider.m */,
+				DEE407551C34C195000AB909 /* NSXNewsParam.h */,
+				DEE407561C34C195000AB909 /* NSXNewsParam.m */,
+				DEE407571C34C195000AB909 /* NSXNewsResult.h */,
+				DEE407581C34C195000AB909 /* NSXNewsResult.m */,
+				DEE407591C34C195000AB909 /* NSXNewsViewModel+Provider.h */,
+				DEE4075A1C34C195000AB909 /* NSXNewsViewModel+Provider.m */,
+				DEE4075B1C34C195000AB909 /* NSXNewsViewModel.h */,
+				DEE4075C1C34C195000AB909 /* NSXNewsViewModel.m */,
+				DEE4075D1C34C195000AB909 /* NSXNewsViewModelParam.h */,
+				DEE4075E1C34C195000AB909 /* NSXNewsViewModelParam.m */,
+				DEE4075F1C34C195000AB909 /* NSXNewsViewModelResult.h */,
+				DEE407601C34C195000AB909 /* NSXNewsViewModelResult.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEE407611C34C195000AB909 /* NewsComment */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407CF1C34C931000AB909 /* CommentViewController.h */,
+				DEE407D01C34C931000AB909 /* CommentViewController.m */,
+				DEE407B71C34C918000AB909 /* Source */,
+			);
+			path = NewsComment;
+			sourceTree = "<group>";
+		};
+		DEE407621C34C195000AB909 /* NewsDailyContent */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407631C34C195000AB909 /* Controller */,
+				DEE407661C34C195000AB909 /* Model */,
+				DEE407691C34C195000AB909 /* View */,
+				DEE4076C1C34C195000AB909 /* ViewModel */,
+			);
+			path = NewsDailyContent;
+			sourceTree = "<group>";
+		};
+		DEE407631C34C195000AB909 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407641C34C195000AB909 /* StoryContentViewController.h */,
+				DEE407651C34C195000AB909 /* StoryContentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEE407661C34C195000AB909 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407671C34C195000AB909 /* StoryContentModel.h */,
+				DEE407681C34C195000AB909 /* StoryContentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEE407691C34C195000AB909 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEE4076A1C34C195000AB909 /* PreView.h */,
+				DEE4076B1C34C195000AB909 /* PreView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEE4076C1C34C195000AB909 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEE4076D1C34C195000AB909 /* StoryContentViewModel.h */,
+				DEE4076E1C34C195000AB909 /* StoryContentViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEE407B71C34C918000AB909 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407B81C34C918000AB909 /* CommentModel.h */,
+				DEE407B91C34C918000AB909 /* CommentModel.m */,
+				DEE407BA1C34C918000AB909 /* CommentTableViewCell.h */,
+				DEE407BB1C34C918000AB909 /* CommentTableViewCell.m */,
+				DEE407BC1C34C918000AB909 /* Constant.h */,
+				DEE407BD1C34C918000AB909 /* GridLayoutView.h */,
+				DEE407BE1C34C918000AB909 /* GridLayoutView.m */,
+				DEE407BF1C34C918000AB909 /* LayoutContainerView.h */,
+				DEE407C01C34C918000AB909 /* LayoutContainerView.m */,
+				DEE407C11C34C918000AB909 /* LayoutView.h */,
+				DEE407C21C34C918000AB909 /* LayoutView.m */,
+				DEE407C31C34C918000AB909 /* resource */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DEE407C31C34C918000AB909 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				DEE407C41C34C918000AB909 /* head_default@2x.png */,
+				DEE407C51C34C918000AB909 /* like_btn@2x.png */,
+				DEE407C61C34C918000AB909 /* test.json */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		DEE4C2CB1C2C13530074D94A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3298,62 +3309,6 @@
 				DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DEEAA50F1C33B9C1002C46EF /* DailyNewsContent */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA5101C33B9C1002C46EF /* Controller */,
-				DEEAA5131C33B9C1002C46EF /* Model */,
-				DEEAA5161C33B9C1002C46EF /* View */,
-				DEEAA5191C33B9C1002C46EF /* ViewModel */,
-			);
-			path = DailyNewsContent;
-			sourceTree = "<group>";
-		};
-		DEEAA5101C33B9C1002C46EF /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA5111C33B9C1002C46EF /* StoryContentViewController.h */,
-				DEEAA5121C33B9C1002C46EF /* StoryContentViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DEEAA5131C33B9C1002C46EF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA5141C33B9C1002C46EF /* StoryContentModel.h */,
-				DEEAA5151C33B9C1002C46EF /* StoryContentModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DEEAA5161C33B9C1002C46EF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA5171C33B9C1002C46EF /* PreView.h */,
-				DEEAA5181C33B9C1002C46EF /* PreView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DEEAA5191C33B9C1002C46EF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAA51A1C33B9C1002C46EF /* StoryContentViewModel.h */,
-				DEEAA51B1C33B9C1002C46EF /* StoryContentViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DEEF9E671C315E040079773D /* XTNetReloader */ = {
-			isa = PBXGroup;
-			children = (
-				DEEF9E681C315E040079773D /* XTNetReloader.h */,
-				DEEF9E691C315E040079773D /* XTNetReloader.m */,
-			);
-			path = XTNetReloader;
 			sourceTree = "<group>";
 		};
 		DEF0947C1C215AD9005D0CB8 /* bin */ = {
@@ -6177,10 +6132,8 @@
 				DEF09B031C215ADB005D0CB8 /* gbk-added.json in Resources */,
 				DEF09A291C215ADA005D0CB8 /* test-multipart-extra-trailer.js in Resources */,
 				DEF09A3F1C215ADA005D0CB8 /* double-quote.ejs in Resources */,
-				DE9BBBD11BFCA26B0048D32A /* weibo_2.json in Resources */,
 				DEF099BC1C215ADA005D0CB8 /* package.json in Resources */,
 				DEB4F7C41C02AF6300DF6740 /* mew_interlaced.gif in Resources */,
-				DE9BBBC61BFCA26B0048D32A /* twitter_0.json in Resources */,
 				DEF099501C215ADA005D0CB8 /* package.json in Resources */,
 				DEF09C121C215ADB005D0CB8 /* index.js in Resources */,
 				DEF0995C1C215ADA005D0CB8 /* bcs.js in Resources */,
@@ -6197,6 +6150,7 @@
 				DEF09B2A1C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09B781C215ADB005D0CB8 /* umask_sync.js in Resources */,
 				DEF09A471C215ADA005D0CB8 /* include-simple.html in Resources */,
+				DEE407CC1C34C918000AB909 /* head_default@2x.png in Resources */,
 				DEF09B411C215ADB005D0CB8 /* mime.js in Resources */,
 				DEB4F7BD1C02AF6300DF6740 /* cube@2x.png in Resources */,
 				DEF0993A1C215ADA005D0CB8 /* LICENSE in Resources */,
@@ -6222,7 +6176,6 @@
 				DEF09A361C215ADA005D0CB8 /* package.json in Resources */,
 				DEF099431C215ADA005D0CB8 /* browser-asap.js in Resources */,
 				DEF09AF41C215ADB005D0CB8 /* .travis.yml in Resources */,
-				DE9BBBCF1BFCA26B0048D32A /* weibo_0.json in Resources */,
 				DEF09B221C215ADB005D0CB8 /* ipaddr.test.coffee in Resources */,
 				DEF099BB1C215ADA005D0CB8 /* LICENSE in Resources */,
 				DEF09A021C215ADA005D0CB8 /* part3.header in Resources */,
@@ -6272,13 +6225,10 @@
 				DEF099F61C215ADA005D0CB8 /* Dicer.js in Resources */,
 				DEF09B571C215ADB005D0CB8 /* LICENSE in Resources */,
 				DEF09B9D1C215ADB005D0CB8 /* PoolConnection.js in Resources */,
-				DE9BBBD51BFCA26B0048D32A /* weibo_6.json in Resources */,
 				DEF09C2E1C215ADB005D0CB8 /* .eslintignore in Resources */,
 				DEF09BB41C215ADB005D0CB8 /* HandshakeInitializationPacket.js in Resources */,
-				DE9BBBC71BFCA26B0048D32A /* twitter_1.json in Resources */,
 				DEF099ED1C215ADA005D0CB8 /* package.json in Resources */,
 				DEF099C71C215ADA005D0CB8 /* util.js in Resources */,
-				DEAF09AF1BF988A400C6954F /* NSXCell.xib in Resources */,
 				DEAF09B71BF988A400C6954F /* NSXSettingController.storyboard in Resources */,
 				DEF099F81C215ADA005D0CB8 /* PartStream.js in Resources */,
 				DEF09B331C215ADB005D0CB8 /* index.js in Resources */,
@@ -6403,6 +6353,7 @@
 				DEB4F7BC1C02AF6300DF6740 /* ermilio_q90.webp in Resources */,
 				DEF09BCA1C215ADB005D0CB8 /* SqlString.js in Resources */,
 				DEF09B381C215ADB005D0CB8 /* index.js in Resources */,
+				DEE407CE1C34C918000AB909 /* test.json in Resources */,
 				DEF09C941C215ADB005D0CB8 /* package.json in Resources */,
 				DE5A18341C084AAE00FD3B1D /* NSDateTimeAgo.bundle in Resources */,
 				DEF09CE41C215ADB005D0CB8 /* bg.jpg in Resources */,
@@ -6443,7 +6394,6 @@
 				DEF09BD91C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09C281C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09C2B1C215ADB005D0CB8 /* package.json in Resources */,
-				DE9BBBC91BFCA26B0048D32A /* twitter_3.json in Resources */,
 				DEF09B001C215ADB005D0CB8 /* cp950.json in Resources */,
 				DEF09B771C215ADB005D0CB8 /* umask.js in Resources */,
 				DEF09BD51C215ADB005D0CB8 /* package.json in Resources */,
@@ -6453,6 +6403,7 @@
 				DEF09A5F1C215ADA005D0CB8 /* messed.html in Resources */,
 				DEF09AC01C215ADA005D0CB8 /* querystring_parser.js in Resources */,
 				DEF099DB1C215ADA005D0CB8 /* bower.json in Resources */,
+				DEE4079F1C34C195000AB909 /* NSXCell.xib in Resources */,
 				DEF0992D1C215ADA005D0CB8 /* mkdirp in Resources */,
 				DEF09A4C1C215ADA005D0CB8 /* include_cache.ejs in Resources */,
 				DE34EDA81BF9BE2A003CFC80 /* LaunchScreen.storyboard in Resources */,
@@ -6580,7 +6531,6 @@
 				DEF09AAD1C215ADA005D0CB8 /* index.js in Resources */,
 				DEF09CF01C215ADB005D0CB8 /* 8ad4b31c8701a18b31e37b519c2f07082838fea0.jpg in Resources */,
 				DEF09AD61C215ADB005D0CB8 /* move.js in Resources */,
-				DE9BBBD31BFCA26B0048D32A /* weibo_4.json in Resources */,
 				DEF09AAF1C215ADA005D0CB8 /* package.json in Resources */,
 				DEB4F7B11C02AF6300DF6740 /* dribbble128_imageio.png in Resources */,
 				DEF09B1B1C215ADB005D0CB8 /* Cakefile in Resources */,
@@ -6601,7 +6551,6 @@
 				DEF09ACC1C215ADA005D0CB8 /* package.json in Resources */,
 				DEF09AA91C215ADA005D0CB8 /* store.js in Resources */,
 				DEF099581C215ADA005D0CB8 /* index.js in Resources */,
-				DE9BBBD21BFCA26B0048D32A /* weibo_3.json in Resources */,
 				DEF09B4D1C215ADB005D0CB8 /* LICENSE in Resources */,
 				DEF099651C215ADA005D0CB8 /* bignumber.min.js in Resources */,
 				DEF099E11C215ADA005D0CB8 /* node.js in Resources */,
@@ -6655,6 +6604,7 @@
 				DEF09AB71C215ADA005D0CB8 /* .npmignore in Resources */,
 				DEF09AFD1C215ADB005D0CB8 /* big5-added.json in Resources */,
 				DEF09A961C215ADA005D0CB8 /* index.js in Resources */,
+				DEE407CD1C34C918000AB909 /* like_btn@2x.png in Resources */,
 				DEF09BFA1C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09C031C215ADB005D0CB8 /* .jshintrc in Resources */,
 				DEF09CC31C215ADB005D0CB8 /* url.js in Resources */,
@@ -6677,12 +6627,10 @@
 				DEF09C041C215ADB005D0CB8 /* .npmignore in Resources */,
 				DEF0998F1C215ADA005D0CB8 /* index.js in Resources */,
 				DEF09B4E1C215ADB005D0CB8 /* package.json in Resources */,
-				DE9BBBC81BFCA26B0048D32A /* twitter_2.json in Resources */,
 				DEF09C811C215ADB005D0CB8 /* rimraf.js in Resources */,
 				DEF09A521C215ADA005D0CB8 /* include_preprocessor_cache.ejs in Resources */,
 				DEF09A721C215ADA005D0CB8 /* user-no-with.ejs in Resources */,
 				DEF0998D1C215ADA005D0CB8 /* .travis.yml in Resources */,
-				DE9BBBD01BFCA26B0048D32A /* weibo_1.json in Resources */,
 				DEF09AED1C215ADB005D0CB8 /* package.json in Resources */,
 				DEF09A531C215ADA005D0CB8 /* include_preprocessor_cache.html in Resources */,
 				DEF09A8F1C215ADA005D0CB8 /* LICENSE in Resources */,
@@ -6761,7 +6709,6 @@
 				DEF09BB21C215ADB005D0CB8 /* Field.js in Resources */,
 				DEF099751C215ADA005D0CB8 /* .npmignore in Resources */,
 				DEF09B391C215ADB005D0CB8 /* LICENSE in Resources */,
-				DE9BBBD41BFCA26B0048D32A /* weibo_5.json in Resources */,
 				DEF09C661C215ADB005D0CB8 /* extend-node.js in Resources */,
 				DEF09C071C215ADB005D0CB8 /* core.js in Resources */,
 				DEF09CE51C215ADB005D0CB8 /* cc.ico in Resources */,
@@ -6805,7 +6752,6 @@
 				DEF09A081C215ADA005D0CB8 /* part6.header in Resources */,
 				DEF09A941C215ADA005D0CB8 /* LICENSE in Resources */,
 				DEF09BC01C215ADB005D0CB8 /* Protocol.js in Resources */,
-				DE9BBBD61BFCA26B0048D32A /* weibo_7.json in Resources */,
 				DEF09B671C215ADB005D0CB8 /* LICENSE in Resources */,
 				DEF09A661C215ADA005D0CB8 /* no.newlines.html in Resources */,
 				DEF09C051C215ADB005D0CB8 /* build.js in Resources */,
@@ -7042,30 +6988,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAF09AE1BF988A400C6954F /* NSXCell.m in Sources */,
 				DE9BBC131BFCA5280048D32A /* YYFPSLabel.m in Sources */,
 				DEF099451C215ADA005D0CB8 /* CHANGES.md in Sources */,
 				DEB3E9721C16814800495FBE /* NSXNavigationBarSearchViewController.m in Sources */,
-				DE5A18911C088EEC00FD3B1D /* NSXNewsCellBar.m in Sources */,
 				DEF09B4A1C215ADB005D0CB8 /* README.md in Sources */,
-				DE9BBBCA1BFCA26B0048D32A /* T1Helper.m in Sources */,
 				DEF09C871C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BDB1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BF21C215ADB005D0CB8 /* readme.md in Sources */,
+				DEE407AB1C34C195000AB909 /* NSXNews+Provider.m in Sources */,
 				DEF09AC41C215ADA005D0CB8 /* HISTORY.md in Sources */,
-				DEEAA51D1C33B9C1002C46EF /* StoryContentModel.m in Sources */,
 				DEF099B81C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09B61BF988A400C6954F /* NSXSettingController.m in Sources */,
 				DE9BBC161BFCA5280048D32A /* YYTableView.m in Sources */,
 				DEF099E01C215ADA005D0CB8 /* Makefile in Sources */,
 				DEF09ADB1C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407771C34C195000AB909 /* OSCObjsViewController.m in Sources */,
 				DEF09CBB1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C181C215ADB005D0CB8 /* Readme.md in Sources */,
-				DE4ACDCC1C072EF700BA5608 /* NSXNewsCell1.m in Sources */,
 				DEF09AB01C215ADA005D0CB8 /* README.md in Sources */,
-				DEE527CF1C2E904500381C6D /* NSXNewsViewModel.m in Sources */,
+				DEE407B11C34C195000AB909 /* NSXNewsViewModelResult.m in Sources */,
 				DEF0994E1C215ADA005D0CB8 /* LICENSE.md in Sources */,
-				DEDD80E01C2A81AE00C5ECE3 /* XHFeedCell3.m in Sources */,
 				DEE820501C2CE0A200E515C9 /* NSXUserParam.m in Sources */,
 				DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */,
 				DEF09C2D1C215ADB005D0CB8 /* README.md in Sources */,
@@ -7079,17 +7021,19 @@
 				DEF09AC31C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09AC91C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09CB21C215ADB005D0CB8 /* HISTORY.md in Sources */,
+				DEE407C91C34C918000AB909 /* GridLayoutView.m in Sources */,
 				DEF09AE01C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B431C215ADB005D0CB8 /* README.md in Sources */,
-				DE4ACDC51C072E4E00BA5608 /* NewsCell.m in Sources */,
+				DEE407AF1C34C195000AB909 /* NSXNewsViewModel.m in Sources */,
 				DE5A18431C08581700FD3B1D /* UIFont+FontAwesome.m in Sources */,
 				DE9BBC141BFCA5280048D32A /* YYPhotoGroupView.m in Sources */,
+				DEE407AD1C34C195000AB909 /* NSXNewsResult.m in Sources */,
 				DEE18E941C327B5B003A5278 /* MMTableViewCell.m in Sources */,
 				DEF099511C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09B8D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B271C215ADB005D0CB8 /* README.md in Sources */,
-				DE9BBBDC1BFCA26B0048D32A /* WBStatusHelper.m in Sources */,
-				DE9BBBDD1BFCA26B0048D32A /* WBStatusLayout.m in Sources */,
+				DEE407741C34C195000AB909 /* NewsCell.m in Sources */,
+				DEE4079E1C34C195000AB909 /* NSXCell.m in Sources */,
 				DEF09AE81C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099B71C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099BF1C215ADA005D0CB8 /* History.md in Sources */,
@@ -7099,24 +7043,24 @@
 				DEF09C7A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A7D1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEE18E8E1C327B5B003A5278 /* MMExampleSideDrawerViewController.m in Sources */,
+				DEE407A21C34C195000AB909 /* NSXNewsCellBar.m in Sources */,
+				DEE407761C34C195000AB909 /* NSXNewsCell1.m in Sources */,
 				DE9BBC171BFCA5280048D32A /* YYTableViewCell.m in Sources */,
 				DE5C15561C06AEAB00E8B428 /* UIView+Util.m in Sources */,
 				DEDCE8D21C2E383900C7757C /* UIBarButtonItem+Badge.m in Sources */,
 				DE9BBC121BFCA5280048D32A /* YYControl.m in Sources */,
 				DEF09B361C215ADB005D0CB8 /* README.md in Sources */,
-				DE34ED921BF9B3CF003CFC80 /* DemoVC3.m in Sources */,
 				DEF09BEA1C215ADB005D0CB8 /* HISTORY.md in Sources */,
-				DE9BBBCB1BFCA26B0048D32A /* T1HomeTimelineItemsViewController.m in Sources */,
 				DEF09B7F1C215ADB005D0CB8 /* History.md in Sources */,
+				DEE407A61C34C195000AB909 /* XHFeedCell3.m in Sources */,
 				DEF09C291C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B0D1C215ADB005D0CB8 /* README.md in Sources */,
 				DE34ED871BF9B370003CFC80 /* UIView+SDAutoLayout.m in Sources */,
 				DEF0996B1C215ADA005D0CB8 /* HISTORY.md in Sources */,
+				DEE407941C34C195000AB909 /* NSXMenu.m in Sources */,
 				DEAF09BA1BF988A400C6954F /* NSXPushitem.m in Sources */,
-				DEF17A8F1C22E3A300EEF06B /* CarouseView.m in Sources */,
 				DEF0995B1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09C9F1C215ADB005D0CB8 /* HISTORY.md in Sources */,
-				DEE2DCE61C27F02B00ED907E /* NSXNewsController.m in Sources */,
 				DEF09B951C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099571C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09CDE1C215ADB005D0CB8 /* Makefile in Sources */,
@@ -7124,7 +7068,6 @@
 				DEF09CB61C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09CC61C215ADB005D0CB8 /* History.md in Sources */,
 				DEF09B2D1C215ADB005D0CB8 /* README.md in Sources */,
-				DEF176631C22AA6700EEF06B /* StoryModel.m in Sources */,
 				DEF09C4D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C3A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEB3E9751C16817E00495FBE /* NSXTabBarController.m in Sources */,
@@ -7134,6 +7077,7 @@
 				DEF09C6D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEE8204B1C2CDFAA00E515C9 /* NSXUser+Provider.m in Sources */,
 				DEF09C4E1C215ADB005D0CB8 /* HISTORY.md in Sources */,
+				DEE407A01C34C195000AB909 /* NSXNewsCell.m in Sources */,
 				DEF09A991C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF094E1BF987AC00C6954F /* main.m in Sources */,
 				DEF09B961C215ADB005D0CB8 /* Changes.md in Sources */,
@@ -7141,13 +7085,14 @@
 				DEF09A951C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BD61C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099FB1C215ADA005D0CB8 /* README.md in Sources */,
-				DE9BBBCE1BFCA26B0048D32A /* T1StatusLayout.m in Sources */,
 				DEE2DCD51C27933D00ED907E /* MyTweetLikeListViewController.m in Sources */,
+				DEE407AC1C34C195000AB909 /* NSXNewsParam.m in Sources */,
+				DEE407B21C34C195000AB909 /* StoryContentViewController.m in Sources */,
 				DEF099411C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09BDF1C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407A71C34C195000AB909 /* XTNetReloader.m in Sources */,
 				DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */,
 				DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */,
-				DEDFFBA71C30CC45001BB8C4 /* NSXNewsViewModelParam.m in Sources */,
 				DEF09BDA1C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF09CB71C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE2DCC41C27914600ED907E /* HomepageViewController.m in Sources */,
@@ -7157,6 +7102,7 @@
 				DEF09C6B1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099E41C215ADA005D0CB8 /* History.md in Sources */,
 				DEE2DCD81C27935E00ED907E /* FavoritesViewController.m in Sources */,
+				DEE407781C34C195000AB909 /* NSXNewsController.m in Sources */,
 				DEF099831C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09AEE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF0999A1C215ADA005D0CB8 /* 2015-01-30.md in Sources */,
@@ -7168,10 +7114,12 @@
 				DEF09C011C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF099E31C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09C491C215ADB005D0CB8 /* HISTORY.md in Sources */,
-				DE34ED931BF9B3CF003CFC80 /* TestCell2.m in Sources */,
 				DEF09CA31C215ADB005D0CB8 /* README.md in Sources */,
+				DEE4076F1C34C195000AB909 /* DemoVC3.m in Sources */,
 				DEF09C8C1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09AAC1C215ADA005D0CB8 /* CHANGELOG.md in Sources */,
+				DEE4079D1C34C195000AB909 /* CarouseView.m in Sources */,
+				DEE407C71C34C918000AB909 /* CommentModel.m in Sources */,
 				DEF09CD01C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE2DCCB1C2791CF00ED907E /* OSCUser.m in Sources */,
 				DEB3E96D1C166D8C00495FBE /* DEMOSecondViewController.m in Sources */,
@@ -7179,9 +7127,7 @@
 				DEF099D81C215ADA005D0CB8 /* README.md in Sources */,
 				DE9BBC151BFCA5280048D32A /* YYSimpleWebViewController.m in Sources */,
 				DEE18E621C327AC3003A5278 /* HMStatusDetailBottomToolbar.m in Sources */,
-				DE248A081C03027900472F71 /* NSXNewsCell.m in Sources */,
 				DEF09AA51C215ADA005D0CB8 /* README.md in Sources */,
-				DE9BBBD71BFCA26B0048D32A /* WBEmoticonInputView.m in Sources */,
 				DEF09AB61C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09B291C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF09A301C215ADA005D0CB8 /* README.md in Sources */,
@@ -7192,6 +7138,7 @@
 				DEF09C331C215ADB005D0CB8 /* CONTRIBUTING.md in Sources */,
 				DEF09BF31C215ADB005D0CB8 /* History.md in Sources */,
 				DEF099EE1C215ADA005D0CB8 /* README.md in Sources */,
+				DEE407A31C34C195000AB909 /* NSXNewsCellTest.m in Sources */,
 				DEF099791C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09AF21C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C321C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
@@ -7204,7 +7151,6 @@
 				DEF09B321C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099BD1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099B31C215ADA005D0CB8 /* README.md in Sources */,
-				DE9BBBDB1BFCA26B0048D32A /* WBStatusComposeViewController.m in Sources */,
 				DEE2DCDB1C27937D00ED907E /* FriendsViewController.m in Sources */,
 				DEE2DCDE1C27943000ED907E /* MessageCenter.m in Sources */,
 				DEF09BE01C215ADB005D0CB8 /* HISTORY.md in Sources */,
@@ -7212,31 +7158,32 @@
 				DEF099311C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09CD71C215ADB005D0CB8 /* README.md in Sources */,
 				DEE2DCE21C27A84400ED907E /* LogInViewController.m in Sources */,
-				DEF1765E1C22A8C800EEF06B /* TopStoryView.m in Sources */,
+				DEE407C81C34C918000AB909 /* CommentTableViewCell.m in Sources */,
 				DE5A18421C08581700FD3B1D /* NSString+FontAwesome.m in Sources */,
+				DEE407AE1C34C195000AB909 /* NSXNewsViewModel+Provider.m in Sources */,
 				DEE820581C2CE1C800E515C9 /* NSXAccount+Provider.m in Sources */,
 				DE34EDA21BF9B451003CFC80 /* SDRefreshView.m in Sources */,
 				DEF09C991C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B531C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407971C34C195000AB909 /* StoryModel.m in Sources */,
 				DEF099921C215ADA005D0CB8 /* README.markdown in Sources */,
 				DEE18E911C327B5B003A5278 /* MMNavigationController.m in Sources */,
 				DEF09A921C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09C411C215ADB005D0CB8 /* History.md in Sources */,
-				DEEAA51C1C33B9C1002C46EF /* StoryContentViewController.m in Sources */,
-				DE9BBBD81BFCA26B0048D32A /* WBModel.m in Sources */,
 				DE0186FD1C0BFA7500F45AC1 /* NSXBaseTool.m in Sources */,
 				DEF09AC81C215ADA005D0CB8 /* README.md in Sources */,
-				DE0187141C0C483700F45AC1 /* NSXNews.m in Sources */,
 				DEF09B4B1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEE18E881C327B5B003A5278 /* MMCenterTableViewCell.m in Sources */,
 				DEF09C951C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09CC11C215ADB005D0CB8 /* README.md in Sources */,
+				DEE4077A1C34C195000AB909 /* TestCell2.m in Sources */,
+				DEE407B51C34C195000AB909 /* StoryContentViewModel.m in Sources */,
 				DEE18E8C1C327B5B003A5278 /* MMExampleLeftSideDrawerViewController.m in Sources */,
 				DEDD80E61C2AA11300C5ECE3 /* RefreshView.m in Sources */,
-				DEEF9E6A1C315E040079773D /* XTNetReloader.m in Sources */,
 				DEF09CAD1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099AA1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BFB1C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407961C34C195000AB909 /* NSXNewsDetails.m in Sources */,
 				DEF09BF71C215ADB005D0CB8 /* Readme.md in Sources */,
 				DEF0993C1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF0998C1C215ADA005D0CB8 /* Readme.md in Sources */,
@@ -7244,7 +7191,6 @@
 				DEF09C8B1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099891C215ADA005D0CB8 /* History.md in Sources */,
 				DE5C15591C06AF0700E8B428 /* UIImage+Util.m in Sources */,
-				DE5A182D1C07EB8D00FD3B1D /* NSXNewsDetails.m in Sources */,
 				DEF09CD41C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099EB1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09B911C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
@@ -7256,11 +7202,11 @@
 				DEF099DF1C215ADA005D0CB8 /* History.md in Sources */,
 				DEF09B791C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF099351C215ADA005D0CB8 /* README.md in Sources */,
+				DEE407A51C34C195000AB909 /* TopStoryView.m in Sources */,
+				DEE407B41C34C195000AB909 /* PreView.m in Sources */,
 				DEF09CCA1C215ADB005D0CB8 /* README.md in Sources */,
-				DE9BBBCD1BFCA26B0048D32A /* T1StatusCell.m in Sources */,
 				DE5A18331C084AAE00FD3B1D /* NSDate+TimeAgo.m in Sources */,
 				DE5C15631C06BB5C00E8B428 /* UIColor+Util.m in Sources */,
-				DE9BBBDA1BFCA26B0048D32A /* WBStatusComposeTextParser.m in Sources */,
 				DE34EDA11BF9B451003CFC80 /* SDRefreshHeaderView.m in Sources */,
 				DEF09B4F1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099C21C215ADA005D0CB8 /* Readme.md in Sources */,
@@ -7268,59 +7214,55 @@
 				DEF09C821C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEAF09B81BF988A400C6954F /* NSXPushController.m in Sources */,
 				DEF09C901C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407751C34C195000AB909 /* NewsViewController.m in Sources */,
 				DEF09C531C215ADB005D0CB8 /* Changelog.md in Sources */,
-				DE5A18211C07E64D00FD3B1D /* NSXNewsCellTest.m in Sources */,
 				DEF099C61C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099991C215ADA005D0CB8 /* stream.markdown in Sources */,
-				DEDFFBA21C30CBF5001BB8C4 /* NSXNewsViewModel+Provider.m in Sources */,
 				DEF09B371C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEB3E9781C16818B00495FBE /* NSXNavigationController.m in Sources */,
 				DEB3E9C21C16D26900495FBE /* MyTableViewController.m in Sources */,
 				DEF09B121C215ADB005D0CB8 /* README.md in Sources */,
 				DEAF09BB1BF988A400C6954F /* NSXSettingItem.m in Sources */,
+				DEE407951C34C195000AB909 /* NSXNews.m in Sources */,
 				DEF09C861C215ADB005D0CB8 /* README.md in Sources */,
 				DE0186FE1C0BFA7500F45AC1 /* NSXHttpTool.m in Sources */,
 				DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */,
 				DEF09B2E1C215ADB005D0CB8 /* HISTORY.md in Sources */,
-				DE9BBBCC1BFCA26B0048D32A /* T1Model.m in Sources */,
 				DEF0995E1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09ACD1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09BCD1C215ADB005D0CB8 /* Readme.md in Sources */,
-				DE9BBBDE1BFCA26B0048D32A /* WBStatusTimelineViewController.m in Sources */,
 				DEF09B691C215ADB005D0CB8 /* readme.markdown in Sources */,
 				DEF09CCF1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A911C215ADA005D0CB8 /* Readme.md in Sources */,
-				DE9BBBD91BFCA26B0048D32A /* WBStatusCell.m in Sources */,
-				DEEAA51E1C33B9C1002C46EF /* PreView.m in Sources */,
 				DEF09A811C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF09B31BF988A400C6954F /* NSXMessageController.m in Sources */,
 				DEF09CE11C215ADB005D0CB8 /* README.md in Sources */,
 				DEE18E631C327AC3003A5278 /* NSXSideViewFooter.m in Sources */,
 				DE5A18371C084C7A00FD3B1D /* NSXUtils.m in Sources */,
 				DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */,
+				DEE407CA1C34C918000AB909 /* LayoutContainerView.m in Sources */,
 				DEF09BCE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B201C215ADB005D0CB8 /* README.md in Sources */,
 				DEE820511C2CE0A200E515C9 /* NSXUserResult.m in Sources */,
-				DE4ACDC91C072E8C00BA5608 /* OSCObjsViewController.m in Sources */,
 				DEF09ACF1C215ADA005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF0994F1C215ADA005D0CB8 /* Makefile in Sources */,
-				DE4ACDC61C072E4E00BA5608 /* NewsViewController.m in Sources */,
 				DEF176661C22AB6300EEF06B /* UIView+Extension.m in Sources */,
 				DEF09AF51C215ADB005D0CB8 /* Changelog.md in Sources */,
-				DEDFFBA81C30CC45001BB8C4 /* NSXNewsViewModelResult.m in Sources */,
 				DE5A18411C08581700FD3B1D /* FAImageView.m in Sources */,
 				DEE4C2D11C2C13530074D94A /* NSXUser.m in Sources */,
 				DEF099461C215ADA005D0CB8 /* LICENSE.md in Sources */,
+				DEE407B31C34C195000AB909 /* StoryContentModel.m in Sources */,
 				DEB3E9C11C16D26900495FBE /* MyResultsViewController.m in Sources */,
-				DEEAA51F1C33B9C1002C46EF /* StoryContentViewModel.m in Sources */,
 				DEE18E8B1C327B5B003A5278 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				DEF099561C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF09B91BF988A400C6954F /* NSXGroupItem.m in Sources */,
 				DEF09B591C215ADB005D0CB8 /* readme.markdown in Sources */,
+				DEE407B01C34C195000AB909 /* NSXNewsViewModelParam.m in Sources */,
+				DEE407D11C34C931000AB909 /* CommentViewController.m in Sources */,
 				DEF099AF1C215ADA005D0CB8 /* HISTORY.md in Sources */,
-				DEAF09AD1BF988A400C6954F /* NSXMenu.m in Sources */,
 				DEF09A7C1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09BEE1C215ADB005D0CB8 /* README.md in Sources */,
+				DEE407CB1C34C918000AB909 /* LayoutView.m in Sources */,
 				DEE2DCC51C27914600ED907E /* MyBasicInfoViewController.m in Sources */,
 				DEE18E931C327B5B003A5278 /* MMSideDrawerTableViewCell.m in Sources */,
 				DEF09C801C215ADB005D0CB8 /* README.md in Sources */,
