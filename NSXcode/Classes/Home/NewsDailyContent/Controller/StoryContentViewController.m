@@ -81,6 +81,9 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     _toolbar.hidden = YES;
     
     [_textView resignFirstResponder];
+    
+#pragma 写入评论数据，刷新数据
+    [_tableview reloadData];
 }
 
 - (void)dealloc {

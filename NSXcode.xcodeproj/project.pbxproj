@@ -174,41 +174,8 @@
 		DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820551C2CE1C800E515C9 /* NSXAccountParam.m */; };
 		DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */; };
 		DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */; };
-		DEEAFA081C3A56720033ABA1 /* YTImgBrowerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA031C3A56720033ABA1 /* YTImgBrowerController.m */; };
-		DEEAFA091C3A56720033ABA1 /* YTImgInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA051C3A56720033ABA1 /* YTImgInfo.m */; };
-		DEEAFA0A1C3A56720033ABA1 /* YTImgScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA071C3A56720033ABA1 /* YTImgScroll.m */; };
-		DEEAFA0D1C3A56820033ABA1 /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA0C1C3A56820033ABA1 /* StartVC.m */; };
-		DEEAFA381C3A56A70033ABA1 /* EmojiFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA121C3A56A70033ABA1 /* EmojiFile.plist */; };
-		DEEAFA391C3A56A70033ABA1 /* EmojiGirl.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA131C3A56A70033ABA1 /* EmojiGirl.plist */; };
-		DEEAFA3A1C3A56A70033ABA1 /* EmojiPanda.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA141C3A56A70033ABA1 /* EmojiPanda.plist */; };
-		DEEAFA3B1C3A56A70033ABA1 /* EmojiSutra.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA151C3A56A70033ABA1 /* EmojiSutra.plist */; };
-		DEEAFA3C1C3A56A70033ABA1 /* girl_beg@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA161C3A56A70033ABA1 /* girl_beg@2x.gif */; };
-		DEEAFA3D1C3A56A70033ABA1 /* grinning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA171C3A56A70033ABA1 /* grinning@2x.png */; };
-		DEEAFA3E1C3A56A70033ABA1 /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEAFA181C3A56A70033ABA1 /* smile@2x.png */; };
-		DEEAFA3F1C3A56A70033ABA1 /* YTEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA1A1C3A56A70033ABA1 /* YTEmoji.m */; };
-		DEEAFA401C3A56A70033ABA1 /* YTEmojiChartletM.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA1C1C3A56A70033ABA1 /* YTEmojiChartletM.m */; };
-		DEEAFA411C3A56A70033ABA1 /* YTEmojiFile.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA1E1C3A56A70033ABA1 /* YTEmojiFile.m */; };
-		DEEAFA421C3A56A70033ABA1 /* YTEmojiIconM.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA201C3A56A70033ABA1 /* YTEmojiIconM.m */; };
-		DEEAFA431C3A56A70033ABA1 /* YTEmojiM.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA221C3A56A70033ABA1 /* YTEmojiM.m */; };
-		DEEAFA441C3A56A70033ABA1 /* YTEmojiBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA251C3A56A70033ABA1 /* YTEmojiBottom.m */; };
-		DEEAFA451C3A56A70033ABA1 /* YTEmojiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA271C3A56A70033ABA1 /* YTEmojiButton.m */; };
-		DEEAFA461C3A56A70033ABA1 /* YTEmojiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA291C3A56A70033ABA1 /* YTEmojiPage.m */; };
-		DEEAFA471C3A56A70033ABA1 /* YTEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA2B1C3A56A70033ABA1 /* YTEmojiView.m */; };
-		DEEAFA481C3A56A70033ABA1 /* YTMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA2E1C3A56A70033ABA1 /* YTMoreView.m */; };
-		DEEAFA491C3A56A70033ABA1 /* SLGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA311C3A56A70033ABA1 /* SLGrowingTextView.m */; };
-		DEEAFA4A1C3A56A70033ABA1 /* YTTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA331C3A56A70033ABA1 /* YTTextAttachment.m */; };
-		DEEAFA4B1C3A56A70033ABA1 /* YTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA351C3A56A70033ABA1 /* YTTextView.m */; };
-		DEEAFA4C1C3A56A70033ABA1 /* YTKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA371C3A56A70033ABA1 /* YTKeyBoardView.m */; };
-		DEEAFA631C3A56D90033ABA1 /* NSDictionary+YTSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA501C3A56D90033ABA1 /* NSDictionary+YTSafe.m */; };
-		DEEAFA641C3A56D90033ABA1 /* UIColor+YTBacal.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA521C3A56D90033ABA1 /* UIColor+YTBacal.m */; };
-		DEEAFA651C3A56D90033ABA1 /* UIColor+YTKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA541C3A56D90033ABA1 /* UIColor+YTKeyBoard.m */; };
-		DEEAFA661C3A56D90033ABA1 /* UIImage+YTGif.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA561C3A56D90033ABA1 /* UIImage+YTGif.m */; };
-		DEEAFA671C3A56D90033ABA1 /* UIView+YTLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA581C3A56D90033ABA1 /* UIView+YTLayer.m */; };
-		DEEAFA6A1C3A56D90033ABA1 /* YTDeviceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA601C3A56D90033ABA1 /* YTDeviceTest.m */; };
-		DEEAFA6B1C3A56D90033ABA1 /* YTNetworkLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA621C3A56D90033ABA1 /* YTNetworkLoad.m */; };
-		DEEAFA6F1C3A57180033ABA1 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA6E1C3A57180033ABA1 /* Message.m */; };
-		DEEAFBBD1C3A90D20033ABA1 /* RDRGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */; };
 		DEEAFBDA1C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */; };
+		DEEAFBE11C3AA2C50033ABA1 /* RDRGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBE01C3AA2C50033ABA1 /* RDRGrowingTextView.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
 		DEF099291C215ADA005D0CB8 /* resource.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094821C215AD9005D0CB8 /* resource.js */; };
@@ -1508,70 +1475,10 @@
 		DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccountResult.m; sourceTree = "<group>"; };
 		DEE8205B1C2CE2A200E515C9 /* NSXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXAccount.h; sourceTree = "<group>"; };
 		DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccount.m; sourceTree = "<group>"; };
-		DEEAFA021C3A56720033ABA1 /* YTImgBrowerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTImgBrowerController.h; sourceTree = "<group>"; };
-		DEEAFA031C3A56720033ABA1 /* YTImgBrowerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTImgBrowerController.m; sourceTree = "<group>"; };
-		DEEAFA041C3A56720033ABA1 /* YTImgInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTImgInfo.h; sourceTree = "<group>"; };
-		DEEAFA051C3A56720033ABA1 /* YTImgInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTImgInfo.m; sourceTree = "<group>"; };
-		DEEAFA061C3A56720033ABA1 /* YTImgScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTImgScroll.h; sourceTree = "<group>"; };
-		DEEAFA071C3A56720033ABA1 /* YTImgScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTImgScroll.m; sourceTree = "<group>"; };
-		DEEAFA0B1C3A56820033ABA1 /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
-		DEEAFA0C1C3A56820033ABA1 /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
-		DEEAFA121C3A56A70033ABA1 /* EmojiFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojiFile.plist; sourceTree = "<group>"; };
-		DEEAFA131C3A56A70033ABA1 /* EmojiGirl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojiGirl.plist; sourceTree = "<group>"; };
-		DEEAFA141C3A56A70033ABA1 /* EmojiPanda.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojiPanda.plist; sourceTree = "<group>"; };
-		DEEAFA151C3A56A70033ABA1 /* EmojiSutra.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojiSutra.plist; sourceTree = "<group>"; };
-		DEEAFA161C3A56A70033ABA1 /* girl_beg@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "girl_beg@2x.gif"; sourceTree = "<group>"; };
-		DEEAFA171C3A56A70033ABA1 /* grinning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grinning@2x.png"; sourceTree = "<group>"; };
-		DEEAFA181C3A56A70033ABA1 /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
-		DEEAFA191C3A56A70033ABA1 /* YTEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmoji.h; sourceTree = "<group>"; };
-		DEEAFA1A1C3A56A70033ABA1 /* YTEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmoji.m; sourceTree = "<group>"; };
-		DEEAFA1B1C3A56A70033ABA1 /* YTEmojiChartletM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiChartletM.h; sourceTree = "<group>"; };
-		DEEAFA1C1C3A56A70033ABA1 /* YTEmojiChartletM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiChartletM.m; sourceTree = "<group>"; };
-		DEEAFA1D1C3A56A70033ABA1 /* YTEmojiFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiFile.h; sourceTree = "<group>"; };
-		DEEAFA1E1C3A56A70033ABA1 /* YTEmojiFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiFile.m; sourceTree = "<group>"; };
-		DEEAFA1F1C3A56A70033ABA1 /* YTEmojiIconM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiIconM.h; sourceTree = "<group>"; };
-		DEEAFA201C3A56A70033ABA1 /* YTEmojiIconM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiIconM.m; sourceTree = "<group>"; };
-		DEEAFA211C3A56A70033ABA1 /* YTEmojiM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiM.h; sourceTree = "<group>"; };
-		DEEAFA221C3A56A70033ABA1 /* YTEmojiM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiM.m; sourceTree = "<group>"; };
-		DEEAFA241C3A56A70033ABA1 /* YTEmojiBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiBottom.h; sourceTree = "<group>"; };
-		DEEAFA251C3A56A70033ABA1 /* YTEmojiBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiBottom.m; sourceTree = "<group>"; };
-		DEEAFA261C3A56A70033ABA1 /* YTEmojiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiButton.h; sourceTree = "<group>"; };
-		DEEAFA271C3A56A70033ABA1 /* YTEmojiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiButton.m; sourceTree = "<group>"; };
-		DEEAFA281C3A56A70033ABA1 /* YTEmojiPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiPage.h; sourceTree = "<group>"; };
-		DEEAFA291C3A56A70033ABA1 /* YTEmojiPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiPage.m; sourceTree = "<group>"; };
-		DEEAFA2A1C3A56A70033ABA1 /* YTEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTEmojiView.h; sourceTree = "<group>"; };
-		DEEAFA2B1C3A56A70033ABA1 /* YTEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTEmojiView.m; sourceTree = "<group>"; };
-		DEEAFA2D1C3A56A70033ABA1 /* YTMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMoreView.h; sourceTree = "<group>"; };
-		DEEAFA2E1C3A56A70033ABA1 /* YTMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMoreView.m; sourceTree = "<group>"; };
-		DEEAFA301C3A56A70033ABA1 /* SLGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGrowingTextView.h; sourceTree = "<group>"; };
-		DEEAFA311C3A56A70033ABA1 /* SLGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGrowingTextView.m; sourceTree = "<group>"; };
-		DEEAFA321C3A56A70033ABA1 /* YTTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTTextAttachment.h; sourceTree = "<group>"; };
-		DEEAFA331C3A56A70033ABA1 /* YTTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTTextAttachment.m; sourceTree = "<group>"; };
-		DEEAFA341C3A56A70033ABA1 /* YTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTTextView.h; sourceTree = "<group>"; };
-		DEEAFA351C3A56A70033ABA1 /* YTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTTextView.m; sourceTree = "<group>"; };
-		DEEAFA361C3A56A70033ABA1 /* YTKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKeyBoardView.h; sourceTree = "<group>"; };
-		DEEAFA371C3A56A70033ABA1 /* YTKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKeyBoardView.m; sourceTree = "<group>"; };
-		DEEAFA4F1C3A56D90033ABA1 /* NSDictionary+YTSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YTSafe.h"; sourceTree = "<group>"; };
-		DEEAFA501C3A56D90033ABA1 /* NSDictionary+YTSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YTSafe.m"; sourceTree = "<group>"; };
-		DEEAFA511C3A56D90033ABA1 /* UIColor+YTBacal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YTBacal.h"; sourceTree = "<group>"; };
-		DEEAFA521C3A56D90033ABA1 /* UIColor+YTBacal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YTBacal.m"; sourceTree = "<group>"; };
-		DEEAFA531C3A56D90033ABA1 /* UIColor+YTKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YTKeyBoard.h"; sourceTree = "<group>"; };
-		DEEAFA541C3A56D90033ABA1 /* UIColor+YTKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YTKeyBoard.m"; sourceTree = "<group>"; };
-		DEEAFA551C3A56D90033ABA1 /* UIImage+YTGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YTGif.h"; sourceTree = "<group>"; };
-		DEEAFA561C3A56D90033ABA1 /* UIImage+YTGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YTGif.m"; sourceTree = "<group>"; };
-		DEEAFA571C3A56D90033ABA1 /* UIView+YTLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YTLayer.h"; sourceTree = "<group>"; };
-		DEEAFA581C3A56D90033ABA1 /* UIView+YTLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YTLayer.m"; sourceTree = "<group>"; };
-		DEEAFA5F1C3A56D90033ABA1 /* YTDeviceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTDeviceTest.h; sourceTree = "<group>"; };
-		DEEAFA601C3A56D90033ABA1 /* YTDeviceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTDeviceTest.m; sourceTree = "<group>"; };
-		DEEAFA611C3A56D90033ABA1 /* YTNetworkLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNetworkLoad.h; sourceTree = "<group>"; };
-		DEEAFA621C3A56D90033ABA1 /* YTNetworkLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNetworkLoad.m; sourceTree = "<group>"; };
-		DEEAFA6C1C3A56EF0033ABA1 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
-		DEEAFA6D1C3A57180033ABA1 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		DEEAFA6E1C3A57180033ABA1 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		DEEAFBBB1C3A90D20033ABA1 /* RDRGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRGrowingTextView.h; sourceTree = "<group>"; };
-		DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRGrowingTextView.m; sourceTree = "<group>"; };
 		DEEAFBD01C3A9FCE0033ABA1 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		DEEAFBDF1C3AA2C50033ABA1 /* RDRGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRGrowingTextView.h; sourceTree = "<group>"; };
+		DEEAFBE01C3AA2C50033ABA1 /* RDRGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRGrowingTextView.m; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		DEF094801C215AD9005D0CB8 /* database.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = database.js; sourceTree = "<group>"; };
 		DEF094821C215AD9005D0CB8 /* resource.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = resource.js; sourceTree = "<group>"; };
@@ -2643,6 +2550,7 @@
 		DE34ED801BF9B364003CFC80 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				DEEAFBDE1C3AA2C50033ABA1 /* RDRGrowingTextView */,
 				DE5A18381C08581700FD3B1D /* FontAwesome */,
 				DE34ED941BF9B451003CFC80 /* SDRefeshView */,
 				DE34ED811BF9B370003CFC80 /* SDAutoLayout */,
@@ -2979,15 +2887,6 @@
 		DEB3E9791C1681F200495FBE /* BackUp */ = {
 			isa = PBXGroup;
 			children = (
-				DEEAFBBA1C3A90D20033ABA1 /* RDRGrowingTextView */,
-				DEEAFA6D1C3A57180033ABA1 /* Message.h */,
-				DEEAFA6E1C3A57180033ABA1 /* Message.m */,
-				DEEAFA6C1C3A56EF0033ABA1 /* Defines.h */,
-				DEEAFA4D1C3A56D90033ABA1 /* Tools */,
-				DEEAFA0E1C3A56A70033ABA1 /* KeyBoard */,
-				DEEAFA0B1C3A56820033ABA1 /* StartVC.h */,
-				DEEAFA0C1C3A56820033ABA1 /* StartVC.m */,
-				DEEAFA011C3A56720033ABA1 /* ImgBrower */,
 			);
 			path = BackUp;
 			sourceTree = "<group>";
@@ -3420,155 +3319,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DEEAFA011C3A56720033ABA1 /* ImgBrower */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA021C3A56720033ABA1 /* YTImgBrowerController.h */,
-				DEEAFA031C3A56720033ABA1 /* YTImgBrowerController.m */,
-				DEEAFA041C3A56720033ABA1 /* YTImgInfo.h */,
-				DEEAFA051C3A56720033ABA1 /* YTImgInfo.m */,
-				DEEAFA061C3A56720033ABA1 /* YTImgScroll.h */,
-				DEEAFA071C3A56720033ABA1 /* YTImgScroll.m */,
-			);
-			path = ImgBrower;
-			sourceTree = "<group>";
-		};
-		DEEAFA0E1C3A56A70033ABA1 /* KeyBoard */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA0F1C3A56A70033ABA1 /* Emoji */,
-				DEEAFA2C1C3A56A70033ABA1 /* More */,
-				DEEAFA2F1C3A56A70033ABA1 /* Other */,
-				DEEAFA361C3A56A70033ABA1 /* YTKeyBoardView.h */,
-				DEEAFA371C3A56A70033ABA1 /* YTKeyBoardView.m */,
-			);
-			path = KeyBoard;
-			sourceTree = "<group>";
-		};
-		DEEAFA0F1C3A56A70033ABA1 /* Emoji */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA101C3A56A70033ABA1 /* EmojiModel */,
-				DEEAFA231C3A56A70033ABA1 /* EmojiView */,
-			);
-			path = Emoji;
-			sourceTree = "<group>";
-		};
-		DEEAFA101C3A56A70033ABA1 /* EmojiModel */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA111C3A56A70033ABA1 /* Resource */,
-				DEEAFA191C3A56A70033ABA1 /* YTEmoji.h */,
-				DEEAFA1A1C3A56A70033ABA1 /* YTEmoji.m */,
-				DEEAFA1B1C3A56A70033ABA1 /* YTEmojiChartletM.h */,
-				DEEAFA1C1C3A56A70033ABA1 /* YTEmojiChartletM.m */,
-				DEEAFA1D1C3A56A70033ABA1 /* YTEmojiFile.h */,
-				DEEAFA1E1C3A56A70033ABA1 /* YTEmojiFile.m */,
-				DEEAFA1F1C3A56A70033ABA1 /* YTEmojiIconM.h */,
-				DEEAFA201C3A56A70033ABA1 /* YTEmojiIconM.m */,
-				DEEAFA211C3A56A70033ABA1 /* YTEmojiM.h */,
-				DEEAFA221C3A56A70033ABA1 /* YTEmojiM.m */,
-			);
-			path = EmojiModel;
-			sourceTree = "<group>";
-		};
-		DEEAFA111C3A56A70033ABA1 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA121C3A56A70033ABA1 /* EmojiFile.plist */,
-				DEEAFA131C3A56A70033ABA1 /* EmojiGirl.plist */,
-				DEEAFA141C3A56A70033ABA1 /* EmojiPanda.plist */,
-				DEEAFA151C3A56A70033ABA1 /* EmojiSutra.plist */,
-				DEEAFA161C3A56A70033ABA1 /* girl_beg@2x.gif */,
-				DEEAFA171C3A56A70033ABA1 /* grinning@2x.png */,
-				DEEAFA181C3A56A70033ABA1 /* smile@2x.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		DEEAFA231C3A56A70033ABA1 /* EmojiView */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA241C3A56A70033ABA1 /* YTEmojiBottom.h */,
-				DEEAFA251C3A56A70033ABA1 /* YTEmojiBottom.m */,
-				DEEAFA261C3A56A70033ABA1 /* YTEmojiButton.h */,
-				DEEAFA271C3A56A70033ABA1 /* YTEmojiButton.m */,
-				DEEAFA281C3A56A70033ABA1 /* YTEmojiPage.h */,
-				DEEAFA291C3A56A70033ABA1 /* YTEmojiPage.m */,
-				DEEAFA2A1C3A56A70033ABA1 /* YTEmojiView.h */,
-				DEEAFA2B1C3A56A70033ABA1 /* YTEmojiView.m */,
-			);
-			path = EmojiView;
-			sourceTree = "<group>";
-		};
-		DEEAFA2C1C3A56A70033ABA1 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA2D1C3A56A70033ABA1 /* YTMoreView.h */,
-				DEEAFA2E1C3A56A70033ABA1 /* YTMoreView.m */,
-			);
-			path = More;
-			sourceTree = "<group>";
-		};
-		DEEAFA2F1C3A56A70033ABA1 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA301C3A56A70033ABA1 /* SLGrowingTextView.h */,
-				DEEAFA311C3A56A70033ABA1 /* SLGrowingTextView.m */,
-				DEEAFA321C3A56A70033ABA1 /* YTTextAttachment.h */,
-				DEEAFA331C3A56A70033ABA1 /* YTTextAttachment.m */,
-				DEEAFA341C3A56A70033ABA1 /* YTTextView.h */,
-				DEEAFA351C3A56A70033ABA1 /* YTTextView.m */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		DEEAFA4D1C3A56D90033ABA1 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA4E1C3A56D90033ABA1 /* Catgray */,
-				DEEAFA5E1C3A56D90033ABA1 /* other */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		DEEAFA4E1C3A56D90033ABA1 /* Catgray */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA4F1C3A56D90033ABA1 /* NSDictionary+YTSafe.h */,
-				DEEAFA501C3A56D90033ABA1 /* NSDictionary+YTSafe.m */,
-				DEEAFA511C3A56D90033ABA1 /* UIColor+YTBacal.h */,
-				DEEAFA521C3A56D90033ABA1 /* UIColor+YTBacal.m */,
-				DEEAFA531C3A56D90033ABA1 /* UIColor+YTKeyBoard.h */,
-				DEEAFA541C3A56D90033ABA1 /* UIColor+YTKeyBoard.m */,
-				DEEAFA551C3A56D90033ABA1 /* UIImage+YTGif.h */,
-				DEEAFA561C3A56D90033ABA1 /* UIImage+YTGif.m */,
-				DEEAFA571C3A56D90033ABA1 /* UIView+YTLayer.h */,
-				DEEAFA581C3A56D90033ABA1 /* UIView+YTLayer.m */,
-			);
-			path = Catgray;
-			sourceTree = "<group>";
-		};
-		DEEAFA5E1C3A56D90033ABA1 /* other */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFA5F1C3A56D90033ABA1 /* YTDeviceTest.h */,
-				DEEAFA601C3A56D90033ABA1 /* YTDeviceTest.m */,
-				DEEAFA611C3A56D90033ABA1 /* YTNetworkLoad.h */,
-				DEEAFA621C3A56D90033ABA1 /* YTNetworkLoad.m */,
-			);
-			path = other;
-			sourceTree = "<group>";
-		};
-		DEEAFBBA1C3A90D20033ABA1 /* RDRGrowingTextView */ = {
-			isa = PBXGroup;
-			children = (
-				DEEAFBBB1C3A90D20033ABA1 /* RDRGrowingTextView.h */,
-				DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */,
-			);
-			path = RDRGrowingTextView;
-			sourceTree = "<group>";
-		};
 		DEEAFBBE1C3A9FCE0033ABA1 /* UIPlaceHolderTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3576,6 +3326,15 @@
 				DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */,
 			);
 			path = UIPlaceHolderTextView;
+			sourceTree = "<group>";
+		};
+		DEEAFBDE1C3AA2C50033ABA1 /* RDRGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAFBDF1C3AA2C50033ABA1 /* RDRGrowingTextView.h */,
+				DEEAFBE01C3AA2C50033ABA1 /* RDRGrowingTextView.m */,
+			);
+			path = RDRGrowingTextView;
 			sourceTree = "<group>";
 		};
 		DEF0947C1C215AD9005D0CB8 /* bin */ = {
@@ -6331,7 +6090,6 @@
 				DEF09C441C215ADB005D0CB8 /* package.json in Resources */,
 				DEB3E9681C166D8C00495FBE /* AppDelegate.m.zip in Resources */,
 				DEF099A01C215ADA005D0CB8 /* _stream_writable.js in Resources */,
-				DEEAFA3B1C3A56A70033ABA1 /* EmojiSutra.plist in Resources */,
 				DEF099CD1C215ADA005D0CB8 /* crc16_modbus.js in Resources */,
 				DEF09A1C1C215ADA005D0CB8 /* original in Resources */,
 				DEF09B161C215ADB005D0CB8 /* LICENSE in Resources */,
@@ -6382,7 +6140,6 @@
 				DEF09CE31C215ADB005D0CB8 /* package.json in Resources */,
 				DEF099D61C215ADA005D0CB8 /* LICENSE in Resources */,
 				DEF09B441C215ADB005D0CB8 /* types.json in Resources */,
-				DEEAFA381C3A56A70033ABA1 /* EmojiFile.plist in Resources */,
 				DEF09CA61C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09A861C215ADA005D0CB8 /* init.js in Resources */,
 				DEF099A11C215ADA005D0CB8 /* LICENSE in Resources */,
@@ -6571,7 +6328,6 @@
 				DEF09A071C215ADA005D0CB8 /* part6 in Resources */,
 				DEF09AE41C215ADB005D0CB8 /* graceful-fs.js in Resources */,
 				DEF09C221C215ADB005D0CB8 /* finally.js in Resources */,
-				DEEAFA3D1C3A56A70033ABA1 /* grinning@2x.png in Resources */,
 				DEF09CF91C215ADB005D0CB8 /* sql.sql in Resources */,
 				DEF09AD71C215ADB005D0CB8 /* output.js in Resources */,
 				DEF09A2B1C215ADA005D0CB8 /* test-multipart.js in Resources */,
@@ -6595,7 +6351,6 @@
 				DEE18E431C326DE0003A5278 /* server.js in Resources */,
 				DEF099C11C215ADA005D0CB8 /* package.json in Resources */,
 				DEF09ABA1C215ADA005D0CB8 /* file.js in Resources */,
-				DEEAFA391C3A56A70033ABA1 /* EmojiGirl.plist in Resources */,
 				DEF099F01C215ADA005D0CB8 /* dicer-bench-multipart-parser.js in Resources */,
 				DEF09AF91C215ADB005D0CB8 /* internal.js in Resources */,
 				DEF09B7E1C215ADB005D0CB8 /* .npmignore in Resources */,
@@ -6725,7 +6480,6 @@
 				DEF09C511C215ADB005D0CB8 /* .npmignore in Resources */,
 				DEF09A2C1C215ADA005D0CB8 /* test.js in Resources */,
 				DEF09BA41C215ADB005D0CB8 /* field_flags.js in Resources */,
-				DEEAFA3E1C3A56A70033ABA1 /* smile@2x.png in Resources */,
 				DEF09CD11C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09BB01C215ADB005D0CB8 /* EofPacket.js in Resources */,
 				DEF09C5F1C215ADB005D0CB8 /* eucjp.json in Resources */,
@@ -6890,7 +6644,6 @@
 				DEF09B5C1C215ADB005D0CB8 /* dotted.js in Resources */,
 				DEF09CC71C215ADB005D0CB8 /* LICENSE in Resources */,
 				DEF09AC51C215ADA005D0CB8 /* index.js in Resources */,
-				DEEAFA3C1C3A56A70033ABA1 /* girl_beg@2x.gif in Resources */,
 				DEF09A801C215ADA005D0CB8 /* package.json in Resources */,
 				DEF09A611C215ADA005D0CB8 /* newlines.html in Resources */,
 				DEF09B881C215ADB005D0CB8 /* make-error.js in Resources */,
@@ -7072,7 +6825,6 @@
 				DEF09C881C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09B9F1C215ADB005D0CB8 /* PoolSelector.js in Resources */,
 				DEF09C681C215ADB005D0CB8 /* streams.js in Resources */,
-				DEEAFA3A1C3A56A70033ABA1 /* EmojiPanda.plist in Resources */,
 				DEF09BD71C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09A631C215ADA005D0CB8 /* newlines.mixed.html in Resources */,
 				DEF09C8F1C215ADB005D0CB8 /* package.json in Resources */,
@@ -7265,7 +7017,6 @@
 				DE9BBC131BFCA5280048D32A /* YYFPSLabel.m in Sources */,
 				DEF099451C215ADA005D0CB8 /* CHANGES.md in Sources */,
 				DEB3E9721C16814800495FBE /* NSXNavigationBarSearchViewController.m in Sources */,
-				DEEAFA0D1C3A56820033ABA1 /* StartVC.m in Sources */,
 				DEF09B4A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C871C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BDB1C215ADB005D0CB8 /* HISTORY.md in Sources */,
@@ -7280,16 +7031,14 @@
 				DEE407771C34C195000AB909 /* OSCObjsViewController.m in Sources */,
 				DEF09CBB1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C181C215ADB005D0CB8 /* Readme.md in Sources */,
-				DEEAFA631C3A56D90033ABA1 /* NSDictionary+YTSafe.m in Sources */,
-				DEEAFA401C3A56A70033ABA1 /* YTEmojiChartletM.m in Sources */,
 				DEF09AB01C215ADA005D0CB8 /* README.md in Sources */,
 				DEE407B11C34C195000AB909 /* NSXNewsViewModelResult.m in Sources */,
-				DEEAFA671C3A56D90033ABA1 /* UIView+YTLayer.m in Sources */,
 				DEF0994E1C215ADA005D0CB8 /* LICENSE.md in Sources */,
 				DEE820501C2CE0A200E515C9 /* NSXUserParam.m in Sources */,
 				DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */,
 				DEF09C2D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09BE81C215ADB005D0CB8 /* README.md in Sources */,
+				DEEAFBE11C3AA2C50033ABA1 /* RDRGrowingTextView.m in Sources */,
 				DE34EDA01BF9B451003CFC80 /* SDRefreshFooterView.m in Sources */,
 				DEF09B181C215ADB005D0CB8 /* README.md in Sources */,
 				DEE18E8F1C327B5B003A5278 /* MMExampleViewController.m in Sources */,
@@ -7307,7 +7056,6 @@
 				DE9BBC141BFCA5280048D32A /* YYPhotoGroupView.m in Sources */,
 				DEE407AD1C34C195000AB909 /* NSXNewsResult.m in Sources */,
 				DEE18E941C327B5B003A5278 /* MMTableViewCell.m in Sources */,
-				DEEAFA3F1C3A56A70033ABA1 /* YTEmoji.m in Sources */,
 				DEF099511C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09B8D1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B271C215ADB005D0CB8 /* README.md in Sources */,
@@ -7338,7 +7086,6 @@
 				DEF0996B1C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEE407941C34C195000AB909 /* NSXMenu.m in Sources */,
 				DEAF09BA1BF988A400C6954F /* NSXPushitem.m in Sources */,
-				DEEAFA481C3A56A70033ABA1 /* YTMoreView.m in Sources */,
 				DEF0995B1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09C9F1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B951C215ADB005D0CB8 /* README.md in Sources */,
@@ -7352,7 +7099,6 @@
 				DEF09C3A1C215ADB005D0CB8 /* README.md in Sources */,
 				DEB3E9751C16817E00495FBE /* NSXTabBarController.m in Sources */,
 				DEE18E8D1C327B5B003A5278 /* MMExampleRightSideDrawerViewController.m in Sources */,
-				DEEAFA661C3A56D90033ABA1 /* UIImage+YTGif.m in Sources */,
 				DEE18E641C327AC3003A5278 /* NSXSideViewHeader.m in Sources */,
 				DEF09B831C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09C6D1C215ADB005D0CB8 /* README.md in Sources */,
@@ -7361,27 +7107,21 @@
 				DEE407A01C34C195000AB909 /* NSXNewsCell.m in Sources */,
 				DEF09A991C215ADA005D0CB8 /* README.md in Sources */,
 				DEAF094E1BF987AC00C6954F /* main.m in Sources */,
-				DEEAFA471C3A56A70033ABA1 /* YTEmojiView.m in Sources */,
 				DEF09B961C215ADB005D0CB8 /* Changes.md in Sources */,
-				DEEAFA0A1C3A56720033ABA1 /* YTImgScroll.m in Sources */,
 				DEF09B841C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF09A951C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BD61C215ADB005D0CB8 /* README.md in Sources */,
 				DEF099FB1C215ADA005D0CB8 /* README.md in Sources */,
 				DEE2DCD51C27933D00ED907E /* MyTweetLikeListViewController.m in Sources */,
-				DEEAFA6F1C3A57180033ABA1 /* Message.m in Sources */,
 				DEE407AC1C34C195000AB909 /* NSXNewsParam.m in Sources */,
 				DEE407B21C34C195000AB909 /* StoryContentViewController.m in Sources */,
-				DEEAFA081C3A56720033ABA1 /* YTImgBrowerController.m in Sources */,
 				DEF099411C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09BDF1C215ADB005D0CB8 /* README.md in Sources */,
-				DEEAFBBD1C3A90D20033ABA1 /* RDRGrowingTextView.m in Sources */,
 				DEE407A71C34C195000AB909 /* XTNetReloader.m in Sources */,
 				DEAF09B51BF988A400C6954F /* NSXSearchController.m in Sources */,
 				DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */,
 				DEF09BDA1C215ADB005D0CB8 /* readme.md in Sources */,
 				DEF09CB71C215ADB005D0CB8 /* HISTORY.md in Sources */,
-				DEEAFA411C3A56A70033ABA1 /* YTEmojiFile.m in Sources */,
 				DEE2DCC41C27914600ED907E /* HomepageViewController.m in Sources */,
 				DEF09C251C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF099A51C215ADA005D0CB8 /* README.md in Sources */,
@@ -7390,7 +7130,6 @@
 				DEF099E41C215ADA005D0CB8 /* History.md in Sources */,
 				DEE2DCD81C27935E00ED907E /* FavoritesViewController.m in Sources */,
 				DEE407781C34C195000AB909 /* NSXNewsController.m in Sources */,
-				DEEAFA491C3A56A70033ABA1 /* SLGrowingTextView.m in Sources */,
 				DEF099831C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09AEE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF0999A1C215ADA005D0CB8 /* 2015-01-30.md in Sources */,
@@ -7418,9 +7157,7 @@
 				DEF09AA51C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09AB61C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09B291C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
-				DEEAFA6A1C3A56D90033ABA1 /* YTDeviceTest.m in Sources */,
 				DEF09A301C215ADA005D0CB8 /* README.md in Sources */,
-				DEEAFA4A1C3A56A70033ABA1 /* YTTextAttachment.m in Sources */,
 				DEF09C431C215ADB005D0CB8 /* License.md in Sources */,
 				DEB3E96C1C166D8C00495FBE /* DEMORightMenuViewController.m in Sources */,
 				DEF09B3B1C215ADB005D0CB8 /* README.md in Sources */,
@@ -7437,10 +7174,8 @@
 				DEE4C2CA1C2C0EE70074D94A /* Config.m in Sources */,
 				DEB3E9671C166D8C00495FBE /* AppDelegate.m in Sources */,
 				DEE2DCB81C2790EF00ED907E /* CYloginRegisterViewController.m in Sources */,
-				DEEAFA6B1C3A56D90033ABA1 /* YTNetworkLoad.m in Sources */,
 				DE5C155D1C06B79700E8B428 /* NSXOptionButton.m in Sources */,
 				DEF09B321C215ADB005D0CB8 /* README.md in Sources */,
-				DEEAFA4B1C3A56A70033ABA1 /* YTTextView.m in Sources */,
 				DEF099BD1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF099B31C215ADA005D0CB8 /* README.md in Sources */,
 				DEE2DCDB1C27937D00ED907E /* FriendsViewController.m in Sources */,
@@ -7490,7 +7225,6 @@
 				DEF09BFF1C215ADB005D0CB8 /* license.md in Sources */,
 				DEF099491C215ADA005D0CB8 /* README.md in Sources */,
 				DE34EDA31BF9B451003CFC80 /* UIView+SDExtension.m in Sources */,
-				DEEAFA451C3A56A70033ABA1 /* YTEmojiButton.m in Sources */,
 				DEF09AB21C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF099DF1C215ADA005D0CB8 /* History.md in Sources */,
 				DEF09B791C215ADB005D0CB8 /* HISTORY.md in Sources */,
@@ -7520,16 +7254,12 @@
 				DEE407951C34C195000AB909 /* NSXNews.m in Sources */,
 				DEF09C861C215ADB005D0CB8 /* README.md in Sources */,
 				DE0186FE1C0BFA7500F45AC1 /* NSXHttpTool.m in Sources */,
-				DEEAFA441C3A56A70033ABA1 /* YTEmojiBottom.m in Sources */,
 				DEE2DD831C281E3F00ED907E /* RegistViewController.m in Sources */,
 				DEF09B2E1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF0995E1C215ADA005D0CB8 /* README.md in Sources */,
-				DEEAFA431C3A56A70033ABA1 /* YTEmojiM.m in Sources */,
 				DEF09ACD1C215ADA005D0CB8 /* README.md in Sources */,
 				DEF09BCD1C215ADB005D0CB8 /* Readme.md in Sources */,
-				DEEAFA651C3A56D90033ABA1 /* UIColor+YTKeyBoard.m in Sources */,
 				DEF09B691C215ADB005D0CB8 /* readme.markdown in Sources */,
-				DEEAFA421C3A56A70033ABA1 /* YTEmojiIconM.m in Sources */,
 				DEF09CCF1C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09A911C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09A811C215ADA005D0CB8 /* README.md in Sources */,
@@ -7539,7 +7269,6 @@
 				DE5A18371C084C7A00FD3B1D /* NSXUtils.m in Sources */,
 				DEE4C2C71C2C0E810074D94A /* Utils.m in Sources */,
 				DEE407CA1C34C918000AB909 /* LayoutContainerView.m in Sources */,
-				DEEAFA4C1C3A56A70033ABA1 /* YTKeyBoardView.m in Sources */,
 				DEF09BCE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B201C215ADB005D0CB8 /* README.md in Sources */,
 				DEE820511C2CE0A200E515C9 /* NSXUserResult.m in Sources */,
@@ -7562,9 +7291,6 @@
 				DEF09A7C1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09BEE1C215ADB005D0CB8 /* README.md in Sources */,
 				DEE407CB1C34C918000AB909 /* LayoutView.m in Sources */,
-				DEEAFA641C3A56D90033ABA1 /* UIColor+YTBacal.m in Sources */,
-				DEEAFA091C3A56720033ABA1 /* YTImgInfo.m in Sources */,
-				DEEAFA461C3A56A70033ABA1 /* YTEmojiPage.m in Sources */,
 				DEE2DCC51C27914600ED907E /* MyBasicInfoViewController.m in Sources */,
 				DEE18E931C327B5B003A5278 /* MMSideDrawerTableViewCell.m in Sources */,
 				DEF09C801C215ADB005D0CB8 /* README.md in Sources */,

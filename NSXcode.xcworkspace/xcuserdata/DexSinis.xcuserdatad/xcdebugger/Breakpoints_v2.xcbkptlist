@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Main/Controller/TarBar/NSXTabBarController.m"
-            timestampString = "473585578.639425"
+            timestampString = "473604886.233103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "-pushSearchViewController"
             landmarkType = "5">
          </BreakpointContent>
