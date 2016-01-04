@@ -68,8 +68,91 @@
         fr.size.height = lastH;
         self.frame = fr;
     }
+    
+
+//    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+//    
+//    longPressed.minimumPressDuration = 1;
+//    
+//    [self addGestureRecognizer:longPressed];
+    
     return self;
 }
+
+//-(void)setNeedsDisplay
+//{
+//    
+//    [super setNeedsDisplay];
+//    
+//    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+//    
+//    longPressed.minimumPressDuration = 1;
+//    
+//    [self addGestureRecognizer:longPressed];
+//}
+//-(void)setNeedsLayout
+//{
+//    
+//    [super setNeedsLayout];
+//    
+//    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+//    
+//    longPressed.minimumPressDuration = 1;
+//    
+//    [self addGestureRecognizer:longPressed];
+//}
+-(void)longPressToDo:(UILongPressGestureRecognizer *)gesture
+
+
+{
+    
+    if (gesture.state==UIGestureRecognizerStateBegan) {
+        [self becomeFirstResponder];
+        UIMenuController *menu=[UIMenuController sharedMenuController];
+        NSLog(@"UILongPressGestureRecognizer---------->");
+        UIMenuItem *copyItem = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyItemClicked:)];
+        UIMenuItem *resendItem = [[UIMenuItem alloc] initWithTitle:@"转发" action:@selector(resendItemClicked:)];
+        [menu setMenuItems:[NSArray arrayWithObjects:copyItem,resendItem,nil]];
+        //        [menu setTargetRect:CGRectMake(location.x, location.y, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) inView:self.view];
+        //        UIView *temp = [[UIView alloc] initWithFrame:CGRectMake(location.x, location.y,1 , 1)];
+        //        [menu setTargetRect:CGRectMake(location.x,location.y,0,0) inView:self.view];
+        [menu setTargetRect:self.frame inView:self.superview];
+        //        NSLog(@"%@",NSStringFromCGRect([UIScreen mainScreen].bounds));
+        //        NSLog(@"%@",NSStringFromCGRect(cell.frame));
+        
+        [menu setMenuVisible:YES animated:YES];
+    }
+    
+    
+    
+}
+
+#pragma mark 处理action事件
+-(BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    if(action ==@selector(copyItemClicked:)){
+        return YES;
+    }else if (action==@selector(resendItemClicked:)){
+        return YES;
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+#pragma mark  实现成为第一响应者方法
+-(BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+#pragma mark method
+-(void)resendItemClicked:(id)sender{
+    NSLog(@"转发");
+//    NSLog(@"%@",self.addressLabel.text);
+    //通知代理
+}
+-(void)copyItemClicked:(id)sender{
+    NSLog(@"复制");
+    // 通知代理
+}
+
+
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.

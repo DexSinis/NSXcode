@@ -99,6 +99,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIViewController-KeyboardAdditions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -107,6 +112,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06687EEF2F3BA0D56C659D8DF775D764</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>06D1E331F819F0A76EC732F42EA982C4</key>
 		<dict>
 			<key>primary</key>
@@ -117,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>15DC590C0B3B7BA58D240A4E221F14F8</key>
+		<key>10F1B86765575A27696156BF69B4C85A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +142,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2D9A6986D94D89B259A302EF96D8123D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35D6189CC73EC21E0FD390E5487014C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4DBBBC5A1487BDF7BEF84E984FFC466F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,22 +187,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D1940B2E7D9B074FD9679F9212FA61D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>964318E0B787174880220B10E536A9FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>96B99B5BB104FC47AF4F06036E7BBBA3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -192,7 +202,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC0CDE961A663CFA64D59391015730A1</key>
+		<key>C1266FAFD689F142A8BCB4AF247A9E2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

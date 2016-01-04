@@ -28,6 +28,8 @@
 #import "LogInViewController.h"
 #import "NSXNewsViewModel.h"
 
+#import "StartVC.h"
+
 @interface NSXTabBarController ()  <UITabBarControllerDelegate,UISearchBarDelegate>
 {
 //    NSXHomeController *oneVC;
@@ -182,7 +184,8 @@
 
     
     // 2.添加第2个控制器
-    NSXMessageController *twoVc = [[NSXMessageController alloc]init];
+//    NSXMessageController *twoVc = [[NSXMessageController alloc]init];
+    StartVC *twoVc = [[StartVC alloc]init];
     UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVc];
     
     // 3.添加第3个控制器

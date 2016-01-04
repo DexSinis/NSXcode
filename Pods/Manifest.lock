@@ -63,6 +63,7 @@ PODS:
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
   - SSKeychain (1.3.1)
+  - UIViewController-KeyboardAdditions (1.1)
   - YYKit (0.9.6):
     - YYKit/no-arc (= 0.9.6)
   - YYKit/no-arc (0.9.6)
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - RESideMenu
   - SDWebImage
   - SSKeychain
+  - UIViewController-KeyboardAdditions
   - YYKit (= 0.9.6)
 
 SPEC CHECKSUMS:
@@ -103,6 +105,7 @@ SPEC CHECKSUMS:
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SSKeychain: 04c4ec40f4c3deda524e269bc76e5f30e638a174
+  UIViewController-KeyboardAdditions: 5db782fc55ec1e49a20caf80f8d4217f4032eaee
   YYKit: 7e27f6b55883bfe3ec2b98e7ad9c38fcbb92a1c5
 
 COCOAPODS: 0.39.0

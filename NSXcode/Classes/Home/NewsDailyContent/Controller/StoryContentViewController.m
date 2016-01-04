@@ -15,10 +15,15 @@
 #import "LayoutContainerView.h"
 #import "CommentModel.h"
 
+#import "RDRGrowingTextView.h"
+static CGFloat const MaxToolbarHeight = 200.0f;
 @interface StoryContentViewController ()<UIScrollViewDelegate, UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *_dataSource;
     UITableView    *_tableview;
+    
+    UIToolbar *_toolbar;
+    RDRGrowingTextView *_textView;
 }
 
 
@@ -54,11 +59,21 @@
     // Do any additional setup after loading the view.
     self.commentViewController = [[CommentViewController alloc] init];
 
-    [self setUpTableView];
-    
     [self initSubViews];
     
+    [self setUpTableView];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateComment:)  name:@"commentNotification" object:nil];
+    
    
+}
+
+-(void)updateComment:(NSNotification *)noti
+{
+    _toolbar.hidden = NO;
+    
+    [_textView becomeFirstResponder];
 }
 
 
@@ -75,8 +90,6 @@
     _webView.delegate = self;
     _webView.backgroundColor = [UIColor whiteColor];
 
-    _preView = [[PreView alloc] initWithFrame:kScreenBounds];
-    [_tableview.tableHeaderView addSubview:_preView];
 
 }
 
@@ -171,6 +184,8 @@
     
     [self setUpHeaderView];
     
+    [self.view addSubview:_tableview];
+    
 //    [self.view addSubview:_tableview];
     
     
@@ -199,6 +214,14 @@
     [toolBar addSubview:commentdBtn];
     toolBar.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:toolBar];
+    
+    
+    
+    _preView = [[PreView alloc] initWithFrame:kScreenBounds];
+    [self.view addSubview:_preView];
+    
+    
+    
     
 //    [_viewmodel getStoryContentWithStoryID:_viewmodel.loadedStoryID];
     
@@ -237,6 +260,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [_preView removeFromSuperview];
         });
+        
     }
 }
 /*
@@ -303,7 +327,7 @@
     //    _tableview.scrollEnabled =NO;
     //    NSLog(@"%f------------------------------>>>>>>>>>>>>>>>>>>",.contentSize);
 //    _tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 300.f)];
-    [self.view addSubview:_tableview];
+   
     
 }
 
@@ -331,7 +355,133 @@
     ce.selectionStyle = UITableViewCellSelectionStyleNone;
     LayoutContainerView * container =[[LayoutContainerView alloc] initWithModelArray:_dataSource[indexPath.row]];
     [ce.contentView addSubview:container];
+    
+//    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+//    
+//    longPressed.minimumPressDuration = 1;
+//    
+//    [ce.contentView addGestureRecognizer:longPressed];
+    
     return ce;
     
 }
+
+//-(void)longPressToDo:(UILongPressGestureRecognizer *)gesture
+//
+//
+//{
+//    
+//    if (gesture.state==UIGestureRecognizerStateBegan) {
+//        [self becomeFirstResponder];
+//     
+//      CGPoint locationcell = [gesture locationInView:self.view];
+//       NSIndexPath * indexPath = [_tableview indexPathForRowAtPoint:locationcell];
+//        
+//        LayoutContainerView * container =[[LayoutContainerView alloc] initWithModelArray:_dataSource[indexPath.row]];
+//        
+//        CommentTableViewCell *cell = (CommentTableViewCell *)gesture.view;
+//        CGPoint location = [gesture locationInView:cell];
+//        NSLog(@"%@",NSStringFromCGPoint(location));
+//        
+//        UIMenuController *menu=[UIMenuController sharedMenuController];
+//        UIMenuItem *copyItem = [[UIMenuItem alloc] initWithTitle:@"复制" action:@selector(copyItemClicked:)];
+//        UIMenuItem *resendItem = [[UIMenuItem alloc] initWithTitle:@"转发" action:@selector(resendItemClicked:)];
+//        [menu setMenuItems:[NSArray arrayWithObjects:copyItem,resendItem,nil]];
+////        [menu setTargetRect:CGRectMake(location.x, location.y, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) inView:self.view];
+////        UIView *temp = [[UIView alloc] initWithFrame:CGRectMake(location.x, location.y,1 , 1)];
+////        [menu setTargetRect:CGRectMake(location.x,location.y,0,0) inView:self.view];
+//        [menu setTargetRect:CGRectMake(100,100,0,0) inView:cell];
+//        NSLog(@"%@",NSStringFromCGRect([UIScreen mainScreen].bounds));
+//         NSLog(@"%@",NSStringFromCGRect(cell.frame));
+//
+//        [menu setMenuVisible:YES animated:YES];
+//    }
+//    
+//    
+//    
+//}
+//
+//#pragma mark 处理action事件
+//-(BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+//    if(action ==@selector(copyItemClicked:)){
+//        return YES;
+//    }else if (action==@selector(resendItemClicked:)){
+//        return YES;
+//    }
+//    return [super canPerformAction:action withSender:sender];
+//}
+//#pragma mark  实现成为第一响应者方法
+//-(BOOL)canBecomeFirstResponder{
+//    return YES;
+//}
+//
+//#pragma mark method
+//-(void)resendItemClicked:(id)sender{
+//    NSLog(@"转发");
+//    //通知代理
+//}
+//-(void)copyItemClicked:(id)sender{
+//    NSLog(@"复制");
+//    // 通知代理
+//}
+
+
+#pragma mark - Overrides
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (UIView *)inputAccessoryView
+{
+    if (_toolbar) {
+        return _toolbar;
+    }
+    
+    _toolbar = [UIToolbar new];
+    
+    RDRGrowingTextView *textView = [RDRGrowingTextView new];
+    textView.font = [UIFont systemFontOfSize:17.0f];
+    textView.textContainerInset = UIEdgeInsetsMake(4.0f, 3.0f, 3.0f, 3.0f);
+    textView.layer.cornerRadius = 4.0f;
+    textView.layer.borderColor = [UIColor colorWithRed:255.0f/255.0f green:200.0f/255.0f blue:205.0f/255.0f alpha:1.0f].CGColor;
+    textView.layer.borderWidth = 1.0f;
+    textView.layer.masksToBounds = YES;
+    _textView = textView;
+    [_toolbar addSubview:textView];
+    
+    textView.translatesAutoresizingMaskIntoConstraints = NO;
+    _toolbar.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [_toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[textView]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(textView)]];
+    [_toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[textView]-8-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(textView)]];
+    
+    [textView setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+    [textView setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [_toolbar setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    
+    [_toolbar addConstraint:[NSLayoutConstraint constraintWithItem:_toolbar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationLessThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:MaxToolbarHeight]];
+    _toolbar.hidden = YES;
+    return _toolbar;
+}
+
+#pragma mark - View lifecycle
+
+- (void)loadView
+{
+    [super loadView];
+    _tableview.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+}
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    
+}
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    [_textView resignFirstResponder];
+    _toolbar.hidden = YES;
+}
+
 @end

@@ -9,6 +9,7 @@
 #import "LayoutView.h"
 #import "LayoutContainerView.h"
 #import "Constant.h"
+//#import <UIViewController+KeyboardAdditions.h>
 @interface LayoutView()
 
 @property (nonatomic,strong) CommentModel *model;
@@ -18,6 +19,8 @@
 @property (nonatomic,strong) UILabel      *addressLabel;
 @property (nonatomic,assign) UIView       *parent;
 @property (nonatomic,assign) BOOL         isLastFloor;
+
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *chatInputBottomSpace;
 
 @end
 
@@ -75,8 +78,76 @@
         }
         
     }
+    
+    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+    
+    longPressed.minimumPressDuration = 1;
+    
+    [self addGestureRecognizer:longPressed];
+    
     return self;
 }
+
+
+-(void)longPressToDo:(UILongPressGestureRecognizer *)gesture
+
+
+{
+    
+    if (gesture.state==UIGestureRecognizerStateBegan) {
+        [self becomeFirstResponder];
+        
+
+                CGPoint location = [gesture locationInView:self];
+                NSLog(@"%@",NSStringFromCGPoint(location));
+        UIMenuController *menu=[UIMenuController sharedMenuController];
+        NSLog(@"UILongPressGestureRecognizer---------->");
+        UIMenuItem *copyItem = [[UIMenuItem alloc] initWithTitle:@"评论" action:@selector(copyItemClicked:)];
+        UIMenuItem *resendItem = [[UIMenuItem alloc] initWithTitle:@"转发" action:@selector(resendItemClicked:)];
+        [menu setMenuItems:[NSArray arrayWithObjects:copyItem,resendItem,nil]];
+        //        [menu setTargetRect:CGRectMake(location.x, location.y, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) inView:self.view];
+        //        UIView *temp = [[UIView alloc] initWithFrame:CGRectMake(location.x, location.y,1 , 1)];
+        //        [menu setTargetRect:CGRectMake(location.x,location.y,0,0) inView:self.view];
+        [menu setTargetRect:CGRectMake(location.x, location.y, 0, 0) inView:self];
+        NSLog(@"%@",NSStringFromCGRect(self.bounds));
+        NSLog(@"%@",NSStringFromCGRect(self.frame));
+        
+        [menu setMenuVisible:YES animated:YES];
+    }
+    
+    
+    
+}
+
+#pragma mark 处理action事件
+-(BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    if(action ==@selector(copyItemClicked:)){
+        return YES;
+    }else if (action==@selector(resendItemClicked:)){
+        return YES;
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+#pragma mark  实现成为第一响应者方法
+-(BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+#pragma mark method
+
+-(void)copyItemClicked:(id)sender{
+    NSLog(@"评论");
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"commentNotification" object:nil userInfo:@{@"comment":self.commentLabel.text}];
+    // 通知代理
+}
+
+-(void)resendItemClicked:(id)sender{
+    NSLog(@"转发");
+    NSLog(@"%@",self.commentLabel.text);
+    //通知代理
+}
+
 
 
 /*
