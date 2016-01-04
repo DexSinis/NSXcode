@@ -17,7 +17,7 @@
 
 #import "RDRGrowingTextView.h"
 static CGFloat const MaxToolbarHeight = 200.0f;
-@interface StoryContentViewController ()<UIScrollViewDelegate, UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface StoryContentViewController ()<UIScrollViewDelegate, UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate,UITextViewDelegate>
 {
     NSMutableArray *_dataSource;
     UITableView    *_tableview;
@@ -49,6 +49,10 @@ static CGFloat const MaxToolbarHeight = 200.0f;
         self.viewmodel = vm;
         [_viewmodel addObserver:self forKeyPath:@"storyModel" options:NSKeyValueObservingOptionNew context:nil];
         [_viewmodel getStoryContentWithStoryID:_viewmodel.loadedStoryID];
+        
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginUpdateComment:)  name:@"commentNotification" object:nil];
+        
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(endUpdateComment:)  name:@"commentFinishNotification" object:nil];
 
     }
     return self;
@@ -62,20 +66,22 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     [self initSubViews];
     
     [self setUpTableView];
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateComment:)  name:@"commentNotification" object:nil];
-    
    
 }
 
--(void)updateComment:(NSNotification *)noti
+-(void)beginUpdateComment:(NSNotification *)noti
 {
     _toolbar.hidden = NO;
-    
+    _textView.placeholder = @"回复:测试意义";
     [_textView becomeFirstResponder];
 }
 
+-(void)endUpdateComment:(NSNotification *)noti
+{
+    _toolbar.hidden = YES;
+    
+    [_textView resignFirstResponder];
+}
 
 - (void)dealloc {
     [_viewmodel removeObserver:self forKeyPath:@"storyModel"];
@@ -448,6 +454,8 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     textView.layer.borderColor = [UIColor colorWithRed:255.0f/255.0f green:200.0f/255.0f blue:205.0f/255.0f alpha:1.0f].CGColor;
     textView.layer.borderWidth = 1.0f;
     textView.layer.masksToBounds = YES;
+    textView.delegate = self;
+    textView.returnKeyType =UIReturnKeyDone;
     _textView = textView;
     [_toolbar addSubview:textView];
     
@@ -477,11 +485,41 @@ static CGFloat const MaxToolbarHeight = 200.0f;
 {
 
     
-}
--(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
-{
-    [_textView resignFirstResponder];
-    _toolbar.hidden = YES;
+    
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    _toolbar.hidden = YES;
+    [_textView resignFirstResponder];
+}
+
+//- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+//    NSLog(@"%@",textView.text);
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"commentFinishNotification" object:nil userInfo:@{@"comment":textView.text}];
+//
+//    return NO;
+//}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (1 == range.length) {//按下回格键
+        return YES;
+    }
+    
+    if ([text isEqualToString:@"\n"]) {//按下return键
+        //这里隐藏键盘，不做任何处理
+        [textView resignFirstResponder];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"commentFinishNotification" object:nil userInfo:@{@"comment":textView.text}];
+         NSLog(@"%@",textView.text);
+         textView.text =nil;
+        return NO;
+    }else {
+        if ([textView.text length] < 140) {//判断字符个数
+            return YES;
+        }
+    }
+    return NO;
+}
 @end

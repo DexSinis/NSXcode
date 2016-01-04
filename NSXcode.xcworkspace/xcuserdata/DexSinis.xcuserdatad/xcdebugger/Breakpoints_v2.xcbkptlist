@@ -346,7 +346,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473601278.624638"
+                  timestampString = "473602427.414945"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
@@ -361,7 +361,7 @@
                   moduleName = "NSXcode"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a000/Documents/XcodeWP/NSXcode/NSXcode/Classes/User/Login/LogInViewController.m"
-                  timestampString = "473601278.624831"
+                  timestampString = "473602427.41512"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -1703,11 +1703,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/NewsDailyContent/Controller/StoryContentViewController.m"
-            timestampString = "473601179.449403"
+            timestampString = "473603167.998447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-webViewDidFinishLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1731,7 +1731,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/NewsDailyContent/Controller/StoryContentViewController.m"
@@ -1740,14 +1740,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "-updateComment:"
+            landmarkName = "-beginUpdateComment:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NSXcode/Classes/Home/NewsComment/Source/LayoutView.m"

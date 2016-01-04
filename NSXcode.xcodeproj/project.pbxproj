@@ -208,6 +208,7 @@
 		DEEAFA6B1C3A56D90033ABA1 /* YTNetworkLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA621C3A56D90033ABA1 /* YTNetworkLoad.m */; };
 		DEEAFA6F1C3A57180033ABA1 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFA6E1C3A57180033ABA1 /* Message.m */; };
 		DEEAFBBD1C3A90D20033ABA1 /* RDRGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */; };
+		DEEAFBDA1C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
 		DEF099281C215ADA005D0CB8 /* database.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094801C215AD9005D0CB8 /* database.js */; };
 		DEF099291C215ADA005D0CB8 /* resource.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF094821C215AD9005D0CB8 /* resource.js */; };
@@ -1569,6 +1570,8 @@
 		DEEAFA6E1C3A57180033ABA1 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		DEEAFBBB1C3A90D20033ABA1 /* RDRGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRGrowingTextView.h; sourceTree = "<group>"; };
 		DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDRGrowingTextView.m; sourceTree = "<group>"; };
+		DEEAFBD01C3A9FCE0033ABA1 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		DEF0947B1C215AD9005D0CB8 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
 		DEF094801C215AD9005D0CB8 /* database.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = database.js; sourceTree = "<group>"; };
 		DEF094821C215AD9005D0CB8 /* resource.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = resource.js; sourceTree = "<group>"; };
@@ -2704,6 +2707,7 @@
 		DE5C15531C06AE8700E8B428 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DEEAFBBE1C3A9FCE0033ABA1 /* UIPlaceHolderTextView */,
 				DEDCE8CE1C2E383900C7757C /* UIBarButtonItem+Badge.h */,
 				DEDCE8CF1C2E383900C7757C /* UIBarButtonItem+Badge.m */,
 				DEDCE8D01C2E383900C7757C /* UIButton+Badge.h */,
@@ -3563,6 +3567,15 @@
 				DEEAFBBC1C3A90D20033ABA1 /* RDRGrowingTextView.m */,
 			);
 			path = RDRGrowingTextView;
+			sourceTree = "<group>";
+		};
+		DEEAFBBE1C3A9FCE0033ABA1 /* UIPlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DEEAFBD01C3A9FCE0033ABA1 /* UIPlaceHolderTextView.h */,
+				DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */,
+			);
+			path = UIPlaceHolderTextView;
 			sourceTree = "<group>";
 		};
 		DEF0947C1C215AD9005D0CB8 /* bin */ = {
@@ -7497,6 +7510,7 @@
 				DEE407751C34C195000AB909 /* NewsViewController.m in Sources */,
 				DEF09C531C215ADB005D0CB8 /* Changelog.md in Sources */,
 				DEF099C61C215ADA005D0CB8 /* README.md in Sources */,
+				DEEAFBDA1C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m in Sources */,
 				DEF099991C215ADA005D0CB8 /* stream.markdown in Sources */,
 				DEF09B371C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEB3E9781C16818B00495FBE /* NSXNavigationController.m in Sources */,
