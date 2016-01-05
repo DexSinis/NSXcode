@@ -9,7 +9,9 @@
 #import "Constant.h"
 #import "NSXComment.h"
 
+
 @implementation NSXComment
+
 
 
 -(instancetype)initWithDict:(NSDictionary *)dic{

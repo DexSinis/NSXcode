@@ -142,7 +142,7 @@
 -(void)copyItemClicked:(id)sender{
     NSLog(@"评论");
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"commentNotification" object:nil userInfo:@{@"comment":self.commentLabel.text}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"commentNotification" object:nil userInfo:@{@"comment":self.model}];
     // 通知代理
 }
 

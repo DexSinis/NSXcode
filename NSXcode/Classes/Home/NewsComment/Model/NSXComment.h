@@ -24,6 +24,8 @@
 @property (nonatomic,strong) NSString *likeCount;  //点赞数
 @property (nonatomic,strong) NSString *commentCount;  //评论数
 
+@property (nonatomic,strong) NSString *maxfloor;
+
 -(instancetype)initWithDict:(NSDictionary *)dic;
 - (CGSize)sizeWithConstrainedToSize:(CGSize)size;
 @end

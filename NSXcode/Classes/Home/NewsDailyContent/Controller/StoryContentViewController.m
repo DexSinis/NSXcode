@@ -13,19 +13,26 @@
 #import "CommentViewController.h"
 #import "CommentTableViewCell.h"
 #import "LayoutContainerView.h"
-#import "CommentModel.h"
+
 
 #import "RDRGrowingTextView.h"
+
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "NSXComment.h"
+#import "NSXCommentViewModel+Provider.h"
+#import "NSXCommentViewModel.h"
+#import "NSXCommentViewModelParam.h"
+#import "NSXCommentViewModelResult.h"
+#import "NSXHttpTool.h"
 static CGFloat const MaxToolbarHeight = 200.0f;
 @interface StoryContentViewController ()<UIScrollViewDelegate, UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate,UITextViewDelegate>
 {
-    NSMutableArray *_dataSource;
-    UITableView    *_tableview;
-    
     UIToolbar *_toolbar;
     RDRGrowingTextView *_textView;
 }
-
+@property (nonatomic,strong)   NSMutableArray *dataSource;
+@property  (nonatomic,strong)  UITableView    *tableview;
 
 @property(strong,nonatomic)UIImageView *imageView;
 @property(strong,nonatomic)UIView *headerView;
@@ -38,6 +45,8 @@ static CGFloat const MaxToolbarHeight = 200.0f;
 @property(strong,nonatomic)CommentViewController *commentViewController;
 
 @property(strong,nonatomic)StoryContentViewModel *viewmodel;
+
+@property(strong,nonatomic)NSXComment *currentComment;
 
 @end
 
@@ -72,7 +81,10 @@ static CGFloat const MaxToolbarHeight = 200.0f;
 -(void)beginUpdateComment:(NSNotification *)noti
 {
     _toolbar.hidden = NO;
-    _textView.placeholder = @"回复:测试意义";
+    NSXComment *comment = noti.userInfo[@"comment"];
+    self.currentComment = comment;
+    NSString *placeholderText = [NSString stringWithFormat:@"回复:%@",comment.username];
+    _textView.placeholder = placeholderText;
     [_textView becomeFirstResponder];
 }
 
@@ -281,46 +293,17 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - 初始化
+- (NSMutableArray *)dataSource
+{
+    if (_dataSource == nil) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
 
 - (void)setUpTableView {
-//    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    /*说明：从网易客服端获取的json，为测试用，做了编辑*/
 
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"json"];
-    
-    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
-    
-    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
-    _dataSource = [[NSMutableArray alloc] init];
-    
-    for (NSDictionary *dic in dict[@"hotPosts"]) {
-        NSMutableArray *arr =[[NSMutableArray alloc] init];
-        NSArray *allkey =[dic allKeys];
-        NSArray *sortedArray= [allkey sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            
-            NSNumber *number1 = [NSNumber numberWithInt:[obj1 intValue]];
-            NSNumber *number2 = [NSNumber numberWithInt:[obj2 intValue]];
-            
-            NSComparisonResult result = [number1 compare:number2];
-            
-            return result == NSOrderedDescending; // 升序
-            
-        }];
-        
-        for (NSString *index in sortedArray) {
-            NSDictionary *dict =dic[index];
-            CommentModel *model =[[CommentModel alloc] initWithDict:dict];
-            model.floor = index;
-            [arr addObject:model];
-        }
-        
-        [_dataSource addObject:arr];
-    }
-    
-    
-    
     _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _tableview.backgroundView = nil;
@@ -333,12 +316,240 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     _tableview.delegate = self;
     _tableview.dataSource = self;
     _tableview.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    
+    
+    _tableview.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    // 马上进入刷新状态
+    [_tableview.mj_header beginRefreshing];
+    
+    _tableview.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     //    _tableview.scrollEnabled =NO;
     //    NSLog(@"%f------------------------------>>>>>>>>>>>>>>>>>>",.contentSize);
 //    _tableview.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 300.f)];
    
     
 }
+
+-(void)loadNewData
+{
+    // Do any additional setup after loading the view, typically from a nib.
+    /*说明：从网易客服端获取的json，为测试用，做了编辑*/
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"testa" ofType:@"json"];
+    
+    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+    
+    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    //    self.dataSource = [[NSMutableArray alloc] init];
+    
+    if (self.dataSource!=nil) {
+        
+        int i = 0;
+        for (NSDictionary *dic in dict[@"hotPosts"]) {
+            NSMutableArray *arr =[[NSMutableArray alloc] init];
+            NSArray *allkey =[dic allKeys];
+            NSArray *sortedArray= [allkey sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                
+                NSNumber *number1 = [NSNumber numberWithInt:[obj1 intValue]];
+                NSNumber *number2 = [NSNumber numberWithInt:[obj2 intValue]];
+                
+                NSComparisonResult result = [number1 compare:number2];
+                
+                return result == NSOrderedDescending; // 升序
+                
+            }];
+            
+            i++;
+            for (NSString *index in sortedArray) {
+                NSDictionary *dict =dic[index];
+                //                CommentModel *model =[[CommentModel alloc] initWithDict:dict];
+                NSXComment *model = [[NSXComment alloc] initWithDict:dict];
+                model.timeString = [NSString stringWithFormat:@"%@",[NSDate new]];
+                int a = arc4random()%1000;
+                int b = arc4random()%2000;
+                model.likeCount =[NSString stringWithFormat:@"%d",b];
+                model.commentCount =[NSString stringWithFormat:@"%d",a];
+                model.userId = @"4f0f3105-dd04-4105-a2b5-93fa5bc0b189";
+                model.newsId = @"20e8a993-bb33-4472-b434-8a4485e37e02";
+                model.floor = index;
+                model.storey = [NSString stringWithFormat:@"%d",i];
+                [arr addObject:model];
+                
+                //                NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
+                //                param.user = model.username;
+                //                param.address = model.address;
+                //                param.comment = model.comment;
+                //                param.timeString = model.timeString;
+                //                param.floor = model.floor;
+                //                param.newsId = model.newsId;
+                //                param.userId = model.userId;
+                //                param.likeCount = model.likeCount;
+                //                param.commentCount = model.commentCount;
+                
+                //                NSDictionary *dictmodel = [model mj_keyValues];
+                //
+                //                [NSXCommentViewModel commentViewModelArrayWithParam:dictmodel success:^(NSXCommentViewModelResult *result) {
+                //                    [_tableview reloadData];
+                //
+                //                    [_tableview.mj_footer endRefreshing];
+                //
+                //                } failure:^(NSError *error) {
+                //
+                //                }];
+                //                NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentInsert"];
+                //
+                //                 NSDictionary *dictmodel = [model mj_keyValues];
+                //                [NSXHttpTool post:url params:dictmodel success:^(id responseObj) {
+                //
+                //                } failure:^(NSError *error) {
+                //
+                //                }];
+                
+            }
+            
+            [self.dataSource addObject:arr];
+        }
+        
+        
+        [_tableview reloadData];
+        
+        [_tableview.mj_header endRefreshing];
+    }
+    
+    
+}
+
+-(void)loadMoreData
+{
+    //    // Do any additional setup after loading the view, typically from a nib.
+    //    /*说明：从网易客服端获取的json，为测试用，做了编辑*/
+    //    NSString *path = [[NSBundle mainBundle] pathForResource:@"testb" ofType:@"json"];
+    //
+    //    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+    //
+    //    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    ////    self.dataSource = [[NSMutableArray alloc] init];
+    //
+    //    if (self.dataSource!=nil) {
+    //        for (NSDictionary *dic in dict[@"hotPosts"]) {
+    //            NSMutableArray *arr =[[NSMutableArray alloc] init];
+    //            NSArray *allkey =[dic allKeys];
+    //            NSArray *sortedArray= [allkey sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    //
+    //                NSNumber *number1 = [NSNumber numberWithInt:[obj1 intValue]];
+    //                NSNumber *number2 = [NSNumber numberWithInt:[obj2 intValue]];
+    //
+    //                NSComparisonResult result = [number1 compare:number2];
+    //
+    //                return result == NSOrderedDescending; // 升序
+    //
+    //            }];
+    //
+    //            for (NSString *index in sortedArray) {
+    //                NSDictionary *dict =dic[index];
+    ////                CommentModel *model =[[CommentModel alloc] initWithDict:dict];
+    //                NSXComment *model = [[NSXComment alloc] initWithDict:dict];
+    //                model.floor = index;
+    //                [arr addObject:model];
+    //            }
+    //
+    //            [self.dataSource addObject:arr];
+    //
+    //        }
+    //
+    //
+    //        [_tableview reloadData];
+    //
+    //        [_tableview.mj_footer endRefreshing];
+    //    }
+    //
+    
+    
+    NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
+    
+    [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+        
+        
+        
+        //         [result.viewModel.hotPostsIdArray addObjectsFromArray:[result.viewModel.hotPosts valueForKeyPath:@"username"]];
+        //
+        //        NSArray *a = result.viewModel.hotPostsIdArray;
+        //        NSMutableSet *set=[NSMutableSet set];
+        //
+        //
+        //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+        //
+        //        for (int i = 0; i<sortedByName.count; i++) {
+        //             NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+        //
+        //        }
+        
+        
+        
+        
+        //        [result.viewModel.hotPosts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        //            [set addObject:obj[@"storey"]];//利用set不重复的特性,得到有多少组,根据数组中的MeasureType字段
+        //        }];
+        
+        NSDictionary *dict  = [result mj_keyValues];
+        //        NSLog(@"%@",dict);
+        
+        //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+        //
+        //        for (int i = 0; i<sortedByName.count; i++) {
+        //            NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+        //
+        //        }
+        NSXCommentViewModel *vm = result.viewModel;
+        NSArray *sortedByName1 = [vm valueForKeyPath:@"hotPosts.storey"];
+        NSInteger max = [[sortedByName1 valueForKeyPath:@"@max.intValue"] integerValue];
+        
+        //        [dict valueForKeyPath:@"vm.hotPosts.storey"];
+        NSLog(@"%@,-------%ld",sortedByName1,(long)max);
+        
+        
+        NSComparator cmptr = ^(id obj1, id obj2){
+            NSXComment *comment1 = obj1;
+            NSXComment *comment2 = obj2;
+            if ([comment1.floor intValue] > [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedDescending;
+            }
+            
+            if ([comment1.floor intValue] < [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+            return (NSComparisonResult)NSOrderedSame;  
+        };
+        
+        for (int i=1; i<=6; i++) {
+            NSMutableArray *arr =[[NSMutableArray alloc] init];
+            NSArray *arrafter =[[NSMutableArray alloc] init];
+            for (NSXComment *comment in result.viewModel.hotPosts) {
+                if ([comment.storey isEqualToString:[NSString stringWithFormat:@"%d",i]]) {
+                    [arr addObject:comment];
+                }
+            }
+            for (NSXComment *comment in arrafter) {
+                comment.maxfloor = [NSString stringWithFormat:@"%lu",(unsigned long)arrafter.count];
+            }
+            arrafter = [arr sortedArrayUsingComparator:cmptr];
+            [self.dataSource addObject:arrafter];
+        }
+        
+        
+        //        _dataSource = result.viewModel.hotPosts;
+        
+        [_tableview reloadData];
+        
+        [_tableview.mj_footer endRefreshing];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
 
 #pragma mark -- tableview
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -515,7 +726,120 @@ static CGFloat const MaxToolbarHeight = 200.0f;
         //这里隐藏键盘，不做任何处理
         [textView resignFirstResponder];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"commentFinishNotification" object:nil userInfo:@{@"comment":textView.text}];
+        
+//        [NSXCommentViewModel commentViewModelInsertWithParam:<#(NSXCommentViewModelParam *)#> success:<#^(NSXCommentViewModelResult *result)success#> failure:<#^(NSError *error)failure#>];
+        
+        NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentInsert"];
+       
+        NSXComment *model = [[NSXComment alloc] init];
+        
+        model.timeString = [NSString stringWithFormat:@"%@",[NSDate new]];
+        int a = arc4random()%1000;
+        int b = arc4random()%2000;
+        model.likeCount =[NSString stringWithFormat:@"%d",b];
+        model.commentCount =[NSString stringWithFormat:@"%d",a];
+        model.userId = @"4f0f3105-dd04-4105-a2b5-93fa5bc0b189";
+        model.newsId = @"20e8a993-bb33-4472-b434-8a4485e37e02";
+        model.floor = [NSString stringWithFormat:@"%d",[self.currentComment.maxfloor intValue]+1];
+        model.storey = [NSString stringWithFormat:@"%d",1];
+        model.username =@"dexsinis";
+        model.comment = textView.text;
+        model.address = @"广州千云科技";
+        
+        NSDictionary *dictmodel = [model keyValues];
+        
+        [NSXHttpTool post:url params:dictmodel success:^(id responseObj) {
+            
+            NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
+            
+            [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+                
+                
+                
+                //         [result.viewModel.hotPostsIdArray addObjectsFromArray:[result.viewModel.hotPosts valueForKeyPath:@"username"]];
+                //
+                //        NSArray *a = result.viewModel.hotPostsIdArray;
+                //        NSMutableSet *set=[NSMutableSet set];
+                //
+                //
+                //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+                //
+                //        for (int i = 0; i<sortedByName.count; i++) {
+                //             NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+                //
+                //        }
+                
+                
+                
+                
+                //        [result.viewModel.hotPosts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                //            [set addObject:obj[@"storey"]];//利用set不重复的特性,得到有多少组,根据数组中的MeasureType字段
+                //        }];
+                
+                NSDictionary *dict  = [result mj_keyValues];
+                self.dataSource = [NSMutableArray array];
+                //        NSLog(@"%@",dict);
+                
+                //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+                //
+                //        for (int i = 0; i<sortedByName.count; i++) {
+                //            NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+                //
+                //        }
+                NSXCommentViewModel *vm = result.viewModel;
+                NSArray *sortedByName1 = [vm valueForKeyPath:@"hotPosts.storey"];
+                NSInteger max = [[sortedByName1 valueForKeyPath:@"@max.intValue"] integerValue];
+                
+                //        [dict valueForKeyPath:@"vm.hotPosts.storey"];
+                NSLog(@"%@,-------%ld",sortedByName1,(long)max);
+                
+                
+                NSComparator cmptr = ^(id obj1, id obj2){
+                    NSXComment *comment1 = obj1;
+                    NSXComment *comment2 = obj2;
+                    if ([comment1.floor intValue] > [comment2.floor intValue]) {
+                        return (NSComparisonResult)NSOrderedDescending;
+                    }
+                    
+                    if ([comment1.floor intValue] < [comment2.floor intValue]) {
+                        return (NSComparisonResult)NSOrderedAscending;
+                    }
+                    return (NSComparisonResult)NSOrderedSame;
+                };
+                
+                for (int i=1; i<=6; i++) {
+                    NSMutableArray *arr =[[NSMutableArray alloc] init];
+                    NSArray *arrafter =[[NSMutableArray alloc] init];
+                    for (NSXComment *comment in result.viewModel.hotPosts) {
+                        if ([comment.storey isEqualToString:[NSString stringWithFormat:@"%d",i]]) {
+                            [arr addObject:comment];
+                        }
+                    }
+                    for (NSXComment *comment in arrafter) {
+                        comment.maxfloor = [NSString stringWithFormat:@"%lu",(unsigned long)arrafter.count];
+                    }
+                    arrafter = [arr sortedArrayUsingComparator:cmptr];
+                    [self.dataSource addObject:arrafter];
+                }
+                
+                
+                //        _dataSource = result.viewModel.hotPosts;
+                
+                [_tableview reloadData];
+                
+                [_tableview.mj_footer endRefreshing];
+                
+            } failure:^(NSError *error) {
+                
+            }];
+        } failure:^(NSError *error) {
+            
+        }];
+        
+        
          NSLog(@"%@",textView.text);
+        
+        
          textView.text =nil;
         return NO;
     }else {
