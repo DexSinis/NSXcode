@@ -1,5 +1,5 @@
 //
-//  OSCNews.m
+//  OSCcomment.m
 //  iosapp
 //
 //  Created by chenhaoxiang on 10/27/14.
@@ -16,36 +16,36 @@
 
 
 @implementation NSXCommentViewModel (Provider)
-+ (void)newsViewModelWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
++ (void)commentViewModelWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
 {
-    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"newsViewModel"];
+    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentViewModel"];
     [NSXBaseTool postWithUrl:url param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
 }
 
-+ (void)newsViewModelArrayWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
++ (void)commentViewModelArrayWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
 {
-        NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"newsArray"];
+        NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentArray"];
 [NSXBaseTool postWithUrl:url param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
     
 //    [NSXBaseTool postWithUrl:@"http://localhost:4000" param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
 }
 
-+ (void)newsViewModelInsertWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
++ (void)commentViewModelInsertWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
 {
-      NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"newsInsert"];
+      NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentInsert"];
     [NSXBaseTool postWithUrl:url param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
 }
 
-+ (void)newsViewModelUpdateWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
++ (void)commentViewModelUpdateWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
 {
-    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"newsUpdate"];
+    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentUpdate"];
     [NSXBaseTool postWithUrl:url param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
 }
 
 
-+ (void)newsViewModelDeleteWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
++ (void)commentViewModelDeleteWithParam:(NSXCommentViewModelParam *)param success:(void (^)(NSXCommentViewModelResult *result))success failure:(void (^)(NSError *error))failure
 {
-    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"newsDelete"];
+    NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentDelete"];
     [NSXBaseTool postWithUrl:url param:param resultClass:[NSXCommentViewModelResult class] success:success failure:failure];
 }
 

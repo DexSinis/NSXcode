@@ -24,18 +24,18 @@
 + (NSDictionary *)mj_objectClassInArray
 {
     return @{
-             @"daysDataList" : @"NSXComment",
-             @"top_stories" : @"NSXComment",
+             @"hotPosts" : @"NSXComment",
+             @"commonPosts" : @"NSXComment",
              };
 }
-+ (NSDictionary *)mj_replacedKeyFromPropertyName
-{
-    return @{
-             @"currentLoadDayStr" : @"date",
-//             @"newsId" : @"id"
-             };
-    
-}
+//+ (NSDictionary *)mj_replacedKeyFromPropertyName
+//{
+//    return @{
+//             @"currentLoadDayStr" : @"date",
+////             @"newsId" : @"id"
+//             };
+//    
+//}
 
 
 
@@ -45,7 +45,7 @@
     NSLog(@"getLatestStories----------");
     NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
     param.currentcommonPostID =@"20151226";
-    [NSXCommentViewModel newsViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+    [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
 //        NSXCommentViewModel *viewModel = result.viewModel;
 //        self.currentLoadDayStr = viewModel.currentLoadDayStr;
 //        SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
@@ -66,7 +66,7 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadLatestDaily" object:nil userInfo:@{@"cyl_reloadData":@"cyl_reloadData"}];
     }];
 //    NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
-//   [NSXCommentViewModel newsViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+//   [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
 //       
 //   } failure:^(NSError *error) {
 //       
@@ -103,7 +103,7 @@
 
     param.currentcommonPostID = self.currentcommonPostID;
     param.currentcommonPostID =@"20151227";
-    [NSXCommentViewModel newsViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+    [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
 //        NSXCommentViewModel *viewModel = result.viewModel;
 //        SectionViewModel *newvm = [[SectionViewModel alloc] initWithViewModel:viewModel];
 //        SectionViewModel *oldvm = _daysDataList[0];
@@ -184,7 +184,7 @@
         NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
         param.currentcommonPostID = self.currentcommonPostID;
         param.currentcommonPostID =@"20151225";
-       [NSXCommentViewModel newsViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+       [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
 //           NSXCommentViewModel *viewModel = result.viewModel;
 //           SectionViewModel *vm = [[SectionViewModel alloc] initWithViewModel:viewModel];
 //           [self.daysDataList addObject:vm];

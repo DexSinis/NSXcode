@@ -19,6 +19,8 @@
 #import "NSXCommentViewModelParam.h"
 #import "NSXCommentViewModelResult.h"
 
+#import "NSXHttpTool.h"
+
 @interface CommentViewController ()<UITableViewDataSource ,UITableViewDelegate>
 //{
  @property (nonatomic,strong)   NSMutableArray *dataSource;
@@ -120,6 +122,8 @@
 //    self.dataSource = [[NSMutableArray alloc] init];
     
     if (self.dataSource!=nil) {
+        
+        int i = 0;
         for (NSDictionary *dic in dict[@"hotPosts"]) {
             NSMutableArray *arr =[[NSMutableArray alloc] init];
             NSArray *allkey =[dic allKeys];
@@ -133,13 +137,53 @@
                 return result == NSOrderedDescending; // 升序
                 
             }];
-            
+    
+            i++;
             for (NSString *index in sortedArray) {
                 NSDictionary *dict =dic[index];
 //                CommentModel *model =[[CommentModel alloc] initWithDict:dict];
                 NSXComment *model = [[NSXComment alloc] initWithDict:dict];
+                model.timeString = [NSString stringWithFormat:@"%@",[NSDate new]];
+                int a = arc4random()%1000;
+                int b = arc4random()%2000;
+                model.likeCount =[NSString stringWithFormat:@"%d",b];
+                model.commentCount =[NSString stringWithFormat:@"%d",a];
+                model.userId = @"4f0f3105-dd04-4105-a2b5-93fa5bc0b189";
+                model.newsId = @"20e8a993-bb33-4472-b434-8a4485e37e02";
                 model.floor = index;
+                model.storey = [NSString stringWithFormat:@"%d",i];
                 [arr addObject:model];
+                
+//                NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
+//                param.user = model.username;
+//                param.address = model.address;
+//                param.comment = model.comment;
+//                param.timeString = model.timeString;
+//                param.floor = model.floor;
+//                param.newsId = model.newsId;
+//                param.userId = model.userId;
+//                param.likeCount = model.likeCount;
+//                param.commentCount = model.commentCount;
+                
+//                NSDictionary *dictmodel = [model mj_keyValues];
+//                
+//                [NSXCommentViewModel commentViewModelArrayWithParam:dictmodel success:^(NSXCommentViewModelResult *result) {
+//                    [_tableview reloadData];
+//                    
+//                    [_tableview.mj_footer endRefreshing];
+//                    
+//                } failure:^(NSError *error) {
+//                    
+//                }];
+//                NSString *url = [NSString stringWithFormat:@"%@%@",Domain,@"commentInsert"];
+//
+//                 NSDictionary *dictmodel = [model mj_keyValues];
+//                [NSXHttpTool post:url params:dictmodel success:^(id responseObj) {
+//                    
+//                } failure:^(NSError *error) {
+//                    
+//                }];
+               
             }
             
             [self.dataSource addObject:arr];
@@ -156,50 +200,128 @@
 
 -(void)loadMoreData
 {
-    // Do any additional setup after loading the view, typically from a nib.
-    /*说明：从网易客服端获取的json，为测试用，做了编辑*/
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"testb" ofType:@"json"];
+//    // Do any additional setup after loading the view, typically from a nib.
+//    /*说明：从网易客服端获取的json，为测试用，做了编辑*/
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"testb" ofType:@"json"];
+//    
+//    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+//    
+//    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+////    self.dataSource = [[NSMutableArray alloc] init];
+//    
+//    if (self.dataSource!=nil) {
+//        for (NSDictionary *dic in dict[@"hotPosts"]) {
+//            NSMutableArray *arr =[[NSMutableArray alloc] init];
+//            NSArray *allkey =[dic allKeys];
+//            NSArray *sortedArray= [allkey sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//                
+//                NSNumber *number1 = [NSNumber numberWithInt:[obj1 intValue]];
+//                NSNumber *number2 = [NSNumber numberWithInt:[obj2 intValue]];
+//                
+//                NSComparisonResult result = [number1 compare:number2];
+//                
+//                return result == NSOrderedDescending; // 升序
+//                
+//            }];
+//            
+//            for (NSString *index in sortedArray) {
+//                NSDictionary *dict =dic[index];
+////                CommentModel *model =[[CommentModel alloc] initWithDict:dict];
+//                NSXComment *model = [[NSXComment alloc] initWithDict:dict];
+//                model.floor = index;
+//                [arr addObject:model];
+//            }
+//            
+//            [self.dataSource addObject:arr];
+//
+//        }
+//        
+//        
+//        [_tableview reloadData];
+//        
+//        [_tableview.mj_footer endRefreshing];
+//    }
+//    
+
     
-    NSData *jsonData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+    NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
     
-    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
-//    self.dataSource = [[NSMutableArray alloc] init];
+    [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+        
+        
+        
+//         [result.viewModel.hotPostsIdArray addObjectsFromArray:[result.viewModel.hotPosts valueForKeyPath:@"username"]];
+//        
+//        NSArray *a = result.viewModel.hotPostsIdArray;
+//        NSMutableSet *set=[NSMutableSet set];
+//        
+//        
+//        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+//        
+//        for (int i = 0; i<sortedByName.count; i++) {
+//             NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+//            
+//        }
+      
+       
+        
+        
+//        [result.viewModel.hotPosts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            [set addObject:obj[@"storey"]];//利用set不重复的特性,得到有多少组,根据数组中的MeasureType字段
+//        }];
+        
+        NSDictionary *dict  = [result mj_keyValues];
+//        NSLog(@"%@",dict);
+        
+//        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+//        
+//        for (int i = 0; i<sortedByName.count; i++) {
+//            NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+//            
+//        }
+        NSXCommentViewModel *vm = result.viewModel;
+        NSArray *sortedByName1 = [vm valueForKeyPath:@"hotPosts.storey"];
+        NSInteger max = [[sortedByName1 valueForKeyPath:@"@max.intValue"] integerValue];
+        
+//        [dict valueForKeyPath:@"vm.hotPosts.storey"];
+        NSLog(@"%@,-------%ld",sortedByName1,(long)max);
     
-    if (self.dataSource!=nil) {
-        for (NSDictionary *dic in dict[@"hotPosts"]) {
-            NSMutableArray *arr =[[NSMutableArray alloc] init];
-            NSArray *allkey =[dic allKeys];
-            NSArray *sortedArray= [allkey sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-                
-                NSNumber *number1 = [NSNumber numberWithInt:[obj1 intValue]];
-                NSNumber *number2 = [NSNumber numberWithInt:[obj2 intValue]];
-                
-                NSComparisonResult result = [number1 compare:number2];
-                
-                return result == NSOrderedDescending; // 升序
-                
-            }];
-            
-            for (NSString *index in sortedArray) {
-                NSDictionary *dict =dic[index];
-//                CommentModel *model =[[CommentModel alloc] initWithDict:dict];
-                NSXComment *model = [[NSXComment alloc] initWithDict:dict];
-                model.floor = index;
-                [arr addObject:model];
+        
+        NSComparator cmptr = ^(id obj1, id obj2){
+            NSXComment *comment1 = obj1;
+            NSXComment *comment2 = obj2;
+            if ([comment1.floor intValue] > [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedDescending;
             }
             
-            [self.dataSource addObject:arr];
-
+            if ([comment1.floor intValue] < [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+            return (NSComparisonResult)NSOrderedSame;  
+        };
+        
+        for (int i=1; i<=6; i++) {
+             NSMutableArray *arr =[[NSMutableArray alloc] init];
+             NSArray *arrafter =[[NSMutableArray alloc] init];
+            for (NSXComment *comment in result.viewModel.hotPosts) {
+                if ([comment.storey isEqualToString:[NSString stringWithFormat:@"%d",i]]) {
+                    [arr addObject:comment];
+                }
+            }
+             arrafter = [arr sortedArrayUsingComparator:cmptr];
+            [self.dataSource addObject:arrafter];
         }
         
+    
+//        _dataSource = result.viewModel.hotPosts;
         
         [_tableview reloadData];
         
         [_tableview.mj_footer endRefreshing];
-    }
-    
-    
-//    [NSXCommentViewModel commentViewModelWithParam]
+        
+    } failure:^(NSError *error) {
+        
+    }];
    
 }
 

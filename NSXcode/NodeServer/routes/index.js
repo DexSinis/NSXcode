@@ -14,6 +14,7 @@ var crypto = require("crypto");
 var user = require("../models/user");
 var news = require("../models/news");
 var account = require("../models/account");
+var comment = require("../models/comment");
 
 
 router.post('/account', function(req, res, next) {
@@ -114,6 +115,62 @@ router.post('/news', function(req, res, next) {
 		//}
 	});
 });
+
+
+
+
+
+router.post('/commentViewModel', function(req, res, next) {
+
+	var keyword =  "7"//req.body.param.keyword;
+	//keyword ="7";
+	var daysDataList;
+	comment.getList(keyword, function(err, hotPostList_, fields){
+		//if(!user_){
+		comment.getTopList(keyword, function(err, commonList, fields){
+			var data = {
+				viewModel:{
+					/*date : "20151226",
+					daysDataList : newsList_,
+					top_stories: topNewsList_ */
+					hotPosts:hotPostList_,
+					commonPosts:commonList
+
+				}}
+			res.writeHead(200, {'Content-Type': 'application/json'});
+			res.end(JSON.stringify(data));
+		})
+	});
+
+});
+
+router.post('/commentInsert', function(req, res, next) {
+
+
+	var comment_ = new comment({
+	 commentId : req.body.commentId,
+	 username : req.body.username,
+	 address : req.body.address,
+	 comment : req.body.comment,
+	 timeString : req.body.timeString,
+	 floor : req.body.floor,
+	 newsId : req.body.newsId,
+	 userId : req.body.userId,
+	 likeCount : req.body.likeCount,
+	 commentCount : req.body.commentCount,
+		storey : req.body.storey,
+
+	});
+
+	comment_.add(function(err){
+		if(err){
+			throw err;
+		}else{
+			res.send(true);
+		}
+	});
+});
+
 
 router.post('/newsViewModel', function(req, res, next) {
 

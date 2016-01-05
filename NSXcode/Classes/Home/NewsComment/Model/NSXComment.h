@@ -16,6 +16,7 @@
 @property (nonatomic,strong) NSString *comment;
 @property (nonatomic,strong) NSString *timeString;
 @property (nonatomic,strong) NSString *floor;
+@property (nonatomic,strong) NSString *storey;
 
 @property (nonatomic,strong) NSString *newsId;  //新闻的id
 @property (nonatomic,strong) NSString *userId;  //评论用户的id
