@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommentModel.h"
+#import "NSXComment.h"
 @interface GridLayoutView : UIView
 - (instancetype)initWithFrame:(CGRect)frame andModelArray:(NSArray *)modelArray;
 @end

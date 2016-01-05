@@ -17,6 +17,9 @@
 @property (nonatomic,strong) NSString *timeString;
 @property (nonatomic,strong) NSString *floor;
 
+@property (nonatomic,strong) NSString *newsId;
+@property (nonatomic,strong) NSString *userId;
+
 
 -(instancetype)initWithDict:(NSDictionary *)dic;
 -(CGSize)sizeWithConstrainedToSize:(CGSize)sz;

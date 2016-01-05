@@ -12,7 +12,7 @@
 //#import <UIViewController+KeyboardAdditions.h>
 @interface LayoutView()
 
-@property (nonatomic,strong) CommentModel *model;
+@property (nonatomic,strong) NSXComment *model;
 @property (nonatomic,strong) UILabel      *nameLabel;
 @property (nonatomic,strong) UILabel      *floorLabel;
 @property (nonatomic,strong) UILabel      *commentLabel;
@@ -26,7 +26,7 @@
 
 @implementation LayoutView
 
-- (instancetype)initWithFrame:(CGRect)frame model:(CommentModel *)amodel parentView:(UIView*)p isLast:(BOOL)isLast
+- (instancetype)initWithFrame:(CGRect)frame model:(NSXComment *)amodel parentView:(UIView*)p isLast:(BOOL)isLast
 {
     if (self = [super initWithFrame:frame]) {
         self.isLastFloor = isLast;
@@ -39,7 +39,7 @@
         }
         
         _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _nameLabel.text = self.model.name;
+        _nameLabel.text = self.model.username;
         _nameLabel.font = NameFont;
         _nameLabel.textColor = NameColor;
         
@@ -79,9 +79,11 @@
         
     }
     
-    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
+//    UILongPressGestureRecognizer *longPressed = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressToDo:)];
     
-    longPressed.minimumPressDuration = 1;
+     UITapGestureRecognizer *longPressed = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(longPressToDo:)];
+    
+//    longPressed.minimumPressDuration = 1;
     
     [self addGestureRecognizer:longPressed];
     
@@ -94,7 +96,7 @@
 
 {
     
-    if (gesture.state==UIGestureRecognizerStateBegan) {
+//    if (gesture.state==UIGestureRecognizerStateBegan) {
         [self becomeFirstResponder];
         
 
@@ -104,7 +106,9 @@
         NSLog(@"UILongPressGestureRecognizer---------->");
         UIMenuItem *copyItem = [[UIMenuItem alloc] initWithTitle:@"评论" action:@selector(copyItemClicked:)];
         UIMenuItem *resendItem = [[UIMenuItem alloc] initWithTitle:@"转发" action:@selector(resendItemClicked:)];
-        [menu setMenuItems:[NSArray arrayWithObjects:copyItem,resendItem,nil]];
+        UIMenuItem *likeItem = [[UIMenuItem alloc] initWithTitle:@"赞" action:@selector(likeItemClicked:)];
+
+        [menu setMenuItems:[NSArray arrayWithObjects:copyItem,resendItem,likeItem,nil]];
         //        [menu setTargetRect:CGRectMake(location.x, location.y, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) inView:self.view];
         //        UIView *temp = [[UIView alloc] initWithFrame:CGRectMake(location.x, location.y,1 , 1)];
         //        [menu setTargetRect:CGRectMake(location.x,location.y,0,0) inView:self.view];
@@ -113,7 +117,7 @@
         NSLog(@"%@",NSStringFromCGRect(self.frame));
         
         [menu setMenuVisible:YES animated:YES];
-    }
+//    }
     
     
     
@@ -143,6 +147,12 @@
 }
 
 -(void)resendItemClicked:(id)sender{
+    NSLog(@"转发");
+    NSLog(@"%@",self.commentLabel.text);
+    //通知代理
+}
+
+-(void)likeItemClicked:(id)sender{
     NSLog(@"转发");
     NSLog(@"%@",self.commentLabel.text);
     //通知代理

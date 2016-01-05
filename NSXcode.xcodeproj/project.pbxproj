@@ -174,6 +174,13 @@
 		DEE820591C2CE1C800E515C9 /* NSXAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820551C2CE1C800E515C9 /* NSXAccountParam.m */; };
 		DEE8205A1C2CE1C800E515C9 /* NSXAccountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */; };
 		DEE8205D1C2CE2A200E515C9 /* NSXAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */; };
+		DEEA5CFB1C3B60CE001A4771 /* NSXComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA5CFA1C3B60CE001A4771 /* NSXComment.m */; };
+		DEEA5D0D1C3B9CFB001A4771 /* testa.json in Resources */ = {isa = PBXBuildFile; fileRef = DEEA5D0B1C3B9CFB001A4771 /* testa.json */; };
+		DEEA5D0E1C3B9CFB001A4771 /* testb.json in Resources */ = {isa = PBXBuildFile; fileRef = DEEA5D0C1C3B9CFB001A4771 /* testb.json */; };
+		DEEA5D7E1C3BBBAD001A4771 /* NSXCommentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA5D771C3BBBAD001A4771 /* NSXCommentViewModel.m */; };
+		DEEA5D7F1C3BBBAD001A4771 /* NSXCommentViewModel+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA5D791C3BBBAD001A4771 /* NSXCommentViewModel+Provider.m */; };
+		DEEA5D801C3BBBAD001A4771 /* NSXCommentViewModelParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA5D7B1C3BBBAD001A4771 /* NSXCommentViewModelParam.m */; };
+		DEEA5D811C3BBBAD001A4771 /* NSXCommentViewModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEA5D7D1C3BBBAD001A4771 /* NSXCommentViewModelResult.m */; };
 		DEEAFBDA1C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */; };
 		DEEAFBE11C3AA2C50033ABA1 /* RDRGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEAFBE01C3AA2C50033ABA1 /* RDRGrowingTextView.m */; };
 		DEF099261C215ADA005D0CB8 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = DEF0947B1C215AD9005D0CB8 /* app.js */; };
@@ -1475,6 +1482,18 @@
 		DEE820571C2CE1C800E515C9 /* NSXAccountResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccountResult.m; sourceTree = "<group>"; };
 		DEE8205B1C2CE2A200E515C9 /* NSXAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXAccount.h; sourceTree = "<group>"; };
 		DEE8205C1C2CE2A200E515C9 /* NSXAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXAccount.m; sourceTree = "<group>"; };
+		DEEA5CF91C3B60CE001A4771 /* NSXComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXComment.h; sourceTree = "<group>"; };
+		DEEA5CFA1C3B60CE001A4771 /* NSXComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXComment.m; sourceTree = "<group>"; };
+		DEEA5D0B1C3B9CFB001A4771 /* testa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testa.json; sourceTree = "<group>"; };
+		DEEA5D0C1C3B9CFB001A4771 /* testb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testb.json; sourceTree = "<group>"; };
+		DEEA5D761C3BBBAD001A4771 /* NSXCommentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXCommentViewModel.h; sourceTree = "<group>"; };
+		DEEA5D771C3BBBAD001A4771 /* NSXCommentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXCommentViewModel.m; sourceTree = "<group>"; };
+		DEEA5D781C3BBBAD001A4771 /* NSXCommentViewModel+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSXCommentViewModel+Provider.h"; sourceTree = "<group>"; };
+		DEEA5D791C3BBBAD001A4771 /* NSXCommentViewModel+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXCommentViewModel+Provider.m"; sourceTree = "<group>"; };
+		DEEA5D7A1C3BBBAD001A4771 /* NSXCommentViewModelParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXCommentViewModelParam.h; sourceTree = "<group>"; };
+		DEEA5D7B1C3BBBAD001A4771 /* NSXCommentViewModelParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXCommentViewModelParam.m; sourceTree = "<group>"; };
+		DEEA5D7C1C3BBBAD001A4771 /* NSXCommentViewModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXCommentViewModelResult.h; sourceTree = "<group>"; };
+		DEEA5D7D1C3BBBAD001A4771 /* NSXCommentViewModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSXCommentViewModelResult.m; sourceTree = "<group>"; };
 		DEEAFBD01C3A9FCE0033ABA1 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		DEEAFBD11C3A9FCE0033ABA1 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		DEEAFBDF1C3AA2C50033ABA1 /* RDRGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDRGrowingTextView.h; sourceTree = "<group>"; };
@@ -3206,6 +3225,10 @@
 		DEE407611C34C195000AB909 /* NewsComment */ = {
 			isa = PBXGroup;
 			children = (
+				DEEA5CF51C3B609F001A4771 /* Controller */,
+				DEEA5CF61C3B609F001A4771 /* Model */,
+				DEEA5CF71C3B609F001A4771 /* View */,
+				DEEA5CF81C3B609F001A4771 /* ViewModel */,
 				DEE407CF1C34C931000AB909 /* CommentViewController.h */,
 				DEE407D01C34C931000AB909 /* CommentViewController.m */,
 				DEE407B71C34C918000AB909 /* Source */,
@@ -3282,6 +3305,8 @@
 		DEE407C31C34C918000AB909 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				DEEA5D0B1C3B9CFB001A4771 /* testa.json */,
+				DEEA5D0C1C3B9CFB001A4771 /* testb.json */,
 				DEE407C41C34C918000AB909 /* head_default@2x.png */,
 				DEE407C51C34C918000AB909 /* like_btn@2x.png */,
 				DEE407C61C34C918000AB909 /* test.json */,
@@ -3315,6 +3340,44 @@
 				DEE8204F1C2CE0A200E515C9 /* NSXUserResult.m */,
 				DEE820491C2CDFAA00E515C9 /* NSXUser+Provider.h */,
 				DEE8204A1C2CDFAA00E515C9 /* NSXUser+Provider.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DEEA5CF51C3B609F001A4771 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEEA5CF61C3B609F001A4771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA5CF91C3B60CE001A4771 /* NSXComment.h */,
+				DEEA5CFA1C3B60CE001A4771 /* NSXComment.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEEA5CF71C3B609F001A4771 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEEA5CF81C3B609F001A4771 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DEEA5D761C3BBBAD001A4771 /* NSXCommentViewModel.h */,
+				DEEA5D771C3BBBAD001A4771 /* NSXCommentViewModel.m */,
+				DEEA5D781C3BBBAD001A4771 /* NSXCommentViewModel+Provider.h */,
+				DEEA5D791C3BBBAD001A4771 /* NSXCommentViewModel+Provider.m */,
+				DEEA5D7A1C3BBBAD001A4771 /* NSXCommentViewModelParam.h */,
+				DEEA5D7B1C3BBBAD001A4771 /* NSXCommentViewModelParam.m */,
+				DEEA5D7C1C3BBBAD001A4771 /* NSXCommentViewModelResult.h */,
+				DEEA5D7D1C3BBBAD001A4771 /* NSXCommentViewModelResult.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -6545,6 +6608,7 @@
 				DEF099481C215ADA005D0CB8 /* raw.js in Resources */,
 				DEB4F7B41C02AF6300DF6740 /* dribbble64_imageio.png in Resources */,
 				DEF09B7B1C215ADB005D0CB8 /* LICENSE in Resources */,
+				DEEA5D0E1C3B9CFB001A4771 /* testb.json in Resources */,
 				DEF09BA21C215ADB005D0CB8 /* client.js in Resources */,
 				DEF09CA01C215ADB005D0CB8 /* index.js in Resources */,
 				DEF09BBD1C215ADB005D0CB8 /* UseOldPasswordPacket.js in Resources */,
@@ -6816,6 +6880,7 @@
 				DEF09A231C215ADA005D0CB8 /* part1.header in Resources */,
 				DEF09A031C215ADA005D0CB8 /* part4 in Resources */,
 				DEF099621C215ADA005D0CB8 /* .npmignore in Resources */,
+				DEEA5D0D1C3B9CFB001A4771 /* testa.json in Resources */,
 				DEF09A111C215ADA005D0CB8 /* part3.header in Resources */,
 				DEF09AA81C215ADA005D0CB8 /* session.js in Resources */,
 				DEF09A8E1C215ADA005D0CB8 /* view.js in Resources */,
@@ -7021,6 +7086,7 @@
 				DEF09C871C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BDB1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09BF21C215ADB005D0CB8 /* readme.md in Sources */,
+				DEEA5D7E1C3BBBAD001A4771 /* NSXCommentViewModel.m in Sources */,
 				DEE407AB1C34C195000AB909 /* NSXNews+Provider.m in Sources */,
 				DEF09AC41C215ADA005D0CB8 /* HISTORY.md in Sources */,
 				DEF099B81C215ADA005D0CB8 /* HISTORY.md in Sources */,
@@ -7052,6 +7118,7 @@
 				DEF09AE01C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B431C215ADB005D0CB8 /* README.md in Sources */,
 				DEE407AF1C34C195000AB909 /* NSXNewsViewModel.m in Sources */,
+				DEEA5D7F1C3BBBAD001A4771 /* NSXCommentViewModel+Provider.m in Sources */,
 				DE5A18431C08581700FD3B1D /* UIFont+FontAwesome.m in Sources */,
 				DE9BBC141BFCA5280048D32A /* YYPhotoGroupView.m in Sources */,
 				DEE407AD1C34C195000AB909 /* NSXNewsResult.m in Sources */,
@@ -7080,6 +7147,7 @@
 				DEF09BEA1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B7F1C215ADB005D0CB8 /* History.md in Sources */,
 				DEE407A61C34C195000AB909 /* XHFeedCell3.m in Sources */,
+				DEEA5D811C3BBBAD001A4771 /* NSXCommentViewModelResult.m in Sources */,
 				DEF09C291C215ADB005D0CB8 /* README.md in Sources */,
 				DEF09B0D1C215ADB005D0CB8 /* README.md in Sources */,
 				DE34ED871BF9B370003CFC80 /* UIView+SDAutoLayout.m in Sources */,
@@ -7222,6 +7290,7 @@
 				DEF099EB1C215ADA005D0CB8 /* Readme.md in Sources */,
 				DEF09B911C215ADB005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF09B461C215ADB005D0CB8 /* HISTORY.md in Sources */,
+				DEEA5CFB1C3B60CE001A4771 /* NSXComment.m in Sources */,
 				DEF09BFF1C215ADB005D0CB8 /* license.md in Sources */,
 				DEF099491C215ADA005D0CB8 /* README.md in Sources */,
 				DE34EDA31BF9B451003CFC80 /* UIView+SDExtension.m in Sources */,
@@ -7272,6 +7341,7 @@
 				DEF09BCE1C215ADB005D0CB8 /* HISTORY.md in Sources */,
 				DEF09B201C215ADB005D0CB8 /* README.md in Sources */,
 				DEE820511C2CE0A200E515C9 /* NSXUserResult.m in Sources */,
+				DEEA5D801C3BBBAD001A4771 /* NSXCommentViewModelParam.m in Sources */,
 				DEF09ACF1C215ADA005D0CB8 /* CHANGELOG.md in Sources */,
 				DEF0994F1C215ADA005D0CB8 /* Makefile in Sources */,
 				DEF176661C22AB6300EEF06B /* UIView+Extension.m in Sources */,

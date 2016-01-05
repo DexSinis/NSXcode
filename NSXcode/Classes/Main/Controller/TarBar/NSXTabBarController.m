@@ -28,6 +28,8 @@
 #import "LogInViewController.h"
 #import "NSXNewsViewModel.h"
 
+#import "CommentViewController.h"
+
 
 @interface NSXTabBarController ()  <UITabBarControllerDelegate,UISearchBarDelegate>
 {
@@ -188,7 +190,8 @@
     UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVc];
     
     // 3.添加第3个控制器
-    NSXSearchController *threeVc = [[NSXSearchController alloc]init];
+//    NSXSearchController *threeVc = [[NSXSearchController alloc]init];
+    CommentViewController *threeVc = [[CommentViewController alloc]init];
 //    [self setUpOneChildViewController:discoverVc image:[UIImage imageNamed:@"qw"] title:@"博文"];
     
     UINavigationController *threeNav = [[UINavigationController alloc]initWithRootViewController:threeVc];

@@ -110,7 +110,7 @@
 //         }
 //     }];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+ /*   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
 
     UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
@@ -120,10 +120,54 @@
     [self.window setTintColor:tintColor];
     [self.window setRootViewController:dragVC];
     [self.window makeKeyAndVisible];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-
-   
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];  */
+    
+    UIViewController * leftSideDrawerViewController = [[MMExampleLeftSideDrawerViewController alloc] init];
+    
+//    LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:@"LeftMenuViewController" bundle:[NSBundle mainBundle]];
+    
+    //    UIViewController * centerViewController = [[MMExampleCenterTableViewController alloc] init];
+    
+    UIViewController * rightSideDrawerViewController = [[MMExampleRightSideDrawerViewController alloc] init];
+    
+    //    UINavigationController * navigationController = [[MMNavigationController alloc] initWithRootViewController:centerViewController];
+    //    [navigationController setRestorationIdentifier:@"MMExampleCenterNavigationControllerRestorationKey"];
+    UINavigationController * rightSideNavController = [[MMNavigationController alloc] initWithRootViewController:rightSideDrawerViewController];
+    [rightSideNavController setRestorationIdentifier:@"MMExampleRightNavigationControllerRestorationKey"];
+    UINavigationController * leftSideNavController = [[MMNavigationController alloc] initWithRootViewController:leftSideDrawerViewController];
+    [leftSideNavController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+    self.drawerController = [[MMDrawerController alloc]
+                             initWithCenterViewController:dragVC
+                             leftDrawerViewController:leftSideDrawerViewController
+                             rightDrawerViewController:rightSideNavController];
+    
+    [self.drawerController setShowsShadow:NO];
+    [self.drawerController setRestorationIdentifier:@"MMDrawer"];
+    [self.drawerController setMaximumRightDrawerWidth:200.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [self.drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[MMExampleDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIColor * tintColor = [UIColor colorWithRed:29.0/255.0
+                                          green:173.0/255.0
+                                           blue:234.0/255.0
+                                          alpha:1.0];
+    [self.window setTintColor:tintColor];
+    self.drawerController.view.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:self.drawerController];
+    
     return YES;
+;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

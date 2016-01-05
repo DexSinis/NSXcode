@@ -19,7 +19,7 @@
         self.backgroundColor = LayoutBackgroundColor;
         
         float lastH = 0;
-        for (CommentModel *model in modelArray) {
+        for (NSXComment *model in modelArray) {
             
             CGSize sz =[model sizeWithConstrainedToSize:CGSizeMake(self.frame.size.width-10, MAXFLOAT)];
             
@@ -43,7 +43,7 @@
             floorLabel.textColor =[UIColor grayColor];
             
         
-            nameLabel.text   = model.name;
+            nameLabel.text   = model.username;
             addressLabel.text  = model.address;
             commentLabel.text = model.comment;
             floorLabel.text = model.floor;

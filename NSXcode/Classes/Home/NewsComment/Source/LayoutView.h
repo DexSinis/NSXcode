@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommentModel.h"
+#import "NSXComment.h"
  
 @interface LayoutView : UIView
-- (instancetype)initWithFrame:(CGRect)frame model:(CommentModel *)info parentView:(UIView*)p isLast:(BOOL)isLast;
+- (instancetype)initWithFrame:(CGRect)frame model:(NSXComment *)info parentView:(UIView*)p isLast:(BOOL)isLast;
 @end

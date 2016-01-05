@@ -9,7 +9,7 @@
 
 @interface NSXUser : NSObject
 
-@property (nonatomic, readwrite, assign) NSString* userID;
+@property (nonatomic, readwrite, assign) NSString* userId;
 @property (nonatomic, readonly, copy) NSString *location;
 @property (nonatomic, readwrite, copy) NSString *name;
 @property (nonatomic, readonly, assign) int followersCount;

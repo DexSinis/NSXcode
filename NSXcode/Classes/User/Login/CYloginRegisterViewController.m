@@ -144,7 +144,7 @@
 //    NSLog(@"%@",_passwordField.text);
     if (accountAndPassword!=nil) {
         NSXUser *user = [Config getOwnUser];
-        NSLog(@"%@",user.userID);
+        NSLog(@"%@",user.userId);
         NSLog(@"%@-----------",user.name);
         _hud.mode = MBProgressHUDModeCustomView;
         _hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HUD-error"]];
@@ -157,7 +157,7 @@
             NSXAccount *account = result.accountArray[0];
             if (account.accountName!=nil&&account.password!=nil) {
                 NSXUserParam *userParam = [[NSXUserParam alloc] init];
-                userParam.userID = account.userID;
+                userParam.userId = account.userId;
                 [NSXUser userWithParam:userParam success:^(NSXUserResult *result) {
                    
                     NSXUser *user = result.userArray[0];

@@ -10,7 +10,7 @@
 #import "LayoutContainerView.h"
 #import "LayoutView.h"
 #import "GridLayoutView.h"
-#import "CommentModel.h"
+#import "NSXComment.h"
 #import "Constant.h"
 @interface LayoutContainerView()
 
@@ -18,7 +18,7 @@
 @property (nonatomic,strong) UILabel      *addressLabel;
 @property (nonatomic,strong) UIImageView  *headImageView;
 @property (nonatomic,strong) UIButton     *likeButton;
-@property (nonatomic,strong) CommentModel *model;
+@property (nonatomic,strong) NSXComment *model;
 
 @end
 
@@ -55,7 +55,7 @@
   
     }
         
-    for (CommentModel *model in sortedArray) {
+    for (NSXComment *model in sortedArray) {
        
         i = lastModel.floor.intValue - model.floor.intValue;
         
@@ -98,7 +98,7 @@
         _nameLabel.font = NameFont;
         _nameLabel.textColor = NameColor;
         
-        _nameLabel.text = self.model.name;
+        _nameLabel.text = self.model.username;
         _addressLabel.text = self.model.address;
         
         _likeButton =[UIButton buttonWithType:UIButtonTypeCustom];

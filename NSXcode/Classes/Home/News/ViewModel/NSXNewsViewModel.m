@@ -16,7 +16,7 @@
 
 @interface SectionViewModel : NSObject
 
-@property(copy,nonatomic)NSString *sectionTitleText;
+@property(copy,nonatomic) NSString *sectionTitleText;
 @property(strong,nonatomic)NSArray *sectionDataSource;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;

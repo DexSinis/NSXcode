@@ -61,8 +61,8 @@ router.post('/accountInsert', function(req, res, next) {
 
 
 router.post('/user', function(req, res, next) {
-	var userID = req.body.userID;
-	user.get(userID, function(err, user_, fields){
+	var userId = req.body.userId;
+	user.get(userId, function(err, user_, fields){
 		//if(!user_){
 		console.log(user_);
 		var userList_ = new Array();

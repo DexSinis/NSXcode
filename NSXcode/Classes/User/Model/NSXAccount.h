@@ -11,6 +11,6 @@
 
 @property (nonatomic, readwrite, copy) NSString *accountName;
 @property (nonatomic, readwrite, copy) NSString *password;
-@property (nonatomic, readonly, copy) NSString *userID;
+@property (nonatomic, readonly, copy) NSString *userId;
 
 @end
