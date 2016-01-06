@@ -60,6 +60,17 @@ Comment.getTopList = function(keyword, callback){
 	})
 }
 
+Comment.getMaxFloor = function(newsId,commentId, callback){
+	var sql = "select count(*) as currentfloor from t_comment where 1=1 and newsId='"+newsId+"'"+" and storey='"+commentId+"'" ;
+	mysql.query(sql, function(err, result, fields){
+		if(err){
+			throw err;
+		}else{
+			callback(err, result, fields);
+		}
+	})
+}
+
 Comment.prototype.add = function add(callback) {
 	var comment = {
 		//title: this.title,

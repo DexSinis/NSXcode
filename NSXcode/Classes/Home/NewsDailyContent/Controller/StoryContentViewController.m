@@ -332,7 +332,7 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     
 }
 
--(void)loadNewData
+-(void)loadNewData1
 {
     // Do any additional setup after loading the view, typically from a nib.
     /*说明：从网易客服端获取的json，为测试用，做了编辑*/
@@ -419,6 +419,97 @@ static CGFloat const MaxToolbarHeight = 200.0f;
     
     
 }
+
+
+-(void)loadNewData
+{
+    
+    NSXCommentViewModelParam *param = [[NSXCommentViewModelParam alloc] init];
+    
+    [NSXCommentViewModel commentViewModelWithParam:param success:^(NSXCommentViewModelResult *result) {
+        
+        
+        
+        //         [result.viewModel.hotPostsIdArray addObjectsFromArray:[result.viewModel.hotPosts valueForKeyPath:@"username"]];
+        //
+        //        NSArray *a = result.viewModel.hotPostsIdArray;
+        //        NSMutableSet *set=[NSMutableSet set];
+        //
+        //
+        //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+        //
+        //        for (int i = 0; i<sortedByName.count; i++) {
+        //             NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+        //
+        //        }
+        
+        
+        
+        
+        //        [result.viewModel.hotPosts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        //            [set addObject:obj[@"storey"]];//利用set不重复的特性,得到有多少组,根据数组中的MeasureType字段
+        //        }];
+        
+        NSDictionary *dict  = [result mj_keyValues];
+        //        NSLog(@"%@",dict);
+        
+        //        NSArray *sortedByName = [result.viewModel.hotPosts  sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"storey" ascending:YES]]];
+        //
+        //        for (int i = 0; i<sortedByName.count; i++) {
+        //            NSArray *t1Only = [result.viewModel.hotPosts  filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"storey = %@", sortedByName[i]]];
+        //
+        //        }
+        NSXCommentViewModel *vm = result.viewModel;
+        NSArray *sortedByName1 = [vm valueForKeyPath:@"hotPosts.storey"];
+        NSInteger max = [[sortedByName1 valueForKeyPath:@"@max.intValue"] integerValue];
+        
+        //        [dict valueForKeyPath:@"vm.hotPosts.storey"];
+        NSLog(@"%@,-------%ld",sortedByName1,(long)max);
+        
+        
+        NSComparator cmptr = ^(id obj1, id obj2){
+            NSXComment *comment1 = obj1;
+            NSXComment *comment2 = obj2;
+            if ([comment1.floor intValue] > [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedDescending;
+            }
+            
+            if ([comment1.floor intValue] < [comment2.floor intValue]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+            return (NSComparisonResult)NSOrderedSame;
+        };
+        
+        for (int i=1; i<=6; i++) {
+            NSMutableArray *arr =[[NSMutableArray alloc] init];
+            NSArray *arrafter =[[NSMutableArray alloc] init];
+            for (NSXComment *comment in result.viewModel.hotPosts) {
+                if ([comment.storey isEqualToString:[NSString stringWithFormat:@"%d",i]]) {
+                    [arr addObject:comment];
+                }
+            }
+         
+            arrafter = [arr sortedArrayUsingComparator:cmptr];
+            for (NSXComment *comment in arrafter) {
+                comment.maxfloor = [NSString stringWithFormat:@"%lu",(unsigned long)arrafter.count];
+            }
+            [self.dataSource addObject:arrafter];
+        }
+        
+        
+        
+        //        _dataSource = result.viewModel.hotPosts;
+        
+        [_tableview reloadData];
+        
+        [_tableview.mj_header endRefreshing];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
 
 -(void)loadMoreData
 {
@@ -530,10 +621,11 @@ static CGFloat const MaxToolbarHeight = 200.0f;
                     [arr addObject:comment];
                 }
             }
+
+            arrafter = [arr sortedArrayUsingComparator:cmptr];
             for (NSXComment *comment in arrafter) {
                 comment.maxfloor = [NSString stringWithFormat:@"%lu",(unsigned long)arrafter.count];
             }
-            arrafter = [arr sortedArrayUsingComparator:cmptr];
             [self.dataSource addObject:arrafter];
         }
         
@@ -740,8 +832,8 @@ static CGFloat const MaxToolbarHeight = 200.0f;
         model.commentCount =[NSString stringWithFormat:@"%d",a];
         model.userId = @"4f0f3105-dd04-4105-a2b5-93fa5bc0b189";
         model.newsId = @"20e8a993-bb33-4472-b434-8a4485e37e02";
-        model.floor = [NSString stringWithFormat:@"%d",[self.currentComment.maxfloor intValue]+1];
-        model.storey = [NSString stringWithFormat:@"%d",1];
+//        model.floor = [NSString stringWithFormat:@"%d",[self.currentComment.maxfloor intValue]+1];
+        model.storey = self.currentComment.storey;
         model.username =@"dexsinis";
         model.comment = textView.text;
         model.address = @"广州千云科技";

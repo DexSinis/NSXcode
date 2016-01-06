@@ -153,7 +153,6 @@ router.post('/commentInsert', function(req, res, next) {
 	 address : req.body.address,
 	 comment : req.body.comment,
 	 timeString : req.body.timeString,
-	 floor : req.body.floor,
 	 newsId : req.body.newsId,
 	 userId : req.body.userId,
 	 likeCount : req.body.likeCount,
@@ -162,13 +161,19 @@ router.post('/commentInsert', function(req, res, next) {
 
 	});
 
-	comment_.add(function(err){
-		if(err){
-			throw err;
-		}else{
-			res.send(true);
-		}
+	comment.getMaxFloor(comment_.newsId,comment_.storey,function(err, result, fields){
+		var floor_ =new String(result[0].currentfloor);
+		comment_.floor = Number(floor_)+1;
+		comment_.add(function(err){
+			if(err){
+				throw err;
+			}else{
+				res.send(true);
+			}
+		});
 	});
+
+
 });
 
 
