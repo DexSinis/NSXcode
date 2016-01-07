@@ -17,10 +17,10 @@
 #define kAppdelegate (AppDelegate *)[UIApplication  sharedApplication].delegate;
 
 #define kbaseURL @"http://news-at.zhihu.com/api/4"
-#define Domain @"http://192.168.2.144:8888/"
+#define Domain3 @"http://192.168.2.144:8888/"
 #define Domain1 @"http://61.160.193.80:39564/"
 #define Domain2 @"http://123.249.81.33:16385/" //123.249.81.33:16380 y38dp836e4fg
-#define Domain4  @"http://119.29.146.86:8888/"
+#define Domain  @"http://119.29.146.86:8888/"
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__)
 #else
