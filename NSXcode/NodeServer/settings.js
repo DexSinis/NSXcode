@@ -4,7 +4,7 @@
 	settings = {
 
 		db: {
-			host: "119.29.146.86",
+			host: "119.29.143.168",
 			port: "3306",
 			user: "root",
 			password: "root",
