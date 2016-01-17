@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 pod 'AFNetworking'
@@ -21,3 +22,6 @@ pod 'JTFadingInfoView'
 pod 'SSKeychain'
 pod 'CYLTableViewPlaceHolder'
 pod 'UIViewController-KeyboardAdditions'
+pod 'UIImage+BlurredFrame', '0.0.4'
+pod 'BlocksKit', '2.2.5'
+pod 'LBXScan'

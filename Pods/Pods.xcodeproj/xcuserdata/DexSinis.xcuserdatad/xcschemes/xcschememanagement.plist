@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CYLTableViewPlaceHolder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -40,6 +45,11 @@
 			<false/>
 		</dict>
 		<key>JTFadingInfoView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LBXScan.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -99,6 +109,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIImage+BlurredFrame.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UIViewController-KeyboardAdditions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -109,14 +124,14 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZXingObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06687EEF2F3BA0D56C659D8DF775D764</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>06D1E331F819F0A76EC732F42EA982C4</key>
 		<dict>
 			<key>primary</key>
@@ -127,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>10F1B86765575A27696156BF69B4C85A</key>
+		<key>113449BF3A11823FAF24F13EA17BD80B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,27 +152,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>220BDCBC17BCD3F7F846787F711C7A17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2AB49797D14D57FA43A345254AFB9F18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D9A6986D94D89B259A302EF96D8123D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>35D6189CC73EC21E0FD390E5487014C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>410B25DF16EA5C5B3E2698F74F9625FB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4DBBBC5A1487BDF7BEF84E984FFC466F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,6 +182,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5B0BD2DECAB32BFCFD79325EA6EAC852</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6610362E50A6DE8BACCA1F2885CD9157</key>
 		<dict>
 			<key>primary</key>
@@ -187,7 +197,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8EB33A6AA4B56718E8068354CA19686D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -197,17 +217,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<key>C421DC77A99AB537FD164FBA7BEA2591</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1266FAFD689F142A8BCB4AF247A9E2C</key>
+		<key>CE83A940009D186772933F66AFB59753</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D867F4DB8F8E39E2E4FD04868CAF5E50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDBBF52D8578B0D837A42948BA5E6827</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DDCE26CDE8794AF8E72BAE43A355AFC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F463DC4CB746D2BCCE6719537ED39AD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

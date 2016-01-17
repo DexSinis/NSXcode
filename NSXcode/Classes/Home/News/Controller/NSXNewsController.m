@@ -34,6 +34,8 @@
 #import "StoryContentViewModel.h"
 #import "StoryContentViewController.h"
 
+#import "UIViewController+MMDrawerController.h"
+
 
 #define kRowHeight 88.f
 #define kSectionHeaderHeight 36.f
@@ -138,7 +140,7 @@
     
     UIButton *menuBtn = [[UIButton alloc] initWithFrame:CGRectMake(16.f, 28.f, 22.f, 22.f)];
     [menuBtn setImage:[UIImage imageNamed:@"Home_Icon"] forState:UIControlStateNormal];
-    [menuBtn addTarget:self action:@selector(showLeftMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [menuBtn addTarget:self action:@selector(leftDrawerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:menuBtn];
     
 
@@ -150,6 +152,12 @@
     
     // 尾部刷新控件
 //    self.mainTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+}
+
+
+#pragma mark - Button Handlers
+-(void)leftDrawerButtonPress:(id)sender{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 

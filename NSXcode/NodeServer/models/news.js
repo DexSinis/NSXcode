@@ -32,7 +32,8 @@ News.get = function(newsId, callback){
 
 
 News.getList = function(keyword, callback){
-	var sql = "select * from t_news where 1=1 and newsId like'%"+keyword+"%'";
+	var sql = "select * from t_news where 1=1";
+	//" and newsId like'%"+keyword+"%'";
 	mysql.query(sql, function(err, result, fields){
 		if(err){
 			throw err;

@@ -43,4 +43,5 @@ typedef NS_ENUM(NSInteger, MMDrawerSection){
 @property (nonatomic, strong) NSXSideViewHeader * headerView;
 @property (nonatomic, strong) NSXSideViewFooter * footerView;
 
+@property (nonatomic, strong) NSMutableArray *categoryMArray;
 @end

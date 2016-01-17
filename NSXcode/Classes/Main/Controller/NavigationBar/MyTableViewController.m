@@ -29,10 +29,17 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:resultsController];
     
     self.searchController.searchResultsUpdater = resultsController;
+    
+    
     [self.searchController.searchBar sizeToFit];
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-//    self.navigationItem.titleView = self.searchController.searchBar;
+//    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.navigationItem.titleView = self.searchController.searchBar;
     self.definesPresentationContext = YES;
+//    self.tableView.frame = CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    
+//    [self.tableView setContentOffset:CGPointMake(0, 200)];
+    
+//    self.tableView.contentOffset = CGPointMake(0, 0);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSXSearchController : UIViewController
+@interface NSXSearchController : UITableViewController
 
 @end

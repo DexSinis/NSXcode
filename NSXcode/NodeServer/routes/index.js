@@ -15,6 +15,7 @@ var user = require("../models/user");
 var news = require("../models/news");
 var account = require("../models/account");
 var comment = require("../models/comment");
+var category = require("../models/category");
 
 
 router.post('/account', function(req, res, next) {
@@ -459,5 +460,46 @@ router.get('/home', function(req, res, next) {
 	res.render('index', { title: '后端码农啊界面纯手写啊喂布局好难啊不知道怎么才算好看啊喂！'});
 });
 
+
+
+
+
+router.post('/categoryArray', function(req, res, next) {
+
+	//var userid = req.body.userid//req.body.param.keyword;
+	//userid = '1';
+	//keyword ="7";
+	category.getList('1', function(err, categoryList_, fields){
+		//if(!user_){
+		console.log(categoryList_);
+		var jsonData = {"categoryArray":categoryList_,"totalNumber":categoryList_.length};
+
+		res.writeHead(200, {'Content-Type': 'application/json'});
+		//for(var i=0;i<newsList_.length;i++)
+		//{
+		//	jsonData[i]=newsList_[i];
+		//}
+		res.end(JSON.stringify(jsonData));
+	});
+});
+
+router.post('/categoryInsert', function(req, res, next) {
+	var category_ = new category({
+		userid: req.body.userid,
+		categoryid: req.body.categoryid,
+		categoryid: req.body.categoryid,
+	});
+
+	category_.add(function(err){
+		if(err){
+			throw err;
+		}else{
+			//res.send(true);
+			res.writeHead(200, {'Content-Type': 'application/json'});
+			var jsonData = {"code":0,"message":"注册成功"};
+			res.end(JSON.stringify(jsonData));
+		}
+	});
+});
 
 module.exports = router;

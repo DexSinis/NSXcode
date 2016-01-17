@@ -17,5 +17,5 @@
 #define  CommentFont  [UIFont systemFontOfSize:14]
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
-#define MaxOverlapNumber 6
+#define MaxOverlapNumber 600
 #define OverlapSpace 3

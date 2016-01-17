@@ -8,7 +8,7 @@
 
 #import "NSXTabBarController.h"
 #import "NSXNewsController.h"
-#import "NSXMessageController.h"
+#import "NSXCategoryController.h"
 #import "NSXSearchController.h"
 #import "NSXSettingController.h"
 
@@ -29,6 +29,8 @@
 #import "NSXNewsViewModel.h"
 
 #import "CommentViewController.h"
+
+#import "MyTableViewController.h"
 
 
 @interface NSXTabBarController ()  <UITabBarControllerDelegate,UISearchBarDelegate>
@@ -185,22 +187,31 @@
 
     
     // 2.添加第2个控制器
-    NSXMessageController *twoVc = [[NSXMessageController alloc]init];
+    NSXCategoryController *twoVc = [[NSXCategoryController alloc]init];
 
     UINavigationController *twoNav = [[UINavigationController alloc]initWithRootViewController:twoVc];
     
-    // 3.添加第3个控制器
-//    NSXSearchController *threeVc = [[NSXSearchController alloc]init];
-    CommentViewController *threeVc = [[CommentViewController alloc]init];
-//    [self setUpOneChildViewController:discoverVc image:[UIImage imageNamed:@"qw"] title:@"博文"];
+//    // 3.添加第3个控制器
+    NSXSearchController *threeVc = [[NSXSearchController alloc]init];
+//    CommentViewController *threeVc = [[CommentViewController alloc]init];
+////    [self setUpOneChildViewController:discoverVc image:[UIImage imageNamed:@"qw"] title:@"博文"];
+//    
+//    UINavigationController *threeNav = [[UINavigationController alloc]initWithRootViewController:threeVc];
+//    
+//    
+//    UIStoryboard *discoverSB = [UIStoryboard storyboardWithName:@"Discover" bundle:nil];
+//    UINavigationController *threeVc = [discoverSB instantiateViewControllerWithIdentifier:@"Nav"];
     
-    UINavigationController *threeNav = [[UINavigationController alloc]initWithRootViewController:threeVc];
     
     
-    // 4.添加第4个控制器
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"NSXSettingController" bundle:nil];
+//    // 4.添加第4个控制器
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"NSXSettingController" bundle:nil];
+////
+//    
+//    NSXSettingController *fourVc = [storyBoard instantiateInitialViewController];
+    NSXSettingController *fourVc = [[NSXSettingController alloc] init];
     
-    NSXSettingController *fourVc = [storyBoard instantiateInitialViewController];
+//    MyTableViewController *fourVc = [[MyTableViewController alloc] init];
     
     
 //    CGRect frame = CGRectMake(150, 200, 150, 50);
@@ -234,8 +245,8 @@
                              [self addNavigationItemForViewController:twoVc],
                              [UIViewController new],
                              [self addNavigationItemForViewController:threeVc],
-//                             [self addNavigationItemForViewController:fourVc],
-                             fourNav
+                             [self addNavigationItemForViewController:fourVc]//,
+//                             fourVc
                              ];
     
     NSArray *titles = @[@"综合", @"动弹", @"", @"发现", @"我"];
@@ -300,7 +311,7 @@
     _centerButton.frame = CGRectMake(origin.x - buttonSize.height/2, origin.y - buttonSize.height/2, buttonSize.height, buttonSize.height);
     
     [_centerButton setCornerRadius:buttonSize.height/2];
-    [_centerButton setBackgroundColor:[UIColor colorWithHex:0x24a83d]];
+    [_centerButton setBackgroundColor:[UIColor colorWithRed:60.f/255.f green:198.f/255.f blue:253.f/255.f alpha:1.f]];
     [_centerButton setImage:buttonImage forState:UIControlStateNormal];
     [_centerButton addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
     
@@ -318,40 +329,40 @@
 }
 
 
-/**
- *  添加所有子控制器
- */
-- (void)setUpAllChildViewController{
-    // 1.添加第一个控制器
-    NSXNewsController *oneVC = [[NSXNewsController alloc]init];
-//    WBStatusTimelineViewController *oneVC = [[WBStatusTimelineViewController alloc] init];
-    
-//        T1HomeTimelineItemsViewController *oneVC = [[T1HomeTimelineItemsViewController alloc] init];
-//    DemoVC3 *oneVC = [[DemoVC3 alloc] init];
-    [self setUpOneChildViewController:oneVC image:[UIImage imageNamed:@"tab_home_icon"] title:@"首页"];
-    
-    // 2.添加第2个控制器
-    NSXMessageController *twoVC = [[NSXMessageController alloc]init];
-    [self setUpOneChildViewController:twoVC image:[UIImage imageNamed:@"js"] title:@"技术"];
-    
-    
-    // .添加中间控制器
-    NSXMessageController *centerVC = [[NSXMessageController alloc]init];
-    [self setUpOneChildViewController:centerVC image:[UIImage imageNamed:@"tabbar-more"] title:@"center"];
-    
-    
-    // 3.添加第3个控制器
-    NSXSearchController *threeVC = [[NSXSearchController alloc]init];
-    [self setUpOneChildViewController:threeVC image:[UIImage imageNamed:@"qw"] title:@"博文"];
-    
-    // 4.添加第4个控制器
-    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"NSXSettingController" bundle:nil];
-    
-    NSXSettingController *fourVC = [storyBoard instantiateInitialViewController];
-//    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
-
-    [self setUpOneChildViewController:fourVC image:[UIImage imageNamed:@"user"] title:@"设置"];
-}
+///**
+// *  添加所有子控制器
+// */
+//- (void)setUpAllChildViewController{
+//    // 1.添加第一个控制器
+//    NSXNewsController *oneVC = [[NSXNewsController alloc]init];
+////    WBStatusTimelineViewController *oneVC = [[WBStatusTimelineViewController alloc] init];
+//    
+////        T1HomeTimelineItemsViewController *oneVC = [[T1HomeTimelineItemsViewController alloc] init];
+////    DemoVC3 *oneVC = [[DemoVC3 alloc] init];
+//    [self setUpOneChildViewController:oneVC image:[UIImage imageNamed:@"tab_home_icon"] title:@"首页"];
+//    
+//    // 2.添加第2个控制器
+//    NSXMessageController *twoVC = [[NSXMessageController alloc]init];
+//    [self setUpOneChildViewController:twoVC image:[UIImage imageNamed:@"js"] title:@"技术"];
+//    
+//    
+//    // .添加中间控制器
+//    NSXMessageController *centerVC = [[NSXMessageController alloc]init];
+//    [self setUpOneChildViewController:centerVC image:[UIImage imageNamed:@"tabbar-more"] title:@"center"];
+//    
+//    
+//    // 3.添加第3个控制器
+//    NSXSearchController *threeVC = [[NSXSearchController alloc]init];
+//    [self setUpOneChildViewController:threeVC image:[UIImage imageNamed:@"qw"] title:@"博文"];
+//    
+//    // 4.添加第4个控制器
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"NSXSettingController" bundle:nil];
+//    
+//    NSXSettingController *fourVC = [storyBoard instantiateInitialViewController];
+////    CYXFourViewController *fourVC = [[CYXFourViewController alloc]init];
+//
+//    [self setUpOneChildViewController:fourVC image:[UIImage imageNamed:@"user"] title:@"设置"];
+//}
 
 
 /**
@@ -374,15 +385,15 @@
 {
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    viewController.navigationItem.leftBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar-sidebar"]
-                                                                                        style:UIBarButtonItemStylePlain
-                                                                                       target:self action:@selector(onClickMenuButton)];
-    
-    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
-                                                                                                     target:self
-                                                                                                     action:@selector(pushSearchViewController)];
-    
-    
+//    viewController.navigationItem.leftBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar-sidebar"]
+//                                                                                        style:UIBarButtonItemStylePlain
+//                                                                                       target:self action:@selector(onClickMenuButton)];
+//    
+//    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+//                                                                                                     target:self
+//                                                                                                     action:@selector(pushSearchViewController)];
+//    
+//    
     
     return navigationController;
 }

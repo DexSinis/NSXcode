@@ -29,16 +29,67 @@
 #import "NSXTabBarController.h"
 
 #import "CYloginRegisterViewController.h"
+#import "EYTagViewController.h"
 
 #import "NSXNewsCellBar.h"
 #import "Config.h"
 #import "NSXUser.h"
 #import "UIButton+Badge.h"
 
+#import "NSXCategory.h"
+#import "NSXCategory+Provider.h"
+#import "NSXCategoryParam.h"
+#import "NSXCategoryResult.h"
+
+#import "Config.h"
+#import "NSXUser.h"
+
 @implementation MMExampleSideDrawerViewController
+
+
+-(NSMutableArray *)categoryMArray
+{
+    if (_categoryMArray == nil) {
+        NSXUser *user = [Config getOwnUser];
+        NSXCategoryParam *param = [[NSXCategoryParam alloc] init];
+        param.userid = user.userId;
+        
+        [NSXCategory categoryArrayWithParam:param success:^(NSXCategoryResult *result) {
+            for (NSXCategory *category in result.categoryArray) {
+                NSLog(@"%@-----------------======",category.categoryname);
+                
+            }
+            _categoryMArray = result.categoryArray;
+            NSXCategory *category = [[NSXCategory alloc] init];
+            category.categoryid =0;
+            category.categoryname = @"编辑标签";
+            category.userid = user.userId;
+            [_categoryMArray insertObject:category atIndex:0];
+            [self.tableView reloadData];
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        //        _categoryMArray  = [NSMutableArray arrayWithObjects:
+        //                       @"编辑标签",
+        //                       @"科技头条",
+        //                       @"股票头条",
+        //                       @"社会热点",
+        //                       @"大气污染",
+        //                       @"你懂的",
+        //                       @"五毛党",
+        //                       @"国防教育",
+        //                       @"github排名",
+        //                       nil];
+    }
+    return _categoryMArray;
+}
+
 
 - (void)viewDidLoad
 {
+    
+
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateHeaderAndFooter) name:CYLOGINSUCCESSNotification object:nil];
@@ -128,7 +179,7 @@
     // Return the number of rows in the section.
     switch (section) {
         case MMDrawerSectionViewSelection:
-            return 2;
+            return self.categoryMArray.count;
         case MMDrawerSectionDrawerWidth:
             return self.drawerWidths.count;
         case MMDrawerSectionShadowToggle:
@@ -156,16 +207,27 @@
         cell = [[MMSideDrawerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
     }
-    
+     NSXCategory *category =self.categoryMArray[indexPath.row];
     switch (indexPath.section) {
         case MMDrawerSectionViewSelection:
-            if(indexPath.row == 0){
-                [cell.textLabel setText:@"Quick View Change"];
+//            for (int i=0; i<=self.categoryMArray.count-1;i++ ) {
+                [cell.textLabel setText:category.categoryname];
+//            }
+//            if(indexPath.row == 0){
+//                [cell.textLabel setText:@"Quick View Change"];
+//            }
+//            else {
+//                [cell.textLabel setText:@"Full View Change"];
+//            }
+            
+            if (indexPath.row==0) {
+                [cell setAccessoryType:UITableViewCellAccessoryNone];
+            }else
+            {
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             }
-            else {
-                [cell.textLabel setText:@"Full View Change"];
-            }
-            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            
+            
             break;
         case MMDrawerSectionDrawerWidth:{
             //Implement in Subclass
@@ -352,8 +414,9 @@
             
 //             NSXTabBarController * nav = [[NSXTabBarController alloc] init];
             
-            CYloginRegisterViewController *nav = [[CYloginRegisterViewController alloc] init];
-            
+//            CYloginRegisterViewController *nav = [[CYloginRegisterViewController alloc] init];
+            EYTagViewController *vc = [[EYTagViewController alloc] init];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
             
 //            UINavigationController * nav = [[MMNavigationController alloc] initWithRootViewController:center];
             

@@ -9,6 +9,10 @@
 #import "NSXSettingController.h"
 #import "NSXSettingItem.h"
 #import "NSXGroupItem.h"
+#import "EaseUserHeaderView.h"
+
+#import "Config.h"
+#import "UIButton+Bootstrap.h"
 
 @interface NSXSettingController ()
 
@@ -43,6 +47,30 @@
     //添加第3组模型
     [self setGroup3];
     
+    
+//    UITableView *tv = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    tv.delegate = self;
+//    tv.dataSource = self;
+    //    tv.rowHeight = kRowHeight;
+     NSXUser *user = [Config getOwnUser];
+    EaseUserHeaderView *headerView =  [EaseUserHeaderView userHeaderViewWithUser:user image:[UIImage imageNamed:@"1441594747553218"]];
+    headerView.frame = CGRectMake(0, 0, kScreenWidth, 260.f);
+    self.tableView.tableHeaderView = headerView;
+    
+    self.tableView.tableFooterView = [self tableFooterView];
+    //[[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 220.f)];
+//    [self.view addSubview:tv];
+//    self.tableView = tv;
+    
+    
+    self.navigationItem.leftBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigationbar-sidebar"]
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self action:@selector(dissEYTagViewController)];
+    
+    self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sidemenu_setting"]
+                                                                               style:UIBarButtonItemStylePlain
+                                                                              target:self action:@selector(startSearch:)];
+    
 }
 
 - (void)setGroup1{
@@ -51,9 +79,10 @@
     // 创建行模型
     NSXSettingItem *item = [NSXSettingItem itemWithtitle:@"我的账号"];
     NSXSettingItem *item1 = [NSXSettingItem itemWithtitle:@"我的收藏"];
+    NSXSettingItem *item2 = [NSXSettingItem itemWithtitle:@"我的博客"];
 
     // 保存行模型数组
-    group.items = @[item,item1];
+    group.items = @[item,item1,item2];
     // 把组模型保存到groups数组
     [self.groups addObject:group];
 }
@@ -77,7 +106,7 @@
     NSXSettingItem *item = [NSXSettingItem itemWithtitle:@"关注我们"];
     NSXSettingItem *item1 = [NSXSettingItem itemWithtitle:@"关于我们"];
 
-    group.items = @[item,item1];
+    group.items = @[item];
     
     [self.groups addObject:group];
 }
@@ -128,4 +157,12 @@
     return cell;
 }
 
+
+- (UIView*)tableFooterView{
+    UIView *footerV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 90)];
+    UIButton *loginBtn = [UIButton buttonWithStyle:StrapWarningStyle andTitle:@"退出" andFrame:CGRectMake(10, 0, kScreenWidth-10*2, 45) target:self action:@selector(loginOutBtnClicked:)];
+    [loginBtn setCenter:footerV.center];
+    [footerV addSubview:loginBtn];
+    return footerV;
+}
 @end
